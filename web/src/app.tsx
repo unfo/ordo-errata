@@ -2,7 +2,8 @@ import { useEffect, useState } from "preact/hooks";
 import { loadSnapshot, type Snapshot } from "./data";
 import { emptyHighlights, forMode, type Mode } from "./changes";
 import { effectOf, Icon } from "./components";
-import { ClassView, WeaponList, WeaponView } from "./views";
+import { ClassView, WeaponList } from "./views";
+import { WeaponView } from "./weapon-view";
 import { ChangelogView, changelogs, useHighlights } from "./changelog-view";
 
 type Route = { page: "class"; id?: string } | { page: "weapon"; id?: string } | { page: "changelog"; id?: string };
@@ -127,7 +128,7 @@ export function App() {
         {route.page === "weapon" && (
           <div class="weapons-page">
             <WeaponList weapons={weapons} current={weapon?.id} mode={mode} highlights={hl} onPick={(id) => go(`#/weapon/${id}`)} />
-            {weapon ? <WeaponView weapon={weapon} mode={mode} highlights={hl} /> : <p class="muted note">Pick a weapon.</p>}
+            {weapon ? <WeaponView key={weapon.id} file={snap.weapons} weapon={weapon} mode={mode} highlights={hl} /> : <p class="muted note">Pick a weapon.</p>}
           </div>
         )}
       </main>
@@ -154,7 +155,9 @@ function Footer() {
       </p>
       <p>
         Provided “as is”, without warranty of any kind. Data is extracted automatically from the game files and may be incomplete or
-        out of date. Rights holders: see the project README for how to contact the maintainer about any content.
+        out of date. Rights holders: contact{" "}
+        <a href="mailto:emperor-protects@localhost.exposed">emperor-protects@localhost.exposed</a> about any content and it will be
+        reviewed and removed promptly on request.
       </p>
     </footer>
   );

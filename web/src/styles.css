@@ -231,13 +231,27 @@ select {
 .perk-col {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 24px;
 }
 
-.group-core .perk-col:nth-child(even),
-.group-gear .perk-col:nth-child(even) {
-  /* Offset alternate hex columns like a honeycomb. */
-  margin-top: calc(var(--tile) / 2);
+.perk-col {
+  position: relative;
+  padding: 0 4px;
+}
+
+/* Vertical connector through each column, like the in-game tree. */
+.perk-col::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: calc(var(--tile) / 2);
+  bottom: calc(var(--tile) / 2);
+  border-left: 1px solid var(--line);
+}
+
+.group-cols {
+  border: 1px dashed var(--line);
+  padding: 12px 6px;
 }
 
 .perk-slot {
@@ -271,7 +285,19 @@ select {
 .tile.hex .tile-face {
   clip-path: polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0% 50%);
   outline: none;
-  background: linear-gradient(160deg, #262a2f, #191b1e);
+  background: linear-gradient(160deg, #173049, #0e1b29);
+}
+
+.tile.square .tile-face {
+  background: linear-gradient(160deg, #173049, #0e1b29);
+  outline-color: #24425e;
+}
+
+/* TEAM and SIGNATURE perks are gold squares in game. */
+.group-team .tile .tile-face,
+.group-signature .tile .tile-face {
+  background: linear-gradient(160deg, #4a3a1c, #241c0e);
+  outline-color: #7a5f2a;
 }
 
 .tile img {
@@ -308,7 +334,7 @@ select {
 }
 
 .tile.hex.hl .tile-face {
-  background: linear-gradient(160deg, color-mix(in srgb, var(--hl) 35%, #262a2f), #191b1e);
+  background: linear-gradient(160deg, color-mix(in srgb, var(--hl) 35%, #173049), #0e1b29);
 }
 
 .tile-level {
@@ -388,13 +414,10 @@ select {
   margin: 0 0 10px;
 }
 
+/* The game shows every perk value in green. */
 .val {
-  color: #fff;
-  font-weight: 600;
-}
-
-.val.pos {
   color: var(--buff);
+  font-weight: 600;
 }
 
 .val.neg {
@@ -685,4 +708,298 @@ select {
   .controls {
     justify-content: flex-start;
   }
+}
+
+/* ---- class header ---- */
+
+.class-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.class-emblem {
+  width: 64px;
+  height: 64px;
+  transform: rotate(45deg);
+  border: 2px solid var(--gold);
+  background: #2a1f0c;
+  display: grid;
+  place-items: center;
+  flex: none;
+  margin: 8px;
+}
+
+.class-emblem img {
+  width: 56px;
+  height: 56px;
+  transform: rotate(-45deg);
+}
+
+.class-title {
+  font-size: 1.6rem;
+  letter-spacing: 0.3em;
+  color: var(--gold);
+  margin: 0;
+}
+
+.class-ability {
+  color: var(--muted);
+}
+
+.class-ability strong {
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.small {
+  font-size: 0.85rem;
+}
+
+.prestige-pool {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.roman {
+  width: 2.2em;
+  text-align: center;
+  color: var(--gold);
+  font-weight: 700;
+  font-family: Georgia, serif;
+}
+
+/* ---- weapon tree ---- */
+
+.tier-common { --tier: #c9ccd1; --tier-bg: #1a1d21; }
+.tier-mastercrafted { --tier: #3fae6a; --tier-bg: #10201a; }
+.tier-artificer { --tier: #a65ad6; --tier-bg: #1d1226; }
+.tier-relic { --tier: #d6a640; --tier-bg: #241c0e; }
+.tier-heroic { --tier: #e0405a; --tier-bg: #2a0f16; }
+
+.tier-text {
+  color: var(--tier);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.wt-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin: 8px 0 12px;
+}
+
+.wt-tabs button {
+  position: relative;
+  min-width: 140px;
+  padding: 6px 16px;
+  background: var(--panel-2);
+  color: var(--muted);
+  border: 1px solid var(--line);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.wt-tabs button.on {
+  background: #173049;
+  color: var(--text);
+  border-color: #3b6a95;
+}
+
+.wt-tabs button.hl::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--hl);
+}
+
+.wt-scroll {
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.wt-grid {
+  --tile: 46px;
+  display: flex;
+  gap: 2px;
+  min-width: max-content;
+}
+
+.wt-tier {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(var(--tier-bg), var(--bg));
+}
+
+.wt-tier-head {
+  display: flex;
+  gap: 6px;
+  white-space: nowrap;
+  align-items: baseline;
+  padding: 4px 8px 6px;
+  border-bottom: 3px solid color-mix(in srgb, var(--tier) 40%, #555);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.tier-heroic .wt-tier-head {
+  justify-content: center;
+  border: 1px solid var(--tier);
+  border-bottom-width: 3px;
+}
+
+.wt-tier-head .xp {
+  color: var(--text);
+}
+
+.wt-body {
+  padding: 34px 10px;
+  flex: 1;
+}
+
+.wt-cols {
+  display: flex;
+  gap: 14px;
+}
+
+.wt-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.wt-row {
+  position: relative;
+  display: flex;
+}
+
+.wt-cell.empty {
+  width: var(--tile);
+  height: var(--tile);
+}
+
+/* Branch perks sit diagonally outside their parent: above the top row, below the bottom row. */
+.wt-cell.sub {
+  position: absolute;
+  left: calc(var(--tile) * 0.8);
+  z-index: 2;
+}
+
+.wt-cell.sub-1 {
+  top: calc(var(--tile) * -0.75);
+}
+
+.wt-cell.sub-2 {
+  bottom: calc(var(--tile) * -0.75);
+}
+
+.wt-col:has(.sub) {
+  padding-right: calc(var(--tile) * 0.8);
+}
+
+.wt-heroic {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+  min-width: 64px;
+}
+
+.wt-cell.heroic .tile-face {
+  background: linear-gradient(160deg, #8a1f33, #3a0d16);
+  outline-color: var(--tier);
+}
+
+.wt-versions {
+  display: grid;
+  gap: 10px;
+  justify-items: center;
+}
+
+.version {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  width: 118px;
+  padding: 6px;
+  background: #11161b;
+  border: 1px solid var(--line);
+  color: var(--text);
+  cursor: pointer;
+}
+
+.version.selected {
+  border-color: #3b6a95;
+  background: #173049;
+}
+
+.version.hl {
+  outline: 3px solid var(--hl);
+  outline-offset: -1px;
+}
+
+.version-icon {
+  height: 34px;
+  max-width: 120px;
+  object-fit: contain;
+}
+
+.version-name {
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.stats {
+  margin: 0 0 10px;
+  display: grid;
+  gap: 4px;
+}
+
+.stat {
+  display: grid;
+  grid-template-columns: 9em 1fr;
+  align-items: center;
+}
+
+.stat dt {
+  color: var(--muted);
+}
+
+.stat dd {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.stat-num {
+  width: 2.2em;
+  font-weight: 600;
+}
+
+.stat-bar {
+  flex: 1;
+  height: 4px;
+  background: var(--line);
+}
+
+.stat-bar span {
+  display: block;
+  height: 100%;
+  background: #d9d9d9;
+}
+
+.weapon-head .class-title {
+  font-size: 1.3rem;
+  letter-spacing: 0.15em;
 }

@@ -20,6 +20,10 @@ export interface Perk {
   textIssue?: { kind: "brokenKey" | "missing"; note: string };
   blockedBy?: string[];
   unlocks?: string[];
+  /** Weapon perks: 1 = top row, 2 = bottom row. */
+  row?: number;
+  /** Weapon perks: a branch perk unlocked by the row's main perk. */
+  sub?: boolean;
 }
 
 export interface Slot {
@@ -48,6 +52,7 @@ export interface ClassesFile {
 export interface WeaponTier {
   id: string;
   name: string;
+  requiredExperience: number;
   layers: Perk[][];
 }
 
@@ -57,12 +62,22 @@ export interface Weapon {
   name: string;
   nameKey?: string;
   icon: string | null;
-  variants: { id: string; name: string; nameKey?: string }[];
+  variants: {
+    id: string;
+    name: string;
+    nameKey?: string;
+    /** COMMON | MASTERCRAFTED | ARTIFICER | RELIC | HEROIC; null for promo skins. */
+    tier: string | null;
+    stats: Record<string, number | string | boolean>;
+  }[];
   tiers: WeaponTier[];
   heroic: (Perk & { variant: string })[];
 }
 
 export interface WeaponsFile {
+  statLabels: Record<string, string>;
+  defenseLabels: Record<string, string>;
+  tierNames: Record<string, string>;
   weapons: Weapon[];
 }
 

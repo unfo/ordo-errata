@@ -31,6 +31,7 @@ MASTERY_SKILLS = "ssl/main/user/mastery/mastery_skills_library.sso"
 ARMORY_ORDER = "ssl/main/user/mastery/ui_armory_ordered_mastery_library.sso"
 UI_SKILLS = "ssl/player/perks/ui/ui_skills_library.sso"
 WEAPON_PERKS = "ssl/main/user/progression/weapons_mastery/perks/weapon_perks_progression_library.sso"
+WEAPON_MASTERY = "ssl/main/user/progression/weapons_mastery/weapon_mastery_progression_library.sso"
 WEAPON_HEROIC = "ssl/main/user/progression/weapons_mastery/perks/weapon_heroic_perks_library.sso"
 UI_FIREARMS = "ssl/weapons/ui/ui_firearms_library.sso"
 UI_ABILITIES = "ssl/abilities/ui/ui_abilities_library.sso"
@@ -45,6 +46,34 @@ TIER_NAME_KEYS = {
     "RELIC": "UI_RARITY_RELIC",
 }
 TIER_FALLBACK = {"COMMON": "Standard-Issue"}
+
+# Weapon stat fields in ui_*_library versions -> UI_WEAPON_PARAMETER_<X>_NAME label keys.
+STAT_LABEL_KEYS = {
+    "firePower": "FIRE_POWER",
+    "accuracy": "ACCURACY",
+    "fireRate": "FIRE_RATE",
+    "reloadingSpeed": "RELOAD_SPEED",
+    "cooling": "COOLING",
+    "chargingSpeed": "CHARGING_SPEED",
+    "piercing": "PIERCING",
+    "range": "RANGE",
+    "strikePower": "STRIKE_POWER",
+    "strikeSpeed": "STRIKE_SPEED",
+    "control": "CONTROL",
+    "defense": "DEFENSE",
+}
+_PERK_POS = re.compile(r"_(\d+)(?:_(\d+))?(_sub)?$")
+
+
+def perk_position(perk_uid: str) -> dict:
+    """Weapon perk uids end in _<row>_<column>[_sub] (or _<row> in the first tier)."""
+    m = _PERK_POS.search(perk_uid)
+    if not m:
+        return {}
+    pos = {"row": int(m.group(1))}
+    if m.group(3):
+        pos["sub"] = True
+    return pos
 
 
 def unwrap(v):
@@ -220,22 +249,44 @@ class Builder:
             **{k: unwrap(v) for k, v in icon_keys.get("meleeWeaponIconKeysBinding", {}).items()},
         }
         switcher = switcher_textures(self.load(WEAPON_ICON_SWITCHER))
+        mastery_doc = self.load(WEAPON_MASTERY)
+        mastery = {**mastery_doc.get("firearmProgression", {}), **mastery_doc.get("meleeProgression", {})}
 
         out = []
         for wid, wdata in progression.items():
             ui = firearms.get(wid) or melee.get(wid) or {}
             kind = "melee" if wid in melee else "ranged"
+            prog = mastery.get(wid, {})
+            version_tier: dict[str, str] = {}
+            for tier_id, t in prog.get("tiers", {}).items():
+                for v in [t.get("baseVersion", {}), *t.get("subVersions", {}).values()]:
+                    if v.get("version"):
+                        version_tier[v["version"]] = tier_id
+            for v in prog.get("heroicVersions", {}).values():
+                if isinstance(v, dict) and v.get("version"):
+                    version_tier[v["version"]] = "HEROIC"
             variants = []
             for vid, v in sorted(ui.get("versions", {}).items()):
                 vkey = v.get("nameUid") or v.get("versionName")
-                variants.append({"id": vid, "name": self.text(vkey, wid) or vid, "nameKey": vkey})
+                stats = {k: v[k] for k in STAT_LABEL_KEYS if k in v}
+                if v.get("hasCoolingParameter"):
+                    stats["_venting"] = True
+                variants.append(
+                    {
+                        "id": vid,
+                        "name": self.text(vkey, wid) or vid,
+                        "nameKey": vkey,
+                        "tier": version_tier.get(vid),
+                        "stats": stats,
+                    }
+                )
             tiers = []
             for tier_id, tier in wdata.get("tiers", {}).items():
                 layers = []
                 for layer in tier.get("perkLayers", []):
                     row = []
                     for entry in layer:
-                        p = self.perk(entry["type"], entry["perkUid"])
+                        p = {**self.perk(entry["type"], entry["perkUid"]), **perk_position(entry["perkUid"])}
                         if entry.get("blockedByPerks"):
                             p["blockedBy"] = entry["blockedByPerks"]
                         if entry.get("unlocksPerks"):
@@ -246,6 +297,7 @@ class Builder:
                     {
                         "id": tier_id,
                         "name": self.s.get(TIER_NAME_KEYS.get(tier_id)) or TIER_FALLBACK.get(tier_id, tier_id.title()),
+                        "requiredExperience": prog.get("tiers", {}).get(tier_id, {}).get("requiredExperience", 0),
                         "layers": layers,
                     }
                 )
@@ -266,7 +318,10 @@ class Builder:
                     "heroic": heroic_perks,
                 }
             )
-        return {"weapons": out}
+        labels = {k: self.s.get(f"UI_WEAPON_PARAMETER_{v}_NAME") or k for k, v in STAT_LABEL_KEYS.items()}
+        defense = {d: self.s.get(f"UI_WEAPON_PARAMETER_DEFENSE_{d}_NAME") or d.title() for d in ("BLOCK", "BALANCED", "FENCING")}
+        tier_names = {**{t: self.s.get(k) or TIER_FALLBACK.get(t, t.title()) for t, k in TIER_NAME_KEYS.items()}, "HEROIC": self.s.get("UI_TIER_HEROIC") or "Heroic"}
+        return {"statLabels": labels, "defenseLabels": defense, "tierNames": tier_names, "weapons": out}
 
     # -- indexes and reports -----------------------------------------------
 

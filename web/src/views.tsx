@@ -32,6 +32,19 @@ function groupColumns(c: ClassData): Group[] {
   ];
 }
 
+function roman(n: number): string {
+  return ["", "I", "II", "III", "IV", "V", "VI"][n] ?? String(n);
+}
+
+function prestigePools(c: ClassData): [number, Perk[]][] {
+  const pools = new Map<number, Perk[]>();
+  for (const ps of c.pve.prestige) {
+    const rank = Number(ps.requires.replace(/\D/g, "")) || 1;
+    pools.set(rank, [...(pools.get(rank) ?? []), ...ps.perks.filter((p) => !p.noUi)]);
+  }
+  return [...pools.entries()].sort((a, b) => a[0] - b[0]);
+}
+
 function perkChanges(h: Highlights, p: Perk, mode: Mode) {
   return forMode(h.get(`perk:${p.id}`), mode);
 }
@@ -66,9 +79,23 @@ export function ClassView({
     />
   );
 
+  const ability = visible(cls.pve.base)[0];
   return (
     <div class="class-view">
       <div class="tree-area">
+        <header class="class-head">
+          <div class="class-emblem">
+            <Icon name={cls.icon} alt="" />
+          </div>
+          <div>
+            <h2 class="class-title">{cls.name}</h2>
+            {ability && (
+              <div class="class-ability">
+                Ability: <strong>{ability.name}</strong>
+              </div>
+            )}
+          </div>
+        </header>
         <section class="base-kit">
           <h2>{mode === "pve" ? "Class ability & base perks" : "PvP class kit"}</h2>
           <div class="tile-row">
@@ -87,7 +114,9 @@ export function ClassView({
                       <div class="perk-col" key={col.key}>
                         {col.slots.map((s) => (
                           <div class="perk-slot" key={s.level}>
-                            {visible(s.perks).map((p) => tile(p, g.shape, `${data.groups[g.id]} · unlocks at level ${s.level}`, s.level))}
+                            {visible(s.perks).map((p) =>
+                              tile(p, g.shape, `${data.groups[g.id]} · unlocks at level ${s.level} · pick one per column`, s.level),
+                            )}
                           </div>
                         ))}
                       </div>
@@ -99,11 +128,13 @@ export function ClassView({
 
             <section class="prestige">
               <h2>Prestige perks</h2>
-              <div class="tile-row">
-                {cls.pve.prestige.flatMap((ps) =>
-                  visible(ps.perks).map((p) => tile(p, "hex", `Prestige · requires ${ps.requires.replace("PRESTIGE_LEVEL_", "Prestige ")}`)),
-                )}
-              </div>
+              <p class="muted small">Four prestige slots (I–IV). Each slot is filled with one of these perks once its prestige rank is unlocked.</p>
+              {prestigePools(cls).map(([rank, perks]) => (
+                <div class="prestige-pool" key={rank}>
+                  <span class="roman">{roman(rank)}</span>
+                  <div class="tile-row">{perks.map((p) => tile(p, "hex", `Prestige perk · unlocked at prestige rank ${roman(rank)}`))}</div>
+                </div>
+              ))}
             </section>
           </>
         ) : (
@@ -189,86 +220,5 @@ export function WeaponList({
         </div>
       ))}
     </nav>
-  );
-}
-
-export function WeaponView({ weapon, mode, highlights }: { weapon: Weapon; mode: Mode; highlights: Highlights }) {
-  const [selected, setSelected] = useState<{ perk: Perk; ctx: string } | undefined>();
-  const weaponChanges = forMode(highlights.get(`weapon:${weapon.id}`), mode);
-  return (
-    <div class="class-view">
-      <div class="tree-area">
-        <header class="weapon-head">
-          <Icon class="weapon-hero" name={weapon.icon} alt="" />
-          <h2>{displayName(weapon, [])}</h2>
-        </header>
-        <ChangeList changes={weaponChanges} mode={mode} />
-
-        <section class="weapon-tree" aria-label="Weapon perk tree">
-          {weapon.tiers.map((t) => (
-            <div class="weapon-tier" key={t.id}>
-              <h3 class="group-head">{t.name}</h3>
-              {t.layers.map((layer, i) => (
-                <div class="tile-row" key={i}>
-                  {layer
-                    .filter((p) => !p.noUi)
-                    .map((p) => (
-                      <PerkTile
-                        key={p.id}
-                        perk={p}
-                        shape="square"
-                        selected={selected?.perk.id === p.id}
-                        changes={perkChanges(highlights, p, mode)}
-                        onSelect={(perk) => setSelected({ perk, ctx: `${t.name} perk` })}
-                      />
-                    ))}
-                </div>
-              ))}
-            </div>
-          ))}
-        </section>
-
-        {weapon.heroic.length > 0 && (
-          <section>
-            <h2>Heroic perks</h2>
-            <div class="tile-row">
-              {weapon.heroic.map((p) => (
-                <PerkTile
-                  key={p.id + p.variant}
-                  perk={p}
-                  shape="hex"
-                  selected={selected?.perk.id === p.id}
-                  changes={perkChanges(highlights, p, mode)}
-                  onSelect={(perk) =>
-                    setSelected({ perk, ctx: `Heroic · ${weapon.variants.find((v) => v.id === p.variant)?.name ?? p.variant}` })
-                  }
-                />
-              ))}
-            </div>
-          </section>
-        )}
-
-        <section>
-          <h2>Variants</h2>
-          <ul class="variants">
-            {weapon.variants.map((v) => {
-              const ch = forMode(highlights.get(`variant:${weapon.id}/${v.id}`), mode);
-              return (
-                <li key={v.id} class={ch ? `hl effect-${effectOf(ch)}` : ""}>
-                  {v.name}
-                  <ChangeList changes={ch} mode={mode} />
-                </li>
-              );
-            })}
-          </ul>
-        </section>
-      </div>
-      <PerkCard
-        perk={selected?.perk}
-        context={selected?.ctx}
-        changes={selected ? perkChanges(highlights, selected.perk, mode) : undefined}
-        mode={mode}
-      />
-    </div>
   );
 }
