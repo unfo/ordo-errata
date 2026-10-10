@@ -1,7 +1,8 @@
-import { useState } from "preact/hooks";
+import { useRef } from "preact/hooks";
 import type { ClassData, ClassesFile, Perk, Slot, Weapon } from "./data";
 import { forMode, type Highlights, type Mode } from "./changes";
-import { effectOf, ChangeList, Icon, PerkCard, PerkTile } from "./components";
+import { effectOf, ChangeList, Icon, PerkTile } from "./components";
+import { LeaderLines, PerkPanel, usePerkPanel } from "./perk-panel";
 
 type Shape = "hex" | "square";
 
@@ -60,8 +61,8 @@ export function ClassView({
   mode: Mode;
   highlights: Highlights;
 }) {
-  const [selected, setSelected] = useState<{ perk: Perk; ctx: string } | undefined>();
-  const select = (ctx: string) => (perk: Perk) => setSelected({ perk, ctx });
+  const panel = usePerkPanel();
+  const root = useRef<HTMLDivElement>(null);
   const visible = (perks: Perk[]) => perks.filter((p) => !p.noUi);
   // Base kits list some UI perks twice (e.g. the ability and its upgrade share a name).
   const uniqueByName = (perks: Perk[]) => perks.filter((p, i) => perks.findIndex((q) => q.name === p.name) === i);
@@ -73,15 +74,17 @@ export function ClassView({
       perk={p}
       shape={shape}
       level={level}
-      selected={selected?.perk.id === p.id}
+      selected={panel.hover?.perk.id === p.id}
+      pinned={panel.isPinned(p.id)}
       changes={perkChanges(highlights, p, mode)}
-      onSelect={select(ctx)}
+      onHover={(perk) => panel.setHover({ perk, ctx })}
+      onPin={(perk) => panel.togglePin({ perk, ctx })}
     />
   );
 
   const ability = visible(cls.pve.base)[0];
   return (
-    <div class="class-view">
+    <div class="class-view" ref={root}>
       <div class="tree-area">
         <header class="class-head">
           <div class="class-emblem">
@@ -147,12 +150,8 @@ export function ClassView({
           </section>
         )}
       </div>
-      <PerkCard
-        perk={selected?.perk}
-        context={selected?.ctx}
-        changes={selected ? perkChanges(highlights, selected.perk, mode) : undefined}
-        mode={mode}
-      />
+      <PerkPanel panel={panel} changesFor={(p) => perkChanges(highlights, p, mode)} mode={mode} />
+      <LeaderLines container={root} ids={panel.pins.map((p) => p.perk.id)} />
     </div>
   );
 }

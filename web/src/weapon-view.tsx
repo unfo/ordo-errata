@@ -1,7 +1,8 @@
-import { useState } from "preact/hooks";
+import { useRef, useState } from "preact/hooks";
 import type { Perk, Weapon, WeaponsFile } from "./data";
 import { forMode, type Highlights, type Mode } from "./changes";
-import { ChangeList, EntityChanges, effectOf, Icon, PerkCard, PerkTile } from "./components";
+import { ChangeList, EntityChanges, effectOf, Icon, PerkTile } from "./components";
+import { LeaderLines, PerkPanel, usePerkPanel } from "./perk-panel";
 import { displayName } from "./views";
 
 const TIER_ORDER = ["COMMON", "MASTERCRAFTED", "ARTIFICER", "RELIC", "HEROIC"] as const;
@@ -34,7 +35,8 @@ export function WeaponView({
   compareSiblings?: boolean;
 }) {
   const [tab, setTab] = useState<"tree" | "versions">("tree");
-  const [selected, setSelected] = useState<{ perk: Perk; ctx: string } | undefined>();
+  const panel = usePerkPanel();
+  const root = useRef<HTMLDivElement>(null);
   const variants = weapon.variants.filter((v) => v.tier);
   const [variantId, setVariantId] = useState<string | undefined>();
   const variant = variants.find((v) => v.id === variantId) ?? variants[0];
@@ -48,9 +50,11 @@ export function WeaponView({
       <PerkTile
         perk={p}
         shape={shape}
-        selected={selected?.perk.id === p.id}
+        selected={panel.hover?.perk.id === p.id}
+        pinned={panel.isPinned(p.id)}
         changes={perkChanges(highlights, p, mode)}
-        onSelect={(perk) => setSelected({ perk, ctx })}
+        onHover={(perk) => panel.setHover({ perk, ctx })}
+        onPin={(perk) => panel.togglePin({ perk, ctx })}
       />
     </span>
   );
@@ -58,7 +62,7 @@ export function WeaponView({
   const tiers = TIER_ORDER.filter((t) => t === "HEROIC" || weapon.tiers.some((x) => x.id === t));
 
   return (
-    <div class="class-view">
+    <div class="class-view" ref={root}>
       <div class="tree-area">
         <header class="weapon-head">
           <Icon class="weapon-hero" name={weapon.icon} alt="" />
@@ -154,7 +158,7 @@ export function WeaponView({
       </div>
 
       {tab === "tree" || !variant ? (
-        <PerkCard perk={selected?.perk} context={selected?.ctx} changes={selected ? perkChanges(highlights, selected.perk, mode) : undefined} mode={mode} />
+        <PerkPanel panel={panel} changesFor={(p) => perkChanges(highlights, p, mode)} mode={mode} />
       ) : (
         <aside class="card">
           <header class="card-head">
@@ -169,6 +173,7 @@ export function WeaponView({
           <ChangeList changes={variantChanges(variant.id)} mode={mode} />
         </aside>
       )}
+      {tab === "tree" && <LeaderLines container={root} ids={panel.pins.map((p) => p.perk.id)} />}
     </div>
   );
 }

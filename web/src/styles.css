@@ -1284,3 +1284,120 @@ select {
 .tip.old {
   color: var(--muted);
 }
+
+/* ---- pinned perk cards ---- */
+
+.class-view {
+  position: relative;
+}
+
+.perk-panel {
+  position: sticky;
+  top: 12px;
+  max-height: calc(100vh - 24px);
+  overflow-y: auto;
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  /* keep the scrollbar from covering cards */
+  padding-right: 2px;
+}
+
+.perk-panel .card {
+  position: static;
+}
+
+.pins-head {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 4px;
+}
+
+button.link {
+  background: none;
+  border: 0;
+  color: var(--gold);
+  cursor: pointer;
+  font-size: 0.75rem;
+  padding: 0;
+}
+
+.pinned {
+  position: relative;
+}
+
+.pinned .card {
+  border-top-color: #3b8fd6;
+}
+
+.unpin {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--line);
+  background: var(--panel-2);
+  color: var(--text);
+  cursor: pointer;
+  line-height: 1;
+}
+
+.unpin:hover {
+  border-color: var(--gold);
+}
+
+.tile-pin {
+  content: "";
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #3b8fd6;
+  border: 2px solid var(--bg);
+  z-index: 2;
+}
+
+.leader-lines {
+  position: absolute;
+  inset: 0 auto auto 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: visible;
+}
+
+.leader {
+  fill: none;
+  stroke: #3b8fd6;
+  stroke-width: 1.5;
+  stroke-dasharray: 4 3;
+  opacity: 0.85;
+}
+
+.leader-dot {
+  fill: #3b8fd6;
+}
+
+@media (max-width: 900px) {
+  .perk-panel {
+    position: static;
+    max-height: none;
+  }
+}
+
+/* Tiles and the panel sit above the leader lines. */
+.class-view .tile,
+.class-view .perk-panel {
+  z-index: 1;
+}
+
+.class-view .perk-panel {
+  position: sticky;
+}

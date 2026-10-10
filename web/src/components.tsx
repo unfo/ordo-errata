@@ -241,31 +241,38 @@ export function PerkTile({
   shape,
   level,
   selected,
+  pinned,
   changes,
-  onSelect,
+  onHover,
+  onPin,
 }: {
   perk: Perk;
   shape: "hex" | "square";
   level?: number;
   selected?: boolean;
+  pinned?: boolean;
   changes?: Change[];
-  onSelect: (p: Perk) => void;
+  onHover: (p: Perk) => void;
+  onPin: (p: Perk) => void;
 }) {
   const effect = effectOf(changes);
   return (
     <button
       type="button"
-      class={`tile ${shape} ${selected ? "selected" : ""} ${effect ? `hl effect-${effect}` : ""} ${perk.textIssue ? "issue" : ""}`}
-      title={perk.name ?? perk.id}
-      onClick={() => onSelect(perk)}
-      onMouseEnter={() => onSelect(perk)}
-      onFocus={() => onSelect(perk)}
+      data-perk-id={perk.id}
+      aria-pressed={pinned}
+      class={`tile ${shape} ${selected ? "selected" : ""} ${pinned ? "pinned" : ""} ${effect ? `hl effect-${effect}` : ""} ${perk.textIssue ? "issue" : ""}`}
+      title={`${perk.name ?? perk.id}${pinned ? " (pinned, click to unpin)" : " (click to pin)"}`}
+      onClick={() => onPin(perk)}
+      onMouseEnter={() => onHover(perk)}
+      onFocus={() => onHover(perk)}
     >
       <span class="tile-face">
         <Icon name={perk.icon} alt="" />
       </span>
       {level !== undefined && <span class="tile-level">{level}</span>}
       {effect && <span class="tile-flag" aria-label={EFFECT_LABEL[effect]} />}
+      {pinned && <span class="tile-pin" aria-hidden="true" />}
     </button>
   );
 }
