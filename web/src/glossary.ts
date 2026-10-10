@@ -48,3 +48,8 @@ export function humanize(id: string): string {
   const words = id.includes("_") && id === id.toUpperCase() ? id.toLowerCase().split("_") : id.replace(/([a-z0-9])([A-Z])/g, "$1 $2").toLowerCase().split(/[\s_]+/);
   return words.map((w) => WORDS[w] ?? w).join(" ");
 }
+
+/** Stats where a lower number is better, so a decrease is a buff. */
+export function lowerIsBetter(item: string): boolean {
+  return /cooldown|time to charge|charge duration|spread|recoil|damage taken|heat|reload time|delay/i.test(item);
+}

@@ -87,6 +87,8 @@ export interface Line {
   pct?: number;
   /** Extra explanation, e.g. how a modifier stacks. */
   note?: string;
+  /** A displayed weapon stat (as opposed to a game-logic value). */
+  isStat?: boolean;
 }
 
 /** Which part of a weapon a value belongs to: a melee attack, a cartridge, ammo... */
@@ -115,7 +117,24 @@ function containerLabel(prefix: string): string {
 }
 
 /** One row per change; the type/applyType/bonus fields of a modifier become one row. */
-export function describeAll(changes: DiffChange[]): Line[] {
+export function describeAll(changes: DiffChange[], entityKey = ""): Line[] {
+  return sourceGroups(describeLines(changes), entityKey);
+}
+
+/**
+ * Perks and variants have two independent sources that Saber updates by hand: what the UI
+ * shows (tooltip text and its numbers, stat bars) and the game logic. Label rows by source so
+ * a tooltip-only or logic-only change stands out.
+ */
+function sourceGroups(lines: Line[], key: string): Line[] {
+  const kind = key.slice(0, key.indexOf(":"));
+  if (kind === "perk") return lines.map((l) => ({ ...l, group: l.group ?? "Tooltip" }));
+  if (kind === "perkType") return lines.map((l) => ({ ...l, group: l.group ?? "Game logic" }));
+  if (kind === "variant") return lines.map((l) => ({ ...l, group: l.group ?? (l.item === "Added" || l.item === "Removed" ? undefined : l.isStat ? "Shown stats" : "Game logic") }));
+  return lines;
+}
+
+function describeLines(changes: DiffChange[]): Line[] {
   const lines: Line[] = [];
   const mods = new Map<string, { type: string; prefix: string; mode: ChangeMode; fields: Record<string, DiffChange> }>();
   // A description that differs only in its numbers repeats the "Values" row; skip it.
@@ -134,7 +153,7 @@ export function describeAll(changes: DiffChange[]): Line[] {
       continue;
     }
     const group = c.kind === "value" ? groupOf(c.field!) : undefined;
-    lines.push({ text: describe(c), mode: changeMode(c), effect: effectOf(c), group, ...rowOf(c, group) });
+    lines.push({ text: describe(c), mode: changeMode(c), effect: effectOf(c), group, isStat: c.kind === "stat", ...rowOf(c, group) });
   }
   for (const g of mods.values()) {
     const val = (side: "old" | "new") => {
@@ -173,7 +192,7 @@ function rowOf(c: DiffChange, group?: string): Pick<Line, "item" | "old" | "new"
     case "moved":
       return { item: "Position", old: fmtValue(c.old), new: fmtValue(c.new) };
     case "field":
-      return { item: capitalize(c.field!), old: fmtValue(c.old), new: fmtValue(c.new) };
+      return { item: c.field === "values" ? "Numbers in the text" : capitalize(c.field!), old: fmtValue(c.old), new: fmtValue(c.new) };
     case "stat":
       return { item: humanize(c.field!), old: fmtValue(c.old), new: fmtValue(c.new) };
     case "value": {
@@ -237,10 +256,16 @@ export function prettyPath(path: string): string {
   const context = rest.slice(0, -1).filter((p) => /^[a-z][a-z_0-9]*$/.test(p) && !/^(auto|default_clip)$/.test(p));
   for (const [re, label] of FIELD_LABELS) {
     const m = path.match(re);
-    if (m) return [mode, ...context.slice(-1), typeof label === "string" ? label : label(m)].filter(Boolean).join(" · ");
+    if (m) return joinLabel(mode, [...context.slice(-1), typeof label === "string" ? label : label(m)]);
   }
   const keep = rest.filter((p, i) => i >= rest.length - 2 || /^[a-z_0-9]+$/.test(p));
-  return [mode, ...keep.map(humanizeSegment)].filter(Boolean).join(" · ");
+  return joinLabel(mode, keep.map(humanizeSegment));
+}
+
+/** "cooldown · cooldown (s)" -> "cooldown (s)": drop a segment the next one already starts with. */
+function joinLabel(mode: string | undefined, words: string[]): string {
+  const deduped = words.filter((w, i) => !(i < words.length - 1 && words[i + 1].startsWith(w)));
+  return [mode, ...deduped].filter(Boolean).join(" · ");
 }
 
 /** "permanentModifiers[FIREARM_FIRE_RATE]" -> "permanent modifiers (rate of fire)" */
@@ -256,7 +281,7 @@ export function diffHighlights(snap: Snapshot, diff: GameDiff): Highlights {
   const out: Highlights = new Map();
   const source = `Game data ${diff.from} → ${diff.to}`;
   for (const [key, changes] of Object.entries(diff.entities)) {
-    for (const [i, line] of describeAll(changes).entries()) {
+    for (const [i, line] of describeAll(changes, key).entries()) {
       const change: Change = {
         id: `${source}:${key}:${i}`,
         source,
@@ -321,7 +346,7 @@ export function DiffView({
   };
 
   const rows = Object.entries(diff.entities)
-    .map(([key, changes]) => ({ key, lines: describeAll(changes).filter((l) => l.mode === "both" || l.mode === mode), doc: documented(key) }))
+    .map(([key, changes]) => ({ key, lines: describeAll(changes, key).filter((l) => l.mode === "both" || l.mode === mode), doc: documented(key) }))
     .filter((r) => r.lines.length && (!onlyUndocumented || !r.doc));
 
   // The perk's own in-game description is often the best explanation of its raw values.

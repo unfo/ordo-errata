@@ -146,3 +146,13 @@ describe("diff modifier grouping", async () => {
     ]);
   });
 });
+
+describe("value labels", async () => {
+  const { prettyPath } = await import("./diff-view");
+  const { lowerIsBetter } = await import("./glossary");
+  it("drops repeated segments and knows lower-is-better stats", () => {
+    expect(prettyPath("activationController.cooldown.cooldownTime")).toBe("cooldown (s)");
+    expect(lowerIsBetter("cooldown (s)")).toBe(true);
+    expect(lowerIsBetter("damage %")).toBe(false);
+  });
+});

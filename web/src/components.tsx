@@ -1,6 +1,7 @@
 import type { ComponentChildren } from "preact";
 import { iconUrl, type DescPart, type Perk } from "./data";
 import type { Change, ChangeRow, Mode } from "./changes";
+import { lowerIsBetter } from "./glossary";
 
 export function Icon({ name, alt, class: cls }: { name?: string | null; alt: string; class?: string }) {
   const src = iconUrl(name);
@@ -94,7 +95,9 @@ export function GroupedChanges({ rows }: { rows: (ChangeRow & { effect: string }
               </td>
               <td class={`old ${r.old.length > 24 ? "long" : ""}`}>{r.old}</td>
               <td class={`new ${r.new.length > 24 ? "long" : ""}`}>{r.new}</td>
-              {hasPct && <td class={`pct ${r.pct === undefined ? "" : r.pct > 0 ? "up" : "down"}`}>{pct(r.pct)}</td>}
+              {hasPct && (
+                <td class={`pct ${r.pct === undefined ? "" : (r.pct > 0) !== lowerIsBetter(r.item) ? "up" : "down"}`}>{pct(r.pct)}</td>
+              )}
             </tr>
           ))}
         </tbody>

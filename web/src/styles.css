@@ -1234,3 +1234,13 @@ select {
 .grouped-changes thead th.item-h {
   width: auto;
 }
+
+.card .grouped-changes th.part {
+  min-width: 0;
+  max-width: 6em;
+}
+
+.card .grouped-changes td,
+.card .grouped-changes thead th {
+  padding-right: 6px;
+}
