@@ -1,0 +1,13 @@
+[project]
+name = "sm2-patch-helper"
+version = "0.1.0"
+description = "Extract perk/weapon data and icons from a local Space Marine 2 install for the patch helper site"
+requires-python = ">=3.11"
+dependencies = ["pillow>=11"]
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[tool.pytest.ini_options]
+testpaths = ["extractor/tests"]
+pythonpath = ["extractor"]

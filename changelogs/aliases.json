@@ -1,0 +1,6 @@
+{
+  "_comment": "Patch-note names that differ from the in-game names. Keys are matched case/hyphen-insensitively. Values use the same refs as data/<build>/names_index.json.",
+  "heavy melta rifle": [{ "kind": "weapon", "weapon": "hwpn_support_heavy_meltagun" }],
+  "two handed thunder hammer": [{ "kind": "weapon", "weapon": "melee_thunder_hammer" }],
+  "ominissian axe": [{ "kind": "weapon", "weapon": "melee_power_halberd" }]
+}

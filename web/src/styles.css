@@ -1,0 +1,688 @@
+:root {
+  --bg: #0d0e10;
+  --panel: #16181b;
+  --panel-2: #1d2024;
+  --line: #2c3036;
+  --text: #e4e0d6;
+  --muted: #8d8a82;
+  --gold: #c9a24a;
+  --gold-dim: #6e5a2c;
+  --buff: #5fbf6a;
+  --nerf: #e0584f;
+  --fixed: #5aa7e0;
+  --replaced: #b07be0;
+  --added: #e7c35a;
+  --removed: #8a8f96;
+  --changed: #e0973f;
+  --majoris: #e0973f;
+  --extremis: #e0584f;
+  --terminus: #c45ae0;
+  --minoris: #b8b8b8;
+  --tile: 64px;
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 15px/1.45 "Segoe UI", system-ui, -apple-system, sans-serif;
+}
+
+a {
+  color: var(--gold);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  margin: 0 0 0.5em;
+}
+
+h2 {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.note {
+  max-width: 60ch;
+}
+
+.loading,
+.error {
+  padding: 2rem;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding: 16px;
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* ---- header ---- */
+
+.top {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px 16px;
+  padding: 12px 16px 0;
+  background: linear-gradient(#17191c, #101113);
+  border-bottom: 1px solid var(--line);
+}
+
+.brand h1 {
+  font-size: 1.1rem;
+  margin: 0;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+.brand span {
+  font-size: 0.75rem;
+}
+
+.controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+select {
+  background: var(--panel-2);
+  color: var(--text);
+  border: 1px solid var(--line);
+  padding: 4px 6px;
+}
+
+.mode-toggle {
+  display: inline-flex;
+  border: 1px solid var(--gold-dim);
+}
+
+.mode-toggle button {
+  background: transparent;
+  color: var(--muted);
+  border: 0;
+  padding: 4px 14px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.mode-toggle button.on {
+  background: var(--gold);
+  color: #111;
+}
+
+.tabs {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: 2px;
+  overflow-x: auto;
+}
+
+.tabs a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  color: var(--muted);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
+  position: relative;
+}
+
+.tabs a.on {
+  color: var(--text);
+  border-bottom-color: var(--gold);
+}
+
+.tab-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.tabs a.hl::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--hl);
+}
+
+/* ---- effect colours ---- */
+
+.effect-buff { --hl: var(--buff); }
+.effect-nerf { --hl: var(--nerf); }
+.effect-fixed { --hl: var(--fixed); }
+.effect-replaced { --hl: var(--replaced); }
+.effect-added { --hl: var(--added); }
+.effect-removed { --hl: var(--removed); }
+.effect-changed { --hl: var(--changed); }
+
+/* ---- class view ---- */
+
+.class-view {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 20px;
+  align-items: start;
+}
+
+.tree-area > section {
+  margin-bottom: 24px;
+}
+
+.tile-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.perk-tree {
+  display: flex;
+  gap: 18px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+}
+
+.perk-group {
+  border-top: 1px solid var(--gold-dim);
+  padding-top: 6px;
+}
+
+.group-head {
+  font-size: 0.75rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.group-cols {
+  display: flex;
+  gap: 6px;
+}
+
+.perk-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.group-core .perk-col:nth-child(even),
+.group-gear .perk-col:nth-child(even) {
+  /* Offset alternate hex columns like a honeycomb. */
+  margin-top: calc(var(--tile) / 2);
+}
+
+.perk-slot {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* ---- tiles ---- */
+
+.tile {
+  position: relative;
+  width: var(--tile);
+  height: var(--tile);
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  color: inherit;
+}
+
+.tile-face {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: var(--panel-2);
+  outline: 1px solid var(--line);
+}
+
+.tile.hex .tile-face {
+  clip-path: polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0% 50%);
+  outline: none;
+  background: linear-gradient(160deg, #262a2f, #191b1e);
+}
+
+.tile img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.tile:hover .tile-face,
+.tile:focus-visible .tile-face,
+.tile.selected .tile-face {
+  background: #34383e;
+}
+
+.tile.selected .tile-face {
+  outline: 2px solid var(--gold);
+}
+
+.tile.hex.selected::before,
+.tile.hex.hl::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  clip-path: polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0% 50%);
+  background: var(--hl, var(--gold));
+}
+
+.tile.square.hl .tile-face {
+  outline: 3px solid var(--hl);
+}
+
+.tile.hl .tile-face {
+  box-shadow: inset 0 0 18px color-mix(in srgb, var(--hl) 45%, transparent);
+}
+
+.tile.hex.hl .tile-face {
+  background: linear-gradient(160deg, color-mix(in srgb, var(--hl) 35%, #262a2f), #191b1e);
+}
+
+.tile-level {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  font-size: 0.65rem;
+  background: var(--bg);
+  color: var(--muted);
+  padding: 0 3px;
+  border: 1px solid var(--line);
+  z-index: 1;
+}
+
+.tile.issue::after {
+  content: "!";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--changed);
+  color: #111;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 16px;
+  z-index: 1;
+}
+
+.icon-missing {
+  display: inline-block;
+  width: 60%;
+  height: 60%;
+  border: 1px dashed var(--line);
+}
+
+/* ---- detail card ---- */
+
+.card {
+  position: sticky;
+  top: 12px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-top: 2px solid var(--gold);
+  padding: 14px;
+}
+
+.card.empty {
+  color: var(--muted);
+}
+
+.card-head {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-head h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.card-icon {
+  width: 56px;
+  height: 56px;
+  flex: none;
+}
+
+.card-context {
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.card-desc {
+  margin: 0 0 10px;
+}
+
+.val {
+  color: #fff;
+  font-weight: 600;
+}
+
+.val.pos {
+  color: var(--buff);
+}
+
+.val.neg {
+  color: var(--nerf);
+}
+
+.val.missing {
+  color: var(--changed);
+}
+
+.tag-majoris { color: var(--majoris); }
+.tag-extremis { color: var(--extremis); }
+.tag-terminus { color: var(--terminus); }
+.tag-minoris { color: var(--minoris); }
+
+.inline-icon {
+  width: 1.1em;
+  height: 1.1em;
+  vertical-align: -0.15em;
+  margin-right: 2px;
+}
+
+.warn {
+  overflow-wrap: anywhere;
+  font-size: 0.85rem;
+  color: var(--changed);
+  border-left: 2px solid var(--changed);
+  padding-left: 8px;
+}
+
+.card-debug {
+  margin-top: 10px;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.card-debug code {
+  display: block;
+  word-break: break-all;
+}
+
+/* ---- changes ---- */
+
+.change-list {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0;
+  display: grid;
+  gap: 8px;
+}
+
+.change-list li {
+  border-left: 3px solid var(--hl);
+  padding: 4px 8px;
+  background: var(--panel-2);
+  font-size: 0.9rem;
+}
+
+.change-list li.other-mode,
+.other-mode {
+  opacity: 0.45;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0 5px;
+  margin-right: 6px;
+  background: var(--hl, var(--line));
+  color: #111;
+}
+
+.badge.mode {
+  background: var(--line);
+  color: var(--text);
+  margin-left: 6px;
+}
+
+.change-src {
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+/* ---- weapons ---- */
+
+.weapons-page {
+  display: grid;
+  grid-template-columns: 260px minmax(0, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.weapon-list {
+  display: grid;
+  gap: 12px;
+}
+
+.weapon-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  color: var(--text);
+  border: 0;
+  border-left: 3px solid transparent;
+  padding: 4px 6px;
+  cursor: pointer;
+}
+
+.weapon-item:hover,
+.weapon-item.selected {
+  background: var(--panel-2);
+}
+
+.weapon-item.selected {
+  border-left-color: var(--gold);
+}
+
+.weapon-item.hl {
+  border-left-color: var(--hl);
+}
+
+.weapon-icon {
+  width: 72px;
+  height: 30px;
+  object-fit: contain;
+  flex: none;
+}
+
+.weapon-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.weapon-hero {
+  height: 64px;
+}
+
+.weapon-tree {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.weapon-tier {
+  display: grid;
+  gap: 10px;
+  align-content: start;
+  border-top: 1px solid var(--gold-dim);
+  padding-top: 6px;
+}
+
+.variants {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 4px;
+}
+
+.variants li {
+  padding: 2px 8px;
+  border-left: 3px solid transparent;
+}
+
+.variants li.hl {
+  border-left-color: var(--hl);
+}
+
+/* ---- patch notes ---- */
+
+.notes {
+  max-width: 900px;
+}
+
+.notes-head {
+  display: flex;
+  gap: 16px;
+  align-items: baseline;
+}
+
+.notes-head h2 {
+  font-size: 1.2rem;
+}
+
+.notes-section {
+  margin-top: 1.4em;
+  font-size: 0.8rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 2px;
+}
+
+.note-line {
+  padding: 4px 8px;
+  border-left: 3px solid transparent;
+  margin: 2px 0;
+}
+
+.note-line[class*="effect-"] {
+  border-left-color: var(--hl);
+  background: var(--panel);
+}
+
+.note-line.depth-1 {
+  margin-left: 20px;
+}
+
+.note-line.depth-2 {
+  margin-left: 40px;
+}
+
+.note-line.kind-note {
+  color: var(--muted);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  color: var(--text);
+  padding: 2px 8px 2px 2px;
+  cursor: pointer;
+}
+
+.chip:hover:not(:disabled) {
+  border-color: var(--gold);
+}
+
+.chip-icon {
+  height: 24px;
+  max-width: 64px;
+  object-fit: contain;
+}
+
+.unmatched {
+  margin-top: 2em;
+}
+
+/* ---- footer ---- */
+
+.foot {
+  border-top: 1px solid var(--line);
+  padding: 16px;
+  font-size: 0.72rem;
+  color: var(--muted);
+}
+
+.foot p {
+  max-width: 120ch;
+  margin: 0 auto 6px;
+}
+
+/* ---- narrow screens ---- */
+
+@media (max-width: 900px) {
+  .class-view,
+  .weapons-page {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .card {
+    position: static;
+  }
+
+  .top {
+    grid-template-columns: 1fr;
+  }
+
+  .controls {
+    justify-content: flex-start;
+  }
+}
