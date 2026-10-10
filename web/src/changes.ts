@@ -13,6 +13,12 @@ export interface Change {
   text: string;
   mode: ChangeMode;
   effect: Effect;
+  /** Set for changes found by comparing game data (as opposed to patch notes). */
+  fromData?: boolean;
+  /** Data changes: what part of the entity changed, e.g. an attack name ("Light 1 charged"). */
+  group?: string;
+  /** Data changes: the change text without the group prefix. */
+  detail?: string;
 }
 
 /** Changes keyed by entity: "class:SOLDIER", "perk:<perk id>", "weapon:<id>", "variant:<weapon>/<id>". */

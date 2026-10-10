@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "preact/hooks";
 import type { Perk, Snapshot } from "./data";
 import type { Change, ChangeMode, Effect, Highlights, Mode } from "./changes";
 import { hrefFor, labeler } from "./changelog";
-import { Desc, Icon } from "./components";
+import { Desc, GroupedChanges, Icon } from "./components";
 import { APPLY_TYPES, humanize } from "./glossary";
 
 export interface DiffChange {
@@ -77,6 +77,23 @@ export interface Line {
   text: string;
   mode: ChangeMode;
   effect: Effect;
+  group?: string;
+  detail?: string;
+}
+
+/** Which part of a weapon a value belongs to: a melee attack, a cartridge, ammo... */
+export function groupOf(path: string): string | undefined {
+  const strike = path.match(/strikeSettings\.([^.[]+)/);
+  if (strike) return capitalize(humanize(strike[1]).replace(/([a-z])(\d)/g, "$1 $2"));
+  const cart = path.match(/cartridgeDescriptions\.([^.[]+)/);
+  if (cart) return `Shot: ${humanize(cart[1])}`;
+  if (/clipsSettings|ammoSettings/.test(path)) return "Ammo";
+  if (/barrelDescriptions/.test(path)) return "Firing";
+  return undefined;
+}
+
+function capitalize(s: string): string {
+  return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
 const MODIFIER = /^(.*)\[([A-Z][A-Z0-9_]+)\]\.(type|applyType|bonus)$/;
@@ -98,7 +115,13 @@ export function describeAll(changes: DiffChange[]): Line[] {
       const g = mods.get(key) ?? { type: m[2], mode: changeMode(c), fields: {} };
       g.fields[m[3]] = c;
       mods.set(key, g);
-    } else lines.push({ text: describe(c), mode: changeMode(c), effect: effectOf(c) });
+    } else {
+      const group = c.kind === "value" ? groupOf(c.field!) : undefined;
+      const text = describe(c);
+      // The group already names the attack; describe the rest of the path without it.
+      const detail = group ? describe({ ...c, field: c.field!.replace(/(strikeSettings)\.[^.[]+\./, "$1.") }).replace(/^(PvE|PvP) · /, "") : undefined;
+      lines.push({ text, mode: changeMode(c), effect: effectOf(c), group, detail });
+    }
   }
   for (const g of mods.values()) {
     const val = (side: "old" | "new") => {
@@ -193,7 +216,17 @@ export function diffHighlights(snap: Snapshot, diff: GameDiff): Highlights {
   const source = `Game data ${diff.from} → ${diff.to}`;
   for (const [key, changes] of Object.entries(diff.entities)) {
     for (const [i, line] of describeAll(changes).entries()) {
-      const change: Change = { id: `${source}:${key}:${i}`, source, section: [], text: line.text, mode: line.mode, effect: line.effect };
+      const change: Change = {
+        id: `${source}:${key}:${i}`,
+        source,
+        section: [],
+        text: line.group ? `${line.group} · ${line.detail}` : line.text,
+        mode: line.mode,
+        effect: line.effect,
+        fromData: true,
+        group: line.group,
+        detail: line.detail,
+      };
       for (const k of entityKeys(snap, key, byType)) out.set(k, [...(out.get(k) ?? []), change]);
     }
   }
@@ -301,13 +334,7 @@ export function DiffView({
                 </p>
               ) : null;
             })()}
-            <ul>
-              {lines.map((l, i) => (
-                <li key={i} class={`effect-${l.effect}`}>
-                  {l.text}
-                </li>
-              ))}
-            </ul>
+            <GroupedChanges items={lines} />
           </div>
         );
       })}

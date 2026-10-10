@@ -57,6 +57,72 @@ export function ChangeList({ changes, mode }: { changes?: Change[]; mode: Mode }
   );
 }
 
+/** Changes laid out as a compact table, one row per group (e.g. per melee attack). */
+export function GroupedChanges({ items }: { items: { text: string; effect: string; group?: string; detail?: string }[] }) {
+  const groups = new Map<string, typeof items>();
+  for (const it of items) groups.set(it.group ?? "", [...(groups.get(it.group ?? "") ?? []), it]);
+  if (groups.size === 1 && groups.has(""))
+    return (
+      <ul class="plain-changes">
+        {items.map((it, i) => (
+          <li key={i} class={`effect-${it.effect}`}>
+            {it.text}
+          </li>
+        ))}
+      </ul>
+    );
+  return (
+    <table class="grouped-changes">
+      <tbody>
+        {[...groups.entries()].sort(([a], [b]) => (a === "" ? -1 : b === "" ? 1 : 0)).map(([g, list]) => (
+          <tr key={g}>
+            <th>{g || "General"}</th>
+            <td>
+              <ul>
+                {list.map((it, i) => (
+                  <li key={i} class={`effect-${it.effect}`}>
+                    {it.group ? it.detail : it.text}
+                  </li>
+                ))}
+              </ul>
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
+}
+
+/** Patch-note changes as cards, game-data changes as a grouped table (collapsed when long). */
+export function EntityChanges({ changes, mode }: { changes?: Change[]; mode: Mode }) {
+  if (!changes?.length) return null;
+  const notes = changes.filter((c) => !c.fromData);
+  const data = changes.filter((c) => c.fromData);
+  const groups = new Set(data.map((c) => c.group ?? "")).size;
+  return (
+    <section class="entity-changes">
+      {notes.length > 0 && (
+        <>
+          <h2>Patch notes</h2>
+          <ChangeList changes={notes} mode={mode} />
+        </>
+      )}
+      {data.length > 0 && (
+        <details class="data-changes" open={data.length <= 8}>
+          <summary>
+            <h2>
+              Game data · {data.length} change{data.length === 1 ? "" : "s"}
+              {groups > 1 ? ` in ${groups} parts` : ""}
+            </h2>
+            <span class="change-src">{data[0].source}</span>
+          </summary>
+          <GroupedChanges items={data.map((c) => ({ text: c.text, effect: c.effect, group: c.group, detail: c.detail }))} />
+        </details>
+      )}
+    </section>
+  );
+}
+
 export function PerkTile({
   perk,
   shape,
@@ -125,7 +191,7 @@ export function PerkCard({
           <span class="muted">{perk.textIssue.note}</span>
         </p>
       )}
-      <ChangeList changes={changes} mode={mode} />
+      <EntityChanges changes={changes} mode={mode} />
       <details class="card-debug">
         <summary>Game data ids</summary>
         <code>{perk.type}</code>

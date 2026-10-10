@@ -1079,3 +1079,74 @@ select {
   color: var(--muted);
   font-style: italic;
 }
+
+/* ---- grouped changes ---- */
+
+.entity-changes {
+  margin-top: 20px;
+}
+
+.data-changes summary {
+  cursor: pointer;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.data-changes summary h2 {
+  display: inline;
+  margin: 0;
+}
+
+.grouped-changes {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.88rem;
+}
+
+.grouped-changes th {
+  text-align: left;
+  vertical-align: top;
+  white-space: nowrap;
+  padding: 4px 12px 4px 0;
+  color: var(--gold);
+  font-weight: 600;
+  width: 1%;
+}
+
+.grouped-changes td {
+  padding: 4px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.grouped-changes tr:first-child td {
+  border-top: 1px solid var(--line);
+}
+
+.grouped-changes ul {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.grouped-changes li::marker {
+  color: var(--hl, var(--muted));
+}
+
+.card .entity-changes {
+  margin-top: 10px;
+}
+
+.card .entity-changes h2 {
+  font-size: 0.75rem;
+}
+
+.plain-changes {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 0.88rem;
+}
+
+.plain-changes li::marker {
+  color: var(--hl, var(--muted));
+}

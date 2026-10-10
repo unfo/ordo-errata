@@ -1,7 +1,7 @@
 import { useState } from "preact/hooks";
 import type { Perk, Weapon, WeaponsFile } from "./data";
 import { forMode, type Highlights, type Mode } from "./changes";
-import { ChangeList, effectOf, Icon, PerkCard, PerkTile } from "./components";
+import { ChangeList, EntityChanges, effectOf, Icon, PerkCard, PerkTile } from "./components";
 import { displayName } from "./views";
 
 const TIER_ORDER = ["COMMON", "MASTERCRAFTED", "ARTIFICER", "RELIC", "HEROIC"] as const;
@@ -71,8 +71,6 @@ export function WeaponView({
             )}
           </div>
         </header>
-        <ChangeList changes={weaponChanges} mode={mode} />
-
         <div class="wt-tabs" role="tablist">
           <button type="button" role="tab" aria-selected={tab === "versions"} class={`${tab === "versions" ? "on" : ""} ${versionsEffect ? `hl effect-${versionsEffect}` : ""}`} onClick={() => setTab("versions")}>
             Versions
@@ -151,6 +149,8 @@ export function WeaponView({
             })}
           </div>
         </div>
+
+        <EntityChanges changes={weaponChanges} mode={mode} />
       </div>
 
       {tab === "tree" || !variant ? (
