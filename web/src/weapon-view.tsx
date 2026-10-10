@@ -9,8 +9,6 @@ const TIER_ORDER = ["COMMON", "MASTERCRAFTED", "ARTIFICER", "RELIC", "HEROIC"] a
 /** Stats in the order the game lists them. Venting weapons show Venting Speed instead of reloading. */
 const RANGED_STATS = ["firePower", "accuracy", "fireRate", "reloadingSpeed", "cooling", "chargingSpeed", "piercing", "range"];
 const MELEE_STATS = ["strikePower", "strikeSpeed", "control", "defense"];
-// The game's bars fill at 10; higher values (heroics) just show a full bar.
-const STAT_MAX = 10;
 
 /** The game shows half points as "+" (9.5 -> "9+"). */
 export function statText(v: number): string {
@@ -164,7 +162,7 @@ export function WeaponView({
               </div>
             </div>
           </header>
-          <Stats file={file} weapon={weapon} stats={variant.stats} />
+          <TierStats file={file} weapon={weapon} variant={variant} />
           <ChangeList changes={variantChanges(variant.id)} mode={mode} />
         </aside>
       )}
@@ -172,8 +170,10 @@ export function WeaponView({
   );
 }
 
-function Stats({ file, weapon, stats }: { file: WeaponsFile; weapon: Weapon; stats: Record<string, number | string | boolean> }) {
-  const order = (weapon.kind === "melee" ? MELEE_STATS : RANGED_STATS).filter((k) => {
+type Variant = Weapon["variants"][number];
+
+function statKeys(weapon: Weapon, stats: Variant["stats"]): string[] {
+  return (weapon.kind === "melee" ? MELEE_STATS : RANGED_STATS).filter((k) => {
     if (!(k in stats)) return false;
     // Venting weapons show Venting Speed in place of Reloading Speed.
     if (k === "reloadingSpeed" && stats._venting) return false;
@@ -182,26 +182,53 @@ function Stats({ file, weapon, stats }: { file: WeaponsFile; weapon: Weapon; sta
     if (k === "piercing" && stats._venting) return false;
     return true;
   });
+}
+
+/**
+ * Stats of every variant in the selected variant's tier. The game's stat numbers are only
+ * comparable within one weapon's tier (tiers carry hidden damage modifiers, and other weapons
+ * have different hidden base values), so differences are shown only against same-tier siblings.
+ */
+function TierStats({ file, weapon, variant }: { file: WeaponsFile; weapon: Weapon; variant: Variant }) {
+  const siblings = weapon.variants.filter((v) => v.tier === variant.tier);
+  const keys = statKeys(weapon, variant.stats);
+  const fmt = (v: unknown) => (typeof v === "number" ? statText(v) : file.defenseLabels[String(v)] ?? String(v));
   return (
-    <dl class="stats">
-      {order.map((k) => {
-        const v = stats[k];
-        return (
-          <div class="stat" key={k}>
-            <dt>{file.statLabels[k] ?? k}</dt>
-            {typeof v === "number" ? (
-              <dd>
-                <span class="stat-num">{statText(v)}</span>
-                <span class="stat-bar">
-                  <span style={{ width: `${Math.min(100, (v / STAT_MAX) * 100)}%` }} />
-                </span>
-              </dd>
-            ) : (
-              <dd>{file.defenseLabels[String(v)] ?? String(v)}</dd>
-            )}
-          </div>
-        );
-      })}
-    </dl>
+    <>
+      <table class="tier-stats">
+        <thead>
+          <tr>
+            <th />
+            {siblings.map((v) => (
+              <th key={v.id} class={v.id === variant.id ? "sel" : ""}>
+                {v.name.replace(/^.* - /, "") || v.name}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {keys.map((k) => (
+            <tr key={k}>
+              <th>{file.statLabels[k] ?? k}</th>
+              {siblings.map((v) => {
+                const val = v.stats[k];
+                const base = variant.stats[k];
+                const d = typeof val === "number" && typeof base === "number" ? val - base : 0;
+                return (
+                  <td key={v.id} class={v.id === variant.id ? "sel" : ""}>
+                    {fmt(val)}
+                    {v.id !== variant.id && d !== 0 && <span class={d > 0 ? "up" : "down"}>{d > 0 ? " ▲" : " ▼"}{statText(Math.abs(d))}</span>}
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+      <p class="muted small">
+        Stat numbers are only comparable between variants of the same tier of this weapon. Each tier has hidden damage
+        modifiers, and other weapons have different hidden base values.
+      </p>
+    </>
   );
 }

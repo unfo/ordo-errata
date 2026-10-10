@@ -1,0 +1,8 @@
+{
+  "_comment": "Crop boxes [left, top, right, bottom] in the centred 2550x1440 UI area of a 1440p screenshot. tools/crop.py scales them to other resolutions.",
+  "ui": [0, 0, 2550, 1440],
+  "class_perks": [90, 150, 1740, 1220],
+  "prestige": [110, 190, 1730, 1220],
+  "weapon_stats": [110, 280, 1000, 690],
+  "weapon_tree": [110, 840, 2440, 1290]
+}

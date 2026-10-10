@@ -1003,3 +1003,43 @@ select {
   font-size: 1.3rem;
   letter-spacing: 0.15em;
 }
+
+.tier-stats {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+}
+
+.tier-stats th,
+.tier-stats td {
+  padding: 3px 6px;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+
+.tier-stats thead th {
+  font-weight: 600;
+  color: var(--muted);
+  vertical-align: bottom;
+}
+
+.tier-stats tbody th {
+  font-weight: normal;
+  color: var(--muted);
+}
+
+.tier-stats .sel {
+  background: #173049;
+  color: var(--text);
+}
+
+.tier-stats .up {
+  color: var(--buff);
+  font-size: 0.75rem;
+}
+
+.tier-stats .down {
+  color: var(--nerf);
+  font-size: 0.75rem;
+}
