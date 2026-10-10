@@ -24,11 +24,14 @@ export function WeaponView({
   weapon,
   mode,
   highlights,
+  compareSiblings = true,
 }: {
   file: WeaponsFile;
   weapon: Weapon;
   mode: Mode;
   highlights: Highlights;
+  /** Show ▲/▼ against same-tier variants. Off while a data diff is shown, where arrows would read as buffs/nerfs. */
+  compareSiblings?: boolean;
 }) {
   const [tab, setTab] = useState<"tree" | "versions">("tree");
   const [selected, setSelected] = useState<{ perk: Perk; ctx: string } | undefined>();
@@ -162,7 +165,7 @@ export function WeaponView({
               </div>
             </div>
           </header>
-          <TierStats file={file} weapon={weapon} variant={variant} />
+          <TierStats file={file} weapon={weapon} variant={variant} deltas={compareSiblings} />
           <ChangeList changes={variantChanges(variant.id)} mode={mode} />
         </aside>
       )}
@@ -189,7 +192,7 @@ function statKeys(weapon: Weapon, stats: Variant["stats"]): string[] {
  * comparable within one weapon's tier (tiers carry hidden damage modifiers, and other weapons
  * have different hidden base values), so differences are shown only against same-tier siblings.
  */
-function TierStats({ file, weapon, variant }: { file: WeaponsFile; weapon: Weapon; variant: Variant }) {
+function TierStats({ file, weapon, variant, deltas }: { file: WeaponsFile; weapon: Weapon; variant: Variant; deltas: boolean }) {
   const siblings = weapon.variants.filter((v) => v.tier === variant.tier);
   const keys = statKeys(weapon, variant.stats);
   const fmt = (v: unknown) => (typeof v === "number" ? statText(v) : file.defenseLabels[String(v)] ?? String(v));
@@ -217,7 +220,7 @@ function TierStats({ file, weapon, variant }: { file: WeaponsFile; weapon: Weapo
                 return (
                   <td key={v.id} class={v.id === variant.id ? "sel" : ""}>
                     {fmt(val)}
-                    {v.id !== variant.id && d !== 0 && <span class={d > 0 ? "up" : "down"}>{d > 0 ? " ▲" : " ▼"}{statText(Math.abs(d))}</span>}
+                    {deltas && v.id !== variant.id && d !== 0 && <span class={d > 0 ? "up" : "down"}>{d > 0 ? " ▲" : " ▼"}{statText(Math.abs(d))}</span>}
                   </td>
                 );
               })}

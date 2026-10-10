@@ -110,3 +110,16 @@ describe("diff path labels", async () => {
     ["activationController.delayedResetSec", "duration (s)"],
   ])("%s", (path, label) => expect(prettyPath(path)).toBe(label));
 });
+
+describe("diff modifier grouping", async () => {
+  const { describeAll } = await import("./diff-view");
+  it("folds type/applyType/bonus into one readable line", () => {
+    const base = "application.permanentModifiers[FIREARM_CHARGE_DURATION]";
+    const lines = describeAll([
+      { kind: "value", field: `${base}.applyType`, new: "PERCENT_SUM" },
+      { kind: "value", field: `${base}.bonus`, new: -10 },
+      { kind: "value", field: `${base}.type`, new: "FIREARM_CHARGE_DURATION" },
+    ]);
+    expect(lines).toEqual([{ text: "New modifier: time to charge a shot -10% (adds up with other % bonuses)", mode: "both", effect: "added" }]);
+  });
+});

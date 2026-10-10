@@ -2,7 +2,8 @@ import { useEffect, useMemo, useState } from "preact/hooks";
 import type { Perk, Snapshot } from "./data";
 import type { Change, ChangeMode, Effect, Highlights, Mode } from "./changes";
 import { hrefFor, labeler } from "./changelog";
-import { Icon } from "./components";
+import { Desc, Icon } from "./components";
+import { APPLY_TYPES, humanize } from "./glossary";
 
 export interface DiffChange {
   kind: "added" | "removed" | "field" | "moved" | "stat" | "value";
@@ -72,8 +73,59 @@ function effectOf(c: DiffChange): Effect {
   return "changed";
 }
 
+export interface Line {
+  text: string;
+  mode: ChangeMode;
+  effect: Effect;
+}
+
+const MODIFIER = /^(.*)\[([A-Z][A-Z0-9_]+)\]\.(type|applyType|bonus)$/;
+
+/** One readable line per change; the type/applyType/bonus fields of a modifier become one line. */
+export function describeAll(changes: DiffChange[]): Line[] {
+  const lines: Line[] = [];
+  const mods = new Map<string, { type: string; mode: ChangeMode; fields: Record<string, DiffChange> }>();
+  // A description that differs only in its numbers repeats the "Values" line; skip it.
+  const numbersOnly = (c: DiffChange) => {
+    const strip = (x: unknown) => String(x ?? "").replace(/\d+(\.\d+)?/g, "#");
+    return c.kind === "field" && c.field === "description" && strip(c.old) === strip(c.new) && changes.some((o) => o.field === "values");
+  };
+  for (const c of changes) {
+    if (numbersOnly(c)) continue;
+    const m = c.kind === "value" ? c.field!.match(MODIFIER) : null;
+    if (m) {
+      const key = `${m[1]}[${m[2]}]`;
+      const g = mods.get(key) ?? { type: m[2], mode: changeMode(c), fields: {} };
+      g.fields[m[3]] = c;
+      mods.set(key, g);
+    } else lines.push({ text: describe(c), mode: changeMode(c), effect: effectOf(c) });
+  }
+  for (const g of mods.values()) {
+    const val = (side: "old" | "new") => {
+      const bonus = g.fields.bonus?.[side] ?? (g.fields.bonus ? undefined : null);
+      const apply = String(g.fields.applyType?.[side] ?? "");
+      if (bonus === undefined || bonus === null) return undefined;
+      const a = APPLY_TYPES[apply];
+      const n = Number(bonus);
+      return `${n > 0 && a?.unit ? "+" : ""}${n}${a?.unit ?? ""}`;
+    };
+    const old = val("old");
+    const nu = val("new");
+    const apply = String(g.fields.applyType?.new ?? g.fields.applyType?.old ?? "");
+    const note = APPLY_TYPES[apply]?.note;
+    const name = humanize(g.type);
+    let text: string;
+    if (old === undefined && nu !== undefined) text = `New modifier: ${name} ${nu}`;
+    else if (nu === undefined && old !== undefined) text = `Modifier removed: ${name} ${old}`;
+    else text = `${name}: ${old ?? "?"} → ${nu ?? "?"}`;
+    lines.push({ text: note ? `${text} (${note})` : text, mode: g.mode, effect: old === undefined ? "added" : nu === undefined ? "removed" : "changed" });
+  }
+  return lines;
+}
+
 export function describe(c: DiffChange): string {
-  const v = (x: unknown) => (Array.isArray(x) ? x.join(", ") : x === undefined || x === null ? "—" : String(x));
+  const v = (x: unknown) =>
+    Array.isArray(x) ? x.join(", ") : x === undefined || x === null ? "—" : typeof x === "string" && /^[A-Z][A-Z0-9_]+$/.test(x) ? humanize(x) : String(x);
   switch (c.kind) {
     case "added":
       return `Added${c.where ? ` (${c.where})` : ""}`;
@@ -124,7 +176,14 @@ export function prettyPath(path: string): string {
     if (m) return [mode, ...context.slice(-1), typeof label === "string" ? label : label(m)].filter(Boolean).join(" · ");
   }
   const keep = rest.filter((p, i) => i >= rest.length - 2 || /^[a-z_0-9]+$/.test(p));
-  return [mode, ...keep].filter(Boolean).join(" · ");
+  return [mode, ...keep.map(humanizeSegment)].filter(Boolean).join(" · ");
+}
+
+/** "permanentModifiers[FIREARM_FIRE_RATE]" -> "permanent modifiers (rate of fire)" */
+function humanizeSegment(seg: string): string {
+  const m = seg.match(/^(.*?)\[(.+)\]$/);
+  if (m) return `${humanize(m[1])} (${/^\d+$/.test(m[2]) ? `#${Number(m[2]) + 1}` : humanize(m[2])})`;
+  return humanize(seg);
 }
 
 /** Changes from a game data diff, shaped like patch-note changes so the trees can highlight them. */
@@ -133,8 +192,8 @@ export function diffHighlights(snap: Snapshot, diff: GameDiff): Highlights {
   const out: Highlights = new Map();
   const source = `Game data ${diff.from} → ${diff.to}`;
   for (const [key, changes] of Object.entries(diff.entities)) {
-    for (const [i, c] of changes.entries()) {
-      const change: Change = { id: `${source}:${key}:${i}`, source, section: [], text: describe(c), mode: changeMode(c), effect: effectOf(c) };
+    for (const [i, line] of describeAll(changes).entries()) {
+      const change: Change = { id: `${source}:${key}:${i}`, source, section: [], text: line.text, mode: line.mode, effect: line.effect };
       for (const k of entityKeys(snap, key, byType)) out.set(k, [...(out.get(k) ?? []), change]);
     }
   }
@@ -189,8 +248,15 @@ export function DiffView({
   };
 
   const rows = Object.entries(diff.entities)
-    .map(([key, changes]) => ({ key, changes: changes.filter((c) => changeMode(c) === "both" || changeMode(c) === mode), doc: documented(key) }))
-    .filter((r) => r.changes.length && (!onlyUndocumented || !r.doc));
+    .map(([key, changes]) => ({ key, lines: describeAll(changes).filter((l) => l.mode === "both" || l.mode === mode), doc: documented(key) }))
+    .filter((r) => r.lines.length && (!onlyUndocumented || !r.doc));
+
+  // The perk's own in-game description is often the best explanation of its raw values.
+  const perkFor = (key: string): Perk | undefined => {
+    if (key.startsWith("perkType:")) return byType.get(key.slice(9))?.[0];
+    if (key.startsWith("perk:")) for (const ps of byType.values()) for (const p of ps) if (p.id === key.slice(5)) return p;
+    return undefined;
+  };
 
   const labelFor = (key: string) => {
     if (key.startsWith("perkType:")) {
@@ -217,7 +283,7 @@ export function DiffView({
         {rows.length} changed items ({mode.toUpperCase()} view). Items marked <span class="badge doc">in notes</span> are mentioned in the selected patch
         notes; the rest are <span class="badge undoc">not in notes</span>.
       </p>
-      {rows.map(({ key, changes, doc }) => {
+      {rows.map(({ key, lines, doc }) => {
         const l = labelFor(key);
         const href = hrefFor(snap, hrefKey(key));
         return (
@@ -227,10 +293,18 @@ export function DiffView({
               {l.label}
             </button>
             <span class={`badge ${doc ? "doc" : "undoc"}`}>{doc ? "in notes" : "not in notes"}</span>
+            {(() => {
+              const p = perkFor(key);
+              return p?.desc ? (
+                <p class="diff-desc">
+                  <Desc parts={p.desc.parts} />
+                </p>
+              ) : null;
+            })()}
             <ul>
-              {changes.map((c, i) => (
-                <li key={i} class={`effect-${effectOf(c)}`}>
-                  {describe(c)}
+              {lines.map((l, i) => (
+                <li key={i} class={`effect-${l.effect}`}>
+                  {l.text}
                 </li>
               ))}
             </ul>

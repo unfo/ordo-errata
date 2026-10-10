@@ -149,7 +149,7 @@ export function App() {
         {route.page === "weapon" && (
           <div class="weapons-page">
             <WeaponList weapons={weapons} current={weapon?.id} mode={mode} highlights={hl} onPick={(id) => go(`#/weapon/${id}`)} />
-            {weapon ? <WeaponView key={weapon.id} file={snap.weapons} weapon={weapon} mode={mode} highlights={hl} /> : <p class="muted note">Pick a weapon.</p>}
+            {weapon ? <WeaponView key={weapon.id} file={snap.weapons} weapon={weapon} mode={mode} highlights={hl} compareSiblings={!diff} /> : <p class="muted note">Pick a weapon.</p>}
           </div>
         )}
       </main>

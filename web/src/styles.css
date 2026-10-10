@@ -1072,3 +1072,10 @@ select {
   background: var(--changed);
   margin-left: 8px;
 }
+
+.diff-desc {
+  margin: 6px 0 0;
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-style: italic;
+}
