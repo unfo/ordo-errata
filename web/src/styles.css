@@ -1150,3 +1150,87 @@ select {
 .plain-changes li::marker {
   color: var(--hl, var(--muted));
 }
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.grouped-changes thead th {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-weight: 600;
+  padding: 4px 10px 4px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.grouped-changes td {
+  padding: 4px 10px 4px 0;
+  vertical-align: top;
+}
+
+.grouped-changes td.old {
+  color: var(--muted);
+}
+
+.grouped-changes td.new {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.grouped-changes td.old,
+.grouped-changes td.new,
+.grouped-changes td.pct {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.grouped-changes td.pct.up {
+  color: var(--buff);
+}
+
+.grouped-changes td.pct.down {
+  color: var(--nerf);
+}
+
+.grouped-changes td.item {
+  border-left: 3px solid var(--hl, transparent);
+  padding-left: 8px;
+}
+
+.grouped-changes th.part {
+  border-bottom: 1px solid var(--line);
+}
+
+.grouped-changes td.long {
+  white-space: normal;
+  min-width: 14em;
+}
+
+/* Let the Item column take the free width; the others size to content. */
+.grouped-changes thead th,
+.grouped-changes th.part,
+.grouped-changes td.old,
+.grouped-changes td.new,
+.grouped-changes td.pct {
+  width: 1%;
+}
+
+.grouped-changes th.part {
+  white-space: normal;
+  min-width: 10em;
+  max-width: 13em;
+}
+
+.grouped-changes thead th:nth-last-child(-n + 3) {
+  white-space: nowrap;
+}
+
+.card .grouped-changes {
+  font-size: 0.8rem;
+}
+
+.grouped-changes thead th.item-h {
+  width: auto;
+}

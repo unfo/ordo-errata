@@ -20,7 +20,7 @@ const TERMS: Record<string, string> = {
   FIREARM_SCALE_SPREAD: "spread",
   SCALE_RECOIL: "recoil",
   FIREARM_SWITCH_SPEED: "weapon switch speed",
-  healthDmgPercent: "damage (% of weapon damage)",
+  healthDmgPercent: "damage %",
   maxDamagedActors: "max enemies hit (cleave)",
   radiusScale: "radius multiplier",
   shouldForceHeavyHit: "always staggers (heavy hit)",

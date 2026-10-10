@@ -15,10 +15,18 @@ export interface Change {
   effect: Effect;
   /** Set for changes found by comparing game data (as opposed to patch notes). */
   fromData?: boolean;
-  /** Data changes: what part of the entity changed, e.g. an attack name ("Light 1 charged"). */
+  /** Data changes: table row (part, item, old, new). */
+  row?: ChangeRow;
+}
+
+export interface ChangeRow {
+  /** Part of the entity, e.g. a melee attack ("Light 1 charged"). */
   group?: string;
-  /** Data changes: the change text without the group prefix. */
-  detail?: string;
+  item: string;
+  old: string;
+  new: string;
+  pct?: number;
+  note?: string;
 }
 
 /** Changes keyed by entity: "class:SOLDIER", "perk:<perk id>", "weapon:<id>", "variant:<weapon>/<id>". */

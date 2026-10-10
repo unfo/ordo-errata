@@ -120,6 +120,29 @@ describe("diff modifier grouping", async () => {
       { kind: "value", field: `${base}.bonus`, new: -10 },
       { kind: "value", field: `${base}.type`, new: "FIREARM_CHARGE_DURATION" },
     ]);
-    expect(lines).toEqual([{ text: "New modifier: time to charge a shot -10% (adds up with other % bonuses)", mode: "both", effect: "added" }]);
+    expect(lines).toEqual([
+      {
+        text: "time to charge a shot (permanent bonus): — → -10% (adds up with other % bonuses)",
+        mode: "both",
+        effect: "added",
+        item: "time to charge a shot (permanent bonus)",
+        old: "—",
+        new: "-10%",
+        note: "adds up with other % bonuses",
+      },
+    ]);
+  });
+
+  it("tells temporary and permanent bonuses apart (Perfect Reprisal)", () => {
+    const lines = describeAll([
+      { kind: "value", field: "application.modifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE].bonus", old: 25 },
+      { kind: "value", field: "application.modifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE].applyType", old: "PERCENT_SUM" },
+      { kind: "value", field: "application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE].bonus", new: 25 },
+      { kind: "value", field: "application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE].applyType", new: "PERCENT_SUM" },
+    ]);
+    expect(lines.map((l) => [l.item, l.old, l.new])).toEqual([
+      ["melee damage dealt (temporary bonus)", "+25%", "—"],
+      ["melee damage dealt (permanent bonus)", "—", "+25%"],
+    ]);
   });
 });

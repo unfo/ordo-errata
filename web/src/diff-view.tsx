@@ -74,11 +74,19 @@ function effectOf(c: DiffChange): Effect {
 }
 
 export interface Line {
+  /** Flat one-line form, used where there is no table (e.g. tooltips). */
   text: string;
   mode: ChangeMode;
   effect: Effect;
+  /** Part of the entity, e.g. a melee attack. */
   group?: string;
-  detail?: string;
+  /** What changed, for the table's Item column. */
+  item: string;
+  old: string;
+  new: string;
+  pct?: number;
+  /** Extra explanation, e.g. how a modifier stacks. */
+  note?: string;
 }
 
 /** Which part of a weapon a value belongs to: a melee attack, a cartridge, ammo... */
@@ -98,11 +106,19 @@ function capitalize(s: string): string {
 
 const MODIFIER = /^(.*)\[([A-Z][A-Z0-9_]+)\]\.(type|applyType|bonus)$/;
 
-/** One readable line per change; the type/applyType/bonus fields of a modifier become one line. */
+/** "permanentModifiers" -> "permanent bonus" */
+function containerLabel(prefix: string): string {
+  const last = prefix.split(".").pop()!.replace(/\[.*$/, "");
+  if (last === "permanentModifiers") return "permanent bonus";
+  if (last === "modifiers") return "temporary bonus";
+  return humanize(last);
+}
+
+/** One row per change; the type/applyType/bonus fields of a modifier become one row. */
 export function describeAll(changes: DiffChange[]): Line[] {
   const lines: Line[] = [];
-  const mods = new Map<string, { type: string; mode: ChangeMode; fields: Record<string, DiffChange> }>();
-  // A description that differs only in its numbers repeats the "Values" line; skip it.
+  const mods = new Map<string, { type: string; prefix: string; mode: ChangeMode; fields: Record<string, DiffChange> }>();
+  // A description that differs only in its numbers repeats the "Values" row; skip it.
   const numbersOnly = (c: DiffChange) => {
     const strip = (x: unknown) => String(x ?? "").replace(/\d+(\.\d+)?/g, "#");
     return c.kind === "field" && c.field === "description" && strip(c.old) === strip(c.new) && changes.some((o) => o.field === "values");
@@ -112,23 +128,19 @@ export function describeAll(changes: DiffChange[]): Line[] {
     const m = c.kind === "value" ? c.field!.match(MODIFIER) : null;
     if (m) {
       const key = `${m[1]}[${m[2]}]`;
-      const g = mods.get(key) ?? { type: m[2], mode: changeMode(c), fields: {} };
+      const g = mods.get(key) ?? { type: m[2], prefix: m[1], mode: changeMode(c), fields: {} };
       g.fields[m[3]] = c;
       mods.set(key, g);
-    } else {
-      const group = c.kind === "value" ? groupOf(c.field!) : undefined;
-      const text = describe(c);
-      // The group already names the attack; describe the rest of the path without it.
-      const detail = group ? describe({ ...c, field: c.field!.replace(/(strikeSettings)\.[^.[]+\./, "$1.") }).replace(/^(PvE|PvP) · /, "") : undefined;
-      lines.push({ text, mode: changeMode(c), effect: effectOf(c), group, detail });
+      continue;
     }
+    const group = c.kind === "value" ? groupOf(c.field!) : undefined;
+    lines.push({ text: describe(c), mode: changeMode(c), effect: effectOf(c), group, ...rowOf(c, group) });
   }
   for (const g of mods.values()) {
     const val = (side: "old" | "new") => {
-      const bonus = g.fields.bonus?.[side] ?? (g.fields.bonus ? undefined : null);
-      const apply = String(g.fields.applyType?.[side] ?? "");
+      const bonus = g.fields.bonus?.[side];
       if (bonus === undefined || bonus === null) return undefined;
-      const a = APPLY_TYPES[apply];
+      const a = APPLY_TYPES[String(g.fields.applyType?.[side] ?? "")];
       const n = Number(bonus);
       return `${n > 0 && a?.unit ? "+" : ""}${n}${a?.unit ?? ""}`;
     };
@@ -136,19 +148,48 @@ export function describeAll(changes: DiffChange[]): Line[] {
     const nu = val("new");
     const apply = String(g.fields.applyType?.new ?? g.fields.applyType?.old ?? "");
     const note = APPLY_TYPES[apply]?.note;
-    const name = humanize(g.type);
-    let text: string;
-    if (old === undefined && nu !== undefined) text = `New modifier: ${name} ${nu}`;
-    else if (nu === undefined && old !== undefined) text = `Modifier removed: ${name} ${old}`;
-    else text = `${name}: ${old ?? "?"} → ${nu ?? "?"}`;
-    lines.push({ text: note ? `${text} (${note})` : text, mode: g.mode, effect: old === undefined ? "added" : nu === undefined ? "removed" : "changed" });
+    const item = `${humanize(g.type)} (${containerLabel(g.prefix)})`;
+    const effect: Effect = old === undefined ? "added" : nu === undefined ? "removed" : "changed";
+    const text = `${item}: ${old ?? "—"} → ${nu ?? "—"}${note ? ` (${note})` : ""}`;
+    lines.push({ text, mode: g.mode, effect, item, old: old ?? "—", new: nu ?? "—", note });
   }
   return lines;
 }
 
+function fmtValue(x: unknown): string {
+  if (Array.isArray(x)) return x.join(", ");
+  if (x === undefined || x === null) return "—";
+  if (typeof x === "string" && /^[A-Z][A-Z0-9_]+$/.test(x)) return humanize(x);
+  return String(x);
+}
+
+/** Item / old / new for a single (non-modifier) change. */
+function rowOf(c: DiffChange, group?: string): Pick<Line, "item" | "old" | "new" | "pct"> {
+  switch (c.kind) {
+    case "added":
+      return { item: "Added", old: "—", new: c.where ?? c.name ?? "yes" };
+    case "removed":
+      return { item: "Removed", old: c.where ?? c.name ?? "yes", new: "—" };
+    case "moved":
+      return { item: "Position", old: fmtValue(c.old), new: fmtValue(c.new) };
+    case "field":
+      return { item: capitalize(c.field!), old: fmtValue(c.old), new: fmtValue(c.new) };
+    case "stat":
+      return { item: humanize(c.field!), old: fmtValue(c.old), new: fmtValue(c.new) };
+    case "value": {
+      // The group already names the attack; describe the rest of the path without it.
+      const path = group ? c.field!.replace(/(strikeSettings)\.[^.[]+\./, "$1.") : c.field!;
+      // "application" / "type" wrap every perk value; they add nothing for the reader.
+      const item = prettyPath(path)
+        .replace(/^(PvE|PvP) · /, "")
+        .replace(/^(application|type) · /, "");
+      return { item, old: fmtValue(c.old), new: fmtValue(c.new), pct: c.pct };
+    }
+  }
+}
+
 export function describe(c: DiffChange): string {
-  const v = (x: unknown) =>
-    Array.isArray(x) ? x.join(", ") : x === undefined || x === null ? "—" : typeof x === "string" && /^[A-Z][A-Z0-9_]+$/.test(x) ? humanize(x) : String(x);
+  const v = fmtValue;
   switch (c.kind) {
     case "added":
       return `Added${c.where ? ` (${c.where})` : ""}`;
@@ -220,12 +261,11 @@ export function diffHighlights(snap: Snapshot, diff: GameDiff): Highlights {
         id: `${source}:${key}:${i}`,
         source,
         section: [],
-        text: line.group ? `${line.group} · ${line.detail}` : line.text,
+        text: line.group ? `${line.group} · ${line.text.replace(/^(PvE|PvP) · /, "")}` : line.text,
         mode: line.mode,
         effect: line.effect,
         fromData: true,
-        group: line.group,
-        detail: line.detail,
+        row: { group: line.group, item: line.item, old: line.old, new: line.new, pct: line.pct, note: line.note },
       };
       for (const k of entityKeys(snap, key, byType)) out.set(k, [...(out.get(k) ?? []), change]);
     }
@@ -334,7 +374,7 @@ export function DiffView({
                 </p>
               ) : null;
             })()}
-            <GroupedChanges items={lines} />
+            <GroupedChanges rows={lines} />
           </div>
         );
       })}
