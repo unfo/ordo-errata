@@ -100,3 +100,13 @@ describe("coverage report", () => {
     }
   });
 });
+
+describe("diff path labels", async () => {
+  const { prettyPath } = await import("./diff-view");
+  it.each([
+    ["pve.cartridgeDescriptions.bolts.shotCreatorSettings.coeffDamage.spline[0]", "PvE · bolts · damage falloff point 1 distance (m)"],
+    ["pve.clipsSettings.default_clip.maxAmmo", "PvE · magazine size"],
+    ["pve.ammoSettings.typeData.ammo_shotgun.maxAmount", "PvE · ammo_shotgun · max ammo pool"],
+    ["activationController.delayedResetSec", "duration (s)"],
+  ])("%s", (path, label) => expect(prettyPath(path)).toBe(label));
+});

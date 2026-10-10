@@ -23,6 +23,7 @@ from sm2data import ssl  # noqa: E402
 from sm2data.pak import DEFAULT_GAME_DIR, PakIndex  # noqa: E402
 from sm2data.strings import StringTable, load_strings, render_description  # noqa: E402
 from sm2data.textures import TextureIndex, UnsupportedTexture  # noqa: E402
+from sm2data.values import extract_values  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -371,6 +372,23 @@ class Builder:
         }
 
 
+def all_class_perks(c: dict) -> list[dict]:
+    pve = c["pve"]
+    groups = [pve["base"], c["pvp"]["base"]]
+    groups += [s["perks"] for col in pve["columns"] for s in col["slots"]]
+    groups += [s["perks"] for s in pve["team"]] + [s["perks"] for s in pve["prestige"]]
+    return [p for g in groups for p in g]
+
+
+def all_weapon_perks(w: dict) -> list[dict]:
+    return [p for t in w["tiers"] for layer in t["layers"] for p in layer] + w["heroic"]
+
+
+def perk_types(classes: dict, weapons: dict) -> set[str]:
+    types = {p["type"] for c in classes["classes"] for p in all_class_perks(c)}
+    return types | {p["type"] for w in weapons["weapons"] for p in all_weapon_perks(w)}
+
+
 def switcher_textures(doc) -> dict[str, str]:
     """UI switcher assets map keys to bitmaps: key -> texture name."""
     found: dict[str, str] = {}
@@ -422,6 +440,7 @@ def main() -> int:
     write_json(out / "weapons.json", weapons)
     write_json(out / "names_index.json", b.names_index(classes, weapons))
     write_json(out / "loc_health.json", b.loc_health())
+    write_json(out / "values.json", extract_values(pak, [w["id"] for w in weapons["weapons"]], perk_types(classes, weapons)))
 
     failed = []
     for name in sorted(b.icons):

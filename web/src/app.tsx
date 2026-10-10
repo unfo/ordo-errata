@@ -1,16 +1,17 @@
-import { useEffect, useState } from "preact/hooks";
+import { useEffect, useMemo, useState } from "preact/hooks";
 import { loadSnapshot, type Snapshot } from "./data";
 import { emptyHighlights, forMode, type Mode } from "./changes";
 import { effectOf, Icon } from "./components";
 import { ClassView, WeaponList } from "./views";
 import { WeaponView } from "./weapon-view";
 import { ChangelogView, changelogs, useHighlights } from "./changelog-view";
+import { DiffView, diffHighlights, diffs, mergeHighlights, useDiff } from "./diff-view";
 
-type Route = { page: "class"; id?: string } | { page: "weapon"; id?: string } | { page: "changelog"; id?: string };
+type Route = { page: "class" | "weapon" | "changelog" | "diff"; id?: string };
 
 function parseRoute(hash: string): Route {
   const [, page, id] = hash.replace(/^#/, "").split("/");
-  if (page === "weapon" || page === "changelog") return { page, id: id && decodeURIComponent(id) };
+  if (page === "weapon" || page === "changelog" || page === "diff") return { page, id: id && decodeURIComponent(id) };
   return { page: "class", id: id && decodeURIComponent(id) };
 }
 
@@ -54,8 +55,11 @@ export function App() {
     loadSnapshot().then(setSnap, (e) => setError(String(e)));
   }, []);
 
+  const [diffId, setDiffId] = useStored<string>("sm2ph.diff", diffs[0]?.id ?? "");
   const { highlights, parsed } = useHighlights(snap, logId);
-  const hl = highlights ?? emptyHighlights;
+  const diff = useDiff(diffId);
+  const diffHl = useMemo(() => (snap && diff ? diffHighlights(snap, diff) : undefined), [snap, diff]);
+  const hl = useMemo(() => (diffHl ? mergeHighlights(highlights, diffHl) : highlights ?? emptyHighlights), [highlights, diffHl]);
 
   const go = (r: string) => (location.hash = r);
 
@@ -95,6 +99,19 @@ export function App() {
               ))}
             </select>
           </label>
+          {diffs.length > 0 && (
+            <label>
+              Game data{" "}
+              <select value={diffId} onChange={(e) => setDiffId((e.target as HTMLSelectElement).value)}>
+                <option value="">(none)</option>
+                {diffs.map((d) => (
+                  <option key={d.id} value={d.id}>
+                    {d.id.replace("..", " → ")}
+                  </option>
+                ))}
+              </select>
+            </label>
+          )}
           <div class="mode-toggle" role="radiogroup" aria-label="Game mode">
             {(["pve", "pvp"] as Mode[]).map((m) => (
               <button type="button" key={m} role="radio" aria-checked={mode === m} class={mode === m ? "on" : ""} onClick={() => setMode(m)}>
@@ -106,6 +123,9 @@ export function App() {
         <nav class="tabs" aria-label="Sections">
           <a href="#/changelog" class={route.page === "changelog" ? "on" : ""}>
             Patch notes
+          </a>
+          <a href="#/diff" class={route.page === "diff" ? "on" : ""}>
+            Data diff
           </a>
           {classes.map((c) => {
             const eff = classEffect(c.id);
@@ -124,6 +144,7 @@ export function App() {
 
       <main>
         {route.page === "changelog" && <ChangelogView snap={snap} parsed={parsed} mode={mode} go={go} />}
+        {route.page === "diff" && <DiffView snap={snap} diff={diff} notes={highlights} mode={mode} go={go} />}
         {cls && <ClassView data={snap.classes} cls={cls} mode={mode} highlights={hl} />}
         {route.page === "weapon" && (
           <div class="weapons-page">

@@ -1043,3 +1043,32 @@ select {
   color: var(--nerf);
   font-size: 0.75rem;
 }
+
+/* ---- data diff ---- */
+
+.diff-entity {
+  padding: 8px 10px;
+  margin: 6px 0;
+  background: var(--panel);
+  border-left: 3px solid var(--line);
+}
+
+.diff-entity ul {
+  margin: 6px 0 0;
+  padding-left: 18px;
+  font-size: 0.9rem;
+}
+
+.diff-entity li::marker {
+  color: var(--hl, var(--muted));
+}
+
+.badge.doc {
+  background: var(--fixed);
+  margin-left: 8px;
+}
+
+.badge.undoc {
+  background: var(--changed);
+  margin-left: 8px;
+}
