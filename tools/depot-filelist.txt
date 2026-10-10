@@ -1,0 +1,4 @@
+regex:^client_pc[\\/]root[\\/]paks[\\/]client[\\/]default[\\/]default\.pak$
+regex:^client_pc[\\/]root[\\/]paks[\\/]client[\\/]default[\\/]default_other\.pak$
+regex:^client_pc[\\/]root[\\/]paks[\\/]client[\\/]resources\.pak$
+regex:^server_pc[\\/]root[\\/]paks[\\/]server[\\/]default[\\/]default_other\.pak$
