@@ -76,6 +76,9 @@ PERK_FIELDS = {
 }
 
 
+TOOLTIP_FIELDS = ("description", "values")
+
+
 def diff_perks(old: dict, new: dict) -> dict[str, list[dict]]:
     a, b = perk_index(old), perk_index(new)
     out: dict[str, list[dict]] = {}
@@ -88,9 +91,14 @@ def diff_perks(old: dict, new: dict) -> dict[str, list[dict]]:
             continue
         changes = []
         for field, get in PERK_FIELDS.items():
+            if field in TOOLTIP_FIELDS:
+                continue
             ov, nv = get(a[pid]["perk"]), get(b[pid]["perk"])
             if ov != nv:
                 changes.append({"kind": "field", "field": field, "old": ov, "new": nv})
+        # Text and its numbers are shown as before/after tooltips rather than as table rows.
+        if any(PERK_FIELDS[f](a[pid]["perk"]) != PERK_FIELDS[f](b[pid]["perk"]) for f in TOOLTIP_FIELDS):
+            changes.append({"kind": "tooltip", "old": a[pid]["perk"].get("desc"), "new": b[pid]["perk"].get("desc")})
         if a[pid]["where"] != b[pid]["where"]:
             changes.append({"kind": "moved", "old": a[pid]["where"], "new": b[pid]["where"]})
         if changes:

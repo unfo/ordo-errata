@@ -1,3 +1,5 @@
+import type { DescPart } from "./data";
+
 // Changes attached to game entities. Filled by the changelog parser (changelog.ts).
 
 export type Mode = "pve" | "pvp";
@@ -17,6 +19,8 @@ export interface Change {
   fromData?: boolean;
   /** Data changes: table row (part, item, old, new). */
   row?: ChangeRow;
+  /** Data changes: before/after tooltip of a perk whose text or numbers changed. */
+  tooltip?: { old?: { parts: DescPart[] } | null; new?: { parts: DescPart[] } | null };
 }
 
 export interface ChangeRow {

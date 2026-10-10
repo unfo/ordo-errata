@@ -53,7 +53,10 @@ def test_perk_text_param_and_replacement(snaps):
     d = diffmod.diff_perks(old, new)
     assert d[f"perk:{removed['id']}"][0]["kind"] == "removed"
     assert d["perk:NewPerk"][0]["kind"] == "added"
-    assert d[f"perk:{perk['id']}"] == [{"kind": "field", "field": "values", "old": ["10%", "20"], "new": ["10%", "15"]}]
+    (change,) = d[f"perk:{perk['id']}"]
+    assert change["kind"] == "tooltip"
+    assert change["old"]["text"].endswith("for 20 seconds")
+    assert change["new"]["text"] == change["old"]["text"]  # only params were edited in this test, desc is pre-rendered
 
 
 def test_variant_stat_change(snaps):

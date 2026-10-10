@@ -17,10 +17,30 @@
     "new": "Whirling Strike"
    },
    {
-    "kind": "field",
-    "field": "description",
+    "kind": "tooltip",
     "old": null,
-    "new": "Aftershock is replaced by a powerful spinning attack. Hitting 5 or more enemies with a single attack grants 1 Adrenaline Surge stacks."
+    "new": {
+     "text": "Aftershock is replaced by a powerful spinning attack. Hitting 5 or more enemies with a single attack grants 1 Adrenaline Surge stacks.",
+     "parts": [
+      {
+       "t": "Aftershock is replaced by a powerful spinning attack. Hitting "
+      },
+      {
+       "v": "5",
+       "kind": null
+      },
+      {
+       "t": " or more enemies with a single attack grants "
+      },
+      {
+       "v": "1",
+       "kind": null
+      },
+      {
+       "t": " Adrenaline Surge stacks."
+      }
+     ]
+    }
    }
   ],
   "perk:PerkHeroicAutoBoltRifleDecreaseFirerate": [
@@ -32,22 +52,51 @@
   ],
   "perk:PerkHeroicStalkerBoltRifle": [
    {
-    "kind": "field",
-    "field": "description",
-    "old": "Landing 4 successful body shots in short succession creates a small Auspex Scan area. Cooldown is 8 seconds.",
-    "new": "Landing 3 successful body shots in short succession creates a small Auspex Scan area. Cooldown is 8 seconds."
-   },
-   {
-    "kind": "field",
-    "field": "values",
-    "old": [
-     "4",
-     "8"
-    ],
-    "new": [
-     "3",
-     "8"
-    ]
+    "kind": "tooltip",
+    "old": {
+     "text": "Landing 4 successful body shots in short succession creates a small Auspex Scan area. Cooldown is 8 seconds.",
+     "parts": [
+      {
+       "t": "Landing "
+      },
+      {
+       "v": "4",
+       "kind": null
+      },
+      {
+       "t": " successful body shots in short succession creates a small Auspex Scan area. Cooldown is "
+      },
+      {
+       "v": "8",
+       "kind": null
+      },
+      {
+       "t": " seconds."
+      }
+     ]
+    },
+    "new": {
+     "text": "Landing 3 successful body shots in short succession creates a small Auspex Scan area. Cooldown is 8 seconds.",
+     "parts": [
+      {
+       "t": "Landing "
+      },
+      {
+       "v": "3",
+       "kind": null
+      },
+      {
+       "t": " successful body shots in short succession creates a small Auspex Scan area. Cooldown is "
+      },
+      {
+       "v": "8",
+       "kind": null
+      },
+      {
+       "t": " seconds."
+      }
+     ]
+    }
    }
   ],
   "perk:PveEngineerServoArmItem": [
@@ -59,10 +108,37 @@
   ],
   "perk:PveEngineerTeamExtraEquipment": [
    {
-    "kind": "field",
-    "field": "description",
-    "old": "All Squad Members gain 1 additional Equipment (except Melta Bomb)",
-    "new": "All Squad Members gain 1 additional Equipment"
+    "kind": "tooltip",
+    "old": {
+     "text": "All Squad Members gain 1 additional Equipment (except Melta Bomb)",
+     "parts": [
+      {
+       "t": "All Squad Members gain "
+      },
+      {
+       "v": "1",
+       "kind": null
+      },
+      {
+       "t": " additional Equipment (except Melta Bomb)"
+      }
+     ]
+    },
+    "new": {
+     "text": "All Squad Members gain 1 additional Equipment",
+     "parts": [
+      {
+       "t": "All Squad Members gain "
+      },
+      {
+       "v": "1",
+       "kind": null
+      },
+      {
+       "t": " additional Equipment"
+      }
+     ]
+    }
    }
   ],
   "perk:PveMeleePowerAxeSlowAndDamageIncreaseByStacksAfterFinisher": [
@@ -81,15 +157,42 @@
    },
    {
     "kind": "field",
-    "field": "description",
-    "old": "Auspex Scan zone lasts 60% longer, and enemies marked by Auspex Scan take an additional 120% Damage, but they lose the mark when they leave the scanned area",
-    "new": "Auspex Scan applies a Gun Strike mark to the most dangerous enemy within range"
-   },
-   {
-    "kind": "field",
     "field": "icon",
     "old": "perk_soldier_22",
     "new": "perk_soldier_24_rework"
+   },
+   {
+    "kind": "tooltip",
+    "old": {
+     "text": "Auspex Scan zone lasts 60% longer, and enemies marked by Auspex Scan take an additional 120% Damage, but they lose the mark when they leave the scanned area",
+     "parts": [
+      {
+       "t": "Auspex Scan zone lasts "
+      },
+      {
+       "v": "60%",
+       "kind": null
+      },
+      {
+       "t": " longer, and enemies marked by Auspex Scan take an additional "
+      },
+      {
+       "v": "120%",
+       "kind": null
+      },
+      {
+       "t": " Damage, but they lose the mark when they leave the scanned area"
+      }
+     ]
+    },
+    "new": {
+     "text": "Auspex Scan applies a Gun Strike mark to the most dangerous enemy within range",
+     "parts": [
+      {
+       "t": "Auspex Scan applies a Gun Strike mark to the most dangerous enemy within range"
+      }
+     ]
+    }
    }
   ],
   "perk:PveSoldierAuspexBuffBonusDebuffDuration": [
@@ -101,28 +204,63 @@
    },
    {
     "kind": "field",
-    "field": "description",
-    "old": "Enemies marked by Auspex Scan take an additional 75% Damage, but the mark's Duration is reduced by 4 seconds (base: 8)",
-    "new": "While in the Auspex Scan area, you and your Squad deal 20% more Melee Damage and take 20% less Health Damage"
-   },
-   {
-    "kind": "field",
-    "field": "values",
-    "old": [
-     "75%",
-     "4",
-     "8"
-    ],
-    "new": [
-     "20%",
-     "20%"
-    ]
-   },
-   {
-    "kind": "field",
     "field": "icon",
     "old": "perk_soldier_21",
     "new": "perk_soldier_16_rework"
+   },
+   {
+    "kind": "tooltip",
+    "old": {
+     "text": "Enemies marked by Auspex Scan take an additional 75% Damage, but the mark's Duration is reduced by 4 seconds (base: 8)",
+     "parts": [
+      {
+       "t": "Enemies marked by Auspex Scan take an additional "
+      },
+      {
+       "v": "75%",
+       "kind": null
+      },
+      {
+       "t": " Damage, but the mark's Duration is reduced by "
+      },
+      {
+       "v": "4",
+       "kind": "NEGATIVE"
+      },
+      {
+       "t": " seconds (base: "
+      },
+      {
+       "v": "8",
+       "kind": null
+      },
+      {
+       "t": ")"
+      }
+     ]
+    },
+    "new": {
+     "text": "While in the Auspex Scan area, you and your Squad deal 20% more Melee Damage and take 20% less Health Damage",
+     "parts": [
+      {
+       "t": "While in the Auspex Scan area, you and your Squad deal "
+      },
+      {
+       "v": "20%",
+       "kind": null
+      },
+      {
+       "t": " more Melee Damage and take "
+      },
+      {
+       "v": "20%",
+       "kind": "POSITIVE"
+      },
+      {
+       "t": " less Health Damage"
+      }
+     ]
+    }
    }
   ],
   "perk:PveSoldierAuspexBuffBonusDebuffRadius": [
@@ -134,28 +272,60 @@
    },
    {
     "kind": "field",
-    "field": "description",
-    "old": "Enemies marked by Auspex Scan take an additional 75% Damage, but Auspex Scan's radius is reduced by 25%",
-    "new": "Enemies marked by Auspex Scan take 60% more Melee Damage and 20% more Gun Strike Damage (Base: 50%)"
-   },
-   {
-    "kind": "field",
-    "field": "values",
-    "old": [
-     "75%",
-     "25%"
-    ],
-    "new": [
-     "60%",
-     "20%",
-     "50%"
-    ]
-   },
-   {
-    "kind": "field",
     "field": "icon",
     "old": "perk_soldier_07",
     "new": "perk_soldier_23_rework"
+   },
+   {
+    "kind": "tooltip",
+    "old": {
+     "text": "Enemies marked by Auspex Scan take an additional 75% Damage, but Auspex Scan's radius is reduced by 25%",
+     "parts": [
+      {
+       "t": "Enemies marked by Auspex Scan take an additional "
+      },
+      {
+       "v": "75%",
+       "kind": null
+      },
+      {
+       "t": " Damage, but Auspex Scan's radius is reduced by "
+      },
+      {
+       "v": "25%",
+       "kind": "NEGATIVE"
+      }
+     ]
+    },
+    "new": {
+     "text": "Enemies marked by Auspex Scan take 60% more Melee Damage and 20% more Gun Strike Damage (Base: 50%)",
+     "parts": [
+      {
+       "t": "Enemies marked by Auspex Scan take "
+      },
+      {
+       "v": "60%",
+       "kind": null
+      },
+      {
+       "t": " more Melee Damage and "
+      },
+      {
+       "v": "20%",
+       "kind": "POSITIVE"
+      },
+      {
+       "t": " more Gun Strike Damage (Base: "
+      },
+      {
+       "v": "50%",
+       "kind": null
+      },
+      {
+       "t": ")"
+      }
+     ]
+    }
    }
   ],
   "perk:PveSoldierAuspexBuffDamageSensitivityFromEquipment": [
@@ -167,27 +337,56 @@
    },
    {
     "kind": "field",
-    "field": "description",
-    "old": "Enemies marked by Auspex Scan take 75% more Equipment Damage",
-    "new": "Auspex Scan activates around you. Its radius increases by 30% and it lasts 4 seconds longer. (Base Duration: 5 seconds)"
-   },
-   {
-    "kind": "field",
-    "field": "values",
-    "old": [
-     "75%"
-    ],
-    "new": [
-     "30%",
-     "4",
-     "5"
-    ]
-   },
-   {
-    "kind": "field",
     "field": "icon",
     "old": "perk_soldier_20",
     "new": "perk_soldier_22_rework"
+   },
+   {
+    "kind": "tooltip",
+    "old": {
+     "text": "Enemies marked by Auspex Scan take 75% more Equipment Damage",
+     "parts": [
+      {
+       "t": "Enemies marked by Auspex Scan take "
+      },
+      {
+       "v": "75%",
+       "kind": null
+      },
+      {
+       "t": " more Equipment Damage"
+      }
+     ]
+    },
+    "new": {
+     "text": "Auspex Scan activates around you. Its radius increases by 30% and it lasts 4 seconds longer. (Base Duration: 5 seconds)",
+     "parts": [
+      {
+       "t": "Auspex Scan activates around you. Its radius increases by "
+      },
+      {
+       "v": "30%",
+       "kind": null
+      },
+      {
+       "t": " and it lasts "
+      },
+      {
+       "v": "4",
+       "kind": null
+      },
+      {
+       "t": " seconds longer. (Base Duration: "
+      },
+      {
+       "v": "5",
+       "kind": null
+      },
+      {
+       "t": " seconds)"
+      }
+     ]
+    }
    }
   ],
   "perk:PveSoldierAuspexBuffMarkDurationIgnoreCommonAndFodder": [
@@ -199,27 +398,66 @@
    },
    {
     "kind": "field",
-    "field": "description",
-    "old": "The mark from Auspex Scan lasts 8 seconds longer (base: 8), but Auspex Scan ignores Minoris-level enemies",
-    "new": "Auspex Scan emits a single pulse instead of creating a Scan zone. It has 2 Charges, but the radius is reduced by 25%."
-   },
-   {
-    "kind": "field",
-    "field": "values",
-    "old": [
-     "8",
-     "8"
-    ],
-    "new": [
-     "2",
-     "25%"
-    ]
-   },
-   {
-    "kind": "field",
     "field": "icon",
     "old": "perk_soldier_05",
     "new": "perk_soldier_14_rework"
+   },
+   {
+    "kind": "tooltip",
+    "old": {
+     "text": "The mark from Auspex Scan lasts 8 seconds longer (base: 8), but Auspex Scan ignores Minoris-level enemies",
+     "parts": [
+      {
+       "t": "The mark from Auspex Scan lasts "
+      },
+      {
+       "v": "8",
+       "kind": null
+      },
+      {
+       "t": " seconds longer (base: "
+      },
+      {
+       "v": "8",
+       "kind": null
+      },
+      {
+       "t": "), but Auspex Scan ignores "
+      },
+      {
+       "enemy": "MINORIS"
+      },
+      {
+       "tag": "minoris",
+       "t": "Minoris"
+      },
+      {
+       "t": "-level enemies"
+      }
+     ]
+    },
+    "new": {
+     "text": "Auspex Scan emits a single pulse instead of creating a Scan zone. It has 2 Charges, but the radius is reduced by 25%.",
+     "parts": [
+      {
+       "t": "Auspex Scan emits a single pulse instead of creating a Scan zone. It has "
+      },
+      {
+       "v": "2",
+       "kind": null
+      },
+      {
+       "t": " Charges, but the radius is reduced by "
+      },
+      {
+       "v": "25%",
+       "kind": "NEGATIVE"
+      },
+      {
+       "t": "."
+      }
+     ]
+    }
    }
   ],
   "perk:PveSoldierBuffBolterPenetration": [
@@ -231,52 +469,155 @@
    },
    {
     "kind": "field",
-    "field": "description",
-    "old": "Bolt Weapons penetrate 1 more enemies. Non-Headshot Damage increased by 50%",
-    "new": "Non-Finisher Gun Strikes restore 1 Armour Segment"
-   },
-   {
-    "kind": "field",
-    "field": "values",
-    "old": [
-     "1",
-     "50%"
-    ],
-    "new": [
-     "1"
-    ]
-   },
-   {
-    "kind": "field",
     "field": "icon",
     "old": "perk_soldier_04",
     "new": "perk_raider_05"
+   },
+   {
+    "kind": "tooltip",
+    "old": {
+     "text": "Bolt Weapons penetrate 1 more enemies. Non-Headshot Damage increased by 50%",
+     "parts": [
+      {
+       "t": "Bolt Weapons penetrate "
+      },
+      {
+       "v": "1",
+       "kind": null
+      },
+      {
+       "t": " more enemies. Non-Headshot Damage increased by "
+      },
+      {
+       "v": "50%",
+       "kind": null
+      }
+     ]
+    },
+    "new": {
+     "text": "Non-Finisher Gun Strikes restore 1 Armour Segment",
+     "parts": [
+      {
+       "t": "Non-Finisher Gun Strikes restore "
+      },
+      {
+       "v": "1",
+       "kind": null
+      },
+      {
+       "t": " Armour Segment"
+      }
+     ]
+    }
    }
   ],
   "perk:PveSoldierBuffSecondaryDamageAfterSwitching": [
    {
-    "kind": "field",
-    "field": "description",
-    "old": "After switching Weapons, your Secondary Weapon does 25% more Damage. The effect lasts until reloading or switching back to your Primary Weapon.",
-    "new": "After switching Weapons, your Secondary Weapon deals 25% more Damage. The effect lasts until reloading or switching back to your Primary Weapon. If a Primary Weapon is equipped in the Secondary Weapon slot, it also benefits from this effect."
+    "kind": "tooltip",
+    "old": {
+     "text": "After switching Weapons, your Secondary Weapon does 25% more Damage. The effect lasts until reloading or switching back to your Primary Weapon.",
+     "parts": [
+      {
+       "t": "After switching Weapons, your Secondary Weapon does "
+      },
+      {
+       "v": "25%",
+       "kind": null
+      },
+      {
+       "t": " more Damage. The effect lasts until reloading or switching back to your Primary Weapon."
+      }
+     ]
+    },
+    "new": {
+     "text": "After switching Weapons, your Secondary Weapon deals 25% more Damage. The effect lasts until reloading or switching back to your Primary Weapon. If a Primary Weapon is equipped in the Secondary Weapon slot, it also benefits from this effect.",
+     "parts": [
+      {
+       "t": "After switching Weapons, your Secondary Weapon deals "
+      },
+      {
+       "v": "25%",
+       "kind": null
+      },
+      {
+       "t": " more Damage. The effect lasts until reloading or switching back to your Primary Weapon. If a Primary Weapon is equipped in the Secondary Weapon slot, it also benefits from this effect."
+      }
+     ]
+    }
    }
   ],
   "perk:PveSoldierHeadshotImmediatelyKillScannedTarget": [
    {
-    "kind": "field",
-    "field": "description",
-    "old": "A Headshot will instantly kill a Majoris- or 120Extremis-level enemy marked by Auspex Scan. Cooldown is {STRING3} seconds.",
-    "new": "Activating Auspex Scan weakens one Majoris- or 100%Extremis-level enemy within its range. All damage bonuses applied by Auspex Scan against that target are increased by {STRING3}"
-   },
-   {
-    "kind": "field",
-    "field": "values",
-    "old": [
-     "120"
-    ],
-    "new": [
-     "100%"
-    ]
+    "kind": "tooltip",
+    "old": {
+     "text": "A Headshot will instantly kill a Majoris- or 120Extremis-level enemy marked by Auspex Scan. Cooldown is {STRING3} seconds.",
+     "parts": [
+      {
+       "t": "A Headshot will instantly kill a "
+      },
+      {
+       "enemy": "MAJORIS"
+      },
+      {
+       "tag": "majoris",
+       "t": "Majoris"
+      },
+      {
+       "t": "- or "
+      },
+      {
+       "v": "120",
+       "kind": null
+      },
+      {
+       "tag": "extremis",
+       "t": "Extremis"
+      },
+      {
+       "t": "-level enemy marked by Auspex Scan. Cooldown is "
+      },
+      {
+       "v": "{STRING3}",
+       "missing": true
+      },
+      {
+       "t": " seconds."
+      }
+     ]
+    },
+    "new": {
+     "text": "Activating Auspex Scan weakens one Majoris- or 100%Extremis-level enemy within its range. All damage bonuses applied by Auspex Scan against that target are increased by {STRING3}",
+     "parts": [
+      {
+       "t": "Activating Auspex Scan weakens one "
+      },
+      {
+       "enemy": "MAJORIS"
+      },
+      {
+       "tag": "majoris",
+       "t": "Majoris"
+      },
+      {
+       "t": "- or "
+      },
+      {
+       "v": "100%",
+       "kind": null
+      },
+      {
+       "tag": "extremis",
+       "t": "Extremis"
+      },
+      {
+       "t": "-level enemy within its range. All damage bonuses applied by Auspex Scan against that target are increased by "
+      },
+      {
+       "v": "{STRING3}",
+       "missing": true
+      }
+     ]
+    }
    }
   ],
   "perk:PveSoldierIncreaseAbilityRegenWhenLowHP": [
@@ -288,26 +629,49 @@
    },
    {
     "kind": "field",
-    "field": "description",
-    "old": "When your Health is less than 25%, Ability Charge regenerates 15% faster",
-    "new": "Any unequipped Ranged Weapon reloads automatically after 10 seconds"
-   },
-   {
-    "kind": "field",
-    "field": "values",
-    "old": [
-     "25%",
-     "15%"
-    ],
-    "new": [
-     "10"
-    ]
-   },
-   {
-    "kind": "field",
     "field": "icon",
     "old": "prestige_perk_soldier_07",
     "new": "prestige_perk_soldier_01_rework"
+   },
+   {
+    "kind": "tooltip",
+    "old": {
+     "text": "When your Health is less than 25%, Ability Charge regenerates 15% faster",
+     "parts": [
+      {
+       "t": "When your Health is less than "
+      },
+      {
+       "v": "25%",
+       "kind": null
+      },
+      {
+       "t": ", Ability Charge regenerates "
+      },
+      {
+       "v": "15%",
+       "kind": null
+      },
+      {
+       "t": " faster"
+      }
+     ]
+    },
+    "new": {
+     "text": "Any unequipped Ranged Weapon reloads automatically after 10 seconds",
+     "parts": [
+      {
+       "t": "Any unequipped Ranged Weapon reloads automatically after "
+      },
+      {
+       "v": "10",
+       "kind": null
+      },
+      {
+       "t": " seconds"
+      }
+     ]
+    }
    }
   ],
   "perk:PveSoldierIncreaseMeleeDamageAgainstThreatClassDependsOnAmmo": [
@@ -319,25 +683,60 @@
    },
    {
     "kind": "field",
-    "field": "description",
-    "old": "When Auspex Scan is in cooldown, Melee Damage increases by 25%",
-    "new": "Scanning an Extremis- or 50%Terminus-level enemy restores {STRING3} Auspex Scan Charge"
-   },
-   {
-    "kind": "field",
-    "field": "values",
-    "old": [
-     "25%"
-    ],
-    "new": [
-     "50%"
-    ]
-   },
-   {
-    "kind": "field",
     "field": "icon",
     "old": "perk_soldier_16_upd",
     "new": "perk_soldier_06"
+   },
+   {
+    "kind": "tooltip",
+    "old": {
+     "text": "When Auspex Scan is in cooldown, Melee Damage increases by 25%",
+     "parts": [
+      {
+       "t": "When Auspex Scan is in cooldown, Melee Damage increases by "
+      },
+      {
+       "v": "25%",
+       "kind": null
+      }
+     ]
+    },
+    "new": {
+     "text": "Scanning an Extremis- or 50%Terminus-level enemy restores {STRING3} Auspex Scan Charge",
+     "parts": [
+      {
+       "t": "Scanning an "
+      },
+      {
+       "enemy": "EXTREMIS"
+      },
+      {
+       "tag": "extremis",
+       "t": "Extremis"
+      },
+      {
+       "t": "- or "
+      },
+      {
+       "v": "50%",
+       "kind": null
+      },
+      {
+       "tag": "terminus",
+       "t": "Terminus"
+      },
+      {
+       "t": "-level enemy restores "
+      },
+      {
+       "v": "{STRING3}",
+       "missing": true
+      },
+      {
+       "t": " Auspex Scan Charge"
+      }
+     ]
+    }
    }
   ],
   "perk:PveSoldierMuteEnemiesInsideAsupexZone": [
@@ -349,15 +748,35 @@
    },
    {
     "kind": "field",
-    "field": "description",
-    "old": "After marking an enemy with Auspex Scan, other enemies cannot call for reinforcement and automatically explode upon attempting to do so for 90 seconds",
-    "new": "Your Secondary Weapon is replaced with a Primary Bolt Rifle"
-   },
-   {
-    "kind": "field",
     "field": "icon",
     "old": "perk_soldier_23",
     "new": "perk_soldier_09_rework"
+   },
+   {
+    "kind": "tooltip",
+    "old": {
+     "text": "After marking an enemy with Auspex Scan, other enemies cannot call for reinforcement and automatically explode upon attempting to do so for 90 seconds",
+     "parts": [
+      {
+       "t": "After marking an enemy with Auspex Scan, other enemies cannot call for reinforcement and automatically explode upon attempting to do so for "
+      },
+      {
+       "v": "90",
+       "kind": null
+      },
+      {
+       "t": " seconds"
+      }
+     ]
+    },
+    "new": {
+     "text": "Your Secondary Weapon is replaced with a Primary Bolt Rifle",
+     "parts": [
+      {
+       "t": "Your Secondary Weapon is replaced with a Primary Bolt Rifle"
+      }
+     ]
+    }
    }
   ],
   "perk:PveSoldierReduceAuspexCooldownForTargetArchetype": [
@@ -369,25 +788,60 @@
    },
    {
     "kind": "field",
-    "field": "description",
-    "old": "Scanning an Extremis- or 50%Terminus-level enemy restores Auspex Scan's Charge by {STRING3}",
-    "new": "Auspex Scan recharges 25% faster"
-   },
-   {
-    "kind": "field",
-    "field": "values",
-    "old": [
-     "50%"
-    ],
-    "new": [
-     "25%"
-    ]
-   },
-   {
-    "kind": "field",
     "field": "icon",
     "old": "perk_soldier_06",
     "new": "perk_soldier_06_rework"
+   },
+   {
+    "kind": "tooltip",
+    "old": {
+     "text": "Scanning an Extremis- or 50%Terminus-level enemy restores Auspex Scan's Charge by {STRING3}",
+     "parts": [
+      {
+       "t": "Scanning an "
+      },
+      {
+       "enemy": "EXTREMIS"
+      },
+      {
+       "tag": "extremis",
+       "t": "Extremis"
+      },
+      {
+       "t": "- or "
+      },
+      {
+       "v": "50%",
+       "kind": null
+      },
+      {
+       "tag": "terminus",
+       "t": "Terminus"
+      },
+      {
+       "t": "-level enemy restores Auspex Scan's Charge by "
+      },
+      {
+       "v": "{STRING3}",
+       "missing": true
+      }
+     ]
+    },
+    "new": {
+     "text": "Auspex Scan recharges 25% faster",
+     "parts": [
+      {
+       "t": "Auspex Scan recharges "
+      },
+      {
+       "v": "25%",
+       "kind": null
+      },
+      {
+       "t": " faster"
+      }
+     ]
+    }
    }
   ],
   "perk:PveSoldierReduceRecoil": [
@@ -399,34 +853,112 @@
    },
    {
     "kind": "field",
-    "field": "description",
-    "old": "Weapon Spread and Recoil are reduced by 20%, and Ranged Damage against Terminus-level enemies is increased by 15%",
-    "new": "During a Gun Strike, you do not lose control upon taking Heavy Hits, cannot be knocked back, and take 30% less Damage"
-   },
-   {
-    "kind": "field",
-    "field": "values",
-    "old": [
-     "20%",
-     "15%"
-    ],
-    "new": [
-     "30%"
-    ]
-   },
-   {
-    "kind": "field",
     "field": "icon",
     "old": "perk_soldier_17",
     "new": "perk_soldier_12_rework"
+   },
+   {
+    "kind": "tooltip",
+    "old": {
+     "text": "Weapon Spread and Recoil are reduced by 20%, and Ranged Damage against Terminus-level enemies is increased by 15%",
+     "parts": [
+      {
+       "t": "Weapon Spread and Recoil are reduced by "
+      },
+      {
+       "v": "20%",
+       "kind": null
+      },
+      {
+       "t": ", and Ranged Damage against "
+      },
+      {
+       "enemy": "TERMINUS"
+      },
+      {
+       "tag": "terminus",
+       "t": "Terminus"
+      },
+      {
+       "t": "-level enemies is increased by "
+      },
+      {
+       "v": "15%",
+       "kind": null
+      }
+     ]
+    },
+    "new": {
+     "text": "During a Gun Strike, you do not lose control upon taking Heavy Hits, cannot be knocked back, and take 30% less Damage",
+     "parts": [
+      {
+       "t": "During a Gun Strike, you do not lose control upon taking Heavy Hits, cannot be knocked back, and take "
+      },
+      {
+       "v": "30%",
+       "kind": null
+      },
+      {
+       "t": " less Damage"
+      }
+     ]
+    }
    }
   ],
   "perk:PveSoldierReloadHolsterWeapon": [
    {
-    "kind": "field",
-    "field": "description",
-    "old": "Ability: Scanning reveals and marks enemies in the selected area for 8 seconds, making them more vulnerable. Starting Perk: Any unequipped Ranged Weapon reloads automatically after 10 seconds.",
-    "new": "Ability: Scanning reveals and marks enemies in the selected area for 10 seconds, making them more vulnerable. Starting Perk: Bolt Weapons penetrate 8 more enemies. Non-Headshot Damage increases by {STRING3}."
+    "kind": "tooltip",
+    "old": {
+     "text": "Ability: Scanning reveals and marks enemies in the selected area for 8 seconds, making them more vulnerable. Starting Perk: Any unequipped Ranged Weapon reloads automatically after 10 seconds.",
+     "parts": [
+      {
+       "t": "Ability: Scanning reveals and marks enemies in the selected area for "
+      },
+      {
+       "v": "8",
+       "kind": null
+      },
+      {
+       "t": " seconds, making them more vulnerable.\n Starting Perk: Any unequipped Ranged Weapon reloads automatically after "
+      },
+      {
+       "v": "10",
+       "kind": null
+      },
+      {
+       "t": " seconds."
+      }
+     ]
+    },
+    "new": {
+     "text": "Ability: Scanning reveals and marks enemies in the selected area for 10 seconds, making them more vulnerable.\\n Starting Perk: Bolt Weapons penetrate 8 more enemies. Non-Headshot Damage increases by {STRING3}.",
+     "parts": [
+      {
+       "t": "Ability: Scanning reveals and marks enemies in the selected area for "
+      },
+      {
+       "v": "10",
+       "kind": null
+      },
+      {
+       "t": " seconds, making them more vulnerable.\\n  Starting Perk: Bolt Weapons penetrate "
+      },
+      {
+       "v": "8",
+       "kind": null
+      },
+      {
+       "t": " more enemies. Non-Headshot Damage increases by "
+      },
+      {
+       "v": "{STRING3}",
+       "missing": true
+      },
+      {
+       "t": "."
+      }
+     ]
+    }
    }
   ],
   "perk:PveSoldierRestoreChargeForAuspexTargetsQuantity": [
@@ -438,69 +970,175 @@
    },
    {
     "kind": "field",
-    "field": "description",
-    "old": "Scanning any 10 enemies or 3 Majoris-level or higher enemies with one Auspex Scan restores Equipment Charge by 1",
-    "new": "Enemies marked by Auspex Scan take 40% more Ranged Damage (Base: 50%)"
-   },
-   {
-    "kind": "field",
-    "field": "values",
-    "old": [
-     "1",
-     "10",
-     "3"
-    ],
-    "new": [
-     "40%",
-     "50%"
-    ]
-   },
-   {
-    "kind": "field",
     "field": "icon",
     "old": "perk_soldier_11",
     "new": "perk_soldier_15_rework"
+   },
+   {
+    "kind": "tooltip",
+    "old": {
+     "text": "Scanning any 10 enemies or 3 Majoris-level or higher enemies with one Auspex Scan restores Equipment Charge by 1",
+     "parts": [
+      {
+       "t": "Scanning any "
+      },
+      {
+       "v": "10",
+       "kind": null
+      },
+      {
+       "t": " enemies or "
+      },
+      {
+       "v": "3",
+       "kind": null
+      },
+      {
+       "t": " "
+      },
+      {
+       "enemy": "MAJORIS"
+      },
+      {
+       "tag": "majoris",
+       "t": "Majoris"
+      },
+      {
+       "t": "-level or higher enemies with one Auspex Scan restores Equipment Charge by "
+      },
+      {
+       "v": "1",
+       "kind": null
+      }
+     ]
+    },
+    "new": {
+     "text": "Enemies marked by Auspex Scan take 40% more Ranged Damage (Base: 50%)",
+     "parts": [
+      {
+       "t": "Enemies marked by Auspex Scan take "
+      },
+      {
+       "v": "40%",
+       "kind": null
+      },
+      {
+       "t": " more Ranged Damage (Base: "
+      },
+      {
+       "v": "50%",
+       "kind": "POSITIVE"
+      },
+      {
+       "t": ")"
+      }
+     ]
+    }
    }
   ],
   "perk:PveSoldierRestoreEquipmentTeamPerk": [
    {
-    "kind": "field",
-    "field": "description",
-    "old": "Equipment Charge is restored by 1 for all Squad Members. Cooldown is 60 seconds.",
-    "new": "Equipment Charge is restored by 1 for all Squad Members. Cooldown is 90 seconds."
-   },
-   {
-    "kind": "field",
-    "field": "values",
-    "old": [
-     "1",
-     "60"
-    ],
-    "new": [
-     "1",
-     "90"
-    ]
+    "kind": "tooltip",
+    "old": {
+     "text": "Equipment Charge is restored by 1 for all Squad Members. Cooldown is 60 seconds.",
+     "parts": [
+      {
+       "t": "Equipment Charge is restored by "
+      },
+      {
+       "v": "1",
+       "kind": null
+      },
+      {
+       "t": " for all Squad Members. Cooldown is "
+      },
+      {
+       "v": "60",
+       "kind": null
+      },
+      {
+       "t": " seconds."
+      }
+     ]
+    },
+    "new": {
+     "text": "Equipment Charge is restored by 1 for all Squad Members. Cooldown is 90 seconds.",
+     "parts": [
+      {
+       "t": "Equipment Charge is restored by "
+      },
+      {
+       "v": "1",
+       "kind": null
+      },
+      {
+       "t": " for all Squad Members. Cooldown is "
+      },
+      {
+       "v": "90",
+       "kind": null
+      },
+      {
+       "t": " seconds."
+      }
+     ]
+    }
    }
   ],
   "perk:SpawnWithJetpackAuspexScanAbility": [
    {
-    "kind": "field",
-    "field": "description",
-    "old": "Ability: Scanning reveals and marks enemies in the selected area for 8 seconds, making them more vulnerable. Starting Perk: Any unequipped Ranged Weapon reloads automatically after 10 seconds.",
-    "new": "Ability: Scanning reveals and marks enemies in the selected area for 8 seconds, making them more vulnerable. Starting Perk: Bolt Weapons penetrate 1 more enemies. Non-Headshot Damage increases by 20%."
-   },
-   {
-    "kind": "field",
-    "field": "values",
-    "old": [
-     "10",
-     "8"
-    ],
-    "new": [
-     "8",
-     "1",
-     "20%"
-    ]
+    "kind": "tooltip",
+    "old": {
+     "text": "Ability: Scanning reveals and marks enemies in the selected area for 8 seconds, making them more vulnerable. Starting Perk: Any unequipped Ranged Weapon reloads automatically after 10 seconds.",
+     "parts": [
+      {
+       "t": "Ability: Scanning reveals and marks enemies in the selected area for "
+      },
+      {
+       "v": "8",
+       "kind": null
+      },
+      {
+       "t": " seconds, making them more vulnerable.\n Starting Perk: Any unequipped Ranged Weapon reloads automatically after "
+      },
+      {
+       "v": "10",
+       "kind": null
+      },
+      {
+       "t": " seconds."
+      }
+     ]
+    },
+    "new": {
+     "text": "Ability: Scanning reveals and marks enemies in the selected area for 8 seconds, making them more vulnerable.\\n Starting Perk: Bolt Weapons penetrate 1 more enemies. Non-Headshot Damage increases by 20%.",
+     "parts": [
+      {
+       "t": "Ability: Scanning reveals and marks enemies in the selected area for "
+      },
+      {
+       "v": "8",
+       "kind": null
+      },
+      {
+       "t": " seconds, making them more vulnerable.\\n  Starting Perk: Bolt Weapons penetrate "
+      },
+      {
+       "v": "1",
+       "kind": null
+      },
+      {
+       "t": " more enemies. Non-Headshot Damage increases by "
+      },
+      {
+       "v": "20%",
+       "kind": null
+      },
+      {
+       "t": "."
+      }
+     ]
+    }
    }
   ],
   "perk:arifle_bolt_rifle_artificer_1_1": [
@@ -528,26 +1166,46 @@
    },
    {
     "kind": "field",
-    "field": "description",
-    "old": "After using a Class Ability, Maximum Spread decreases by 25% for 10 seconds",
-    "new": "Maximum Spread decreases by 10%"
-   },
-   {
-    "kind": "field",
-    "field": "values",
-    "old": [
-     "25%",
-     "10"
-    ],
-    "new": [
-     "10%"
-    ]
-   },
-   {
-    "kind": "field",
     "field": "type",
     "old": "FirearmSpreadDecreaseMaxSpreadByUsingClassAbility",
     "new": "FirearmSpreadDecreaseMaxSpreadByUsingClassAbilitySecondary"
+   },
+   {
+    "kind": "tooltip",
+    "old": {
+     "text": "After using a Class Ability, Maximum Spread decreases by 25% for 10 seconds",
+     "parts": [
+      {
+       "t": "After using a Class Ability, Maximum Spread decreases by "
+      },
+      {
+       "v": "25%",
+       "kind": null
+      },
+      {
+       "t": " for "
+      },
+      {
+       "v": "10",
+       "kind": null
+      },
+      {
+       "t": " seconds"
+      }
+     ]
+    },
+    "new": {
+     "text": "Maximum Spread decreases by 10%",
+     "parts": [
+      {
+       "t": "Maximum Spread decreases by "
+      },
+      {
+       "v": "10%",
+       "kind": null
+      }
+     ]
+    }
    }
   ],
   "perk:arifle_bolt_rifle_artificer_2_2": [
@@ -647,23 +1305,35 @@
    },
    {
     "kind": "field",
-    "field": "description",
-    "old": "While reloading, you do not lose control from Heavy Hits",
-    "new": "You are immune to Heavy Hits while reloading. Cooldown is 15 seconds."
-   },
-   {
-    "kind": "field",
-    "field": "values",
-    "old": [],
-    "new": [
-     "15"
-    ]
-   },
-   {
-    "kind": "field",
     "field": "type",
     "old": "FirearmMiscImmuneToHeavyHitInReloading",
     "new": "FirearmMiscImmuneToHeavyHitInReloadingSecondary"
+   },
+   {
+    "kind": "tooltip",
+    "old": {
+     "text": "While reloading, you do not lose control from Heavy Hits",
+     "parts": [
+      {
+       "t": "While reloading, you do not lose control from Heavy Hits"
+      }
+     ]
+    },
+    "new": {
+     "text": "You are immune to Heavy Hits while reloading. Cooldown is 15 seconds.",
+     "parts": [
+      {
+       "t": "You are immune to Heavy Hits while reloading. Cooldown is "
+      },
+      {
+       "v": "15",
+       "kind": null
+      },
+      {
+       "t": " seconds."
+      }
+     ]
+    }
    }
   ],
   "perk:arifle_bolt_rifle_relic_1_4": [
@@ -854,10 +1524,37 @@
     "new": "Trick Shot"
    },
    {
-    "kind": "field",
-    "field": "description",
+    "kind": "tooltip",
     "old": null,
-    "new": "Killing 5 enemies with one shot restores 1 Armour Segment. Cooldown is 30 seconds."
+    "new": {
+     "text": "Killing 5 enemies with one shot restores 1 Armour Segment. Cooldown is 30 seconds.",
+     "parts": [
+      {
+       "t": "Killing "
+      },
+      {
+       "v": "5",
+       "kind": null
+      },
+      {
+       "t": " enemies with one shot restores "
+      },
+      {
+       "v": "1",
+       "kind": null
+      },
+      {
+       "t": " Armour Segment. Cooldown is "
+      },
+      {
+       "v": "30",
+       "kind": null
+      },
+      {
+       "t": " seconds."
+      }
+     ]
+    }
    }
   ],
   "perk:melee_power_fist_artificer_2_2": [
@@ -868,10 +1565,23 @@
     "new": "Strength of Will"
    },
    {
-    "kind": "field",
-    "field": "description",
+    "kind": "tooltip",
     "old": null,
-    "new": "While performing a Heavy Attack, you take 20% less Ranged Damage"
+    "new": {
+     "text": "While performing a Heavy Attack, you take 20% less Ranged Damage",
+     "parts": [
+      {
+       "t": "While performing a Heavy Attack, you take "
+      },
+      {
+       "v": "20%",
+       "kind": null
+      },
+      {
+       "t": " less Ranged Damage"
+      }
+     ]
+    }
    }
   ],
   "perk:melee_power_fist_relic_artificer_1_3_sub": [
@@ -882,18 +1592,79 @@
     "new": "Following Blow"
    },
    {
-    "kind": "field",
-    "field": "description",
+    "kind": "tooltip",
     "old": null,
-    "new": "Backfist and Backfist 2 can be performed instantly after a charged Thrust Jab or Hammer Hook"
+    "new": {
+     "text": "Backfist and Backfist 2 can be performed instantly after a charged Thrust Jab or Hammer Hook",
+     "parts": [
+      {
+       "t": "Backfist and Backfist 2 can be performed instantly after a charged Thrust Jab or Hammer Hook"
+      }
+     ]
+    }
    }
   ],
   "perk:melee_power_halberd_artificer_1_3": [
    {
-    "kind": "field",
-    "field": "description",
-    "old": "If Omnissian Rush hits 5 or more foes, the Damage of all Melee Attacks is increased by 20% for 10 seconds",
-    "new": "If Omnissian Rush hits 5 or more times, Melee Attack Damage increases by 20% for 10 seconds"
+    "kind": "tooltip",
+    "old": {
+     "text": "If Omnissian Rush hits 5 or more foes, the Damage of all Melee Attacks is increased by 20% for 10 seconds",
+     "parts": [
+      {
+       "t": "If Omnissian Rush hits "
+      },
+      {
+       "v": "5",
+       "kind": null
+      },
+      {
+       "t": " or more foes, the Damage of all Melee Attacks is increased by "
+      },
+      {
+       "v": "20%",
+       "kind": null
+      },
+      {
+       "t": " for "
+      },
+      {
+       "v": "10",
+       "kind": null
+      },
+      {
+       "t": " seconds"
+      }
+     ]
+    },
+    "new": {
+     "text": "If Omnissian Rush hits 5 or more times, Melee Attack Damage increases by 20% for 10 seconds",
+     "parts": [
+      {
+       "t": "If Omnissian Rush hits "
+      },
+      {
+       "v": "5",
+       "kind": null
+      },
+      {
+       "t": " or more times, Melee Attack Damage increases by "
+      },
+      {
+       "v": "20%",
+       "kind": null
+      },
+      {
+       "t": " for "
+      },
+      {
+       "v": "10",
+       "kind": null
+      },
+      {
+       "t": " seconds"
+      }
+     ]
+    }
    }
   ],
   "perk:melee_thunder_hammer_artificer_1_2": [
@@ -904,10 +1675,23 @@
     "new": "Offence Initiated"
    },
    {
-    "kind": "field",
-    "field": "description",
+    "kind": "tooltip",
     "old": null,
-    "new": "If your Armour is fully depleted, this Weapon deals 10% more Melee Damage"
+    "new": {
+     "text": "If your Armour is fully depleted, this Weapon deals 10% more Melee Damage",
+     "parts": [
+      {
+       "t": "If your Armour is fully depleted, this Weapon deals "
+      },
+      {
+       "v": "10%",
+       "kind": null
+      },
+      {
+       "t": " more Melee Damage"
+      }
+     ]
+    }
    }
   ],
   "perk:melee_thunder_hammer_one_handed_artificer_1_1": [
@@ -1058,10 +1842,37 @@
     "new": "Trick Shot"
    },
    {
-    "kind": "field",
-    "field": "description",
+    "kind": "tooltip",
     "old": null,
-    "new": "Killing 5 enemies with one shot restores 1 Armour Segment. Cooldown is 30 seconds."
+    "new": {
+     "text": "Killing 5 enemies with one shot restores 1 Armour Segment. Cooldown is 30 seconds.",
+     "parts": [
+      {
+       "t": "Killing "
+      },
+      {
+       "v": "5",
+       "kind": null
+      },
+      {
+       "t": " enemies with one shot restores "
+      },
+      {
+       "v": "1",
+       "kind": null
+      },
+      {
+       "t": " Armour Segment. Cooldown is "
+      },
+      {
+       "v": "30",
+       "kind": null
+      },
+      {
+       "t": " seconds."
+      }
+     ]
+    }
    }
   ],
   "perk:support_heavy_meltagun_artificer_2_2": [
@@ -1072,10 +1883,37 @@
     "new": "Trick Shot"
    },
    {
-    "kind": "field",
-    "field": "description",
+    "kind": "tooltip",
     "old": null,
-    "new": "Killing 5 enemies with one shot restores 1 Armour Segment. Cooldown is 30 seconds."
+    "new": {
+     "text": "Killing 5 enemies with one shot restores 1 Armour Segment. Cooldown is 30 seconds.",
+     "parts": [
+      {
+       "t": "Killing "
+      },
+      {
+       "v": "5",
+       "kind": null
+      },
+      {
+       "t": " enemies with one shot restores "
+      },
+      {
+       "v": "1",
+       "kind": null
+      },
+      {
+       "t": " Armour Segment. Cooldown is "
+      },
+      {
+       "v": "30",
+       "kind": null
+      },
+      {
+       "t": " seconds."
+      }
+     ]
+    }
    }
   ],
   "perkType:FirearmAmmoRestoresAmmoBasedOnClipByHealthDroppingSecondary": [

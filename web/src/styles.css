@@ -1244,3 +1244,43 @@ select {
 .card .grouped-changes thead th {
   padding-right: 6px;
 }
+
+/* ---- tooltip diff ---- */
+
+.tooltip-diff {
+  display: grid;
+  gap: 6px;
+  margin: 6px 0 10px;
+}
+
+.tip {
+  background: #0f1216;
+  border: 1px solid var(--line);
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.tip-label {
+  display: inline-block;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin-right: 8px;
+}
+
+.tip .del {
+  background: color-mix(in srgb, var(--nerf) 25%, transparent);
+  text-decoration: line-through;
+  text-decoration-color: var(--nerf);
+}
+
+.tip .ins {
+  background: color-mix(in srgb, var(--buff) 25%, transparent);
+  outline: 1px solid color-mix(in srgb, var(--buff) 60%, transparent);
+}
+
+.tip.old {
+  color: var(--muted);
+}

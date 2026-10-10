@@ -58,6 +58,97 @@ export function ChangeList({ changes, mode }: { changes?: Change[]; mode: Mode }
   );
 }
 
+type Token = { key: string; part: DescPart; text: string };
+
+/** Split description parts into word-level tokens; values and enemy icons stay whole. */
+function tokens(parts: DescPart[]): Token[] {
+  const out: Token[] = [];
+  for (const p of parts) {
+    if ("enemy" in p) out.push({ key: `enemy:${p.enemy}`, part: p, text: "" });
+    else if ("v" in p) out.push({ key: `v:${p.v}`, part: p, text: p.v });
+    else
+      for (const w of p.t.split(/(\s+)/))
+        if (w) out.push({ key: `${"tag" in p ? `tag:${p.tag}:` : ""}${w}`, part: "tag" in p ? { tag: p.tag, t: w } : { t: w }, text: w });
+  }
+  return out;
+}
+
+/** Longest common subsequence: which tokens on each side are unchanged. */
+function lcsKeep(a: Token[], b: Token[]): [boolean[], boolean[]] {
+  const n = a.length;
+  const m = b.length;
+  const dp = Array.from({ length: n + 1 }, () => new Uint16Array(m + 1));
+  for (let i = n - 1; i >= 0; i--) for (let j = m - 1; j >= 0; j--) dp[i][j] = a[i].key === b[j].key ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
+  const ka = new Array(n).fill(false);
+  const kb = new Array(m).fill(false);
+  for (let i = 0, j = 0; i < n && j < m; ) {
+    if (a[i].key === b[j].key) {
+      ka[i++] = true;
+      kb[j++] = true;
+    } else if (dp[i + 1][j] >= dp[i][j + 1]) i++;
+    else j++;
+  }
+  return [ka, kb];
+}
+
+/** Group tokens into runs of unchanged / changed text; spaces between two changed words join the run. */
+function runs(toks: Token[], keep: boolean[]): { changed: boolean; toks: Token[] }[] {
+  const changedAt = (i: number) => !keep[i] && (toks[i].text.trim() !== "" || "enemy" in toks[i].part);
+  const out: { changed: boolean; toks: Token[] }[] = [];
+  toks.forEach((t, i) => {
+    let changed = changedAt(i);
+    if (!changed && !t.text.trim() && !("enemy" in t.part)) {
+      // whitespace: part of a changed run only if changed words sit on both sides
+      const prev = out[out.length - 1];
+      let j = i + 1;
+      while (j < toks.length && !toks[j].text.trim() && !("enemy" in toks[j].part)) j++;
+      changed = !!prev?.changed && j < toks.length && changedAt(j);
+    }
+    const last = out[out.length - 1];
+    if (last && last.changed === changed) last.toks.push(t);
+    else out.push({ changed, toks: [t] });
+  });
+  return out;
+}
+
+/** Before/after tooltip with removed text struck on the old one and added text marked on the new one. */
+export function TooltipDiff({ old, new: nu }: { old?: { parts: DescPart[] } | null; new?: { parts: DescPart[] } | null }) {
+  const a = tokens(old?.parts ?? []);
+  const b = tokens(nu?.parts ?? []);
+  const [ka, kb] = lcsKeep(a, b);
+  const words = (toks: Token[]) => toks.filter((t) => t.text.trim()).length || 1;
+  const kept = (toks: Token[], keep: boolean[]) => toks.filter((t, i) => keep[i] && t.text.trim()).length;
+  // Mostly rewritten text reads better without any marks.
+  const rewritten = a.length > 0 && b.length > 0 && Math.min(kept(a, ka) / words(a), kept(b, kb) / words(b)) < 0.3;
+  const side = (toks: Token[], keep: boolean[], cls: string) =>
+    toks.length ? (
+      runs(toks, keep).map((r, i) => {
+        const inner = r.toks.map((t, j) => <Desc key={j} parts={[t.part]} />);
+        return r.changed && !rewritten ? (
+          <span key={i} class={cls}>
+            {inner}
+          </span>
+        ) : (
+          <span key={i}>{inner}</span>
+        );
+      })
+    ) : (
+      <span class="muted">(no text)</span>
+    );
+  return (
+    <div class="tooltip-diff">
+      <div class="tip old">
+        <span class="tip-label">{rewritten ? "Before (rewritten)" : "Before"}</span>
+        {side(a, ka, "del")}
+      </div>
+      <div class="tip new">
+        <span class="tip-label">After</span>
+        {side(b, kb, "ins")}
+      </div>
+    </div>
+  );
+}
+
 /** Data changes as an Item | Old | New | Change table, with a Part column when rows belong to parts. */
 export function GroupedChanges({ rows }: { rows: (ChangeRow & { effect: string })[] }) {
   const grouped = rows.some((r) => r.group);
@@ -110,7 +201,8 @@ export function GroupedChanges({ rows }: { rows: (ChangeRow & { effect: string }
 export function EntityChanges({ changes, mode }: { changes?: Change[]; mode: Mode }) {
   if (!changes?.length) return null;
   const notes = changes.filter((c) => !c.fromData);
-  const data = changes.filter((c) => c.fromData);
+  const tips = changes.filter((c) => c.tooltip);
+  const data = changes.filter((c) => c.fromData && !c.tooltip);
   const groups = new Set(data.map((c) => c.row?.group ?? "")).size;
   return (
     <section class="entity-changes">
@@ -120,6 +212,14 @@ export function EntityChanges({ changes, mode }: { changes?: Change[]; mode: Mod
           <ChangeList changes={notes} mode={mode} />
         </>
       )}
+      {tips.map((c) => (
+        <div key={c.id}>
+          <h2>
+            Tooltip <span class="change-src">{c.source}</span>
+          </h2>
+          <TooltipDiff old={c.tooltip!.old} new={c.tooltip!.new} />
+        </div>
+      ))}
       {data.length > 0 && (
         <details class="data-changes" open={data.length <= 8}>
           <summary>

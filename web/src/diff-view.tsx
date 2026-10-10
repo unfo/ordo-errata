@@ -1,12 +1,12 @@
 import { useEffect, useMemo, useState } from "preact/hooks";
-import type { Perk, Snapshot } from "./data";
+import type { DescPart, Perk, Snapshot } from "./data";
 import type { Change, ChangeMode, Effect, Highlights, Mode } from "./changes";
 import { hrefFor, labeler } from "./changelog";
-import { Desc, GroupedChanges, Icon } from "./components";
+import { Desc, GroupedChanges, Icon, TooltipDiff } from "./components";
 import { APPLY_TYPES, humanize } from "./glossary";
 
 export interface DiffChange {
-  kind: "added" | "removed" | "field" | "moved" | "stat" | "value";
+  kind: "added" | "removed" | "field" | "moved" | "stat" | "value" | "tooltip";
   field?: string;
   old?: unknown;
   new?: unknown;
@@ -128,7 +128,8 @@ export function describeAll(changes: DiffChange[], entityKey = ""): Line[] {
  */
 function sourceGroups(lines: Line[], key: string): Line[] {
   const kind = key.slice(0, key.indexOf(":"));
-  if (kind === "perk") return lines.map((l) => ({ ...l, group: l.group ?? "Tooltip" }));
+  const structural = (l: Line) => l.item === "Added" || l.item === "Removed" || l.item === "Position";
+  if (kind === "perk") return lines.map((l) => ({ ...l, group: l.group ?? (structural(l) ? undefined : "Tooltip") }));
   if (kind === "perkType") return lines.map((l) => ({ ...l, group: l.group ?? "Game logic" }));
   if (kind === "variant") return lines.map((l) => ({ ...l, group: l.group ?? (l.item === "Added" || l.item === "Removed" ? undefined : l.isStat ? "Shown stats" : "Game logic") }));
   return lines;
@@ -143,7 +144,7 @@ function describeLines(changes: DiffChange[]): Line[] {
     return c.kind === "field" && c.field === "description" && strip(c.old) === strip(c.new) && changes.some((o) => o.field === "values");
   };
   for (const c of changes) {
-    if (numbersOnly(c)) continue;
+    if (numbersOnly(c) || c.kind === "tooltip") continue; // tooltips are rendered separately
     const m = c.kind === "value" ? c.field!.match(MODIFIER) : null;
     if (m) {
       const key = `${m[1]}[${m[2]}]`;
@@ -191,6 +192,8 @@ function rowOf(c: DiffChange, group?: string): Pick<Line, "item" | "old" | "new"
       return { item: "Removed", old: c.where ?? c.name ?? "yes", new: "—" };
     case "moved":
       return { item: "Position", old: fmtValue(c.old), new: fmtValue(c.new) };
+    case "tooltip":
+      return { item: "Tooltip", old: "", new: "" };
     case "field":
       return { item: c.field === "values" ? "Numbers in the text" : capitalize(c.field!), old: fmtValue(c.old), new: fmtValue(c.new) };
     case "stat":
@@ -216,6 +219,8 @@ export function describe(c: DiffChange): string {
       return `Removed${c.where ? ` (was ${c.where})` : ""}`;
     case "moved":
       return `Moved: ${v(c.old)} → ${v(c.new)}`;
+    case "tooltip":
+      return "Tooltip text changed";
     case "field":
       return `${c.field![0].toUpperCase()}${c.field!.slice(1)}: ${v(c.old)} → ${v(c.new)}`;
     case "stat":
@@ -281,6 +286,21 @@ export function diffHighlights(snap: Snapshot, diff: GameDiff): Highlights {
   const out: Highlights = new Map();
   const source = `Game data ${diff.from} → ${diff.to}`;
   for (const [key, changes] of Object.entries(diff.entities)) {
+    const tip = changes.find((c) => c.kind === "tooltip");
+    if (tip) {
+      const t = tip as unknown as { old?: { text: string; parts: DescPart[] }; new?: { text: string; parts: DescPart[] } };
+      const change: Change = {
+        id: `${source}:${key}:tooltip`,
+        source,
+        section: [],
+        text: `Tooltip: ${t.old?.text ?? "—"} → ${t.new?.text ?? "—"}`,
+        mode: "both",
+        effect: "changed",
+        fromData: true,
+        tooltip: { old: t.old, new: t.new },
+      };
+      for (const k of entityKeys(snap, key, byType)) out.set(k, [...(out.get(k) ?? []), change]);
+    }
     for (const [i, line] of describeAll(changes, key).entries()) {
       const change: Change = {
         id: `${source}:${key}:${i}`,
@@ -346,8 +366,13 @@ export function DiffView({
   };
 
   const rows = Object.entries(diff.entities)
-    .map(([key, changes]) => ({ key, lines: describeAll(changes, key).filter((l) => l.mode === "both" || l.mode === mode), doc: documented(key) }))
-    .filter((r) => r.lines.length && (!onlyUndocumented || !r.doc));
+    .map(([key, changes]) => ({
+      key,
+      lines: describeAll(changes, key).filter((l) => l.mode === "both" || l.mode === mode),
+      tooltip: changes.find((c) => c.kind === "tooltip") as { old?: { parts: DescPart[] }; new?: { parts: DescPart[] } } | undefined,
+      doc: documented(key),
+    }))
+    .filter((r) => (r.lines.length || r.tooltip) && (!onlyUndocumented || !r.doc));
 
   // The perk's own in-game description is often the best explanation of its raw values.
   const perkFor = (key: string): Perk | undefined => {
@@ -381,7 +406,7 @@ export function DiffView({
         {rows.length} changed items ({mode.toUpperCase()} view). Items marked <span class="badge doc">in notes</span> are mentioned in the selected patch
         notes; the rest are <span class="badge undoc">not in notes</span>.
       </p>
-      {rows.map(({ key, lines, doc }) => {
+      {rows.map(({ key, lines, tooltip, doc }) => {
         const l = labelFor(key);
         const href = hrefFor(snap, hrefKey(key));
         return (
@@ -391,15 +416,19 @@ export function DiffView({
               {l.label}
             </button>
             <span class={`badge ${doc ? "doc" : "undoc"}`}>{doc ? "in notes" : "not in notes"}</span>
-            {(() => {
-              const p = perkFor(key);
-              return p?.desc ? (
-                <p class="diff-desc">
-                  <Desc parts={p.desc.parts} />
-                </p>
-              ) : null;
-            })()}
-            <GroupedChanges rows={lines} />
+            {tooltip ? (
+              <TooltipDiff old={tooltip.old} new={tooltip.new} />
+            ) : (
+              (() => {
+                const p = perkFor(key);
+                return p?.desc ? (
+                  <p class="diff-desc">
+                    <Desc parts={p.desc.parts} />
+                  </p>
+                ) : null;
+              })()
+            )}
+            {lines.length > 0 && <GroupedChanges rows={lines} />}
           </div>
         );
       })}

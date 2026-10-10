@@ -4,82 +4,198 @@
  "entities": {
   "perk:Melee_OneHandedHammer_Heroic": [
    {
-    "kind": "field",
-    "field": "description",
-    "old": "Hold the Attack button to perform a powerful Ground Slam that consumes all Charges. Damage is increased by 20% per Charge spent.",
-    "new": "Hold the Attack button to perform a powerful Ground Slam that consumes all Charges. Damage is increased by 30% per Charge spent."
-   },
-   {
-    "kind": "field",
-    "field": "values",
-    "old": [
-     "20%"
-    ],
-    "new": [
-     "30%"
-    ]
+    "kind": "tooltip",
+    "old": {
+     "text": "Hold the Attack button to perform a powerful Ground Slam that consumes all Charges. Damage is increased by 20% per Charge spent.",
+     "parts": [
+      {
+       "t": "Hold the Attack button to perform a powerful Ground Slam that consumes all Charges. Damage is increased by "
+      },
+      {
+       "v": "20%",
+       "kind": null
+      },
+      {
+       "t": " per Charge spent."
+      }
+     ]
+    },
+    "new": {
+     "text": "Hold the Attack button to perform a powerful Ground Slam that consumes all Charges. Damage is increased by 30% per Charge spent.",
+     "parts": [
+      {
+       "t": "Hold the Attack button to perform a powerful Ground Slam that consumes all Charges. Damage is increased by "
+      },
+      {
+       "v": "30%",
+       "kind": null
+      },
+      {
+       "t": " per Charge spent."
+      }
+     ]
+    }
    }
   ],
   "perk:melee_thunder_hammer_one_handed_artificer_2_1": [
    {
-    "kind": "field",
-    "field": "description",
-    "old": "Killing 5 foes in quick succession with the Light Combo restores 1 Power Charges. Cooldown is 30 seconds",
-    "new": "Killing 5 foes in quick succession with the Light Combo restores 1 Power Charges. Cooldown is 15 seconds"
-   },
-   {
-    "kind": "field",
-    "field": "values",
-    "old": [
-     "5",
-     "1",
-     "30"
-    ],
-    "new": [
-     "5",
-     "1",
-     "15"
-    ]
+    "kind": "tooltip",
+    "old": {
+     "text": "Killing 5 foes in quick succession with the Light Combo restores 1 Power Charges. Cooldown is 30 seconds",
+     "parts": [
+      {
+       "t": "Killing "
+      },
+      {
+       "v": "5",
+       "kind": null
+      },
+      {
+       "t": " foes in quick succession with the Light Combo restores "
+      },
+      {
+       "v": "1",
+       "kind": null
+      },
+      {
+       "t": " Power Charges. Cooldown is "
+      },
+      {
+       "v": "30",
+       "kind": null
+      },
+      {
+       "t": " seconds"
+      }
+     ]
+    },
+    "new": {
+     "text": "Killing 5 foes in quick succession with the Light Combo restores 1 Power Charges. Cooldown is 15 seconds",
+     "parts": [
+      {
+       "t": "Killing "
+      },
+      {
+       "v": "5",
+       "kind": null
+      },
+      {
+       "t": " foes in quick succession with the Light Combo restores "
+      },
+      {
+       "v": "1",
+       "kind": null
+      },
+      {
+       "t": " Power Charges. Cooldown is "
+      },
+      {
+       "v": "15",
+       "kind": null
+      },
+      {
+       "t": " seconds"
+      }
+     ]
+    }
    }
   ],
   "perk:melee_thunder_hammer_one_handed_artificer_2_3_sub": [
    {
-    "kind": "field",
-    "field": "description",
-    "old": "Perfect Parry, Perfect Block, and Perfect Dodge instantly generate 1 Power Charges. Cooldown is 60 seconds",
-    "new": "Perfect Parry, Perfect Block, and Perfect Dodge instantly generate 1 Power Charges. Cooldown is 20 seconds"
-   },
-   {
-    "kind": "field",
-    "field": "values",
-    "old": [
-     "1",
-     "60"
-    ],
-    "new": [
-     "1",
-     "20"
-    ]
+    "kind": "tooltip",
+    "old": {
+     "text": "Perfect Parry, Perfect Block, and Perfect Dodge instantly generate 1 Power Charges. Cooldown is 60 seconds",
+     "parts": [
+      {
+       "t": "Perfect Parry, Perfect Block, and Perfect Dodge instantly generate "
+      },
+      {
+       "v": "1",
+       "kind": null
+      },
+      {
+       "t": " Power Charges. Cooldown is "
+      },
+      {
+       "v": "60",
+       "kind": null
+      },
+      {
+       "t": " seconds"
+      }
+     ]
+    },
+    "new": {
+     "text": "Perfect Parry, Perfect Block, and Perfect Dodge instantly generate 1 Power Charges. Cooldown is 20 seconds",
+     "parts": [
+      {
+       "t": "Perfect Parry, Perfect Block, and Perfect Dodge instantly generate "
+      },
+      {
+       "v": "1",
+       "kind": null
+      },
+      {
+       "t": " Power Charges. Cooldown is "
+      },
+      {
+       "v": "20",
+       "kind": null
+      },
+      {
+       "t": " seconds"
+      }
+     ]
+    }
    }
   ],
   "perk:melee_thunder_hammer_one_handed_mastercrafted_1_3": [
    {
-    "kind": "field",
-    "field": "description",
-    "old": "Reaching the maximum Power Charge stack increases Damage by 10% for 10 seconds",
-    "new": "Reaching the maximum Power Charge stack increases Damage by 10% for 20 seconds"
-   },
-   {
-    "kind": "field",
-    "field": "values",
-    "old": [
-     "10%",
-     "10"
-    ],
-    "new": [
-     "10%",
-     "20"
-    ]
+    "kind": "tooltip",
+    "old": {
+     "text": "Reaching the maximum Power Charge stack increases Damage by 10% for 10 seconds",
+     "parts": [
+      {
+       "t": "Reaching the maximum Power Charge stack increases Damage by "
+      },
+      {
+       "v": "10%",
+       "kind": null
+      },
+      {
+       "t": " for "
+      },
+      {
+       "v": "10",
+       "kind": null
+      },
+      {
+       "t": " seconds"
+      }
+     ]
+    },
+    "new": {
+     "text": "Reaching the maximum Power Charge stack increases Damage by 10% for 20 seconds",
+     "parts": [
+      {
+       "t": "Reaching the maximum Power Charge stack increases Damage by "
+      },
+      {
+       "v": "10%",
+       "kind": null
+      },
+      {
+       "t": " for "
+      },
+      {
+       "v": "20",
+       "kind": null
+      },
+      {
+       "t": " seconds"
+      }
+     ]
+    }
    }
   ],
   "perkType:FirearmFireRateIncreaseFireRate": [
