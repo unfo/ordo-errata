@@ -426,10 +426,12 @@ def main() -> int:
     ap.add_argument("--lang", default="english")
     ap.add_argument("--out", type=Path, default=ROOT / "data")
     ap.add_argument("--icons", type=Path, default=ROOT / "web" / "public" / "icons")
+    ap.add_argument("--build-id", help="snapshot name when the install has no Steam manifest (e.g. an old build from DepotDownloader)")
+    ap.add_argument("--no-icons", action="store_true", help="skip icon export (old builds downloaded without texture paks)")
     args = ap.parse_args()
 
     pak = PakIndex(args.game_dir)
-    build_id = pak.build_id()
+    build_id = args.build_id or pak.build_id()
     b = Builder(pak, args.lang)
     classes = b.classes()
     weapons = b.weapons()
@@ -443,7 +445,7 @@ def main() -> int:
     write_json(out / "values.json", extract_values(pak, [w["id"] for w in weapons["weapons"]], perk_types(classes, weapons)))
 
     failed = []
-    for name in sorted(b.icons):
+    for name in [] if args.no_icons else sorted(b.icons):
         target = args.icons / f"{name}.png"
         if target.exists():
             continue
