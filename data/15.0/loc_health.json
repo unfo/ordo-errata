@@ -1,0 +1,44 @@
+{
+ "lang": "english",
+ "malformedKeys": [],
+ "recovered": {},
+ "missingKeys": {
+  "UI_ABILITY_CHAINSWORD_01_A_NAME": [
+   "melee_chainsword"
+  ],
+  "UI_FIREARM_ABSOLVER_BOLT_PISTOL_01_NAME": [
+   "hgun_absolver_bolt_pistol"
+  ],
+  "UI_FIREARM_ABSOLVER_BOLT_PISTOL_02_A_NAME": [
+   "hgun_absolver_bolt_pistol"
+  ],
+  "UI_FIREARM_ABSOLVER_BOLT_PISTOL_02_B_NAME": [
+   "hgun_absolver_bolt_pistol"
+  ],
+  "UI_FIREARM_ABSOLVER_BOLT_PISTOL_02_NAME": [
+   "hgun_absolver_bolt_pistol"
+  ],
+  "UI_FIREARM_ABSOLVER_BOLT_PISTOL_03_A_NAME": [
+   "hgun_absolver_bolt_pistol"
+  ],
+  "UI_FIREARM_ABSOLVER_BOLT_PISTOL_03_B_NAME": [
+   "hgun_absolver_bolt_pistol"
+  ],
+  "UI_FIREARM_ABSOLVER_BOLT_PISTOL_03_NAME": [
+   "hgun_absolver_bolt_pistol"
+  ],
+  "UI_FIREARM_ABSOLVER_BOLT_PISTOL_04_A_NAME": [
+   "hgun_absolver_bolt_pistol"
+  ],
+  "UI_FIREARM_ABSOLVER_BOLT_PISTOL_04_B_NAME": [
+   "hgun_absolver_bolt_pistol"
+  ],
+  "UI_FIREARM_ABSOLVER_BOLT_PISTOL_04_NAME": [
+   "hgun_absolver_bolt_pistol"
+  ],
+  "UI_FIREARM_ABSOLVER_BOLT_PISTOL_NAME": [
+   "hgun_absolver_bolt_pistol"
+  ]
+ },
+ "missingIcons": []
+}

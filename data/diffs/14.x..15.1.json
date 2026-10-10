@@ -1099,9 +1099,33 @@
    },
    {
     "kind": "value",
+    "field": "activationTrigger.condition.condition.compareOperator",
+    "old": null,
+    "new": "SMALLER"
+   },
+   {
+    "kind": "value",
     "field": "activationTrigger.condition.condition.thresholdToCompare",
     "old": null,
     "new": 30
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.ReceiveAmmo.ownerCondition.condition.condition.clipToCheckAmmo",
+    "old": null,
+    "new": "DEFAULT_CLIP"
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.ReceiveAmmo.ownerCondition.condition.condition.slot",
+    "old": null,
+    "new": "SECONDARY"
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.ReceiveAmmo.perkApplication.firearmSlot",
+    "old": null,
+    "new": "SECONDARY"
    },
    {
     "kind": "value",
@@ -1117,9 +1141,39 @@
    },
    {
     "kind": "value",
+    "field": "application.applications.ReceiveAmmo.perkApplication.typeOfRefillClip",
+    "old": null,
+    "new": "IN_INVENTORY"
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.ReceiveAmmoForNoInventoryFirearm.ownerCondition.condition.clipToCheckAmmo",
+    "old": null,
+    "new": "DEFAULT_CLIP"
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.ReceiveAmmoForNoInventoryFirearm.ownerCondition.condition.slot",
+    "old": null,
+    "new": "SECONDARY"
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.ReceiveAmmoForNoInventoryFirearm.perkApplication.firearmSlot",
+    "old": null,
+    "new": "SECONDARY"
+   },
+   {
+    "kind": "value",
     "field": "application.applications.ReceiveAmmoForNoInventoryFirearm.perkApplication.refillPercentsClip",
     "old": null,
     "new": 20
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.ReceiveAmmoForNoInventoryFirearm.perkApplication.typeOfRefillClip",
+    "old": null,
+    "new": "IN_CLIP"
    },
    {
     "kind": "value",
@@ -1137,6 +1191,36 @@
    },
    {
     "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.HitConditionDamageSideEffect.pdNodePosX",
+    "old": -68,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.HitConditionDamageSideEffect.pdNodePosY",
+    "old": 313,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.HitConditionDamageSideEffect.sideEffectType",
+    "old": "BURNING",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.HitConditionStatusEffectWithInitiatorApplied.pdNodePosX",
+    "old": -246,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.HitConditionStatusEffectWithInitiatorApplied.pdNodePosY",
+    "old": 423,
+    "new": null
+   },
+   {
+    "kind": "value",
     "field": "activationTrigger.hitCondition.conditions.hitCondition_1.isCheckOnlySpecificFirearm",
     "old": false,
     "new": null
@@ -1185,9 +1269,21 @@
    },
    {
     "kind": "value",
+    "field": "application.permanentModifiers[SE_BURNING_SCALE_DAMAGE_AMOUNT_FROM_MELEE_TO_TARGET].applyType",
+    "old": null,
+    "new": "PERCENT_MULT"
+   },
+   {
+    "kind": "value",
     "field": "application.permanentModifiers[SE_BURNING_SCALE_DAMAGE_AMOUNT_FROM_MELEE_TO_TARGET].bonus",
     "old": null,
     "new": -20
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[SE_BURNING_SCALE_DAMAGE_AMOUNT_FROM_MELEE_TO_TARGET].type",
+    "old": null,
+    "new": "SE_BURNING_SCALE_DAMAGE_AMOUNT_FROM_MELEE_TO_TARGET"
    }
   ],
   "perkType:FirearmBurningRestoreArmour": [
@@ -1196,6 +1292,12 @@
     "field": "activationTrigger.condition.condition.conditionTrigger.isAppliedByFirearmHit",
     "old": true,
     "new": null
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.condition.condition.conditionTrigger.sourceType",
+    "old": null,
+    "new": "FIREARM"
    }
   ],
   "perkType:FirearmBurningTakeMoreMelee": [
@@ -1207,6 +1309,36 @@
    },
    {
     "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.HitConditionDamageSideEffect.pdNodePosX",
+    "old": -68,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.HitConditionDamageSideEffect.pdNodePosY",
+    "old": 313,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.HitConditionDamageSideEffect.sideEffectType",
+    "old": "BURNING",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.HitConditionStatusEffectWithInitiatorApplied.pdNodePosX",
+    "old": -246,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.HitConditionStatusEffectWithInitiatorApplied.pdNodePosY",
+    "old": 423,
+    "new": null
+   },
+   {
+    "kind": "value",
     "field": "activationTrigger.hitCondition.conditions.hitCondition_1.isCheckOnlySpecificFirearm",
     "old": false,
     "new": null
@@ -1255,25 +1387,61 @@
    },
    {
     "kind": "value",
+    "field": "application.permanentModifiers[SE_BURNING_MELEE_DAMAGE_SENSITIVITY_TO_TARGET].applyType",
+    "old": null,
+    "new": "PERCENT_MULT"
+   },
+   {
+    "kind": "value",
     "field": "application.permanentModifiers[SE_BURNING_MELEE_DAMAGE_SENSITIVITY_TO_TARGET].bonus",
     "old": null,
     "new": 20
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[SE_BURNING_MELEE_DAMAGE_SENSITIVITY_TO_TARGET].type",
+    "old": null,
+    "new": "SE_BURNING_MELEE_DAMAGE_SENSITIVITY_TO_TARGET"
    }
   ],
   "perkType:FirearmFireRateIncreaseFireRate": [
    {
     "kind": "value",
+    "field": "application.permanentModifiers[FIREARM_CHARGE_DURATION].applyType",
+    "old": null,
+    "new": "PERCENT_SUM"
+   },
+   {
+    "kind": "value",
     "field": "application.permanentModifiers[FIREARM_CHARGE_DURATION].bonus",
     "old": null,
     "new": -10
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[FIREARM_CHARGE_DURATION].type",
+    "old": null,
+    "new": "FIREARM_CHARGE_DURATION"
    }
   ],
   "perkType:FirearmFireRateIncreaseFireRateByPerfectDodge": [
    {
     "kind": "value",
+    "field": "application.permanentModifiers[FIREARM_CHARGE_DURATION].applyType",
+    "old": null,
+    "new": "PERCENT_SUM"
+   },
+   {
+    "kind": "value",
     "field": "application.permanentModifiers[FIREARM_CHARGE_DURATION].bonus",
     "old": null,
     "new": -25
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[FIREARM_CHARGE_DURATION].type",
+    "old": null,
+    "new": "FIREARM_CHARGE_DURATION"
    }
   ],
   "perkType:FirearmReloadInstantlyReloadByUsingClassAbilitySecondary": [
@@ -1285,9 +1453,21 @@
    },
    {
     "kind": "value",
+    "field": "activationTrigger.abilitySlot",
+    "old": null,
+    "new": "ULTIMATE"
+   },
+   {
+    "kind": "value",
     "field": "activationTrigger.triggerOnSlot",
     "old": null,
     "new": true
+   },
+   {
+    "kind": "value",
+    "field": "application.firearmSlot",
+    "old": null,
+    "new": "SECONDARY"
    },
    {
     "kind": "value",
@@ -1311,18 +1491,57 @@
    },
    {
     "kind": "value",
+    "field": "application.modifierDescriptionsPerSlot.SECONDARY.__value[FIREARM_SCALE_SPREAD].applyType",
+    "old": null,
+    "new": "PERCENT_SUM"
+   },
+   {
+    "kind": "value",
     "field": "application.modifierDescriptionsPerSlot.SECONDARY.__value[FIREARM_SCALE_SPREAD].bonus",
     "old": null,
     "new": -25
    },
    {
     "kind": "value",
+    "field": "application.modifierDescriptionsPerSlot.SECONDARY.__value[FIREARM_SCALE_SPREAD].type",
+    "old": null,
+    "new": "FIREARM_SCALE_SPREAD"
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[FIREARM_SCALE_SPREAD].applyType",
+    "old": null,
+    "new": "PERCENT_SUM"
+   },
+   {
+    "kind": "value",
     "field": "application.permanentModifiers[FIREARM_SCALE_SPREAD].bonus",
     "old": null,
     "new": -100
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[FIREARM_SCALE_SPREAD].type",
+    "old": null,
+    "new": "FIREARM_SCALE_SPREAD"
+   }
+  ],
+  "perkType:PerkHeroicAutoBoltRifleDecreaseFirerate": [
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[SCALE_MELEE_DAMAGE_TO_CHAOS].type",
+    "old": null,
+    "new": "SCALE_MELEE_DAMAGE_TO_CHAOS"
    }
   ],
   "perkType:PerkHeroicStalkerBoltRifle": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.requiredTimeGap",
+    "old": 5,
+    "new": 10,
+    "pct": 100.0
+   },
    {
     "kind": "value",
     "field": "activationTrigger.resetProgressionOnOtherTargetHit",
@@ -1336,6 +1555,12 @@
     "field": "application.permanentModifiers[SCALE_HAMMER_ONE_HANDED_DEFAULT_FAST_UPDATE_STACK_COUNT].bonus",
     "old": null,
     "new": 1
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[SCALE_HAMMER_ONE_HANDED_DEFAULT_FAST_UPDATE_STACK_COUNT].type",
+    "old": null,
+    "new": "SCALE_HAMMER_ONE_HANDED_DEFAULT_FAST_UPDATE_STACK_COUNT"
    }
   ],
   "perkType:PvEMeleeThunderHammerOneHandedBuffNextAttackByPerfectDodgeOrParry": [
@@ -1359,9 +1584,21 @@
    },
    {
     "kind": "value",
+    "field": "application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE].applyType",
+    "old": null,
+    "new": "PERCENT_SUM"
+   },
+   {
+    "kind": "value",
     "field": "application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE].bonus",
     "old": null,
     "new": 25
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE].type",
+    "old": null,
+    "new": "SCALE_DAMAGE_AMOUNT_FROM_MELEE"
    },
    {
     "kind": "value",
@@ -1392,6 +1629,12 @@
     "field": "deactivationTrigger.shouldTriggerAfterDealDamage",
     "old": null,
     "new": true
+   },
+   {
+    "kind": "value",
+    "field": "perkVisualizationType",
+    "old": null,
+    "new": "MELEE_BOOST"
    }
   ],
   "perkType:PvEMeleeThunderHammerOneHandedChargesByPerfectDodgeOrParry": [
@@ -1488,15 +1731,47 @@
     "new": 1
    }
   ],
+  "perkType:PvEMeleeThunderHammerOneHandedHeavyStrikesHitTwice": [
+   {
+    "kind": "value",
+    "field": "application.flags[0]",
+    "old": null,
+    "new": "MELEE_HAMMER_ONE_HANDED_DOUBLE_HITS"
+   }
+  ],
   "perkType:PvEMeleeThunderHammerOneHandedIncreaseHeavyChargedStrikeDamage": [
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE_PER_SPENT_STACK].applyType",
+    "old": null,
+    "new": "PERCENT_MULT"
+   },
    {
     "kind": "value",
     "field": "application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE_PER_SPENT_STACK].bonus",
     "old": null,
     "new": 30
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE_PER_SPENT_STACK].type",
+    "old": null,
+    "new": "SCALE_DAMAGE_AMOUNT_FROM_MELEE_PER_SPENT_STACK"
+   },
+   {
+    "kind": "value",
+    "field": "perkVisualizationType",
+    "old": null,
+    "new": "MELEE_BOOST"
    }
   ],
   "perkType:PvEMeleeThunderHammerOneHandedIncreaseHeavyChargedStrikeRadius": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.meleeStrikeWeaponType",
+    "old": null,
+    "new": "HAMMER_ONE_HANDED"
+   },
    {
     "kind": "value",
     "field": "activationTrigger.shouldCheckWeaponType",
@@ -1511,9 +1786,27 @@
    },
    {
     "kind": "value",
+    "field": "application.permanentModifiers[MELEE_DAMAGE_DISPATCHER_RADIUS].applyType",
+    "old": null,
+    "new": "PERCENT_SUM"
+   },
+   {
+    "kind": "value",
     "field": "application.permanentModifiers[MELEE_DAMAGE_DISPATCHER_RADIUS].bonus",
     "old": null,
     "new": 50
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[MELEE_DAMAGE_DISPATCHER_RADIUS].type",
+    "old": null,
+    "new": "MELEE_DAMAGE_DISPATCHER_RADIUS"
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.meleeStrikeWeaponType",
+    "old": null,
+    "new": "HAMMER_ONE_HANDED"
    },
    {
     "kind": "value",
@@ -1526,6 +1819,12 @@
     "field": "deactivationTrigger.shouldTriggerOnStopped",
     "old": null,
     "new": true
+   },
+   {
+    "kind": "value",
+    "field": "perkVisualizationType",
+    "old": null,
+    "new": "SURVIVAL_BOOST"
    }
   ],
   "perkType:PvEMeleeThunderHammerOneHandedIncreaseMaximumCharges": [
@@ -1537,17 +1836,41 @@
    },
    {
     "kind": "value",
+    "field": "application.permanentModifiers[MELEE_HEAVY_COMBO_PREPARATION_TIME].type",
+    "old": null,
+    "new": "MELEE_HEAVY_COMBO_PREPARATION_TIME"
+   },
+   {
+    "kind": "value",
     "field": "application.permanentModifiers[SCALE_HAMMER_ONE_HANDED_DEFAULT_MAX_STACK_COUNT].bonus",
     "old": null,
     "new": 1
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[SCALE_HAMMER_ONE_HANDED_DEFAULT_MAX_STACK_COUNT].type",
+    "old": null,
+    "new": "SCALE_HAMMER_ONE_HANDED_DEFAULT_MAX_STACK_COUNT"
    }
   ],
   "perkType:PvEMeleeThunderHammerOneHandedLongerChargeTimer": [
    {
     "kind": "value",
+    "field": "application.permanentModifiers[SCALE_HAMMER_ONE_HANDED_DEFAULT_TIMER_RESET_STACK].applyType",
+    "old": null,
+    "new": "PERCENT_SUM"
+   },
+   {
+    "kind": "value",
     "field": "application.permanentModifiers[SCALE_HAMMER_ONE_HANDED_DEFAULT_TIMER_RESET_STACK].bonus",
     "old": null,
     "new": 100
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[SCALE_HAMMER_ONE_HANDED_DEFAULT_TIMER_RESET_STACK].type",
+    "old": null,
+    "new": "SCALE_HAMMER_ONE_HANDED_DEFAULT_TIMER_RESET_STACK"
    }
   ],
   "perkType:PvEMeleeThunderHammerOneHandedPowerIncreaseOnMaxCharges": [
@@ -1565,9 +1888,27 @@
    },
    {
     "kind": "value",
+    "field": "application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE].applyType",
+    "old": null,
+    "new": "PERCENT_MULT"
+   },
+   {
+    "kind": "value",
     "field": "application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE].bonus",
     "old": null,
     "new": 10
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE].type",
+    "old": null,
+    "new": "SCALE_DAMAGE_AMOUNT_FROM_MELEE"
+   },
+   {
+    "kind": "value",
+    "field": "perkVisualizationType",
+    "old": null,
+    "new": "MELEE_BOOST"
    }
   ],
   "perkType:PvEMeleeThunderHammerOneHandedReducedRangedDamageOnMaxCharges": [
@@ -1585,9 +1926,21 @@
    },
    {
     "kind": "value",
+    "field": "activationTrigger.condition.condition.compareType",
+    "old": null,
+    "new": "LARGER_OR_EQUAL"
+   },
+   {
+    "kind": "value",
     "field": "activationTrigger.condition.condition.stacks",
     "old": null,
     "new": 1
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[FIREARM_DAMAGE_SENSITIVITY].applyType",
+    "old": null,
+    "new": "PERCENT_SUM"
    },
    {
     "kind": "value",
@@ -1603,9 +1956,27 @@
    },
    {
     "kind": "value",
+    "field": "application.permanentModifiers[FIREARM_DAMAGE_SENSITIVITY].type",
+    "old": null,
+    "new": "FIREARM_DAMAGE_SENSITIVITY"
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.condition.condition.compareType",
+    "old": null,
+    "new": "EQUAL"
+   },
+   {
+    "kind": "value",
     "field": "deactivationTrigger.condition.condition.stacks",
     "old": null,
     "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "perkVisualizationType",
+    "old": null,
+    "new": "SURVIVAL_BOOST"
    }
   ],
   "perkType:PvEMeleeThunderHammerOneHandedRestoreAbilityByKilling": [
@@ -1629,6 +2000,30 @@
    },
    {
     "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.Threat_Classes.threatClasses[0]",
+    "old": null,
+    "new": "ELITE"
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.Threat_Classes.threatClasses[1]",
+    "old": null,
+    "new": "SPECIAL"
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.Threat_Classes.threatClasses[2]",
+    "old": null,
+    "new": "MINIBOSS"
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.Threat_Classes.threatClasses[3]",
+    "old": null,
+    "new": "BOSS"
+   },
+   {
+    "kind": "value",
     "field": "activationTrigger.hitConditionPropDiagramRootX",
     "old": null,
     "new": 203
@@ -1644,6 +2039,12 @@
     "field": "activationTrigger.isKillOnly",
     "old": null,
     "new": true
+   },
+   {
+    "kind": "value",
+    "field": "application.abilitySlot",
+    "old": null,
+    "new": "ULTIMATE"
    },
    {
     "kind": "value",
@@ -1691,6 +2092,12 @@
    },
    {
     "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.HitConditionHealthAmount.typeActorToCheck",
+    "old": null,
+    "new": "DAMAGER_ACTOR"
+   },
+   {
+    "kind": "value",
     "field": "activationTrigger.hitCondition.conditions.HitConditionThreatClasses.pdNodePosX",
     "old": null,
     "new": -366.3165
@@ -1700,6 +2107,30 @@
     "field": "activationTrigger.hitCondition.conditions.HitConditionThreatClasses.pdNodePosY",
     "old": null,
     "new": -155.7896
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.HitConditionThreatClasses.threatClasses[0]",
+    "old": null,
+    "new": "ELITE"
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.HitConditionThreatClasses.threatClasses[1]",
+    "old": null,
+    "new": "SPECIAL"
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.HitConditionThreatClasses.threatClasses[2]",
+    "old": null,
+    "new": "MINIBOSS"
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.HitConditionThreatClasses.threatClasses[3]",
+    "old": null,
+    "new": "BOSS"
    },
    {
     "kind": "value",
@@ -1744,12 +2175,32 @@
     "new": true
    }
   ],
+  "perkType:PvEMeleeThunderHammerOneHandedShockwavesOnHeavyStrikes": [
+   {
+    "kind": "value",
+    "field": "application.flags[0]",
+    "old": null,
+    "new": "MELEE_HAMMER_ONE_HANDED_SHOCKWAVES"
+   }
+  ],
   "perkType:PvEMeleeThunderHammerOneHandedUnstoppableOnCharging": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.meleeWeaponType",
+    "old": null,
+    "new": "HAMMER_ONE_HANDED"
+   },
    {
     "kind": "value",
     "field": "activationTrigger.shouldCheckWeaponType",
     "old": null,
     "new": true
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.shouldSkipUidCheck",
+    "old": null,
+    "new": false
    },
    {
     "kind": "value",
@@ -1771,15 +2222,45 @@
    },
    {
     "kind": "value",
+    "field": "application.permanentModifiers[HEAVY_HIT_INSTEAD_KNOCKBACK_PROBABILITY].type",
+    "old": null,
+    "new": "HEAVY_HIT_INSTEAD_KNOCKBACK_PROBABILITY"
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[HEAVY_HIT_POISE_SENSITIVITY].applyType",
+    "old": null,
+    "new": "PERCENT_MULT"
+   },
+   {
+    "kind": "value",
     "field": "application.permanentModifiers[HEAVY_HIT_POISE_SENSITIVITY].bonus",
     "old": null,
     "new": -100
    },
    {
     "kind": "value",
+    "field": "application.permanentModifiers[HEAVY_HIT_POISE_SENSITIVITY].type",
+    "old": null,
+    "new": "HEAVY_HIT_POISE_SENSITIVITY"
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.meleeWeaponType",
+    "old": null,
+    "new": "HAMMER_ONE_HANDED"
+   },
+   {
+    "kind": "value",
     "field": "deactivationTrigger.shouldCheckWeaponType",
     "old": null,
     "new": true
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.shouldSkipUidCheck",
+    "old": null,
+    "new": false
    },
    {
     "kind": "value",
@@ -1798,6 +2279,12 @@
     "field": "deactivationTrigger.shouldTriggerOnStopped",
     "old": null,
     "new": true
+   },
+   {
+    "kind": "value",
+    "field": "perkVisualizationType",
+    "old": null,
+    "new": "DEFAULT"
    }
   ],
   "perkType:PveEngineerReviveAbilityRegenTeam": [
@@ -1809,6 +2296,12 @@
    }
   ],
   "perkType:PveEngineerServoArmItem": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.condition.condition.teamName",
+    "old": null,
+    "new": "PLR_LOYALIST"
+   },
    {
     "kind": "value",
     "field": "application.inventoryItemUnit.inventoryItemAmount",
@@ -1836,12 +2329,40 @@
     "new": true
    }
   ],
+  "perkType:PveEngineerTeamExtraEquipment": [
+   {
+    "kind": "value",
+    "field": "application.applications.IfNotLoadoutChangeRestoreEquipment.ownerConditionOnTeamPerkAttach.condition.condition.durationSec",
+    "old": null,
+    "new": 1
+   }
+  ],
+  "perkType:PveMeleePowerAxeSlowAndDamageIncreaseByStacksAfterFinisher": [
+   {
+    "kind": "value",
+    "field": "application.flags[0]",
+    "old": null,
+    "new": "POWER_AXE_WHIRLWIND_CHAIN"
+   }
+  ],
   "perkType:PveMeleePowerFistHeavy4Heavy5RadiusIncreased": [
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[MELEE_DAMAGE_EXTRA_1_DISPATCHER_RADIUS].applyType",
+    "old": null,
+    "new": "PERCENT_SUM"
+   },
    {
     "kind": "value",
     "field": "application.permanentModifiers[MELEE_DAMAGE_EXTRA_1_DISPATCHER_RADIUS].bonus",
     "old": null,
     "new": 50
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[MELEE_DAMAGE_EXTRA_1_DISPATCHER_RADIUS].type",
+    "old": null,
+    "new": "MELEE_DAMAGE_EXTRA_1_DISPATCHER_RADIUS"
    }
   ],
   "perkType:PveSniperRestorePrimaryAmmoForSecondaryWeaponKill": [
@@ -1881,8 +2402,32 @@
    },
    {
     "kind": "value",
+    "field": "application.applications.PerkApplicationModifiers.permanentModifiers[ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_FIREARM_ABILITY_SENSITIVITY_BY_INITIATOR].type",
+    "old": "ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_FIREARM_ABILITY_SENSITIVITY_BY_INITIATOR",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.PerkApplicationModifiers.permanentModifiers[ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_FIREARM_SENSITIVITY_BY_INITIATOR].applyType",
+    "old": "ABSOLUTE",
+    "new": null
+   },
+   {
+    "kind": "value",
     "field": "application.applications.PerkApplicationModifiers.permanentModifiers[ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_FIREARM_SENSITIVITY_BY_INITIATOR].bonus",
     "old": 120,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.PerkApplicationModifiers.permanentModifiers[ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_FIREARM_SENSITIVITY_BY_INITIATOR].type",
+    "old": "ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_FIREARM_SENSITIVITY_BY_INITIATOR",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.PerkApplicationModifiers.permanentModifiers[ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_MELEE_SENSITIVITY_BY_INITIATOR].applyType",
+    "old": "ABSOLUTE",
     "new": null
    },
    {
@@ -1893,8 +2438,32 @@
    },
    {
     "kind": "value",
+    "field": "application.applications.PerkApplicationModifiers.permanentModifiers[ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_MELEE_SENSITIVITY_BY_INITIATOR].type",
+    "old": "ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_MELEE_SENSITIVITY_BY_INITIATOR",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.PerkApplicationUpdateAbilityZoneActor.modifiers[ABILITY_AUSPEX_MARK_DEPLOYMENT_DURATION].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
     "field": "application.applications.PerkApplicationUpdateAbilityZoneActor.modifiers[ABILITY_AUSPEX_MARK_DEPLOYMENT_DURATION].bonus",
     "old": 60,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.PerkApplicationUpdateAbilityZoneActor.modifiers[ABILITY_AUSPEX_MARK_DEPLOYMENT_DURATION].type",
+    "old": "ABILITY_AUSPEX_MARK_DEPLOYMENT_DURATION",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.PerkApplicationUpdateAbilityZoneActor.modifiers[REMOVE_ZONE_EFFECT_DELAY_ON_LEAVE].applyType",
+    "old": "PERCENT_SUM",
     "new": null
    },
    {
@@ -1902,6 +2471,18 @@
     "field": "application.applications.PerkApplicationUpdateAbilityZoneActor.modifiers[REMOVE_ZONE_EFFECT_DELAY_ON_LEAVE].bonus",
     "old": -100,
     "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.PerkApplicationUpdateAbilityZoneActor.modifiers[REMOVE_ZONE_EFFECT_DELAY_ON_LEAVE].type",
+    "old": "REMOVE_ZONE_EFFECT_DELAY_ON_LEAVE",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.flags[0]",
+    "old": null,
+    "new": "ENABLE_GUN_STRIKE_MARK_BY_AUSPEX_SCAN"
    }
   ],
   "perkType:PveSoldierAuspexBuffBonusDebuffDuration": [
@@ -1913,8 +2494,32 @@
    },
    {
     "kind": "value",
+    "field": "application.applications.Modifiers.permanentModifiers[ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_FIREARM_ABILITY_SENSITIVITY_BY_INITIATOR].type",
+    "old": "ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_FIREARM_ABILITY_SENSITIVITY_BY_INITIATOR",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.Modifiers.permanentModifiers[ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_FIREARM_SENSITIVITY_BY_INITIATOR].applyType",
+    "old": "ABSOLUTE",
+    "new": null
+   },
+   {
+    "kind": "value",
     "field": "application.applications.Modifiers.permanentModifiers[ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_FIREARM_SENSITIVITY_BY_INITIATOR].bonus",
     "old": 75,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.Modifiers.permanentModifiers[ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_FIREARM_SENSITIVITY_BY_INITIATOR].type",
+    "old": "ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_FIREARM_SENSITIVITY_BY_INITIATOR",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.Modifiers.permanentModifiers[ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_MELEE_SENSITIVITY_BY_INITIATOR].applyType",
+    "old": "ABSOLUTE",
     "new": null
    },
    {
@@ -1925,8 +2530,32 @@
    },
    {
     "kind": "value",
+    "field": "application.applications.Modifiers.permanentModifiers[ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_MELEE_SENSITIVITY_BY_INITIATOR].type",
+    "old": "ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_MELEE_SENSITIVITY_BY_INITIATOR",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.Modifiers.permanentModifiers[ABILITY_AUSPEX_MARK_STATUS_EFFECT_DURATION].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
     "field": "application.applications.Modifiers.permanentModifiers[ABILITY_AUSPEX_MARK_STATUS_EFFECT_DURATION].bonus",
     "old": -50,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.Modifiers.permanentModifiers[ABILITY_AUSPEX_MARK_STATUS_EFFECT_DURATION].type",
+    "old": "ABILITY_AUSPEX_MARK_STATUS_EFFECT_DURATION",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.Modifiers.permanentModifiers[STATUS_EFFECT_MUTE_SCREAM_DURATION].applyType",
+    "old": "PERCENT_SUM",
     "new": null
    },
    {
@@ -1934,13 +2563,49 @@
     "field": "application.applications.Modifiers.permanentModifiers[STATUS_EFFECT_MUTE_SCREAM_DURATION].bonus",
     "old": -50,
     "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.Modifiers.permanentModifiers[STATUS_EFFECT_MUTE_SCREAM_DURATION].type",
+    "old": "STATUS_EFFECT_MUTE_SCREAM_DURATION",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.scannerTags[0]",
+    "old": null,
+    "new": "ANY_PCBAND"
+   },
+   {
+    "kind": "value",
+    "field": "application.statusEffectEmitterDescs.AuspexZoneSquadBuff.type.initiatorCondition.condition.teamRelation",
+    "old": null,
+    "new": "ALLIES"
    }
   ],
   "perkType:PveSoldierAuspexBuffBonusDebuffRadius": [
    {
     "kind": "value",
+    "field": "application.applications.PerkApplicationFlags.flags[0]",
+    "old": "AUSPEX_ZONE_DECREASE_RANGE_MODIFIER",
+    "new": null
+   },
+   {
+    "kind": "value",
     "field": "application.applications.PerkApplicationModifiers.permanentModifiers[ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_FIREARM_ABILITY_SENSITIVITY_BY_INITIATOR].bonus",
     "old": 75,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.PerkApplicationModifiers.permanentModifiers[ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_FIREARM_ABILITY_SENSITIVITY_BY_INITIATOR].type",
+    "old": "ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_FIREARM_ABILITY_SENSITIVITY_BY_INITIATOR",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.PerkApplicationModifiers.permanentModifiers[ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_FIREARM_SENSITIVITY_BY_INITIATOR].applyType",
+    "old": "ABSOLUTE",
     "new": null
    },
    {
@@ -1951,9 +2616,21 @@
    },
    {
     "kind": "value",
+    "field": "application.applications.PerkApplicationModifiers.permanentModifiers[ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_FIREARM_SENSITIVITY_BY_INITIATOR].type",
+    "old": "ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_FIREARM_SENSITIVITY_BY_INITIATOR",
+    "new": null
+   },
+   {
+    "kind": "value",
     "field": "application.applications.PerkApplicationModifiers.permanentModifiers[ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_GUNSTRIKE_SENSITIVITY_BY_INITIATOR].bonus",
     "old": null,
     "new": 20
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.PerkApplicationModifiers.permanentModifiers[ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_GUNSTRIKE_SENSITIVITY_BY_INITIATOR].type",
+    "old": null,
+    "new": "ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_GUNSTRIKE_SENSITIVITY_BY_INITIATOR"
    },
    {
     "kind": "value",
@@ -1964,12 +2641,48 @@
    },
    {
     "kind": "value",
+    "field": "application.applications.PerkApplicationUpdateAbilityZoneActor.flags[0]",
+    "old": "AUSPEX_ZONE_DECREASE_RANGE_MODIFIER",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.PerkApplicationUpdateAbilityZoneActor.modifiers[ABILITY_AUSPEX_MARK_RADIUS].applyType",
+    "old": "PERCENT_MULT",
+    "new": null
+   },
+   {
+    "kind": "value",
     "field": "application.applications.PerkApplicationUpdateAbilityZoneActor.modifiers[ABILITY_AUSPEX_MARK_RADIUS].bonus",
     "old": -25,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.PerkApplicationUpdateAbilityZoneActor.modifiers[ABILITY_AUSPEX_MARK_RADIUS].type",
+    "old": "ABILITY_AUSPEX_MARK_RADIUS",
     "new": null
    }
   ],
   "perkType:PveSoldierAuspexBuffDamageSensitivityFromEquipment": [
+   {
+    "kind": "value",
+    "field": "application.applications.PerkApplicationFlags.flags[0]",
+    "old": null,
+    "new": "ENABLE_MOBILE_AUSPEX"
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.PerkApplicationFlags.flags[1]",
+    "old": null,
+    "new": "AUSPEX_VISUAL_ZONE_INCREASE_RANGE_MODIFIER"
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.PerkApplicationUpdateAbilityZoneActor.modifiers[ABILITY_AUSPEX_MARK_DEPLOYMENT_DURATION].applyType",
+    "old": null,
+    "new": "PERCENT_SUM"
+   },
    {
     "kind": "value",
     "field": "application.applications.PerkApplicationUpdateAbilityZoneActor.modifiers[ABILITY_AUSPEX_MARK_DEPLOYMENT_DURATION].bonus",
@@ -1978,8 +2691,26 @@
    },
    {
     "kind": "value",
+    "field": "application.applications.PerkApplicationUpdateAbilityZoneActor.modifiers[ABILITY_AUSPEX_MARK_DEPLOYMENT_DURATION].type",
+    "old": null,
+    "new": "ABILITY_AUSPEX_MARK_DEPLOYMENT_DURATION"
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_EQUIPMENT_SENSITIVITY_BY_INITIATOR].applyType",
+    "old": "ABSOLUTE",
+    "new": null
+   },
+   {
+    "kind": "value",
     "field": "application.permanentModifiers[ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_EQUIPMENT_SENSITIVITY_BY_INITIATOR].bonus",
     "old": 75,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_EQUIPMENT_SENSITIVITY_BY_INITIATOR].type",
+    "old": "ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_EQUIPMENT_SENSITIVITY_BY_INITIATOR",
     "new": null
    }
   ],
@@ -1989,6 +2720,30 @@
     "field": "application.applications.IncreaseAuspexCharges.permanentModifiers[ABILITY_ULTIMATE_MAX_CHARGES].bonus",
     "old": null,
     "new": 1
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.IncreaseAuspexCharges.permanentModifiers[ABILITY_ULTIMATE_MAX_CHARGES].type",
+    "old": null,
+    "new": "ABILITY_ULTIMATE_MAX_CHARGES"
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.PerkApplicationFlags.flags[0]",
+    "old": null,
+    "new": "AUSPEX_VISUAL_ZONE_DECREASE_RANGE_MODIFIER"
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.PerkApplicationFlags.flags[1]",
+    "old": null,
+    "new": "ENABLE_RAPID_AUSPEX"
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.PerkApplicationRestoreAbilityEnergy.abilitySlot",
+    "old": null,
+    "new": "ULTIMATE"
    },
    {
     "kind": "value",
@@ -2010,8 +2765,20 @@
    },
    {
     "kind": "value",
+    "field": "application.permanentModifiers[ABILITY_AUSPEX_MARK_IGNORE_COMMON].type",
+    "old": "ABILITY_AUSPEX_MARK_IGNORE_COMMON",
+    "new": null
+   },
+   {
+    "kind": "value",
     "field": "application.permanentModifiers[ABILITY_AUSPEX_MARK_IGNORE_FODDER].bonus",
     "old": 1,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[ABILITY_AUSPEX_MARK_IGNORE_FODDER].type",
+    "old": "ABILITY_AUSPEX_MARK_IGNORE_FODDER",
     "new": null
    },
    {
@@ -2022,8 +2789,20 @@
    },
    {
     "kind": "value",
+    "field": "application.permanentModifiers[ABILITY_AUSPEX_MARK_STATUS_EFFECT_DURATION].type",
+    "old": "ABILITY_AUSPEX_MARK_STATUS_EFFECT_DURATION",
+    "new": null
+   },
+   {
+    "kind": "value",
     "field": "application.permanentModifiers[STATUS_EFFECT_MUTE_SCREAM_DURATION].bonus",
     "old": 8,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[STATUS_EFFECT_MUTE_SCREAM_DURATION].type",
+    "old": "STATUS_EFFECT_MUTE_SCREAM_DURATION",
     "new": null
    }
   ],
@@ -2042,14 +2821,32 @@
    },
    {
     "kind": "value",
+    "field": "application.applications.body.permanentModifiers[SCALE_BOLTER_NON_HEAD_DAMAGE_FROM_FIREARM].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
     "field": "application.applications.body.permanentModifiers[SCALE_BOLTER_NON_HEAD_DAMAGE_FROM_FIREARM].bonus",
     "old": 50,
     "new": null
    },
    {
     "kind": "value",
+    "field": "application.applications.body.permanentModifiers[SCALE_BOLTER_NON_HEAD_DAMAGE_FROM_FIREARM].type",
+    "old": "SCALE_BOLTER_NON_HEAD_DAMAGE_FROM_FIREARM",
+    "new": null
+   },
+   {
+    "kind": "value",
     "field": "application.applications.penetration.permanentModifiers[SCALE_FIREARM_PENETRATION_BOLTER].bonus",
     "old": 1,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.penetration.permanentModifiers[SCALE_FIREARM_PENETRATION_BOLTER].type",
+    "old": "SCALE_FIREARM_PENETRATION_BOLTER",
     "new": null
    },
    {
@@ -2076,6 +2873,24 @@
     "kind": "value",
     "field": "activationController.delayedResetSec",
     "old": 0,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.Bone_Names.boneNames[0]",
+    "old": "HEAD",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.ThreatClasses.threatClasses[0]",
+    "old": "ELITE",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.ThreatClasses.threatClasses[1]",
+    "old": "SPECIAL",
     "new": null
    },
    {
@@ -2154,8 +2969,20 @@
    },
    {
     "kind": "value",
+    "field": "application.permanentModifiers[ABILITY_ULTIMATE_REGENERATION].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
     "field": "application.permanentModifiers[ABILITY_ULTIMATE_REGENERATION].bonus",
     "old": 15,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[ABILITY_ULTIMATE_REGENERATION].type",
+    "old": "ABILITY_ULTIMATE_REGENERATION",
     "new": null
    },
    {
@@ -2169,6 +2996,12 @@
     "field": "deactivationTrigger.needTriggerOnUpperHp",
     "old": true,
     "new": null
+   },
+   {
+    "kind": "value",
+    "field": "perkVisualizationType",
+    "old": null,
+    "new": "WPN_AMMO"
    }
   ],
   "perkType:PveSoldierIncreaseMeleeDamageAgainstThreatClassDependsOnAmmo": [
@@ -2180,8 +3013,38 @@
    },
    {
     "kind": "value",
+    "field": "activationTrigger.affectedThreatClasses[0]",
+    "old": null,
+    "new": "SPECIAL"
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.affectedThreatClasses[1]",
+    "old": null,
+    "new": "MINIBOSS"
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.affectedThreatClasses[2]",
+    "old": null,
+    "new": "BOSS"
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.condition.condition.abilityProvider.abilitySlot",
+    "old": "ULTIMATE",
+    "new": null
+   },
+   {
+    "kind": "value",
     "field": "activationTrigger.condition.condition.abilityProvider.shouldCheckSlot",
     "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.condition.condition.compareType",
+    "old": "SMALLER",
     "new": null
    },
    {
@@ -2198,14 +3061,32 @@
    },
    {
     "kind": "value",
+    "field": "application.abilitySlot",
+    "old": null,
+    "new": "ULTIMATE"
+   },
+   {
+    "kind": "value",
     "field": "application.canRestoreWhenAbilityActive",
     "old": null,
     "new": true
    },
    {
     "kind": "value",
+    "field": "application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
     "field": "application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE].bonus",
     "old": 25,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE].type",
+    "old": "SCALE_DAMAGE_AMOUNT_FROM_MELEE",
     "new": null
    },
    {
@@ -2222,6 +3103,12 @@
    },
    {
     "kind": "value",
+    "field": "deactivationTrigger.condition.condition.abilityProvider.abilitySlot",
+    "old": "ULTIMATE",
+    "new": null
+   },
+   {
+    "kind": "value",
     "field": "deactivationTrigger.condition.condition.abilityProvider.shouldCheckSlot",
     "old": true,
     "new": null
@@ -2231,6 +3118,26 @@
     "field": "deactivationTrigger.condition.condition.energyPercent",
     "old": 100,
     "new": null
+   }
+  ],
+  "perkType:PveSoldierMuteEnemiesInsideAsupexZone": [
+   {
+    "kind": "value",
+    "field": "application.applications.AddFlagReplaceMuteWithKill.flags[0]",
+    "old": "KILL_TARGET_AFTER_SCREAM_MUTE",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.AddMuteEffectInAuspexZone.statusEffectEmitterDescs.StatusEffectEmitterDesc.type.initiatorCondition.condition.teamRelation",
+    "old": "ENEMIES",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.GiveFakePistol.firearmSlot",
+    "old": null,
+    "new": "ADDITIONAL"
    }
   ],
   "perkType:PveSoldierReceiveAmmoClipForKillEliteOrHigher": [
@@ -2245,6 +3152,12 @@
     "field": "application.applications.ReceiveAmmoForGrenadeLauncher.useGrenadeLauncherClip",
     "old": true,
     "new": null
+   },
+   {
+    "kind": "value",
+    "field": "perkVisualizationType",
+    "old": null,
+    "new": "DEFAULT"
    }
   ],
   "perkType:PveSoldierReduceAuspexCooldownForTargetArchetype": [
@@ -2256,15 +3169,51 @@
    },
    {
     "kind": "value",
+    "field": "activationTrigger.affectedThreatClasses[0]",
+    "old": "SPECIAL",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.affectedThreatClasses[1]",
+    "old": "MINIBOSS",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.affectedThreatClasses[2]",
+    "old": "BOSS",
+    "new": null
+   },
+   {
+    "kind": "value",
     "field": "activationTrigger.triggerOncePerEmitter",
     "old": true,
     "new": null
    },
    {
     "kind": "value",
+    "field": "application.abilitySlot",
+    "old": "ULTIMATE",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.PerkApplicationModifiers.permanentModifiers[ABILITY_ULTIMATE_REGENERATION].applyType",
+    "old": null,
+    "new": "PERCENT_SUM"
+   },
+   {
+    "kind": "value",
     "field": "application.applications.PerkApplicationModifiers.permanentModifiers[ABILITY_ULTIMATE_REGENERATION].bonus",
     "old": null,
     "new": 25
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.PerkApplicationModifiers.permanentModifiers[ABILITY_ULTIMATE_REGENERATION].type",
+    "old": null,
+    "new": "ABILITY_ULTIMATE_REGENERATION"
    },
    {
     "kind": "value",
@@ -2288,14 +3237,44 @@
    },
    {
     "kind": "value",
+    "field": "activationTrigger.bodyStateConditionObserver.condition.bodyStateArray[0]",
+    "old": null,
+    "new": "GUN_STRIKE_EXECUTOR"
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[DAMAGE_SENSITIVITY].applyType",
+    "old": null,
+    "new": "PERCENT_SUM"
+   },
+   {
+    "kind": "value",
     "field": "application.permanentModifiers[DAMAGE_SENSITIVITY].bonus",
     "old": null,
     "new": -30
    },
    {
     "kind": "value",
+    "field": "application.permanentModifiers[DAMAGE_SENSITIVITY].type",
+    "old": null,
+    "new": "DAMAGE_SENSITIVITY"
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[FIREARM_SCALE_SPREAD].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
     "field": "application.permanentModifiers[FIREARM_SCALE_SPREAD].bonus",
     "old": -20,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[FIREARM_SCALE_SPREAD].type",
+    "old": "FIREARM_SCALE_SPREAD",
     "new": null
    },
    {
@@ -2306,14 +3285,50 @@
    },
    {
     "kind": "value",
+    "field": "application.permanentModifiers[HEAVY_HIT_INSTEAD_KNOCKBACK_PROBABILITY].type",
+    "old": null,
+    "new": "HEAVY_HIT_INSTEAD_KNOCKBACK_PROBABILITY"
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[HEAVY_HIT_POISE_SENSITIVITY].applyType",
+    "old": null,
+    "new": "PERCENT_MULT"
+   },
+   {
+    "kind": "value",
     "field": "application.permanentModifiers[HEAVY_HIT_POISE_SENSITIVITY].bonus",
     "old": null,
     "new": -100
    },
    {
     "kind": "value",
+    "field": "application.permanentModifiers[HEAVY_HIT_POISE_SENSITIVITY].type",
+    "old": null,
+    "new": "HEAVY_HIT_POISE_SENSITIVITY"
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[SCALE_FIREARM_DAMAGE_TO_BOSS].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
     "field": "application.permanentModifiers[SCALE_FIREARM_DAMAGE_TO_BOSS].bonus",
     "old": 15,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[SCALE_FIREARM_DAMAGE_TO_BOSS].type",
+    "old": "SCALE_FIREARM_DAMAGE_TO_BOSS",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[SCALE_FIREARM_DAMAGE_TO_MINIBOSS].applyType",
+    "old": "PERCENT_SUM",
     "new": null
    },
    {
@@ -2324,8 +3339,26 @@
    },
    {
     "kind": "value",
+    "field": "application.permanentModifiers[SCALE_FIREARM_DAMAGE_TO_MINIBOSS].type",
+    "old": "SCALE_FIREARM_DAMAGE_TO_MINIBOSS",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[SCALE_RECOIL].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
     "field": "application.permanentModifiers[SCALE_RECOIL].bonus",
     "old": -20,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "application.permanentModifiers[SCALE_RECOIL].type",
+    "old": "SCALE_RECOIL",
     "new": null
    },
    {
@@ -2333,6 +3366,18 @@
     "field": "deactivationTrigger.delayTime",
     "old": null,
     "new": 1
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.disableTimerCondition.condition.bodyStateConditionInternal.bodyStateArray[0]",
+    "old": null,
+    "new": "GUN_STRIKE_EXECUTOR"
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.perkTrigger.bodyStateConditionObserver.condition.bodyStateArray[0]",
+    "old": null,
+    "new": "GUN_STRIKE_EXECUTOR"
    },
    {
     "kind": "value",
@@ -2345,6 +3390,12 @@
     "field": "deactivationTrigger.perkTrigger.needTriggerOnExit",
     "old": null,
     "new": true
+   },
+   {
+    "kind": "value",
+    "field": "perkVisualizationType",
+    "old": null,
+    "new": "DEFAULT"
    }
   ],
   "perkType:PveSoldierReloadHolsterWeapon": [
@@ -2380,15 +3431,33 @@
    },
    {
     "kind": "value",
+    "field": "application.applications.body.permanentModifiers[SCALE_BOLTER_NON_HEAD_DAMAGE_FROM_FIREARM].applyType",
+    "old": null,
+    "new": "PERCENT_SUM"
+   },
+   {
+    "kind": "value",
     "field": "application.applications.body.permanentModifiers[SCALE_BOLTER_NON_HEAD_DAMAGE_FROM_FIREARM].bonus",
     "old": null,
     "new": 20
    },
    {
     "kind": "value",
+    "field": "application.applications.body.permanentModifiers[SCALE_BOLTER_NON_HEAD_DAMAGE_FROM_FIREARM].type",
+    "old": null,
+    "new": "SCALE_BOLTER_NON_HEAD_DAMAGE_FROM_FIREARM"
+   },
+   {
+    "kind": "value",
     "field": "application.applications.penetration.permanentModifiers[SCALE_FIREARM_PENETRATION_BOLTER].bonus",
     "old": null,
     "new": 1
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.penetration.permanentModifiers[SCALE_FIREARM_PENETRATION_BOLTER].type",
+    "old": null,
+    "new": "SCALE_FIREARM_PENETRATION_BOLTER"
    }
   ],
   "perkType:PveSoldierRestoreAbilityForUseLootable": [
@@ -2416,6 +3485,30 @@
    },
    {
     "kind": "value",
+    "field": "activationTrigger.triggers.AbilityZoneVictimsThresholdReachedSpecificThreat.threatClasses[0]",
+    "old": "ELITE",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.triggers.AbilityZoneVictimsThresholdReachedSpecificThreat.threatClasses[1]",
+    "old": "SPECIAL",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.triggers.AbilityZoneVictimsThresholdReachedSpecificThreat.threatClasses[2]",
+    "old": "MINIBOSS",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.triggers.AbilityZoneVictimsThresholdReachedSpecificThreat.threatClasses[3]",
+    "old": "BOSS",
+    "new": null
+   },
+   {
+    "kind": "value",
     "field": "activationTrigger.triggers.AbilityZoneVictimsThresholdReachedSpecificThreat.threshold",
     "old": 3,
     "new": null
@@ -2428,9 +3521,27 @@
    },
    {
     "kind": "value",
+    "field": "application.applications.PerkApplicationModifiers.permanentModifiers[ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_FIREARM_ABILITY_SENSITIVITY_BY_INITIATOR].type",
+    "old": null,
+    "new": "ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_FIREARM_ABILITY_SENSITIVITY_BY_INITIATOR"
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.PerkApplicationModifiers.permanentModifiers[ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_FIREARM_SENSITIVITY_BY_INITIATOR].applyType",
+    "old": null,
+    "new": "ABSOLUTE"
+   },
+   {
+    "kind": "value",
     "field": "application.applications.PerkApplicationModifiers.permanentModifiers[ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_FIREARM_SENSITIVITY_BY_INITIATOR].bonus",
     "old": null,
     "new": 40
+   },
+   {
+    "kind": "value",
+    "field": "application.applications.PerkApplicationModifiers.permanentModifiers[ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_FIREARM_SENSITIVITY_BY_INITIATOR].type",
+    "old": null,
+    "new": "ABILITY_AUSPEX_MARK_MARKED_DAMAGE_FROM_FIREARM_SENSITIVITY_BY_INITIATOR"
    },
    {
     "kind": "value",
@@ -2449,6 +3560,14 @@
     "field": "deactivationTrigger.shouldTriggerOnEmissionStop",
     "old": true,
     "new": null
+   }
+  ],
+  "perkType:PveSoldierRestoreEquipmentTeamPerk": [
+   {
+    "kind": "value",
+    "field": "perkVisualizationType",
+    "old": null,
+    "new": "DEFAULT"
    }
   ],
   "perkType:PveSupportIncreaseAmmoCapacityToTeam": [
@@ -2488,6 +3607,12 @@
   "variant:arifle_bolt_rifle_tac_reserve/arifle_bolt_rifle_02": [
    {
     "kind": "value",
+    "field": "ModificatorBulletSpread.applyType",
+    "old": null,
+    "new": "PERCENT"
+   },
+   {
+    "kind": "value",
     "field": "ModificatorBulletSpread.modificator",
     "old": null,
     "new": -30
@@ -2500,9 +3625,21 @@
    },
    {
     "kind": "value",
+    "field": "ModificatorHeadshotMultiplier.applyType",
+    "old": null,
+    "new": "ABSOLUTE"
+   },
+   {
+    "kind": "value",
     "field": "ModificatorHeadshotMultiplier.modificator",
     "old": null,
     "new": 0.5
+   },
+   {
+    "kind": "value",
+    "field": "ModificatorRecoilRiseTimeSpeed.applyType",
+    "old": null,
+    "new": "PERCENT"
    },
    {
     "kind": "value",
@@ -2528,6 +3665,12 @@
   "variant:arifle_bolt_rifle_tac_reserve/arifle_bolt_rifle_03": [
    {
     "kind": "value",
+    "field": "ModificatorBulletSpread.applyType",
+    "old": null,
+    "new": "PERCENT"
+   },
+   {
+    "kind": "value",
     "field": "ModificatorBulletSpread.modificator",
     "old": null,
     "new": -45
@@ -2540,9 +3683,21 @@
    },
    {
     "kind": "value",
+    "field": "ModificatorHeadshotMultiplier.applyType",
+    "old": null,
+    "new": "ABSOLUTE"
+   },
+   {
+    "kind": "value",
     "field": "ModificatorHeadshotMultiplier.modificator",
     "old": null,
     "new": 0.5
+   },
+   {
+    "kind": "value",
+    "field": "ModificatorRecoilRiseTimeSpeed.applyType",
+    "old": null,
+    "new": "PERCENT"
    },
    {
     "kind": "value",
@@ -2562,9 +3717,21 @@
   "variant:arifle_bolt_rifle_tac_reserve/arifle_bolt_rifle_03_b": [
    {
     "kind": "value",
+    "field": "ModificatorAmmoPool.applyType",
+    "old": null,
+    "new": "ABSOLUTE"
+   },
+   {
+    "kind": "value",
     "field": "ModificatorAmmoPool.modificator",
     "old": null,
     "new": 155
+   },
+   {
+    "kind": "value",
+    "field": "ModificatorClipAmmo.applyType",
+    "old": null,
+    "new": "ABSOLUTE"
    },
    {
     "kind": "value",
@@ -2596,6 +3763,12 @@
   "variant:arifle_bolt_rifle_tac_reserve/arifle_bolt_rifle_04": [
    {
     "kind": "value",
+    "field": "ModificatorBulletSpread.applyType",
+    "old": null,
+    "new": "PERCENT"
+   },
+   {
+    "kind": "value",
     "field": "ModificatorBulletSpread.modificator",
     "old": null,
     "new": -70
@@ -2608,9 +3781,21 @@
    },
    {
     "kind": "value",
+    "field": "ModificatorHeadshotMultiplier.applyType",
+    "old": null,
+    "new": "ABSOLUTE"
+   },
+   {
+    "kind": "value",
     "field": "ModificatorHeadshotMultiplier.modificator",
     "old": null,
     "new": 0.5
+   },
+   {
+    "kind": "value",
+    "field": "ModificatorRecoilRiseTimeSpeed.applyType",
+    "old": null,
+    "new": "PERCENT"
    },
    {
     "kind": "value",
@@ -2630,9 +3815,21 @@
   "variant:arifle_bolt_rifle_tac_reserve/arifle_bolt_rifle_04_b": [
    {
     "kind": "value",
+    "field": "ModificatorAmmoPool.applyType",
+    "old": null,
+    "new": "ABSOLUTE"
+   },
+   {
+    "kind": "value",
     "field": "ModificatorAmmoPool.modificator",
     "old": null,
     "new": 190
+   },
+   {
+    "kind": "value",
+    "field": "ModificatorClipAmmo.applyType",
+    "old": null,
+    "new": "ABSOLUTE"
    },
    {
     "kind": "value",
@@ -2686,6 +3883,12 @@
   "variant:hgun_absolver_bolt_pistol/02": [
    {
     "kind": "value",
+    "field": "ModificatorBulletSpread.applyType",
+    "old": null,
+    "new": "PERCENT"
+   },
+   {
+    "kind": "value",
     "field": "ModificatorBulletSpread.modificator",
     "old": null,
     "new": -15
@@ -2698,6 +3901,12 @@
    },
    {
     "kind": "value",
+    "field": "ModificatorRecoilRiseTimeSpeed.applyType",
+    "old": null,
+    "new": "PERCENT"
+   },
+   {
+    "kind": "value",
     "field": "ModificatorRecoilRiseTimeSpeed.modificator",
     "old": null,
     "new": -20
@@ -2706,9 +3915,21 @@
   "variant:hgun_absolver_bolt_pistol/02_a": [
    {
     "kind": "value",
+    "field": "ModificatorAmmoPool.applyType",
+    "old": null,
+    "new": "ABSOLUTE"
+   },
+   {
+    "kind": "value",
     "field": "ModificatorAmmoPool.modificator",
     "old": null,
     "new": 20
+   },
+   {
+    "kind": "value",
+    "field": "ModificatorClipAmmo.applyType",
+    "old": null,
+    "new": "ABSOLUTE"
    },
    {
     "kind": "value",
@@ -2734,6 +3955,12 @@
   "variant:hgun_absolver_bolt_pistol/03": [
    {
     "kind": "value",
+    "field": "ModificatorBulletSpread.applyType",
+    "old": null,
+    "new": "PERCENT"
+   },
+   {
+    "kind": "value",
     "field": "ModificatorBulletSpread.modificator",
     "old": null,
     "new": -30
@@ -2746,6 +3973,12 @@
    },
    {
     "kind": "value",
+    "field": "ModificatorRecoilRiseTimeSpeed.applyType",
+    "old": null,
+    "new": "PERCENT"
+   },
+   {
+    "kind": "value",
     "field": "ModificatorRecoilRiseTimeSpeed.modificator",
     "old": null,
     "new": -40
@@ -2754,9 +3987,21 @@
   "variant:hgun_absolver_bolt_pistol/03_a": [
    {
     "kind": "value",
+    "field": "ModificatorAmmoPool.applyType",
+    "old": null,
+    "new": "ABSOLUTE"
+   },
+   {
+    "kind": "value",
     "field": "ModificatorAmmoPool.modificator",
     "old": null,
     "new": 40
+   },
+   {
+    "kind": "value",
+    "field": "ModificatorClipAmmo.applyType",
+    "old": null,
+    "new": "ABSOLUTE"
    },
    {
     "kind": "value",
@@ -2782,6 +4027,12 @@
   "variant:hgun_absolver_bolt_pistol/04": [
    {
     "kind": "value",
+    "field": "ModificatorBulletSpread.applyType",
+    "old": null,
+    "new": "PERCENT"
+   },
+   {
+    "kind": "value",
     "field": "ModificatorBulletSpread.modificator",
     "old": null,
     "new": -45
@@ -2794,6 +4045,12 @@
    },
    {
     "kind": "value",
+    "field": "ModificatorRecoilRiseTimeSpeed.applyType",
+    "old": null,
+    "new": "PERCENT"
+   },
+   {
+    "kind": "value",
     "field": "ModificatorRecoilRiseTimeSpeed.modificator",
     "old": null,
     "new": -60
@@ -2802,9 +4059,21 @@
   "variant:hgun_absolver_bolt_pistol/04_a": [
    {
     "kind": "value",
+    "field": "ModificatorAmmoPool.applyType",
+    "old": null,
+    "new": "ABSOLUTE"
+   },
+   {
+    "kind": "value",
     "field": "ModificatorAmmoPool.modificator",
     "old": null,
     "new": 60
+   },
+   {
+    "kind": "value",
+    "field": "ModificatorClipAmmo.applyType",
+    "old": null,
+    "new": "ABSOLUTE"
    },
    {
     "kind": "value",
@@ -3428,6 +4697,18 @@
    },
    {
     "kind": "value",
+    "field": "pve.barrelDescriptions.auto.recoilSettings.targetRecoilSettings.isRotatingToCamera",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.barrelDescriptions.auto.recoilSettings.targetRecoilSettings.minDistToCamera",
+    "old": null,
+    "new": 2.5
+   },
+   {
+    "kind": "value",
     "field": "pve.barrelDescriptions.auto.recoilSettings.targetRecoilSettings.minDistToWeapon",
     "old": null,
     "new": 3
@@ -3533,6 +4814,12 @@
     "field": "pve.barrelDescriptions.auto.shootSettings.fireRate.shotsPerMin",
     "old": null,
     "new": 280
+   },
+   {
+    "kind": "value",
+    "field": "pve.barrelDescriptions.auto.shootSettings.fireRateAffectShootAnim",
+    "old": null,
+    "new": false
    },
    {
     "kind": "value",
@@ -3647,6 +4934,12 @@
     "field": "pve.cartridgeDescriptions.bolts.shotCreatorSettings.heavyHitDamage",
     "old": null,
     "new": 0.5
+   },
+   {
+    "kind": "value",
+    "field": "pve.category",
+    "old": null,
+    "new": "RIFLE_FA"
    },
    {
     "kind": "value",
@@ -3882,6 +5175,18 @@
    },
    {
     "kind": "value",
+    "field": "pve.barrelDescriptions.common.recoilSettings.targetRecoilSettings.isRotatingToCamera",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.barrelDescriptions.common.recoilSettings.targetRecoilSettings.minDistToCamera",
+    "old": null,
+    "new": 2.5
+   },
+   {
+    "kind": "value",
     "field": "pve.barrelDescriptions.common.recoilSettings.targetRecoilSettings.minDistToWeapon",
     "old": null,
     "new": 3
@@ -3996,6 +5301,12 @@
    },
    {
     "kind": "value",
+    "field": "pve.barrelDescriptions.common.shootSettings.fireRateAffectShootAnim",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
     "field": "pve.barrelDescriptions.common.spreadSettings.maxBulletSpread",
     "old": null,
     "new": 3
@@ -4107,6 +5418,12 @@
     "field": "pve.cartridgeDescriptions.bolts.shotCreatorSettings.heavyHitDamage",
     "old": null,
     "new": 0.5
+   },
+   {
+    "kind": "value",
+    "field": "pve.category",
+    "old": null,
+    "new": "PISTOL"
    },
    {
     "kind": "value",
@@ -4242,6 +5559,29 @@
     "pct": -20.0
    }
   ],
+  "weapon:melee_chainsword": [
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light5Mirrored.strikeDirection",
+    "old": "UP",
+    "new": "LEFT"
+   }
+  ],
+  "weapon:melee_combat_knife": [
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light4.mainDamage.healthDmgPercent",
+    "old": 30,
+    "new": 20,
+    "pct": -33.33
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light4.mainDamage.heavyHitDmgPercent",
+    "old": 0,
+    "new": 100
+   }
+  ],
   "weapon:melee_power_axe": [
    {
     "kind": "value",
@@ -4338,6 +5678,12 @@
     "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.RemoveByEndOfStrikeThatHitActor.conditionTrigger.condition.conditions.MeleeStrikeWithHitsEndedTriggeronly.conditionHit.hitCondition.pdNodePosY",
     "old": null,
     "new": 108.0033
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.RemoveByEndOfStrikeThatHitActor.conditionTrigger.condition.conditions.MeleeStrikeWithHitsEndedTriggeronly.conditionMeleeStrike.needCheckStrikeUid",
+    "old": null,
+    "new": true
    },
    {
     "kind": "value",
@@ -4515,6 +5861,18 @@
    },
    {
     "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.WhirlwindIdleCharged.strikeDirection",
+    "old": null,
+    "new": "LEFT"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.WhirlwindIdleCharged.weaponType",
+    "old": null,
+    "new": "BODY"
+   },
+   {
+    "kind": "value",
     "field": "pve.comboDesc.strikeSettings.WhirlwindLeftCharged.mainDamage.canKnockback",
     "old": null,
     "new": true
@@ -4566,6 +5924,18 @@
     "field": "pve.comboDesc.strikeSettings.WhirlwindLeftCharged.rotationSpeed",
     "old": null,
     "new": 80
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.WhirlwindLeftCharged.strikeDirection",
+    "old": null,
+    "new": "LEFT"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.WhirlwindLeftCharged.weaponType",
+    "old": null,
+    "new": "BODY"
    },
    {
     "kind": "value",
@@ -4629,6 +5999,18 @@
    },
    {
     "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.WhirlwindRightCharged.strikeDirection",
+    "old": null,
+    "new": "RIGHT"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.WhirlwindRightCharged.weaponType",
+    "old": null,
+    "new": "BODY"
+   },
+   {
+    "kind": "value",
     "field": "pve.comboDesc.strikeSettings.WhirlwindRightCombo1Charged.mainDamage.canKnockback",
     "old": null,
     "new": true
@@ -4683,9 +6065,33 @@
    },
    {
     "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.WhirlwindRightCombo1Charged.strikeDirection",
+    "old": null,
+    "new": "RIGHT"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.WhirlwindRightCombo1Charged.weaponType",
+    "old": null,
+    "new": "BODY"
+   },
+   {
+    "kind": "value",
+    "field": "pve.meleeDetectorSettings.RightHandHeroic.endTrackerLocator",
+    "old": null,
+    "new": "GUN_R"
+   },
+   {
+    "kind": "value",
     "field": "pve.meleeDetectorSettings.RightHandHeroic.endTrackerOffset.z",
     "old": null,
     "new": 6
+   },
+   {
+    "kind": "value",
+    "field": "pve.meleeDetectorSettings.RightHandHeroic.rootTrackerLocator",
+    "old": null,
+    "new": "GUN_R"
    },
    {
     "kind": "value",
@@ -5067,6 +6473,36 @@
    },
    {
     "kind": "value",
+    "field": "pve.comboDesc.blueprintDesc.type.groups.Light Combo.height",
+    "old": null,
+    "new": 1600
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.blueprintDesc.type.groups.Light Combo.isCollapsed",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.blueprintDesc.type.groups.Light Combo.width",
+    "old": null,
+    "new": 4277.734
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.blueprintDesc.type.groups.Light Combo.x",
+    "old": null,
+    "new": 8400
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.blueprintDesc.type.groups.Light Combo.y",
+    "old": null,
+    "new": 5400
+   },
+   {
+    "kind": "value",
     "field": "pve.comboDesc.blueprintDesc.type.groups.Regular Attacks.height",
     "old": null,
     "new": 598.663
@@ -5154,6 +6590,102 @@
     "field": "pve.comboDesc.blueprintDesc.type.nodes.BlueprintLibraryFunction_G76cwv0i.logic.nodes.IsMeleeSlowTap_G76cdC5H.slowTapDelayRef.def",
     "old": null,
     "new": 0.33
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.blueprintDesc.type.nodes.BlueprintLibraryFunction_G85dp71p.logic.nodes.CheckModifierFlag_G85dgj0C.flag",
+    "old": null,
+    "new": "MELEE_HAMMER_ONE_HANDED_DOUBLE_HITS"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.blueprintDesc.type.nodes.BlueprintLibraryFunction_G85dqX3k.logic.nodes.CheckModifierFlag_G85dgj0C.flag",
+    "old": null,
+    "new": "MELEE_HAMMER_ONE_HANDED_DOUBLE_HITS"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.blueprintDesc.type.nodes.BlueprintLibraryFunction_G85dqr1E.logic.nodes.CheckModifierFlag_G85dgj0C.flag",
+    "old": null,
+    "new": "MELEE_HAMMER_ONE_HANDED_DOUBLE_HITS"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.blueprintDesc.type.nodes.CheckBodyStateCondition_1.bodyStateCondition.bodyStateArray[0]",
+    "old": null,
+    "new": "DODGE"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.blueprintDesc.type.nodes.CheckBodyStateCondition_1.bodyStateCondition.bodyStateArray[1]",
+    "old": null,
+    "new": "SPRINT"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.blueprintDesc.type.nodes.CheckBodyStateCondition_1.bodyStateCondition.type",
+    "old": null,
+    "new": "ANY"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.blueprintDesc.type.nodes.CheckBodyStateCondition_1_2_F7pczlan3.bodyStateCondition.bodyStateArray[0]",
+    "old": null,
+    "new": "DODGE"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.blueprintDesc.type.nodes.CheckBodyStateCondition_1_2_F7pczlan3.bodyStateCondition.bodyStateArray[1]",
+    "old": null,
+    "new": "SPRINT"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.blueprintDesc.type.nodes.CheckBodyStateCondition_1_2_F7pczlan3.bodyStateCondition.type",
+    "old": null,
+    "new": "ANY"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.blueprintDesc.type.nodes.CheckBodyStateCondition_1_F7pczlan1.bodyStateCondition.bodyStateArray[0]",
+    "old": null,
+    "new": "BLOCK"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.blueprintDesc.type.nodes.CheckBodyStateCondition_1_F7pczlan1.bodyStateCondition.type",
+    "old": null,
+    "new": "ANY"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.blueprintDesc.type.nodes.CheckBodyStateCondition_Faecytbj.bodyStateCondition.bodyStateArray[0]",
+    "old": null,
+    "new": "ABILITY_CAST"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.blueprintDesc.type.nodes.CheckBodyStateCondition_Faecytbj.bodyStateCondition.type",
+    "old": null,
+    "new": "ANY"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.blueprintDesc.type.nodes.CheckCharacterCommandInProgress_1.commandTypeRef.def",
+    "old": null,
+    "new": "FALLING_ATTACK"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.blueprintDesc.type.nodes.CheckModifierFlag_G8hcFUaa.flag",
+    "old": null,
+    "new": "MELEE_HAMMER_ONE_HANDED_HEAVY_CHARGED"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.blueprintDesc.type.nodes.CheckModifierFlag_G8hcVj1P.flag",
+    "old": null,
+    "new": "MELEE_HAMMER_ONE_HANDED_HEAVY_CHARGED"
    },
    {
     "kind": "value",
@@ -5247,6 +6779,18 @@
    },
    {
     "kind": "value",
+    "field": "pve.comboDesc.blueprintDesc.type.nodes.SubscribeOnAbility.subscribeType",
+    "old": null,
+    "new": "MULTIPLE"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.blueprintDesc.type.nodes.SubscribeOnAbility.tagToCheckRef.def",
+    "old": null,
+    "new": "FLYING"
+   },
+   {
+    "kind": "value",
     "field": "pve.comboDesc.blueprintDesc.type.nodes.UpdateBPVariable.boolRef.def",
     "old": null,
     "new": true
@@ -5331,6 +6875,12 @@
    },
    {
     "kind": "value",
+    "field": "pve.comboDesc.preparingSettings.IdleCharge.type.preparationDurationModifierStack.ownerModifierTypes[0]",
+    "old": null,
+    "new": "MELEE_HEAVY_COMBO_PREPARATION_TIME"
+   },
+   {
+    "kind": "value",
     "field": "pve.comboDesc.preparingSettings.IdleCharge.type.uninterruptiblePreparationPhaseDuration",
     "old": null,
     "new": 1
@@ -5397,9 +6947,27 @@
    },
    {
     "kind": "value",
+    "field": "pve.comboDesc.stackManagerDesc.maxCoundModifier.type",
+    "old": null,
+    "new": "SCALE_HAMMER_ONE_HANDED_DEFAULT_MAX_STACK_COUNT"
+   },
+   {
+    "kind": "value",
     "field": "pve.comboDesc.stackManagerDesc.maxCount",
     "old": null,
     "new": 3
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.StackUpdaterConditionPreparing.conditionTrigger.condition.conditions.MeleePreparing.needCheckPreparingUid",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.StackUpdaterConditionPreparing.conditionTrigger.condition.logicOperator",
+    "old": null,
+    "new": "AND"
    },
    {
     "kind": "value",
@@ -5412,6 +6980,12 @@
     "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.StackUpdaterConditionPreparing.settings.maxUpdateStackCount",
     "old": null,
     "new": 3
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.StackUpdaterConditionPreparing.settings.maxUpdateStackCountModifier.type",
+    "old": null,
+    "new": "SCALE_HAMMER_ONE_HANDED_DEFAULT_MAX_STACK_COUNT"
    },
    {
     "kind": "value",
@@ -5445,6 +7019,12 @@
    },
    {
     "kind": "value",
+    "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.StackUpdaterConditionPreparing.settings.updateCountModifier.type",
+    "old": null,
+    "new": "SCALE_HAMMER_ONE_HANDED_DEFAULT_UPDATE_STACK_COUNT"
+   },
+   {
+    "kind": "value",
     "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.StackUpdaterConditionStrikeDefault.settings.isInstantUpdate",
     "old": null,
     "new": true
@@ -5463,6 +7043,24 @@
    },
    {
     "kind": "value",
+    "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.StackUpdaterConditionStrikeReset.settings.updateType",
+    "old": null,
+    "new": "RESET"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.StackUpdaterFastCharges.conditionTrigger.condition.conditions.MeleeStrike.needCheckStrikeUid",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.StackUpdaterFastCharges.conditionTrigger.condition.logicOperator",
+    "old": null,
+    "new": "AND"
+   },
+   {
+    "kind": "value",
     "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.StackUpdaterFastCharges.settings.checkMainCountOnly",
     "old": null,
     "new": false
@@ -5472,6 +7070,12 @@
     "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.StackUpdaterFastCharges.settings.maxUpdateStackCount",
     "old": null,
     "new": 1
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.StackUpdaterFastCharges.settings.maxUpdateStackCountModifier.type",
+    "old": null,
+    "new": "SCALE_HAMMER_ONE_HANDED_DEFAULT_FAST_UPDATE_STACK_COUNT"
    },
    {
     "kind": "value",
@@ -5505,6 +7109,30 @@
    },
    {
     "kind": "value",
+    "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.StackUpdaterFastCharges.settings.updateCountModifier.type",
+    "old": null,
+    "new": "SCALE_HAMMER_ONE_HANDED_DEFAULT_FAST_UPDATE_STACK_COUNT"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.StackUpdaterResetOverTime.conditionTrigger.condition.conditions.NotChargePreparingOrStrikeOrStackUpdate.condition.conditions.MeleePreparing.needCheckPreparingUid",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.StackUpdaterResetOverTime.conditionTrigger.condition.conditions.NotChargePreparingOrStrikeOrStackUpdate.condition.logicOperator",
+    "old": null,
+    "new": "OR"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.StackUpdaterResetOverTime.settings.modifierForTimeUpdate.type",
+    "old": null,
+    "new": "SCALE_HAMMER_ONE_HANDED_DEFAULT_TIMER_RESET_STACK"
+   },
+   {
+    "kind": "value",
     "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.StackUpdaterResetOverTime.settings.timingsForStacksUpdate.spline[0]",
     "old": null,
     "new": 5
@@ -5520,6 +7148,12 @@
     "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.StackUpdaterResetOverTime.settings.updateCount",
     "old": null,
     "new": -1
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.StackUpdaterResetOverTime.settings.updateType",
+    "old": null,
+    "new": "SUM"
    },
    {
     "kind": "value",
@@ -5553,6 +7187,12 @@
    },
    {
     "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.ChargeStackDamager.extraDamages.melee_damaging_window.damageLocator",
+    "old": null,
+    "new": "GUN_R"
+   },
+   {
+    "kind": "value",
     "field": "pve.comboDesc.strikeSettings.ChargeStackDamager.extraDamages.melee_damaging_window.damageOffset.y",
     "old": null,
     "new": 0
@@ -5568,6 +7208,12 @@
     "field": "pve.comboDesc.strikeSettings.ChargeStackDamager.extraDamages.melee_damaging_window.heavyHitDmgPercent",
     "old": null,
     "new": 200
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.ChargeStackDamager.extraDamages.melee_damaging_window.hitReactionSourceType",
+    "old": null,
+    "new": "DAMAGER"
    },
    {
     "kind": "value",
@@ -5634,6 +7280,12 @@
     "field": "pve.comboDesc.strikeSettings.ChargeStackDamager.maxDamagedActors",
     "old": null,
     "new": 15
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.ChargeStackDamager.strikeDirection",
+    "old": null,
+    "new": "CENTRE"
    },
    {
     "kind": "value",
@@ -5730,6 +7382,12 @@
     "field": "pve.comboDesc.strikeSettings.CombatShield1.maxDamagedActors",
     "old": null,
     "new": 10
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.CombatShield1.strikeDirection",
+    "old": null,
+    "new": "CENTRE"
    },
    {
     "kind": "value",
@@ -6015,6 +7673,12 @@
    },
    {
     "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.CombatShieldThrustAttack.extraDamages.ShieldRush.hitReactionSourceType",
+    "old": null,
+    "new": "SOURCE"
+   },
+   {
+    "kind": "value",
     "field": "pve.comboDesc.strikeSettings.CombatShieldThrustAttack.extraDamages.ShieldRush.isAuthorityDamage",
     "old": null,
     "new": false
@@ -6099,6 +7763,12 @@
    },
    {
     "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.CombatShieldThrustAttack.strikeDirection",
+    "old": null,
+    "new": "LEFT"
+   },
+   {
+    "kind": "value",
     "field": "pve.comboDesc.strikeSettings.CombatShieldThrustAttack.useRotationSpeedOverride",
     "old": null,
     "new": true
@@ -6177,6 +7847,12 @@
    },
    {
     "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.FallingAttack.strikeDirection",
+    "old": null,
+    "new": "UP"
+   },
+   {
+    "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Heavy1.mainDamage.canKnockback",
     "old": null,
     "new": true
@@ -6219,9 +7895,21 @@
    },
    {
     "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Heavy1.strikeDirection",
+    "old": null,
+    "new": "RIGHT"
+   },
+   {
+    "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Heavy1.useWeaponTypeOverride",
     "old": null,
     "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Heavy1.weaponType",
+    "old": null,
+    "new": "HAMMER_ONE_HANDED"
    },
    {
     "kind": "value",
@@ -6315,9 +8003,21 @@
    },
    {
     "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Heavy2.strikeDirection",
+    "old": null,
+    "new": "LEFT"
+   },
+   {
+    "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Heavy2.useWeaponTypeOverride",
     "old": null,
     "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Heavy2.weaponType",
+    "old": null,
+    "new": "HAMMER_ONE_HANDED"
    },
    {
     "kind": "value",
@@ -6411,9 +8111,21 @@
    },
    {
     "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Heavy3.strikeDirection",
+    "old": null,
+    "new": "RIGHT"
+   },
+   {
+    "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Heavy3.useWeaponTypeOverride",
     "old": null,
     "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Heavy3.weaponType",
+    "old": null,
+    "new": "HAMMER_ONE_HANDED"
    },
    {
     "kind": "value",
@@ -6531,9 +8243,21 @@
    },
    {
     "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.HeavyChargedLeft.strikeDirection",
+    "old": null,
+    "new": "UP"
+   },
+   {
+    "kind": "value",
     "field": "pve.comboDesc.strikeSettings.HeavyChargedLeft.useWeaponTypeOverride",
     "old": null,
     "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.HeavyChargedLeft.weaponType",
+    "old": null,
+    "new": "HAMMER_ONE_HANDED"
    },
    {
     "kind": "value",
@@ -6645,9 +8369,21 @@
    },
    {
     "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.HeavyChargedRight.strikeDirection",
+    "old": null,
+    "new": "UP"
+   },
+   {
+    "kind": "value",
     "field": "pve.comboDesc.strikeSettings.HeavyChargedRight.useWeaponTypeOverride",
     "old": null,
     "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.HeavyChargedRight.weaponType",
+    "old": null,
+    "new": "HAMMER_ONE_HANDED"
    },
    {
     "kind": "value",
@@ -6675,6 +8411,12 @@
    },
    {
     "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.HeavyFastChargeLeft.extraDamages.melee_extra_damage_2.damageLocator",
+    "old": null,
+    "new": "GUN_R"
+   },
+   {
+    "kind": "value",
     "field": "pve.comboDesc.strikeSettings.HeavyFastChargeLeft.extraDamages.melee_extra_damage_2.damageOffset.y",
     "old": null,
     "new": 0
@@ -6690,6 +8432,12 @@
     "field": "pve.comboDesc.strikeSettings.HeavyFastChargeLeft.extraDamages.melee_extra_damage_2.heavyHitDmgPercent",
     "old": null,
     "new": 200
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.HeavyFastChargeLeft.extraDamages.melee_extra_damage_2.hitReactionSourceType",
+    "old": null,
+    "new": "DAMAGER"
    },
    {
     "kind": "value",
@@ -6729,6 +8477,12 @@
    },
    {
     "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.HeavyFastChargeLeft.weaponType",
+    "old": null,
+    "new": "HAMMER_ONE_HANDED"
+   },
+   {
+    "kind": "value",
     "field": "pve.comboDesc.strikeSettings.HeavyFastChargeRight.extraDamages.melee_extra_damage_2.canKnockback",
     "old": null,
     "new": true
@@ -6753,6 +8507,12 @@
    },
    {
     "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.HeavyFastChargeRight.extraDamages.melee_extra_damage_2.damageLocator",
+    "old": null,
+    "new": "GUN_R"
+   },
+   {
+    "kind": "value",
     "field": "pve.comboDesc.strikeSettings.HeavyFastChargeRight.extraDamages.melee_extra_damage_2.damageOffset.y",
     "old": null,
     "new": 0
@@ -6768,6 +8528,12 @@
     "field": "pve.comboDesc.strikeSettings.HeavyFastChargeRight.extraDamages.melee_extra_damage_2.heavyHitDmgPercent",
     "old": null,
     "new": 200
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.HeavyFastChargeRight.extraDamages.melee_extra_damage_2.hitReactionSourceType",
+    "old": null,
+    "new": "DAMAGER"
    },
    {
     "kind": "value",
@@ -6804,6 +8570,12 @@
     "field": "pve.comboDesc.strikeSettings.HeavyFastChargeRight.useWeaponTypeOverride",
     "old": null,
     "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.HeavyFastChargeRight.weaponType",
+    "old": null,
+    "new": "HAMMER_ONE_HANDED"
    },
    {
     "kind": "value",
@@ -6954,6 +8726,12 @@
     "field": "pve.comboDesc.strikeSettings.JetpackAir1.maxDamagedActors",
     "old": null,
     "new": 15
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.JetpackAir1.strikeDirection",
+    "old": null,
+    "new": "UP"
    },
    {
     "kind": "value",
@@ -7209,6 +8987,12 @@
    },
    {
     "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.JetpackLand1.strikeDirection",
+    "old": null,
+    "new": "UP"
+   },
+   {
+    "kind": "value",
     "field": "pve.comboDesc.strikeSettings.JetpackLand1Charged.constraintSettingsOverrides.IgnoreInputsAndTargets.needIgnoreInputsAndTargets",
     "old": null,
     "new": true
@@ -7461,6 +9245,1122 @@
    },
    {
     "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.JetpackLand1Charged.strikeDirection",
+    "old": null,
+    "new": "UP"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1.mainDamage.healthDmgPercent",
+    "old": null,
+    "new": 125
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1.mainDamage.heavyHitDmgPercent",
+    "old": null,
+    "new": 100
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1.mainDamage.impulse",
+    "old": null,
+    "new": 200
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1.mainDamage.knockbackAngle",
+    "old": null,
+    "new": 13
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1.maxDamagedActors",
+    "old": null,
+    "new": 5
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1.strikeDirection",
+    "old": null,
+    "new": "RIGHT"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1Charged.extraDamages.melee_extra_damage.canKnockback",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1Charged.extraDamages.melee_extra_damage.canRepeatDamageToDamageActorsByThis",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1Charged.extraDamages.melee_extra_damage.canRepeatDamageToDamagedActorsAfterThis",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1Charged.extraDamages.melee_extra_damage.damageOffset.x",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1Charged.extraDamages.melee_extra_damage.damageOffset.y",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1Charged.extraDamages.melee_extra_damage.damageOffset.z",
+    "old": null,
+    "new": 3
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1Charged.extraDamages.melee_extra_damage.healthDmgPercent",
+    "old": null,
+    "new": 150
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1Charged.extraDamages.melee_extra_damage.heavyHitDmgPercent",
+    "old": null,
+    "new": 100
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1Charged.extraDamages.melee_extra_damage.impulse",
+    "old": null,
+    "new": 500
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1Charged.extraDamages.melee_extra_damage.isGuardbreak",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1Charged.extraDamages.melee_extra_damage.isPervasive",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1Charged.extraDamages.melee_extra_damage.knockbackAngle",
+    "old": null,
+    "new": 15
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1Charged.extraDamages.melee_extra_damage.radiusScale",
+    "old": null,
+    "new": 5
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1Charged.mainDamage.canKnockback",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1Charged.mainDamage.healthDmgPercent",
+    "old": null,
+    "new": 175
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1Charged.mainDamage.heavyHitDmgPercent",
+    "old": null,
+    "new": 200
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1Charged.mainDamage.impulse",
+    "old": null,
+    "new": 200
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1Charged.mainDamage.isGuardbreak",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1Charged.mainDamage.knockbackAngle",
+    "old": null,
+    "new": 13
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1Charged.maxDamagedActors",
+    "old": null,
+    "new": 10
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1Charged.strikeDirection",
+    "old": null,
+    "new": "RIGHT"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1ChargedDouble.extraDamages.melee_extra_damage.canKnockback",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1ChargedDouble.extraDamages.melee_extra_damage.canRepeatDamageToDamageActorsByThis",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1ChargedDouble.extraDamages.melee_extra_damage.damageOffset.x",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1ChargedDouble.extraDamages.melee_extra_damage.damageOffset.y",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1ChargedDouble.extraDamages.melee_extra_damage.damageOffset.z",
+    "old": null,
+    "new": 3
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1ChargedDouble.extraDamages.melee_extra_damage.healthDmgPercent",
+    "old": null,
+    "new": 150
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1ChargedDouble.extraDamages.melee_extra_damage.heavyHitDmgPercent",
+    "old": null,
+    "new": 100
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1ChargedDouble.extraDamages.melee_extra_damage.impulse",
+    "old": null,
+    "new": 500
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1ChargedDouble.extraDamages.melee_extra_damage.isGuardbreak",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1ChargedDouble.extraDamages.melee_extra_damage.isPervasive",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1ChargedDouble.extraDamages.melee_extra_damage.knockbackAngle",
+    "old": null,
+    "new": 15
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1ChargedDouble.extraDamages.melee_extra_damage.radiusScale",
+    "old": null,
+    "new": 5
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1ChargedDouble.mainDamage.canKnockback",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1ChargedDouble.mainDamage.healthDmgPercent",
+    "old": null,
+    "new": 175
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1ChargedDouble.mainDamage.heavyHitDmgPercent",
+    "old": null,
+    "new": 200
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1ChargedDouble.mainDamage.impulse",
+    "old": null,
+    "new": 200
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1ChargedDouble.mainDamage.isGuardbreak",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1ChargedDouble.mainDamage.knockbackAngle",
+    "old": null,
+    "new": 13
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1ChargedDouble.maxDamagedActors",
+    "old": null,
+    "new": 10
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light1ChargedDouble.strikeDirection",
+    "old": null,
+    "new": "RIGHT"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2.mainDamage.healthDmgPercent",
+    "old": null,
+    "new": 125
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2.mainDamage.heavyHitDmgPercent",
+    "old": null,
+    "new": 100
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2.mainDamage.impulse",
+    "old": null,
+    "new": 200
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2.mainDamage.knockbackAngle",
+    "old": null,
+    "new": 13
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2.maxDamagedActors",
+    "old": null,
+    "new": 5
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2.strikeDirection",
+    "old": null,
+    "new": "LEFT"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2Charged.extraDamages.melee_extra_damage.canKnockback",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2Charged.extraDamages.melee_extra_damage.canRepeatDamageToDamageActorsByThis",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2Charged.extraDamages.melee_extra_damage.canRepeatDamageToDamagedActorsAfterThis",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2Charged.extraDamages.melee_extra_damage.damageOffset.x",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2Charged.extraDamages.melee_extra_damage.damageOffset.y",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2Charged.extraDamages.melee_extra_damage.damageOffset.z",
+    "old": null,
+    "new": 3
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2Charged.extraDamages.melee_extra_damage.healthDmgPercent",
+    "old": null,
+    "new": 150
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2Charged.extraDamages.melee_extra_damage.heavyHitDmgPercent",
+    "old": null,
+    "new": 100
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2Charged.extraDamages.melee_extra_damage.impulse",
+    "old": null,
+    "new": 500
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2Charged.extraDamages.melee_extra_damage.isGuardbreak",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2Charged.extraDamages.melee_extra_damage.isPervasive",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2Charged.extraDamages.melee_extra_damage.knockbackAngle",
+    "old": null,
+    "new": 15
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2Charged.extraDamages.melee_extra_damage.radiusScale",
+    "old": null,
+    "new": 5
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2Charged.mainDamage.canKnockback",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2Charged.mainDamage.healthDmgPercent",
+    "old": null,
+    "new": 175
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2Charged.mainDamage.heavyHitDmgPercent",
+    "old": null,
+    "new": 200
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2Charged.mainDamage.impulse",
+    "old": null,
+    "new": 200
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2Charged.mainDamage.isGuardbreak",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2Charged.mainDamage.knockbackAngle",
+    "old": null,
+    "new": 13
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2Charged.maxDamagedActors",
+    "old": null,
+    "new": 10
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2Charged.strikeDirection",
+    "old": null,
+    "new": "LEFT"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2ChargedDouble.extraDamages.melee_extra_damage.canKnockback",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2ChargedDouble.extraDamages.melee_extra_damage.canRepeatDamageToDamageActorsByThis",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2ChargedDouble.extraDamages.melee_extra_damage.damageOffset.x",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2ChargedDouble.extraDamages.melee_extra_damage.damageOffset.y",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2ChargedDouble.extraDamages.melee_extra_damage.damageOffset.z",
+    "old": null,
+    "new": 3
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2ChargedDouble.extraDamages.melee_extra_damage.healthDmgPercent",
+    "old": null,
+    "new": 150
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2ChargedDouble.extraDamages.melee_extra_damage.heavyHitDmgPercent",
+    "old": null,
+    "new": 100
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2ChargedDouble.extraDamages.melee_extra_damage.impulse",
+    "old": null,
+    "new": 500
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2ChargedDouble.extraDamages.melee_extra_damage.isGuardbreak",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2ChargedDouble.extraDamages.melee_extra_damage.isPervasive",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2ChargedDouble.extraDamages.melee_extra_damage.knockbackAngle",
+    "old": null,
+    "new": 15
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2ChargedDouble.extraDamages.melee_extra_damage.radiusScale",
+    "old": null,
+    "new": 5
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2ChargedDouble.mainDamage.canKnockback",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2ChargedDouble.mainDamage.healthDmgPercent",
+    "old": null,
+    "new": 175
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2ChargedDouble.mainDamage.heavyHitDmgPercent",
+    "old": null,
+    "new": 200
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2ChargedDouble.mainDamage.impulse",
+    "old": null,
+    "new": 200
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2ChargedDouble.mainDamage.isGuardbreak",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2ChargedDouble.mainDamage.knockbackAngle",
+    "old": null,
+    "new": 13
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2ChargedDouble.maxDamagedActors",
+    "old": null,
+    "new": 10
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light2ChargedDouble.strikeDirection",
+    "old": null,
+    "new": "LEFT"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3.constraintSettingsOverrides.MaxLinearSpeed.maxLinearSpeed",
+    "old": null,
+    "new": 14
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3.mainDamage.healthDmgPercent",
+    "old": null,
+    "new": 125
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3.mainDamage.heavyHitDmgPercent",
+    "old": null,
+    "new": 100
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3.mainDamage.impulse",
+    "old": null,
+    "new": 200
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3.mainDamage.knockbackAngle",
+    "old": null,
+    "new": 13
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3.maxDamagedActors",
+    "old": null,
+    "new": 5
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3.strikeDirection",
+    "old": null,
+    "new": "RIGHT"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3Charged.constraintSettingsOverrides.MaxLinearSpeed.maxLinearSpeed",
+    "old": null,
+    "new": 14
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3Charged.extraDamages.melee_extra_damage.canKnockback",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3Charged.extraDamages.melee_extra_damage.canRepeatDamageToDamageActorsByThis",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3Charged.extraDamages.melee_extra_damage.damageOffset.x",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3Charged.extraDamages.melee_extra_damage.damageOffset.y",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3Charged.extraDamages.melee_extra_damage.damageOffset.z",
+    "old": null,
+    "new": 3
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3Charged.extraDamages.melee_extra_damage.healthDmgPercent",
+    "old": null,
+    "new": 150
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3Charged.extraDamages.melee_extra_damage.heavyHitDmgPercent",
+    "old": null,
+    "new": 100
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3Charged.extraDamages.melee_extra_damage.impulse",
+    "old": null,
+    "new": 500
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3Charged.extraDamages.melee_extra_damage.isGuardbreak",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3Charged.extraDamages.melee_extra_damage.isPervasive",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3Charged.extraDamages.melee_extra_damage.knockbackAngle",
+    "old": null,
+    "new": 15
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3Charged.extraDamages.melee_extra_damage.radiusScale",
+    "old": null,
+    "new": 5
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3Charged.mainDamage.canKnockback",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3Charged.mainDamage.healthDmgPercent",
+    "old": null,
+    "new": 175
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3Charged.mainDamage.heavyHitDmgPercent",
+    "old": null,
+    "new": 200
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3Charged.mainDamage.impulse",
+    "old": null,
+    "new": 200
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3Charged.mainDamage.isGuardbreak",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3Charged.mainDamage.knockbackAngle",
+    "old": null,
+    "new": 13
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3Charged.maxDamagedActors",
+    "old": null,
+    "new": 10
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3Charged.strikeDirection",
+    "old": null,
+    "new": "RIGHT"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3ChargedDouble.constraintSettingsOverrides.MaxLinearSpeed.maxLinearSpeed",
+    "old": null,
+    "new": 14
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3ChargedDouble.extraDamages.melee_extra_damage.canKnockback",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3ChargedDouble.extraDamages.melee_extra_damage.canRepeatDamageToDamageActorsByThis",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3ChargedDouble.extraDamages.melee_extra_damage.damageOffset.x",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3ChargedDouble.extraDamages.melee_extra_damage.damageOffset.y",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3ChargedDouble.extraDamages.melee_extra_damage.damageOffset.z",
+    "old": null,
+    "new": 3
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3ChargedDouble.extraDamages.melee_extra_damage.healthDmgPercent",
+    "old": null,
+    "new": 150
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3ChargedDouble.extraDamages.melee_extra_damage.heavyHitDmgPercent",
+    "old": null,
+    "new": 100
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3ChargedDouble.extraDamages.melee_extra_damage.impulse",
+    "old": null,
+    "new": 500
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3ChargedDouble.extraDamages.melee_extra_damage.isGuardbreak",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3ChargedDouble.extraDamages.melee_extra_damage.isPervasive",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3ChargedDouble.extraDamages.melee_extra_damage.knockbackAngle",
+    "old": null,
+    "new": 15
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3ChargedDouble.extraDamages.melee_extra_damage.radiusScale",
+    "old": null,
+    "new": 5
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3ChargedDouble.mainDamage.canKnockback",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3ChargedDouble.mainDamage.healthDmgPercent",
+    "old": null,
+    "new": 175
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3ChargedDouble.mainDamage.heavyHitDmgPercent",
+    "old": null,
+    "new": 200
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3ChargedDouble.mainDamage.impulse",
+    "old": null,
+    "new": 200
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3ChargedDouble.mainDamage.isGuardbreak",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3ChargedDouble.mainDamage.knockbackAngle",
+    "old": null,
+    "new": 13
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3ChargedDouble.maxDamagedActors",
+    "old": null,
+    "new": 10
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.Light3ChargedDouble.strikeDirection",
+    "old": null,
+    "new": "RIGHT"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeft.extraDamages.melee_extra_damage_1.canKnockback",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeft.extraDamages.melee_extra_damage_1.canRepeatDamageToDamageActorsByThis",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeft.extraDamages.melee_extra_damage_1.damageOffset.x",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeft.extraDamages.melee_extra_damage_1.damageOffset.y",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeft.extraDamages.melee_extra_damage_1.damageOffset.z",
+    "old": null,
+    "new": 3
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeft.extraDamages.melee_extra_damage_1.healthDmgPercent",
+    "old": null,
+    "new": 50
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeft.extraDamages.melee_extra_damage_1.heavyHitDmgPercent",
+    "old": null,
+    "new": 100
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeft.extraDamages.melee_extra_damage_1.impulse",
+    "old": null,
+    "new": 500
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeft.extraDamages.melee_extra_damage_1.isGuardbreak",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeft.extraDamages.melee_extra_damage_1.isPervasive",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeft.extraDamages.melee_extra_damage_1.knockbackAngle",
+    "old": null,
+    "new": 15
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeft.extraDamages.melee_extra_damage_1.radiusScale",
+    "old": null,
+    "new": 3
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeft.mainDamage.canKnockback",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeft.mainDamage.healthDmgPercent",
+    "old": null,
+    "new": 100
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeft.mainDamage.heavyHitDmgPercent",
+    "old": null,
+    "new": 200
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeft.mainDamage.impulse",
+    "old": null,
+    "new": 20
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeft.mainDamage.isGuardbreak",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeft.mainDamage.isPervasive",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeft.mainDamage.knockbackAngle",
+    "old": null,
+    "new": 13
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeft.maxDamagedActors",
+    "old": null,
+    "new": 10
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeft.strikeDirection",
+    "old": null,
+    "new": "UP"
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeftCharged.extraDamages.melee_extra_damage_1.canKnockback",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeftCharged.extraDamages.melee_extra_damage_1.canRepeatDamageToDamageActorsByThis",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeftCharged.extraDamages.melee_extra_damage_1.damageOffset.x",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeftCharged.extraDamages.melee_extra_damage_1.damageOffset.y",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeftCharged.extraDamages.melee_extra_damage_1.damageOffset.z",
+    "old": null,
+    "new": 3
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeftCharged.extraDamages.melee_extra_damage_1.healthDmgPercent",
+    "old": null,
+    "new": 150
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeftCharged.extraDamages.melee_extra_damage_1.heavyHitDmgPercent",
+    "old": null,
+    "new": 100
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeftCharged.extraDamages.melee_extra_damage_1.impulse",
+    "old": null,
+    "new": 500
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeftCharged.extraDamages.melee_extra_damage_1.isGuardbreak",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeftCharged.extraDamages.melee_extra_damage_1.isPervasive",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeftCharged.extraDamages.melee_extra_damage_1.knockbackAngle",
+    "old": null,
+    "new": 15
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeftCharged.extraDamages.melee_extra_damage_1.radiusScale",
+    "old": null,
+    "new": 5
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeftCharged.mainDamage.canKnockback",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeftCharged.mainDamage.healthDmgPercent",
+    "old": null,
+    "new": 100
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeftCharged.mainDamage.heavyHitDmgPercent",
+    "old": null,
+    "new": 200
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeftCharged.mainDamage.impulse",
+    "old": null,
+    "new": 20
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeftCharged.mainDamage.isGuardbreak",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeftCharged.mainDamage.isPervasive",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeftCharged.mainDamage.knockbackAngle",
+    "old": null,
+    "new": 13
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeftCharged.maxDamagedActors",
+    "old": null,
+    "new": 10
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LightDashLeftCharged.strikeDirection",
+    "old": null,
+    "new": "UP"
+   },
+   {
+    "kind": "value",
     "field": "pve.comboDesc.strikeSettings.LongDashAttack.extraDamages.melee_extra_damage_1.canKnockback",
     "old": null,
     "new": true
@@ -7578,6 +10478,12 @@
     "field": "pve.comboDesc.strikeSettings.LongDashAttack.maxDamagedActors",
     "old": null,
     "new": 10
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LongDashAttack.strikeDirection",
+    "old": null,
+    "new": "LEFT"
    },
    {
     "kind": "value",
@@ -7701,9 +10607,21 @@
    },
    {
     "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.LongDashAttackCharged.strikeDirection",
+    "old": null,
+    "new": "LEFT"
+   },
+   {
+    "kind": "value",
     "field": "pve.healthDamage",
     "old": null,
     "new": 12.1
+   },
+   {
+    "kind": "value",
+    "field": "pve.meleeDetectorSettings.LeftHand.endTrackerLocator",
+    "old": null,
+    "new": "GUN_L"
    },
    {
     "kind": "value",
@@ -7713,15 +10631,33 @@
    },
    {
     "kind": "value",
+    "field": "pve.meleeDetectorSettings.LeftHand.rootTrackerLocator",
+    "old": null,
+    "new": "ARM2L"
+   },
+   {
+    "kind": "value",
     "field": "pve.meleeDetectorSettings.LeftHand.staticCheckEndOffset",
     "old": null,
     "new": -1
    },
    {
     "kind": "value",
+    "field": "pve.meleeDetectorSettings.LeftShieldRush.endTrackerLocator",
+    "old": null,
+    "new": "GUN_L"
+   },
+   {
+    "kind": "value",
     "field": "pve.meleeDetectorSettings.LeftShieldRush.endTrackerOffset.z",
     "old": null,
     "new": 4
+   },
+   {
+    "kind": "value",
+    "field": "pve.meleeDetectorSettings.LeftShieldRush.rootTrackerLocator",
+    "old": null,
+    "new": "ARM2L"
    },
    {
     "kind": "value",
@@ -7749,15 +10685,33 @@
    },
    {
     "kind": "value",
+    "field": "pve.meleeDetectorSettings.LongRightHand.endTrackerLocator",
+    "old": null,
+    "new": "GUN_R"
+   },
+   {
+    "kind": "value",
     "field": "pve.meleeDetectorSettings.LongRightHand.endTrackerOffset.z",
     "old": null,
     "new": 5
    },
    {
     "kind": "value",
+    "field": "pve.meleeDetectorSettings.LongRightHand.rootTrackerLocator",
+    "old": null,
+    "new": "GUN_R"
+   },
+   {
+    "kind": "value",
     "field": "pve.meleeDetectorSettings.LongRightHand.staticCheckEndOffset",
     "old": null,
     "new": -3.5
+   },
+   {
+    "kind": "value",
+    "field": "pve.meleeDetectorSettings.RightFoot.endTrackerLocator",
+    "old": null,
+    "new": "LEG2R"
    },
    {
     "kind": "value",
@@ -7779,9 +10733,27 @@
    },
    {
     "kind": "value",
+    "field": "pve.meleeDetectorSettings.RightFoot.rootTrackerLocator",
+    "old": null,
+    "new": "LEG2R"
+   },
+   {
+    "kind": "value",
+    "field": "pve.meleeDetectorSettings.RightHand.endTrackerLocator",
+    "old": null,
+    "new": "GUN_R"
+   },
+   {
+    "kind": "value",
     "field": "pve.meleeDetectorSettings.RightHand.endTrackerOffset.z",
     "old": null,
     "new": 2
+   },
+   {
+    "kind": "value",
+    "field": "pve.meleeDetectorSettings.RightHand.rootTrackerLocator",
+    "old": null,
+    "new": "GUN_R"
    },
    {
     "kind": "value",
@@ -7812,6 +10784,12 @@
     "field": "pve.morphemeWeaponType",
     "old": null,
     "new": 8
+   },
+   {
+    "kind": "value",
+    "field": "pve.weaponType",
+    "old": null,
+    "new": "HAMMER_ONE_HANDED"
    },
    {
     "kind": "value",
@@ -7890,6 +10868,12 @@
     "field": "pvp.comboDesc.strikeSettings.ChargeStackDamager.extraDamages.melee_damaging_window.canTriggerPerfectDodge",
     "old": null,
     "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.ChargeStackDamager.extraDamages.melee_damaging_window.damageLocator",
+    "old": null,
+    "new": "CENTRE"
    },
    {
     "kind": "value",
@@ -8745,6 +11729,12 @@
    },
    {
     "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.HeavyFastChargeLeft.extraDamages.melee_extra_damage_2.damageLocator",
+    "old": null,
+    "new": "CENTRE"
+   },
+   {
+    "kind": "value",
     "field": "pvp.comboDesc.strikeSettings.HeavyFastChargeLeft.extraDamages.melee_extra_damage_2.healthDmgPercent",
     "old": null,
     "new": 15
@@ -8856,6 +11846,12 @@
     "field": "pvp.comboDesc.strikeSettings.HeavyFastChargeRight.extraDamages.melee_extra_damage_2.canTriggerPerfectDodge",
     "old": null,
     "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.HeavyFastChargeRight.extraDamages.melee_extra_damage_2.damageLocator",
+    "old": null,
+    "new": "CENTRE"
    },
    {
     "kind": "value",
@@ -9514,6 +12510,690 @@
    {
     "kind": "value",
     "field": "pvp.comboDesc.strikeSettings.JetpackLand1Charged.maxDamagedActors",
+    "old": null,
+    "new": -1
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light1.mainDamage.canKnockback",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light1.mainDamage.healthDmgPercent",
+    "old": null,
+    "new": 35
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light1.mainDamage.heavyHitDmgPercent",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light1.mainDamage.impulse",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light1.mainDamage.isGuardbreak",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light1.mainDamage.isPervasive",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light1.mainDamage.shouldForceHeavyHit",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light1.maxDamagedActors",
+    "old": null,
+    "new": -1
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light1Charged.extraDamages.melee_extra_damage.canKnockback",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light1Charged.extraDamages.melee_extra_damage.canRepeatDamageToDamageActorsByThis",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light1Charged.extraDamages.melee_extra_damage.damageOffset.z",
+    "old": null,
+    "new": 1.5
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light1Charged.extraDamages.melee_extra_damage.healthDmgPercent",
+    "old": null,
+    "new": 35
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light1Charged.extraDamages.melee_extra_damage.heavyHitDmgPercent",
+    "old": null,
+    "new": 100
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light1Charged.extraDamages.melee_extra_damage.impulse",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light1Charged.extraDamages.melee_extra_damage.isGuardbreak",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light1Charged.extraDamages.melee_extra_damage.isPervasive",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light1Charged.extraDamages.melee_extra_damage.radiusScale",
+    "old": null,
+    "new": 2.5
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light1Charged.extraDamages.melee_extra_damage.shouldForceHeavyHit",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light1Charged.mainDamage.canKnockback",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light1Charged.mainDamage.healthDmgPercent",
+    "old": null,
+    "new": 35
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light1Charged.mainDamage.heavyHitDmgPercent",
+    "old": null,
+    "new": 100
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light1Charged.mainDamage.impulse",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light1Charged.mainDamage.isGuardbreak",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light1Charged.mainDamage.isPervasive",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light1Charged.mainDamage.shouldForceHeavyHit",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light1Charged.maxDamagedActors",
+    "old": null,
+    "new": -1
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light2.mainDamage.canKnockback",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light2.mainDamage.healthDmgPercent",
+    "old": null,
+    "new": 35
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light2.mainDamage.heavyHitDmgPercent",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light2.mainDamage.impulse",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light2.mainDamage.isGuardbreak",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light2.mainDamage.isPervasive",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light2.mainDamage.shouldForceHeavyHit",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light2.maxDamagedActors",
+    "old": null,
+    "new": 1
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light2Charged.extraDamages.melee_extra_damage.canKnockback",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light2Charged.extraDamages.melee_extra_damage.canRepeatDamageToDamageActorsByThis",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light2Charged.extraDamages.melee_extra_damage.damageOffset.z",
+    "old": null,
+    "new": 1.5
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light2Charged.extraDamages.melee_extra_damage.healthDmgPercent",
+    "old": null,
+    "new": 35
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light2Charged.extraDamages.melee_extra_damage.heavyHitDmgPercent",
+    "old": null,
+    "new": 100
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light2Charged.extraDamages.melee_extra_damage.impulse",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light2Charged.extraDamages.melee_extra_damage.isGuardbreak",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light2Charged.extraDamages.melee_extra_damage.isPervasive",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light2Charged.extraDamages.melee_extra_damage.radiusScale",
+    "old": null,
+    "new": 2.5
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light2Charged.extraDamages.melee_extra_damage.shouldForceHeavyHit",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light2Charged.mainDamage.canKnockback",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light2Charged.mainDamage.healthDmgPercent",
+    "old": null,
+    "new": 35
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light2Charged.mainDamage.heavyHitDmgPercent",
+    "old": null,
+    "new": 100
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light2Charged.mainDamage.impulse",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light2Charged.mainDamage.isGuardbreak",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light2Charged.mainDamage.isPervasive",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light2Charged.mainDamage.shouldForceHeavyHit",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light2Charged.maxDamagedActors",
+    "old": null,
+    "new": -1
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light3.mainDamage.canKnockback",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light3.mainDamage.healthDmgPercent",
+    "old": null,
+    "new": 35
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light3.mainDamage.heavyHitDmgPercent",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light3.mainDamage.impulse",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light3.mainDamage.isGuardbreak",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light3.mainDamage.isPervasive",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light3.mainDamage.shouldForceHeavyHit",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light3.maxDamagedActors",
+    "old": null,
+    "new": -1
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light3Charged.extraDamages.melee_extra_damage.canKnockback",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light3Charged.extraDamages.melee_extra_damage.canRepeatDamageToDamageActorsByThis",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light3Charged.extraDamages.melee_extra_damage.damageOffset.z",
+    "old": null,
+    "new": 1.5
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light3Charged.extraDamages.melee_extra_damage.healthDmgPercent",
+    "old": null,
+    "new": 35
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light3Charged.extraDamages.melee_extra_damage.heavyHitDmgPercent",
+    "old": null,
+    "new": 100
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light3Charged.extraDamages.melee_extra_damage.impulse",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light3Charged.extraDamages.melee_extra_damage.isGuardbreak",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light3Charged.extraDamages.melee_extra_damage.isPervasive",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light3Charged.extraDamages.melee_extra_damage.radiusScale",
+    "old": null,
+    "new": 2.5
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light3Charged.extraDamages.melee_extra_damage.shouldForceHeavyHit",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light3Charged.mainDamage.canKnockback",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light3Charged.mainDamage.healthDmgPercent",
+    "old": null,
+    "new": 35
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light3Charged.mainDamage.heavyHitDmgPercent",
+    "old": null,
+    "new": 100
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light3Charged.mainDamage.impulse",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light3Charged.mainDamage.isGuardbreak",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light3Charged.mainDamage.isPervasive",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light3Charged.mainDamage.shouldForceHeavyHit",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.Light3Charged.maxDamagedActors",
+    "old": null,
+    "new": -1
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeft.extraDamages.melee_extra_damage_1.canKnockback",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeft.extraDamages.melee_extra_damage_1.canRepeatDamageToDamageActorsByThis",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeft.extraDamages.melee_extra_damage_1.damageOffset.z",
+    "old": null,
+    "new": 1.5
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeft.extraDamages.melee_extra_damage_1.healthDmgPercent",
+    "old": null,
+    "new": 25
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeft.extraDamages.melee_extra_damage_1.heavyHitDmgPercent",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeft.extraDamages.melee_extra_damage_1.impulse",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeft.extraDamages.melee_extra_damage_1.isGuardbreak",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeft.extraDamages.melee_extra_damage_1.isPervasive",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeft.extraDamages.melee_extra_damage_1.radiusScale",
+    "old": null,
+    "new": 2.5
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeft.extraDamages.melee_extra_damage_1.shouldForceHeavyHit",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeft.mainDamage.canKnockback",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeft.mainDamage.healthDmgPercent",
+    "old": null,
+    "new": 25
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeft.mainDamage.heavyHitDmgPercent",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeft.mainDamage.impulse",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeft.mainDamage.isGuardbreak",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeft.mainDamage.isPervasive",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeft.mainDamage.shouldForceHeavyHit",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeft.maxDamagedActors",
+    "old": null,
+    "new": -1
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeftCharged.extraDamages.melee_extra_damage_1.canKnockback",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeftCharged.extraDamages.melee_extra_damage_1.canRepeatDamageToDamageActorsByThis",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeftCharged.extraDamages.melee_extra_damage_1.damageOffset.z",
+    "old": null,
+    "new": 1.5
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeftCharged.extraDamages.melee_extra_damage_1.healthDmgPercent",
+    "old": null,
+    "new": 35
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeftCharged.extraDamages.melee_extra_damage_1.heavyHitDmgPercent",
+    "old": null,
+    "new": 100
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeftCharged.extraDamages.melee_extra_damage_1.impulse",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeftCharged.extraDamages.melee_extra_damage_1.isGuardbreak",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeftCharged.extraDamages.melee_extra_damage_1.isPervasive",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeftCharged.extraDamages.melee_extra_damage_1.radiusScale",
+    "old": null,
+    "new": 2.5
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeftCharged.extraDamages.melee_extra_damage_1.shouldForceHeavyHit",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeftCharged.mainDamage.canKnockback",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeftCharged.mainDamage.healthDmgPercent",
+    "old": null,
+    "new": 35
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeftCharged.mainDamage.heavyHitDmgPercent",
+    "old": null,
+    "new": 100
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeftCharged.mainDamage.impulse",
+    "old": null,
+    "new": 0
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeftCharged.mainDamage.isGuardbreak",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeftCharged.mainDamage.isPervasive",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeftCharged.mainDamage.shouldForceHeavyHit",
+    "old": null,
+    "new": false
+   },
+   {
+    "kind": "value",
+    "field": "pvp.comboDesc.strikeSettings.LightDashLeftCharged.maxDamagedActors",
     "old": null,
     "new": -1
    },

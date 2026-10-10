@@ -7,7 +7,7 @@ Output maps entity keys (same keys the web app highlights) to flat
   weapon:<weapon id>        firearm / melee descriptions, prefixed "pve." / "pvp."
   variant:<weapon>/<id>     per-variant modifiers (firearm_modificators_library.sso)
 
-Only numbers and booleans are kept; paths into visual/audio settings are skipped.
+Numbers, booleans and enum-like strings are kept; visual/audio settings are skipped.
 """
 
 from __future__ import annotations
@@ -25,18 +25,22 @@ FIREARM_MODS = "ssl/weapons/creator/customization/firearm_modificators_library.s
 MELEE_DESC = "ssl/weapons/melee/weapon_descriptions/melee_weapon_descs/{}_desc.sso"
 MELEE_PVP = "ssl/weapons/melee/weapon_descriptions/melee_descriptions_library_pvp.sso"
 
-# Path segments that only affect presentation.
+# Path segments (whole key names) that only affect presentation. Matched against the full
+# key, case-sensitively, so gameplay keys like "Light1Charged" or "statusEffect" survive.
 _SKIP = re.compile(
-    r"(sound|vfx|fx$|^fx|effect|camera|cam[A-Z]|anim|visual|decal|light|mesh|geom|trail|shake|"
-    r"ui[A-Z]|^ui|icon|color|colour|debug|editor|viewData|scorch|blood|gore|pickupVisual|flyBy|tracer)",
-    re.IGNORECASE,
+    r"(.*[Ss]ound.*|.*[Vv]fx.*|.*[Ss]fx.*|[Cc]amera.*|cam[A-Z].*|.*[Aa]nimation.*|anim[A-Z].*|[Vv]isual.*|.*[Dd]ecal.*"
+    r"|geom|nameTpl|.*[Mm]esh.*|[Tt]rail.*|.*[Ss]hake.*|[Ii]con.*|.*[Cc]olou?r|debug.*|editor.*|viewData|[Ss]corch.*"
+    r"|blood.*|gore.*|pickupVisual.*|flyBy.*|tracer.*|endEffects?.*|sslModule|__type)"
 )
+# Enum-like strings ("MAJORIS", "SCALE_DAMAGE_AMOUNT_FROM_MELEE") carry gameplay meaning; other strings
+# (asset names, node ids) are noise.
+_ENUM = re.compile(r"^[A-Z][A-Z0-9_]+$")
 
 
-def flatten(obj: Any, prefix: str = "") -> Iterator[tuple[str, float | int | bool]]:
+def flatten(obj: Any, prefix: str = "") -> Iterator[tuple[str, float | int | bool | str]]:
     if isinstance(obj, dict):
         for k, v in obj.items():
-            if k in ("__type", "sslModule") or _SKIP.search(k):
+            if _SKIP.fullmatch(k):
                 continue
             yield from flatten(v, f"{prefix}.{k}" if prefix else k)
     elif isinstance(obj, list):
@@ -46,9 +50,11 @@ def flatten(obj: Any, prefix: str = "") -> Iterator[tuple[str, float | int | boo
             yield from flatten(v, f"{prefix}[{key}]")
     elif isinstance(obj, bool) or isinstance(obj, (int, float)):
         yield prefix, obj
+    elif isinstance(obj, str) and _ENUM.match(obj):
+        yield prefix, obj
 
 
-def _flat(obj: Any, prefix: str = "") -> dict[str, float | int | bool]:
+def _flat(obj: Any, prefix: str = "") -> dict[str, float | int | bool | str]:
     return dict(flatten(obj, prefix))
 
 
