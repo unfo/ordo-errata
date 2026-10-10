@@ -1,7 +1,7 @@
 # Screenshot test plan #1
 
 Take each screenshot with Steam's screenshot key (F12) in the order below. Afterwards, the tool crops them with
-`uv run tools/crop.py <preset> --last 6` (preset per shot below), so only the relevant part is analysed.
+`uv run tools/crop.py <preset> --last 5` (preset per shot below), so only the relevant part is analysed.
 
 All weapon shots: **Armoury** → select the class → open the weapon slot → pick the weapon from the top weapon bar.
 
@@ -12,4 +12,3 @@ All weapon shots: **Armoury** → select the class → open the weapon slot → 
 | 3 | Heavy → **Heavy Bolter** → *Perk Tree* | Whole tree, no hover | Branch perks in Master-Crafted, Artificer and Relic column 2 (6 branch perks in total) | `weapon_tree` |
 | 4 | Same as 3 | Hover **Heavy Immunity** (Master-Crafted, branch above column 2) | Tooltip text and values vs our card | `weapon_tree` |
 | 5 | Vanguard → **Perks** | Hover **Adrenaline Rush** (Signature column, bottom) | Enemy-tier icon + "Majoris" styling in the description | `ui` |
-| 6 | Any class with the **One-Handed Thunder Hammer** (e.g. Tactical) → *Perk Tree* | Hover **Charge Overflow** (Master-Crafted, column 3 top) | Confirms the broken text the game shows | `weapon_tree` |
