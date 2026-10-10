@@ -1,0 +1,102 @@
+{
+ "lang": "english",
+ "malformedKeys": [
+  {
+   "line": 5644,
+   "key": "\"UI_WEAPON_SKILL_HEROIC_THUNDER HUMMER_05_A_NAME\"",
+   "text": "Whirling Strike",
+   "prev_key": "UI_WEAPON_SKILL_HEROIC_POWER_SWORD_05_A_DESC"
+  },
+  {
+   "line": 5645,
+   "key": "\"UI_WEAPON_SKILL_HEROIC_THUNDER HUMMER_05_A_DESC\"",
+   "text": "Aftershock is replaced by a powerful spinning attack. Hitting {STRING1} or more enemies with a single attack grants {STRING2} Adrenaline Surge stacks.",
+   "prev_key": "\"UI_WEAPON_SKILL_HEROIC_THUNDER HUMMER_05_A_NAME\""
+  },
+  {
+   "line": 6316,
+   "key": "\"UI_WEAPON_SKILL_FIREARM_RESTORE_SEGMENT_PERSHOT_PACK _NAME\"",
+   "text": "Trick Shot",
+   "prev_key": "UI_WEAPON_SKILL_FIREARM_MELEE_KILL_HEAD_UP_DESC"
+  },
+  {
+   "line": 6317,
+   "key": "\"UI_WEAPON_SKILL_FIREARM_RESTORE_SEGMENT_PERSHOT_PACK _DESC\"",
+   "text": "Killing {STRING1} enemies with one shot restores {STRING2} Armour Segment. Cooldown is {STRING3} seconds.",
+   "prev_key": "\"UI_WEAPON_SKILL_FIREARM_RESTORE_SEGMENT_PERSHOT_PACK _NAME\""
+  },
+  {
+   "line": 6412,
+   "key": "\"UI_WEAPON_SKILL_MELEE_FIST_CHARGE_INST_BACKFIST _NAME\"",
+   "text": "Following Blow",
+   "prev_key": "UI_WEAPON_SKILL_MELEE_HITBY_AFTERSHOCK_UP_DAMAGE_DESC"
+  },
+  {
+   "line": 6413,
+   "key": "\"UI_WEAPON_SKILL_MELEE_FIST_CHARGE_INST_BACKFIST _DESC\"",
+   "text": "Backfist and Backfist 2 can be performed instantly after a charged Thrust Jab or Hammer Hook",
+   "prev_key": "\"UI_WEAPON_SKILL_MELEE_FIST_CHARGE_INST_BACKFIST _NAME\""
+  },
+  {
+   "line": 6414,
+   "key": "\"UI_WEAPON_SKILL_MELEE_FIST_CHARGE_DAMAGE_REDUCE _NAME\"",
+   "text": "Strength of Will",
+   "prev_key": "\"UI_WEAPON_SKILL_MELEE_FIST_CHARGE_INST_BACKFIST _DESC\""
+  },
+  {
+   "line": 6415,
+   "key": "\"UI_WEAPON_SKILL_MELEE_FIST_CHARGE_DAMAGE_REDUCE _DESC\"",
+   "text": "While performing a Heavy Attack, you take {STRING} less Ranged Damage",
+   "prev_key": "\"UI_WEAPON_SKILL_MELEE_FIST_CHARGE_DAMAGE_REDUCE _NAME\""
+  },
+  {
+   "line": 6416,
+   "key": "\"UI_WEAPON_SKILL_MELEE_POWER INCREASE_ARMOR_LOST_NAME\"",
+   "text": "Offence Initiated",
+   "prev_key": "\"UI_WEAPON_SKILL_MELEE_FIST_CHARGE_DAMAGE_REDUCE _DESC\""
+  },
+  {
+   "line": 6417,
+   "key": "\"UI_WEAPON_SKILL_MELEE_POWER INCREASE_ARMOR_LOSTDESC\"",
+   "text": "If your Armour is fully depleted, this Weapon deals {STRING} more Melee Damage",
+   "prev_key": "\"UI_WEAPON_SKILL_MELEE_POWER INCREASE_ARMOR_LOST_NAME\""
+  }
+ ],
+ "recovered": {},
+ "missingKeys": {
+  "UI_ABILITY_CHAINSWORD_01_A_NAME": [
+   "melee_chainsword"
+  ],
+  "UI_WEAPON_SKILL_FIREARM_RESTORE_SEGMENT_PERSHOT_PACK _DESC": [
+   "FirearmRegenArmorSegmentByPerShotKillEnemyPackAllWeapon"
+  ],
+  "UI_WEAPON_SKILL_FIREARM_RESTORE_SEGMENT_PERSHOT_PACK _NAME": [
+   "FirearmRegenArmorSegmentByPerShotKillEnemyPackAllWeapon"
+  ],
+  "UI_WEAPON_SKILL_HEROIC_THUNDER HUMMER_05_A_DESC": [
+   "PvEMeleeThunderHammerPoleaxeWhirlwind"
+  ],
+  "UI_WEAPON_SKILL_HEROIC_THUNDER HUMMER_05_A_NAME": [
+   "PvEMeleeThunderHammerPoleaxeWhirlwind"
+  ],
+  "UI_WEAPON_SKILL_MELEE_FIST_CHARGE_DAMAGE_REDUCE _DESC": [
+   "PveMeleePowerFistIncomingRangeDamageDecreaseWhileHold"
+  ],
+  "UI_WEAPON_SKILL_MELEE_FIST_CHARGE_DAMAGE_REDUCE _NAME": [
+   "PveMeleePowerFistIncomingRangeDamageDecreaseWhileHold"
+  ],
+  "UI_WEAPON_SKILL_MELEE_FIST_CHARGE_INST_BACKFIST _DESC": [
+   "PveMeleePowerFistBackfistToPerformAdditional"
+  ],
+  "UI_WEAPON_SKILL_MELEE_FIST_CHARGE_INST_BACKFIST _NAME": [
+   "PveMeleePowerFistBackfistToPerformAdditional"
+  ],
+  "UI_WEAPON_SKILL_MELEE_POWER INCREASE_ARMOR_LOSTDESC": [
+   "PveMeleeGenericPowerIncreaseWhenArmourDepleted"
+  ],
+  "UI_WEAPON_SKILL_MELEE_POWER INCREASE_ARMOR_LOST_NAME": [
+   "PveMeleeGenericPowerIncreaseWhenArmourDepleted"
+  ]
+ },
+ "missingIcons": []
+}

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import re
+from collections import Counter
 from dataclasses import dataclass, field
 
 from .pak import PakIndex
@@ -11,6 +12,22 @@ _LINE = re.compile(r'^(?P<key>[^\t]+)\t+"(?P<val>.*)"\s*$')
 _KEY_OK = re.compile(r"^[A-Za-z0-9_.\-]+$")
 _PLACEHOLDER = re.compile(r"\{STRING(\d*)\}")
 _TAG = re.compile(r"\[(/?)(\w+)\]")
+_OBFUSCATED = re.compile(r"^6d3s9((?:[0-9a-f]{4})+)$")
+
+
+def deobfuscate(val: str) -> str:
+    """Some builds (e.g. ones shipping unreleased content) store every string as
+    ``6d3s9`` + hex: UTF-16LE text with each byte XOR-ed by a one-byte key. The key
+    shows up as the high byte of every ASCII character, so the most common odd byte is it."""
+    m = _OBFUSCATED.match(val)
+    if not m:
+        return val
+    data = bytes.fromhex(m.group(1))
+    key = Counter(data[1::2]).most_common(1)[0][0]
+    try:
+        return bytes(b ^ key for b in data).decode("utf-16-le")
+    except UnicodeDecodeError:
+        return val
 
 
 @dataclass
@@ -46,7 +63,7 @@ def load_strings(pak: PakIndex, lang: str = "english") -> StringTable:
         m = _LINE.match(line)
         if not m:
             continue
-        key, val = m.group("key"), m.group("val")
+        key, val = m.group("key"), deobfuscate(m.group("val"))
         if not _KEY_OK.match(key):
             table.malformed.append({"line": lineno, "key": key, "text": val, "prev_key": prev_key})
         table.values[key] = val

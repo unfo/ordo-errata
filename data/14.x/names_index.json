@@ -1,0 +1,7581 @@
+{
+ "01a": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_chainsword",
+   "variant": "01_a"
+  }
+ ],
+ "able damage": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_occulus_bolt_carbine",
+   "perk": "smg_occulus_bolt_carbine_relic_2_4",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "perk": "hgun_heavy_bolt_pistol_relic_2_1",
+   "tier": "RELIC"
+  }
+ ],
+ "able headshot": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_occulus_bolt_carbine",
+   "perk": "smg_occulus_bolt_carbine_relic_1_4",
+   "tier": "RELIC"
+  }
+ ],
+ "able precision": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_bolt_rifle",
+   "perk": "arifle_bolt_rifle_artificer_2_1",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "able reload": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_bolt_rifle",
+   "perk": "arifle_bolt_rifle_artificer_1_1",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "perk": "arifle_heavy_bolt_rifle_artificer_1_1",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "accelerated combustion": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_volkite_pistol",
+   "perk": "hgun_volkite_pistol_artificer_2_2",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "achortan oath": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_chainsword",
+   "variant": "03_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_sword",
+   "variant": "03_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_halberd",
+   "variant": "03"
+  }
+ ],
+ "achortan oath alpha": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_fist",
+   "variant": "03"
+  }
+ ],
+ "achortan oath beta": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_fist",
+   "variant": "03_a"
+  }
+ ],
+ "achortan oath gamma": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_fist",
+   "variant": "03_b"
+  }
+ ],
+ "act of attrition": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderDebuffEnemyOnHit",
+   "where": "col2",
+   "mode": "pve"
+  }
+ ],
+ "acuity": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierIncreaseHeadshotDamageByHeadshot",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "adamant hunter": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_bolt_rifle",
+   "perk": "arifle_bolt_rifle_mastercrafted_1_1",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_bolter",
+   "perk": "support_heavy_bolter_artificer_2_1",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_stalker_bolt_rifle",
+   "perk": "brifle_stalker_bolt_rifle_mastercrafted_1_1",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "perk": "arifle_heavy_bolt_rifle_mastercrafted_1_1",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_bolt_carbine",
+   "perk": "smg_bolt_carbine_relic_1_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_carbine",
+   "perk": "hgun_bolt_carbine_mastercrafted_2_1",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "adamant restoration": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_bolter",
+   "perk": "support_heavy_bolter_artificer_1_1",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "pwpn_plasma_exterminator",
+   "perk": "pwpn_plasma_exterminator_artificer_1_4",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_las_fusil",
+   "perk": "hwpn_las_fusil_mastercrafted_2_1",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "perk": "support_plasma_incinerator_artificer_2_1",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_inferno_pistol",
+   "perk": "hgun_inferno_pistol_artificer_2_2",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "adamant velocity": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "pwpn_plasma_exterminator",
+   "perk": "pwpn_plasma_exterminator_artificer_2_4",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_las_fusil",
+   "perk": "hwpn_las_fusil_mastercrafted_1_1",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "perk": "support_plasma_incinerator_artificer_1_1",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "adamant will": [
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportReduceDamageAfterDeactivatingIronHalo",
+   "where": "col3",
+   "mode": "pve"
+  }
+ ],
+ "adamantine grip": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_bolt_rifle",
+   "perk": "arifle_bolt_rifle_artificer_1_4",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_stalker_bolt_rifle",
+   "perk": "brifle_stalker_bolt_rifle_mastercrafted_2_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_bolt_sniper_rifle",
+   "perk": "brifle_bolt_sniper_rifle_mastercrafted_2_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_bolt_carbine",
+   "perk": "smg_bolt_carbine_mastercrafted_2_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_bolt_carbine",
+   "perk": "smg_bolt_carbine_relic_2_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "perk": "hgun_heavy_bolt_pistol_mastercrafted_1_1",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "adaptability": [
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperIncreaseMeleeDamageAfterReloadOnLowAmmo",
+   "where": "col1",
+   "mode": "pve"
+  }
+ ],
+ "additional supplies": [
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportIncreaseAmmoCapacityToTeam",
+   "where": "team",
+   "mode": "pve"
+  }
+ ],
+ "adrenaline boost": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderUnstoppableAfterRiposteAndPerfectDodge",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "adrenaline rush": [
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkGainHPForKill",
+   "where": "col6",
+   "mode": "pve"
+  }
+ ],
+ "advanced conditioning": [
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankReducedHealthTrailFadingSpeedToTeam",
+   "where": "team",
+   "mode": "pve"
+  }
+ ],
+ "aerial grace": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderIncreaseDamageAfterPerfectJumpPackDodge",
+   "where": "col5",
+   "mode": "pve"
+  }
+ ],
+ "after aftershock": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_thunder_hammer",
+   "perk": "melee_thunder_hammer_artificer_2_3_sub",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "aftershock improved": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_thunder_hammer",
+   "perk": "melee_thunder_hammer_relic_2_1",
+   "tier": "RELIC"
+  }
+ ],
+ "aggamedes's gift alpha": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_fist",
+   "variant": "04"
+  }
+ ],
+ "aggamedes's gift beta": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_fist",
+   "variant": "04_a"
+  }
+ ],
+ "aggamedes's gift gamma": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_fist",
+   "variant": "04_b"
+  }
+ ],
+ "agile hunter": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_stalker_bolt_rifle",
+   "perk": "brifle_stalker_bolt_rifle_relic_1_1",
+   "tier": "RELIC"
+  }
+ ],
+ "agile strike": [
+  {
+   "kind": "heroicPerk",
+   "weapon": "melee_combat_knife",
+   "perk": "Melee_Combat_Knife_Heroic",
+   "variant": "05"
+  }
+ ],
+ "aligned aim": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierIncreaseFirearmDamageForTeam",
+   "where": "team",
+   "mode": "pve"
+  }
+ ],
+ "ambush": [
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperKnockbackEnemiesAfterCamouflageDeactivate",
+   "where": "col5",
+   "mode": "pve"
+  }
+ ],
+ "ample ammunition": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderJumpPackUsageReloadsFirearms",
+   "where": "col6",
+   "mode": "pve"
+  }
+ ],
+ "amplification": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_las_fusil",
+   "perk": "hwpn_las_fusil_mastercrafted_2_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_las_fusil",
+   "perk": "hwpn_las_fusil_artificer_2_1",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "ancient technology": [
+  {
+   "kind": "heroicPerk",
+   "weapon": "melee_power_sword",
+   "perk": "Melee_Power_Sword_Heroic",
+   "variant": "05"
+  }
+ ],
+ "aquilan dedication": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_chainsword",
+   "variant": "04_a"
+  }
+ ],
+ "arc cleave": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerChargedMeleeDamageIncrease",
+   "where": "col1",
+   "mode": "pve"
+  }
+ ],
+ "argent edge": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_combat_knife",
+   "variant": "05_a"
+  }
+ ],
+ "armour of contempt": [
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankSpreadBlockedDamageOnEnemies",
+   "where": "col1",
+   "mode": "pve"
+  }
+ ],
+ "armour reinforcement": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderGetArmorForAnyGunStrike",
+   "where": "col0",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankGetArmorForAnyGunStrike",
+   "where": "col2",
+   "mode": "pve"
+  }
+ ],
+ "armour siphon": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_halberd",
+   "perk": "melee_power_halberd_mastercrafted_1_1",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "armoured advance": [
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankPermanentEndurance",
+   "where": "col6",
+   "mode": "pve"
+  }
+ ],
+ "armoured strength": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_chainsword",
+   "perk": "melee_chainsword_common_1",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_fist",
+   "perk": "melee_power_fist_common_1",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_combat_knife",
+   "perk": "melee_combat_knife_common_1",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_sword",
+   "perk": "melee_power_sword_common_1",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_thunder_hammer",
+   "perk": "melee_thunder_hammer_common_1",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_halberd",
+   "perk": "melee_power_halberd_artificer_1_2",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "artificer alpha": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_axe",
+   "variant": "03"
+  }
+ ],
+ "artificer beta": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_axe",
+   "variant": "03_a"
+  }
+ ],
+ "artificer gamma": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_axe",
+   "variant": "03_b"
+  }
+ ],
+ "ascension": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderDealDamageOnStartinJumpPackJump",
+   "where": "col6",
+   "mode": "pve"
+  }
+ ],
+ "assault": [
+  {
+   "kind": "class",
+   "class": "RAIDER"
+  }
+ ],
+ "augmented ammunition feed": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerShoulderGunFasterRecharge",
+   "where": "col4",
+   "mode": "pve"
+  }
+ ],
+ "augmented tarantula": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerSentryTurretPowerUp",
+   "where": "col4",
+   "mode": "pve"
+  }
+ ],
+ "auspex scan": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "SpawnWithJetpackAuspexScanAbility",
+   "where": "base",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierReloadHolsterWeapon",
+   "where": "base",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "SpawnWithJetpackAuspexScanAbility",
+   "where": "base",
+   "mode": "pvp"
+  }
+ ],
+ "auto bolt rifle": [
+  {
+   "kind": "weapon",
+   "weapon": "arifle_auto_bolt_rifle"
+  }
+ ],
+ "auxiliary ammunition": [
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportRestoreAmmoWhenOutOfAmmoForRapidSuccession",
+   "where": "col0",
+   "mode": "pve"
+  }
+ ],
+ "auxiliary arsenal": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderIncreaseSecondaryWeaponDamage",
+   "where": "col1",
+   "mode": "pve"
+  }
+ ],
+ "auxiliary grenade launcher": [
+  {
+   "kind": "heroicPerk",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "perk": "HeavyBoltRifleAUX",
+   "variant": "05"
+  }
+ ],
+ "auxiliary reload": [
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankRestoreSecondaryAmmoForFinisherOfSpecial",
+   "where": "prestige",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportRestorePrimaryAmmoForFinisherOfSpecial",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "balanced cooling": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "pwpn_plasma_exterminator",
+   "perk": "pwpn_plasma_exterminator_artificer_2_3_sub",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "balanced distribution": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierBuffPrimaryDamageDebuffSecondaryDamage",
+   "where": "col0",
+   "mode": "pve"
+  }
+ ],
+ "battle focus": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierApplyAuspexMarkOnFoeAfterRiposte",
+   "where": "col4",
+   "mode": "pve"
+  }
+ ],
+ "battlefield awareness": [
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkIncreaseFirearmDamageIfTargetCloser8Meters",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "battlefield repairs": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerArmorAndSegmentOnInjectorTeam",
+   "where": "team",
+   "mode": "pve"
+  }
+ ],
+ "blast radius": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerEquipmentDamageRadiusIncrease",
+   "where": "prestige",
+   "mode": "pve"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "pwpn_plasma_exterminator",
+   "perk": "pwpn_plasma_exterminator_common_2",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "pwpn_plasma_exterminator",
+   "perk": "pwpn_plasma_exterminator_artificer_2_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_plasma_pistol",
+   "perk": "hgun_plasma_pistol_artificer_1_1",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_plasma_pistol",
+   "perk": "hgun_plasma_pistol_artificer_2_3",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "block break": [
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperFirearmsPenetrateBlocks",
+   "where": "col0",
+   "mode": "pve"
+  }
+ ],
+ "blood of vossus": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_combat_knife",
+   "variant": "04"
+  }
+ ],
+ "bolt carbine": [
+  {
+   "kind": "weapon",
+   "weapon": "smg_bolt_carbine"
+  }
+ ],
+ "bolt carbine one handed": [
+  {
+   "kind": "weapon",
+   "weapon": "hgun_bolt_carbine"
+  }
+ ],
+ "bolt pistol": [
+  {
+   "kind": "weapon",
+   "weapon": "hgun_bolt_pistol"
+  }
+ ],
+ "bolt rifle": [
+  {
+   "kind": "weapon",
+   "weapon": "arifle_bolt_rifle"
+  }
+ ],
+ "bolt sniper rifle": [
+  {
+   "kind": "weapon",
+   "weapon": "brifle_bolt_sniper_rifle"
+  }
+ ],
+ "bonds of brotherhood": [
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportRestoreFullHealthWhenRevivedForTeam",
+   "where": "team",
+   "mode": "pve"
+  }
+ ],
+ "braced preparation": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_thunder_hammer",
+   "perk": "melee_thunder_hammer_artificer_1_3_sub",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "braced reload": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_inferno_pistol",
+   "perk": "hgun_inferno_pistol_mastercrafted_2_1",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "brutal rampage": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_las_fusil",
+   "perk": "hwpn_las_fusil_relic_2_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "perk": "support_plasma_incinerator_relic_2_1",
+   "tier": "RELIC"
+  }
+ ],
+ "brute force": [
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportIncreaseRangeDamageWhenAbilityOnCooldown",
+   "where": "col5",
+   "mode": "pve"
+  }
+ ],
+ "bulwark": [
+  {
+   "kind": "class",
+   "class": "TANK"
+  }
+ ],
+ "burst fire": [
+  {
+   "kind": "heroicPerk",
+   "weapon": "hgun_bolt_pistol",
+   "perk": "arifle_bolt_pistol_heroic_1",
+   "variant": "05"
+  }
+ ],
+ "calm before the storm": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_thunder_hammer",
+   "perk": "melee_thunder_hammer_mastercrafted_1_1",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "camo cloak": [
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "AbilityCamouflage",
+   "where": "base",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperIncreaseHeadshotDamage",
+   "where": "base",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "AbilityCamouflage",
+   "where": "base",
+   "mode": "pvp"
+  }
+ ],
+ "chained headshots": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerHeadshotRamp",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "chains of duty": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_heavy_bolter",
+   "variant": "05"
+  }
+ ],
+ "chainsword": [
+  {
+   "kind": "weapon",
+   "weapon": "melee_chainsword"
+  }
+ ],
+ "chapter banner": [
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "SpawnWithCombatShield",
+   "where": "base",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankAdditionalHP",
+   "where": "base",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "SpawnWithCombatShield",
+   "where": "base",
+   "mode": "pvp"
+  }
+ ],
+ "charged cooling": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "perk": "support_plasma_incinerator_relic_1_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_plasma_pistol",
+   "perk": "hgun_plasma_pistol_relic_1_2",
+   "tier": "RELIC"
+  }
+ ],
+ "charged speed": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "pwpn_plasma_exterminator",
+   "perk": "pwpn_plasma_exterminator_artificer_2_1",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "charging immunity": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_las_fusil",
+   "perk": "hwpn_las_fusil_artificer_1_2",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "choler's teeth": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_chainsword",
+   "variant": "04"
+  }
+ ],
+ "cleaver": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_axe",
+   "perk": "melee_power_axe_artificer_2_3",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "cleaving fire": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_bolt_rifle",
+   "perk": "arifle_bolt_rifle_artificer_2_4",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_stalker_bolt_rifle",
+   "perk": "brifle_stalker_bolt_rifle_artificer_1_1",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "perk": "arifle_heavy_bolt_rifle_mastercrafted_2_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "perk": "arifle_heavy_bolt_rifle_artificer_2_4",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "perk": "brifle_instigator_bolt_carbine_artificer_2_4",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_bolt_sniper_rifle",
+   "perk": "brifle_bolt_sniper_rifle_relic_1_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_bolt_carbine",
+   "perk": "smg_bolt_carbine_artificer_1_4",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_carbine",
+   "perk": "hgun_bolt_carbine_mastercrafted_2_2",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "cleaving strike": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_halberd",
+   "perk": "melee_power_halberd_mastercrafted_2_1",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "close combat": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_auto_bolt_rifle",
+   "perk": "arifle_auto_bolt_rifle_mastercrafted_1_1",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "close combat focus": [
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkModifyIncomingMeleeAndFirearmDamage",
+   "where": "col1",
+   "mode": "pve"
+  }
+ ],
+ "close targeting": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierIncreaseMeleeDamageAgainstThreatClassDependsOnAmmo",
+   "where": "col5",
+   "mode": "pve"
+  }
+ ],
+ "collateral damage": [
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkDamageByFlyCollision",
+   "where": "col3",
+   "mode": "pve"
+  }
+ ],
+ "combat knife": [
+  {
+   "kind": "weapon",
+   "weapon": "melee_combat_knife"
+  }
+ ],
+ "combat readiness": [
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkIncreaseAbilityRegenSpeed",
+   "where": "col5",
+   "mode": "pve"
+  }
+ ],
+ "combat squad resupply": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerTeamExtraEquipment",
+   "where": "team",
+   "mode": "pve"
+  }
+ ],
+ "combi flamer": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "smg_bolt_carbine",
+   "variant": "05"
+  }
+ ],
+ "combi melta": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_bolt_rifle",
+   "variant": "05"
+  }
+ ],
+ "combi weapon": [
+  {
+   "kind": "heroicPerk",
+   "weapon": "arifle_bolt_rifle",
+   "perk": "arifle_bolt_rifle_heroic_1",
+   "variant": "05"
+  },
+  {
+   "kind": "heroicPerk",
+   "weapon": "smg_bolt_carbine",
+   "perk": "PerkHeroicSmgBoltCarbine",
+   "variant": "05"
+  },
+  {
+   "kind": "heroicPerk",
+   "weapon": "melee_power_fist",
+   "perk": "Melee_Power_Fist_Heroic_A",
+   "variant": "05_a"
+  }
+ ],
+ "combined onslaught": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_chainsword",
+   "perk": "melee_chainsword_artificer_1_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_combat_knife",
+   "perk": "melee_combat_knife_artificer_1_1",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "combo": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_fist",
+   "perk": "melee_power_fist_artificer_1_3",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "combustive momentum": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_volkite_pistol",
+   "perk": "hgun_volkite_pistol_mastercrafted_2_1",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "commitment": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderRestoreChargeOnPerfectJetpackDash",
+   "where": "col6",
+   "mode": "pve"
+  }
+ ],
+ "common cooling": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "pwpn_plasma_exterminator",
+   "perk": "pwpn_plasma_exterminator_common_1",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "pwpn_plasma_exterminator",
+   "perk": "pwpn_plasma_exterminator_relic_1_4",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "perk": "support_plasma_incinerator_common_1",
+   "tier": "COMMON"
+  }
+ ],
+ "common efficiency": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "pwpn_plasma_exterminator",
+   "perk": "pwpn_plasma_exterminator_artificer_1_3_sub",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "common speed": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "pwpn_plasma_exterminator",
+   "perk": "pwpn_plasma_exterminator_artificer_1_2",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "concentrated fire": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierAuspexBuffBonusButRemoveEffectOnLeave",
+   "where": "col5",
+   "mode": "pve"
+  }
+ ],
+ "concussive force": [
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankShieldBashDealSmallDamage",
+   "where": "col4",
+   "mode": "pve"
+  }
+ ],
+ "concussive impact": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_fist",
+   "perk": "melee_power_fist_artificer_2_3",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "confident stance": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_axe",
+   "perk": "melee_power_axe_mastercrafted_1_1",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "consecutive execution": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderRestoreEquipmentChargeByKillstreak",
+   "where": "col1",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkRestoreEquipmentChargeByKillstreak",
+   "where": "col2",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportRestoreEquipmentForRapidSuccession",
+   "where": "col3",
+   "mode": "pve"
+  }
+ ],
+ "contingency plan": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_bolter",
+   "perk": "support_heavy_bolter_mastercrafted_2_1",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "perk": "support_plasma_incinerator_mastercrafted_2_1",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_pyroblaster",
+   "perk": "pyreblaster_mastercrafted_2_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_pyrecannon",
+   "perk": "pyrecannon_mastercrafted_2_2",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "conversion field": [
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportRecoverAbilitiesFasterWhenIronHaloActiveForAllies",
+   "where": "col6",
+   "mode": "pve"
+  }
+ ],
+ "conviction": [
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkReduceDamageOnArmorDestroyed",
+   "where": "col1",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankReduceDamageOnArmorDestroyed",
+   "where": "col0",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperReduceDamageOnArmorDestroyed",
+   "where": "prestige",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportReduceDamageOnArmorDestroyed",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "coolant reserve": [
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportCantOverheatWhenTeamIsDowned",
+   "where": "col6",
+   "mode": "pve"
+  }
+ ],
+ "counterattack": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_axe",
+   "perk": "melee_power_axe_mastercrafted_2_3",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "counteroffensive protocols": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerMeleeBoostAfterShoulderGun",
+   "where": "col5",
+   "mode": "pve"
+  }
+ ],
+ "coup de grce": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_axe",
+   "perk": "melee_power_axe_mastercrafted_2_1",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "crushing heel": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_chainsword",
+   "perk": "melee_chainsword_mastercrafted_1_1",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "cutting edge": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_sword",
+   "perk": "melee_power_sword_relic_2_1",
+   "tier": "RELIC"
+  }
+ ],
+ "dead end": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_thunder_hammer",
+   "perk": "melee_thunder_hammer_relic_2_3",
+   "tier": "RELIC"
+  }
+ ],
+ "death strike": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "perk": "brifle_instigator_bolt_carbine_relic_2_3",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "perk": "support_heavy_meltagun_relic_1_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "perk": "hgun_heavy_bolt_pistol_artificer_2_1",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "death's grasp": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_fist",
+   "variant": "05"
+  }
+ ],
+ "deathwatch": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "brifle_stalker_bolt_rifle",
+   "variant": "05"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "variant": "05"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_fist",
+   "variant": "05_a"
+  }
+ ],
+ "decapitating stratagem": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerShoulderGunMajorisKillRestoreUltimate",
+   "where": "col6",
+   "mode": "pve"
+  }
+ ],
+ "decisive reload": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "perk": "support_heavy_meltagun_mastercrafted_2_1",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "shotgun_meltagun",
+   "perk": "shotgun_meltagun_common_2",
+   "tier": "COMMON"
+  }
+ ],
+ "defence mechanism": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderIFadeHPDownLow",
+   "where": "col1",
+   "mode": "pve"
+  }
+ ],
+ "defensive advantage": [
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankShockAreaAfterRiposte",
+   "where": "col2",
+   "mode": "pve"
+  }
+ ],
+ "defensive mastery": [
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankRiposteMakeEnemiesGoToIncapacitation",
+   "where": "col6",
+   "mode": "pve"
+  }
+ ],
+ "defensive stance": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerRangedDRWhenSurrounded",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "designated target": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerShoulderGunExposeOnHit",
+   "where": "col3",
+   "mode": "pve"
+  }
+ ],
+ "dexterous hands": [
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperIncreaseCarbinesReloadSpeed",
+   "where": "col2",
+   "mode": "pve"
+  }
+ ],
+ "diligence": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderIncreaseChargeTimeAndMaxChargedGroundPoundDamage",
+   "where": "col5",
+   "mode": "pve"
+  }
+ ],
+ "discharge": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_axe",
+   "perk": "melee_power_axe_relic_1_2",
+   "tier": "RELIC"
+  }
+ ],
+ "discipline": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_bolter",
+   "perk": "support_heavy_bolter_relic_1_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "perk": "support_heavy_meltagun_relic_2_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "perk": "hgun_heavy_bolt_pistol_artificer_1_2",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "distributed deflagration": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_volkite_pistol",
+   "perk": "hgun_volkite_pistol_relic_2_2",
+   "tier": "RELIC"
+  }
+ ],
+ "divine might": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_bolt_rifle",
+   "perk": "arifle_bolt_rifle_relic_2_4",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_bolter",
+   "perk": "support_heavy_bolter_relic_2_4",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_stalker_bolt_rifle",
+   "perk": "brifle_stalker_bolt_rifle_common_2",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_auto_bolt_rifle",
+   "perk": "arifle_auto_bolt_rifle_artificer_2_1",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "perk": "arifle_heavy_bolt_rifle_relic_1_4",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "perk": "brifle_instigator_bolt_carbine_mastercrafted_2_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_bolt_sniper_rifle",
+   "perk": "brifle_bolt_sniper_rifle_mastercrafted_1_1",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_bolt_carbine",
+   "perk": "smg_bolt_carbine_artificer_1_1",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_bolt_carbine",
+   "perk": "smg_bolt_carbine_artificer_2_3_sub",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_bolt_carbine",
+   "perk": "smg_bolt_carbine_relic_2_4",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_occulus_bolt_carbine",
+   "perk": "smg_occulus_bolt_carbine_artificer_2_3_sub",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_occulus_bolt_carbine",
+   "perk": "smg_occulus_bolt_carbine_relic_1_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_las_fusil",
+   "perk": "hwpn_las_fusil_artificer_2_3_sub",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "perk": "support_heavy_meltagun_artificer_2_3",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "perk": "support_heavy_meltagun_relic_1_3",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "perk": "hgun_heavy_bolt_pistol_common_2",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "perk": "hgun_heavy_bolt_pistol_relic_2_3",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_pistol",
+   "perk": "hgun_bolt_pistol_artificer_2_1",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_pistol",
+   "perk": "hgun_bolt_pistol_relic_2_3",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "shotgun_meltagun",
+   "perk": "shotgun_meltagun_artificer_1_1",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_plasma_pistol",
+   "perk": "hgun_plasma_pistol_mastercrafted_2_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_plasma_pistol",
+   "perk": "hgun_plasma_pistol_relic_2_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_volkite_pistol",
+   "perk": "hgun_volkite_pistol_common_1",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_inferno_pistol",
+   "perk": "hgun_inferno_pistol_common_1",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_pyroblaster",
+   "perk": "pyreblaster_mastercrafted_2_1",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_pyrecannon",
+   "perk": "pyrecannon_artificer_2_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_carbine",
+   "perk": "hgun_bolt_carbine_common_2",
+   "tier": "COMMON"
+  }
+ ],
+ "double edged relic": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_chainsword",
+   "variant": "05"
+  }
+ ],
+ "drogos reclamation": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_heavy_bolter",
+   "variant": "03_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "brifle_stalker_bolt_rifle",
+   "variant": "03_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_auto_bolt_rifle",
+   "variant": "03_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "smg_bolt_carbine",
+   "variant": "03_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "smg_occulus_bolt_carbine",
+   "variant": "03_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_las_fusil",
+   "variant": "03_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "variant": "03_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_bolt_pistol",
+   "variant": "03_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_chainsword",
+   "variant": "03_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_combat_knife",
+   "variant": "03"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_sword",
+   "variant": "03_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_volkite_pistol",
+   "variant": "03_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_inferno_pistol",
+   "variant": "03_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_pyroblaster",
+   "variant": "03_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_pyrecannon",
+   "variant": "03_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_bolt_carbine",
+   "variant": "03_a"
+  }
+ ],
+ "drogos reclamation alpha": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_bolt_rifle",
+   "variant": "03_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "variant": "03_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "variant": "03_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "brifle_bolt_sniper_rifle",
+   "variant": "03_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "pwpn_plasma_exterminator",
+   "variant": "03_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "variant": "03_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "variant": "03_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "shotgun_meltagun",
+   "variant": "03_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_plasma_pistol",
+   "variant": "03_a"
+  }
+ ],
+ "drogos reclamation beta": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_bolt_rifle",
+   "variant": "03_c"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "variant": "03_c"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "brifle_bolt_sniper_rifle",
+   "variant": "03_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "pwpn_plasma_exterminator",
+   "variant": "03_c"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "variant": "03_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "variant": "03_b"
+  }
+ ],
+ "drogos reclamation marksman": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "smg_bolt_carbine",
+   "variant": "03_c"
+  }
+ ],
+ "duellist": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderIncreaseRiposteWindow",
+   "where": "prestige",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkIncreaseRiposteWindow",
+   "where": "col1",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportIncreaseRiposteWindow",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "effective formation": [
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankReducedDamageFromBossesToTeam",
+   "where": "team",
+   "mode": "pve"
+  }
+ ],
+ "efficient charge": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "pwpn_plasma_exterminator",
+   "perk": "pwpn_plasma_exterminator_mastercrafted_2_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "pwpn_plasma_exterminator",
+   "perk": "pwpn_plasma_exterminator_relic_2_3_sub",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "perk": "support_plasma_incinerator_mastercrafted_2_3",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_plasma_pistol",
+   "perk": "hgun_plasma_pistol_artificer_1_3",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "efficient hunter": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "perk": "brifle_instigator_bolt_carbine_mastercrafted_1_1",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "efficient precision": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_bolter",
+   "perk": "support_heavy_bolter_relic_2_1",
+   "tier": "RELIC"
+  }
+ ],
+ "efficient readiness": [
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperReloadingFirearmForFinisher",
+   "where": "col3",
+   "mode": "pve"
+  }
+ ],
+ "electrified thunderclap": [
+  {
+   "kind": "heroicPerk",
+   "weapon": "melee_thunder_hammer",
+   "perk": "Melee_ThunderHummer_Heroic",
+   "variant": "05"
+  }
+ ],
+ "elite health": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "perk": "support_heavy_meltagun_relic_2_1",
+   "tier": "RELIC"
+  }
+ ],
+ "elite hunter": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_auto_bolt_rifle",
+   "perk": "arifle_auto_bolt_rifle_artificer_1_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_pistol",
+   "perk": "hgun_bolt_pistol_relic_1_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_carbine",
+   "perk": "hgun_bolt_carbine_relic_2_2",
+   "tier": "RELIC"
+  }
+ ],
+ "elite restoration": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "perk": "support_heavy_meltagun_mastercrafted_1_1",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "elusive fire": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "shotgun_meltagun",
+   "perk": "shotgun_meltagun_relic_2_1",
+   "tier": "RELIC"
+  }
+ ],
+ "elusive precision": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_occulus_bolt_carbine",
+   "perk": "smg_occulus_bolt_carbine_mastercrafted_1_1",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "emboldened stand": [
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankOnBannerEndurance",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "emergency countermeasure": [
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankCreateShockAreaAfterLostArmor",
+   "where": "col6",
+   "mode": "pve"
+  }
+ ],
+ "emergency override": [
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperActivateCamouflageAndInvulnerabilityOnLethalDamage",
+   "where": "col6",
+   "mode": "pve"
+  }
+ ],
+ "emperor's blessing": [
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkRestoreArmorOnLethalDamage",
+   "where": "col6",
+   "mode": "pve"
+  }
+ ],
+ "emperor's grace": [
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperInvulnerabilityWhenActivatingCamouflage",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "emperor's judgement": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierReloadAfterFinisherAndBuffPrimary",
+   "where": "col2",
+   "mode": "pve"
+  }
+ ],
+ "emperor's protection": [
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportRestoreArmorSegmentWhenIronHaloSpendsAllEnergyForTeam",
+   "where": "col3",
+   "mode": "pve"
+  }
+ ],
+ "emperor's vengeance": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierReceiveAmmoClipForKillEliteOrHigher",
+   "where": "col2",
+   "mode": "pve"
+  }
+ ],
+ "encarmine axe": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_axe",
+   "variant": "05"
+  }
+ ],
+ "encompassing aegis": [
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportReduceIncomingDamageForTeam",
+   "where": "team",
+   "mode": "pve"
+  }
+ ],
+ "endless slash": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_axe",
+   "perk": "melee_power_axe_mastercrafted_1_3_sub",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "energised": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_halberd",
+   "perk": "melee_power_halberd_artificer_2_3",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "enhanced force": [
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportIncreaseHoldAttacksDamage",
+   "where": "col2",
+   "mode": "pve"
+  }
+ ],
+ "eternal flame": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_pyroblaster",
+   "perk": "pyreblaster_mastercrafted_1_1",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_pyrecannon",
+   "perk": "pyrecannon_mastercrafted_1_1",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "evasion": [
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperActivateCamouflageForPerfectDodge",
+   "where": "col6",
+   "mode": "pve"
+  }
+ ],
+ "exacting focus": [
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperBuffRangeDamageAfterGunstrike",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "executioner": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_halberd",
+   "perk": "melee_power_halberd_artificer_2_2_sub",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "executioner's fire": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "perk": "support_heavy_meltagun_artificer_1_1",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "executioner's range": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "perk": "support_heavy_meltagun_artificer_2_1",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "exigency charge": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierIncreaseAbilityRegenWhenLowHP",
+   "where": "prestige",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkIncreaseDamageAndAbilityRestoreWhenLowHp",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "expedient barrage": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "perk": "support_heavy_meltagun_relic_2_3",
+   "tier": "RELIC"
+  }
+ ],
+ "expert timing": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierAuspexBuffBonusDebuffDuration",
+   "where": "col5",
+   "mode": "pve"
+  }
+ ],
+ "explosive enfilade": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerRangedBoostAfterEquipmentUse",
+   "where": "col0",
+   "mode": "pve"
+  }
+ ],
+ "explosive strike": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_halberd",
+   "perk": "melee_power_halberd_relic_1_2",
+   "tier": "RELIC"
+  }
+ ],
+ "explosives adept": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerEquipmentDamageBoost",
+   "where": "col2",
+   "mode": "pve"
+  }
+ ],
+ "exponential force": [
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportIncreaseMeleeDamage",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "expose": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_halberd",
+   "perk": "melee_power_halberd_artificer_1_2_sub",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "extended magazine": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_bolt_rifle",
+   "perk": "arifle_bolt_rifle_common_2",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_bolt_rifle",
+   "perk": "arifle_bolt_rifle_relic_2_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_stalker_bolt_rifle",
+   "perk": "brifle_stalker_bolt_rifle_artificer_2_1",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_auto_bolt_rifle",
+   "perk": "arifle_auto_bolt_rifle_common_2",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "perk": "arifle_heavy_bolt_rifle_common_2",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "perk": "arifle_heavy_bolt_rifle_relic_2_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "perk": "brifle_instigator_bolt_carbine_common_2",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_bolt_sniper_rifle",
+   "perk": "brifle_bolt_sniper_rifle_common_1",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_bolt_carbine",
+   "perk": "smg_bolt_carbine_artificer_2_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_occulus_bolt_carbine",
+   "perk": "smg_occulus_bolt_carbine_artificer_2_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "perk": "hgun_heavy_bolt_pistol_mastercrafted_2_3",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_pistol",
+   "perk": "hgun_bolt_pistol_artificer_2_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_pistol",
+   "perk": "hgun_bolt_pistol_relic_2_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "shotgun_meltagun",
+   "perk": "shotgun_meltagun_common_1",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "shotgun_meltagun",
+   "perk": "shotgun_meltagun_artificer_1_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_volkite_pistol",
+   "perk": "hgun_volkite_pistol_common_2",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_carbine",
+   "perk": "hgun_bolt_carbine_mastercrafted_1_1",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "extra shot": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_inferno_pistol",
+   "perk": "hgun_inferno_pistol_relic_2_1",
+   "tier": "RELIC"
+  }
+ ],
+ "extremis slayer": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_chainsword",
+   "perk": "melee_chainsword_relic_2_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_combat_knife",
+   "perk": "melee_combat_knife_relic_2_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_sword",
+   "perk": "melee_power_sword_relic_2_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_thunder_hammer",
+   "perk": "melee_thunder_hammer_mastercrafted_1_3",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "fast preparation": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_thunder_hammer",
+   "perk": "melee_thunder_hammer_mastercrafted_2_1",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "fast reload": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_bolt_rifle",
+   "perk": "arifle_bolt_rifle_mastercrafted_1_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_stalker_bolt_rifle",
+   "perk": "brifle_stalker_bolt_rifle_relic_1_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_auto_bolt_rifle",
+   "perk": "arifle_auto_bolt_rifle_mastercrafted_1_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "perk": "arifle_heavy_bolt_rifle_mastercrafted_1_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "perk": "brifle_instigator_bolt_carbine_mastercrafted_1_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_bolt_sniper_rifle",
+   "perk": "brifle_bolt_sniper_rifle_artificer_2_1",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_occulus_bolt_carbine",
+   "perk": "smg_occulus_bolt_carbine_mastercrafted_1_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "shotgun_meltagun",
+   "perk": "shotgun_meltagun_artificer_2_1",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "shotgun_meltagun",
+   "perk": "shotgun_meltagun_artificer_2_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_inferno_pistol",
+   "perk": "hgun_inferno_pistol_artificer_1_1",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_carbine",
+   "perk": "hgun_bolt_carbine_mastercrafted_1_2",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "fast venting": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_bolter",
+   "perk": "support_heavy_bolter_common_1",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_bolter",
+   "perk": "support_heavy_bolter_relic_1_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "pwpn_plasma_exterminator",
+   "perk": "pwpn_plasma_exterminator_mastercrafted_1_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "pwpn_plasma_exterminator",
+   "perk": "pwpn_plasma_exterminator_relic_1_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "perk": "support_plasma_incinerator_common_2",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "perk": "support_plasma_incinerator_relic_2_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_plasma_pistol",
+   "perk": "hgun_plasma_pistol_common_2",
+   "tier": "COMMON"
+  }
+ ],
+ "fencing blade": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_sword",
+   "perk": "melee_power_sword_artificer_2_3_sub",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "field adjustment": [
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportIncreaseIronHaloChargesDecreaseDurability",
+   "where": "col4",
+   "mode": "pve"
+  }
+ ],
+ "finisher reload": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "perk": "brifle_instigator_bolt_carbine_artificer_1_1",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_bolt_sniper_rifle",
+   "perk": "brifle_bolt_sniper_rifle_mastercrafted_1_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_occulus_bolt_carbine",
+   "perk": "smg_occulus_bolt_carbine_artificer_1_1",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "first shot": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "shotgun_meltagun",
+   "perk": "shotgun_meltagun_artificer_1_3",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "fistfight": [
+  {
+   "kind": "heroicPerk",
+   "weapon": "melee_chainsword",
+   "perk": "Melee_Chainsword_Heroic",
+   "variant": "05"
+  }
+ ],
+ "flame of ascension": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_pyroblaster",
+   "perk": "pyreblaster_artificer_1_1",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_pyrecannon",
+   "perk": "pyrecannon_artificer_1_1",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "flame of protection": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_pyrecannon",
+   "perk": "pyrecannon_mastercrafted_2_1",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "flame of purification": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_pyroblaster",
+   "perk": "pyreblaster_relic_2_2",
+   "tier": "RELIC"
+  }
+ ],
+ "flash burn": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_pyroblaster",
+   "perk": "pyreblaster_artificer_2_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_pyrecannon",
+   "perk": "pyrecannon_relic_2_2",
+   "tier": "RELIC"
+  }
+ ],
+ "focused fusion beam": [
+  {
+   "kind": "heroicPerk",
+   "weapon": "shotgun_meltagun",
+   "perk": "PerkHeroicMeltagunRifle",
+   "variant": "05"
+  }
+ ],
+ "focused intention": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_fist",
+   "perk": "melee_power_fist_artificer_1_1",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "focused restoration": [
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankReducedArmorPassiveRegenerationDelayToTeam",
+   "where": "team",
+   "mode": "pve"
+  }
+ ],
+ "focused strength": [
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankGunStrikeMarkerForShieldBash",
+   "where": "col3",
+   "mode": "pve"
+  }
+ ],
+ "follow up shot": [
+  {
+   "kind": "heroicPerk",
+   "weapon": "melee_power_fist",
+   "perk": "Melee_Power_Fist_Heroic",
+   "variant": "05"
+  }
+ ],
+ "fortifying salvo": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerShoulderGunArmorOnKill",
+   "where": "col5",
+   "mode": "pve"
+  }
+ ],
+ "fortitude": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierAdditionalHP",
+   "where": "prestige",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderAdditionalHP",
+   "where": "prestige",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkAdditionalHP",
+   "where": "prestige",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportAdditionalHP",
+   "where": "col1",
+   "mode": "pve"
+  }
+ ],
+ "forward momentum": [
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankIncreaseMeleeDamageAfterShieldBash",
+   "where": "col0",
+   "mode": "pve"
+  }
+ ],
+ "full throttle": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_chainsword",
+   "perk": "melee_chainsword_artificer_2_3_sub",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "furious gun strike": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerMeleeAfterGunStrike",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "furious strikes": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderRetoreChargeAfterHitDash",
+   "where": "col3",
+   "mode": "pve"
+  }
+ ],
+ "fury of chogoris": [
+  {
+   "kind": "heroicPerk",
+   "weapon": "melee_chainsword",
+   "perk": "Melee_Chainsword_Heroic_A",
+   "variant": "05_a"
+  }
+ ],
+ "gathalamor crusade": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_bolt_rifle",
+   "variant": "04"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "brifle_stalker_bolt_rifle",
+   "variant": "04"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_auto_bolt_rifle",
+   "variant": "04"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "brifle_bolt_sniper_rifle",
+   "variant": "04"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "smg_bolt_carbine",
+   "variant": "04"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_las_fusil",
+   "variant": "04"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "variant": "04"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "variant": "04"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_bolt_pistol",
+   "variant": "04"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "shotgun_meltagun",
+   "variant": "04"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_plasma_pistol",
+   "variant": "04"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_chainsword",
+   "variant": "04_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_sword",
+   "variant": "04_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_volkite_pistol",
+   "variant": "04"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_inferno_pistol",
+   "variant": "04"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_pyroblaster",
+   "variant": "04"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_pyrecannon",
+   "variant": "04"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_halberd",
+   "variant": "04_b"
+  }
+ ],
+ "gathalamor crusade alpha": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_heavy_bolter",
+   "variant": "04"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "variant": "04"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "variant": "04"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "smg_occulus_bolt_carbine",
+   "variant": "04"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "pwpn_plasma_exterminator",
+   "variant": "04"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "variant": "04"
+  }
+ ],
+ "gathalamor crusade beta": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_heavy_bolter",
+   "variant": "04_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "variant": "04_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "variant": "04_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "smg_occulus_bolt_carbine",
+   "variant": "04_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "pwpn_plasma_exterminator",
+   "variant": "04_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "variant": "04_a"
+  }
+ ],
+ "gathalamor crusade marksman": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "smg_bolt_carbine",
+   "variant": "04_a"
+  }
+ ],
+ "gathalamor crusade with grenade launcher": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_bolt_rifle",
+   "variant": "04_a"
+  }
+ ],
+ "glory's shield": [
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankBannerGivesArmor",
+   "where": "col4",
+   "mode": "pve"
+  }
+ ],
+ "grapnel launcher": [
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "SpawnWithGrapplingHook",
+   "where": "base",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkIncreaseHealthTrailRestoring",
+   "where": "base",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "SpawnWithGrapplingHook",
+   "where": "base",
+   "mode": "pvp"
+  }
+ ],
+ "great might": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_bolt_rifle",
+   "perk": "arifle_bolt_rifle_artificer_2_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_bolter",
+   "perk": "support_heavy_bolter_relic_1_4",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_stalker_bolt_rifle",
+   "perk": "brifle_stalker_bolt_rifle_relic_2_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_auto_bolt_rifle",
+   "perk": "arifle_auto_bolt_rifle_artificer_2_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "perk": "arifle_heavy_bolt_rifle_artificer_2_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "perk": "brifle_instigator_bolt_carbine_artificer_2_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_bolt_sniper_rifle",
+   "perk": "brifle_bolt_sniper_rifle_relic_2_3",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_bolt_carbine",
+   "perk": "smg_bolt_carbine_common_2",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_occulus_bolt_carbine",
+   "perk": "smg_occulus_bolt_carbine_common_2",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_occulus_bolt_carbine",
+   "perk": "smg_occulus_bolt_carbine_relic_2_3_sub",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "pwpn_plasma_exterminator",
+   "perk": "pwpn_plasma_exterminator_relic_2_4",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_las_fusil",
+   "perk": "hwpn_las_fusil_artificer_2_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "perk": "hgun_heavy_bolt_pistol_artificer_2_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_pistol",
+   "perk": "hgun_bolt_pistol_common_2",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "shotgun_meltagun",
+   "perk": "shotgun_meltagun_mastercrafted_1_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_plasma_pistol",
+   "perk": "hgun_plasma_pistol_artificer_2_1",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_volkite_pistol",
+   "perk": "hgun_volkite_pistol_mastercrafted_1_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_inferno_pistol",
+   "perk": "hgun_inferno_pistol_mastercrafted_1_2",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "grim determination": [
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkIncreaseDamageWhenAbilityOnCooldown",
+   "where": "col5",
+   "mode": "pve"
+  }
+ ],
+ "ground shake": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_fist",
+   "perk": "melee_power_fist_artificer_2_3_sub",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "guardian protocol": [
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperShareCamouflageWhenRiseUpAlly",
+   "where": "col4",
+   "mode": "pve"
+  }
+ ],
+ "gun strike reload": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_bolt_carbine",
+   "perk": "smg_bolt_carbine_relic_1_3_sub",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "perk": "hgun_heavy_bolt_pistol_relic_1_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_pistol",
+   "perk": "hgun_bolt_pistol_mastercrafted_1_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_volkite_pistol",
+   "perk": "hgun_volkite_pistol_mastercrafted_1_1",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_carbine",
+   "perk": "hgun_bolt_carbine_relic_2_1",
+   "tier": "RELIC"
+  }
+ ],
+ "hammer of wrath": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderEnduranceAfterGroundpound",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "hard target": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_chainsword",
+   "perk": "melee_chainsword_artificer_1_4",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_combat_knife",
+   "perk": "melee_combat_knife_relic_1_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_sword",
+   "perk": "melee_power_sword_artificer_2_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_thunder_hammer",
+   "perk": "melee_thunder_hammer_artificer_1_4",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_axe",
+   "perk": "melee_power_axe_artificer_2_1",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "head hunter": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_bolt_rifle",
+   "perk": "arifle_bolt_rifle_common_1",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_bolt_rifle",
+   "perk": "arifle_bolt_rifle_relic_1_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_bolter",
+   "perk": "support_heavy_bolter_mastercrafted_2_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_stalker_bolt_rifle",
+   "perk": "brifle_stalker_bolt_rifle_mastercrafted_1_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_stalker_bolt_rifle",
+   "perk": "brifle_stalker_bolt_rifle_artificer_1_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_auto_bolt_rifle",
+   "perk": "arifle_auto_bolt_rifle_artificer_1_1",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "perk": "arifle_heavy_bolt_rifle_common_1",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "perk": "arifle_heavy_bolt_rifle_artificer_1_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "perk": "brifle_instigator_bolt_carbine_common_1",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "perk": "brifle_instigator_bolt_carbine_artificer_1_4",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_bolt_sniper_rifle",
+   "perk": "brifle_bolt_sniper_rifle_artificer_1_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_bolt_carbine",
+   "perk": "smg_bolt_carbine_common_1",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_bolt_carbine",
+   "perk": "smg_bolt_carbine_artificer_1_3_sub",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_bolt_carbine",
+   "perk": "smg_bolt_carbine_artificer_1_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_occulus_bolt_carbine",
+   "perk": "smg_occulus_bolt_carbine_relic_1_3_sub",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_las_fusil",
+   "perk": "hwpn_las_fusil_mastercrafted_1_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_las_fusil",
+   "perk": "hwpn_las_fusil_artificer_1_3_sub",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_las_fusil",
+   "perk": "hwpn_las_fusil_relic_1_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "perk": "hgun_heavy_bolt_pistol_common_1",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "perk": "hgun_heavy_bolt_pistol_relic_1_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_pistol",
+   "perk": "hgun_bolt_pistol_mastercrafted_1_1",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_pistol",
+   "perk": "hgun_bolt_pistol_artificer_1_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_pistol",
+   "perk": "hgun_bolt_pistol_relic_1_2",
+   "tier": "RELIC"
+  }
+ ],
+ "heat retention": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_volkite_pistol",
+   "perk": "hgun_volkite_pistol_artificer_1_2",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "heavy": [
+  {
+   "kind": "class",
+   "class": "SUPPORT"
+  }
+ ],
+ "heavy armament": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_fist",
+   "perk": "melee_power_fist_relic_2_2",
+   "tier": "RELIC"
+  }
+ ],
+ "heavy bolt pistol": [
+  {
+   "kind": "weapon",
+   "weapon": "hgun_heavy_bolt_pistol"
+  }
+ ],
+ "heavy bolt rifle": [
+  {
+   "kind": "weapon",
+   "weapon": "arifle_heavy_bolt_rifle"
+  }
+ ],
+ "heavy bolter": [
+  {
+   "kind": "weapon",
+   "weapon": "hwpn_support_heavy_bolter"
+  }
+ ],
+ "heavy fire": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "perk": "support_plasma_incinerator_artificer_2_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "perk": "support_heavy_meltagun_mastercrafted_1_2",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "heavy immunity": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_bolter",
+   "perk": "support_heavy_bolter_mastercrafted_1_3_sub",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "perk": "support_plasma_incinerator_artificer_1_3",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "perk": "support_heavy_meltagun_mastercrafted_1_3",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_pyrecannon",
+   "perk": "pyrecannon_relic_2_1",
+   "tier": "RELIC"
+  }
+ ],
+ "heavy might": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_bolter",
+   "perk": "support_heavy_bolter_artificer_1_3_sub",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_bolter",
+   "perk": "support_heavy_bolter_artificer_1_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "perk": "support_heavy_meltagun_artificer_1_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "perk": "support_heavy_meltagun_artificer_1_3",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "heavy onslaught": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_chainsword",
+   "perk": "melee_chainsword_artificer_2_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_combat_knife",
+   "perk": "melee_combat_knife_artificer_2_1",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "heavy plasma incinerator": [
+  {
+   "kind": "weapon",
+   "weapon": "hwpn_support_plasma_incinerator"
+  }
+ ],
+ "heavy precision": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_bolter",
+   "perk": "support_heavy_bolter_artificer_2_2",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "heavy preparation": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_fist",
+   "perk": "melee_power_fist_mastercrafted_2_1",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "heavy velocity": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "perk": "support_plasma_incinerator_mastercrafted_1_2",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "heightened vigour": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierUnstoppableAfterPerfectDodge",
+   "where": "col1",
+   "mode": "pve"
+  }
+ ],
+ "high capacity": [
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperIncreaseMaxAmmo",
+   "where": "col1",
+   "mode": "pve"
+  }
+ ],
+ "higher rate burst": [
+  {
+   "kind": "heroicPerk",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "perk": "instigator_bolt_rifle_heroic_1",
+   "variant": "05"
+  }
+ ],
+ "honed precision": [
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupporthipFireSpredDecrease",
+   "where": "prestige",
+   "mode": "pve"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_bolt_rifle",
+   "perk": "arifle_bolt_rifle_relic_2_3_sub",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_bolter",
+   "perk": "support_heavy_bolter_artificer_2_3_sub",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_auto_bolt_rifle",
+   "perk": "arifle_auto_bolt_rifle_common_1",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "perk": "arifle_heavy_bolt_rifle_relic_2_3_sub",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "perk": "brifle_instigator_bolt_carbine_artificer_2_3_sub",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_bolt_sniper_rifle",
+   "perk": "brifle_bolt_sniper_rifle_artificer_1_3_sub",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_bolt_carbine",
+   "perk": "smg_bolt_carbine_mastercrafted_1_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_occulus_bolt_carbine",
+   "perk": "smg_occulus_bolt_carbine_artificer_1_3_sub",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "pwpn_plasma_exterminator",
+   "perk": "pwpn_plasma_exterminator_relic_1_3_sub",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "perk": "hgun_heavy_bolt_pistol_relic_2_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_pistol",
+   "perk": "hgun_bolt_pistol_relic_1_3",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_carbine",
+   "perk": "hgun_bolt_carbine_relic_1_2",
+   "tier": "RELIC"
+  }
+ ],
+ "honed reactions": [
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkIncreasePerfectDodgeWindowOnLowHealth",
+   "where": "col2",
+   "mode": "pve"
+  }
+ ],
+ "honourific relic": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_bolt_pistol",
+   "variant": "05"
+  }
+ ],
+ "imperator blade": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_sword",
+   "variant": "04"
+  }
+ ],
+ "improved efficiency": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierRestoreChargeForAuspexTargetsQuantity",
+   "where": "col4",
+   "mode": "pve"
+  }
+ ],
+ "improved fast venting": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_pyroblaster",
+   "perk": "pyreblaster_common_1",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_pyrecannon",
+   "perk": "pyrecannon_common_1",
+   "tier": "COMMON"
+  }
+ ],
+ "increased capacity": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_bolt_rifle",
+   "perk": "arifle_bolt_rifle_artificer_2_3_sub",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_bolter",
+   "perk": "support_heavy_bolter_mastercrafted_1_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_bolter",
+   "perk": "support_heavy_bolter_relic_1_3_sub",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_stalker_bolt_rifle",
+   "perk": "brifle_stalker_bolt_rifle_artificer_2_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_auto_bolt_rifle",
+   "perk": "arifle_auto_bolt_rifle_relic_2_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "perk": "arifle_heavy_bolt_rifle_artificer_2_3_sub",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "perk": "brifle_instigator_bolt_carbine_artificer_2_1",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_bolt_sniper_rifle",
+   "perk": "brifle_bolt_sniper_rifle_artificer_2_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_bolt_carbine",
+   "perk": "smg_bolt_carbine_artificer_2_4",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_occulus_bolt_carbine",
+   "perk": "smg_occulus_bolt_carbine_relic_2_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_las_fusil",
+   "perk": "hwpn_las_fusil_common_2",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_las_fusil",
+   "perk": "hwpn_las_fusil_relic_2_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_las_fusil",
+   "perk": "hwpn_las_fusil_relic_2_3",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "perk": "support_heavy_meltagun_common_1",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "perk": "support_heavy_meltagun_relic_1_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "perk": "hgun_heavy_bolt_pistol_mastercrafted_2_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_pistol",
+   "perk": "hgun_bolt_pistol_artificer_1_1",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_volkite_pistol",
+   "perk": "hgun_volkite_pistol_mastercrafted_2_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_inferno_pistol",
+   "perk": "hgun_inferno_pistol_artificer_2_1",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_pyroblaster",
+   "perk": "pyreblaster_relic_2_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_pyrecannon",
+   "perk": "pyrecannon_mastercrafted_1_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_carbine",
+   "perk": "hgun_bolt_carbine_common_1",
+   "tier": "COMMON"
+  }
+ ],
+ "indomitable spirit": [
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkUnstoppableWhileGunStrike",
+   "where": "prestige",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperUnstoppableWhileGunStrike",
+   "where": "prestige",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportUnstoppableWhileGunStrike",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "inexorable salvo": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerShoulderGunStabilityWhileActive",
+   "where": "col3",
+   "mode": "pve"
+  }
+ ],
+ "inferno pistol": [
+  {
+   "kind": "weapon",
+   "weapon": "hgun_inferno_pistol"
+  }
+ ],
+ "inner fire": [
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkAttachToPlayersRestoreAbilityByFinisher",
+   "where": "team",
+   "mode": "pve"
+  }
+ ],
+ "inspiration": [
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankBannerIncreasesDamage",
+   "where": "col5",
+   "mode": "pve"
+  }
+ ],
+ "inspired aim": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "perk": "brifle_instigator_bolt_carbine_relic_1_3",
+   "tier": "RELIC"
+  }
+ ],
+ "instant health": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_las_fusil",
+   "perk": "hwpn_las_fusil_relic_1_1",
+   "tier": "RELIC"
+  }
+ ],
+ "instigator bolt carbine": [
+  {
+   "kind": "weapon",
+   "weapon": "brifle_instigator_bolt_carbine"
+  }
+ ],
+ "intimidating aura": [
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankShieldBashDealsAOEDamage",
+   "where": "col0",
+   "mode": "pve"
+  }
+ ],
+ "invigorating icon": [
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankContestedHealthForBanner",
+   "where": "col4",
+   "mode": "pve"
+  }
+ ],
+ "iron grip": [
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperReducedSniperRiflesRecoil",
+   "where": "col2",
+   "mode": "pve"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_pistol",
+   "perk": "hgun_bolt_pistol_mastercrafted_2_2",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "iron halo": [
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "SpawnWithBarrier",
+   "where": "base",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportReduceDamageWhenIronHaloActiveForTeam",
+   "where": "base",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "SpawnWithBarrier",
+   "where": "base",
+   "mode": "pvp"
+  }
+ ],
+ "iron rush": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_halberd",
+   "perk": "melee_power_halberd_artificer_1_1",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "jump pack": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "SpawnWithJetpackPveAbility",
+   "where": "base",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderIncreasePerfectDodgeWindow",
+   "where": "base",
+   "mode": "pve"
+  }
+ ],
+ "kill streak": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_chainsword",
+   "perk": "melee_chainsword_relic_2_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_combat_knife",
+   "perk": "melee_combat_knife_relic_2_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_sword",
+   "perk": "melee_power_sword_artificer_1_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_thunder_hammer",
+   "perk": "melee_thunder_hammer_artificer_2_4",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_halberd",
+   "perk": "melee_power_halberd_mastercrafted_2_3",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "kinetic energy": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_combat_knife",
+   "perk": "melee_combat_knife_mastercrafted_2_1",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "know no fear": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_inferno_pistol",
+   "perk": "hgun_inferno_pistol_artificer_1_2",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "knowledge of the enemy": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderIncreaseMeleeAgainstEliteAndSpecial",
+   "where": "col2",
+   "mode": "pve"
+  }
+ ],
+ "kraken penetrator rounds": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierBuffBolterPenetration",
+   "where": "col0",
+   "mode": "pve"
+  }
+ ],
+ "las fusil": [
+  {
+   "kind": "weapon",
+   "weapon": "hwpn_las_fusil"
+  }
+ ],
+ "launch restoration": [
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkRestoreArmorSegmentForAbilityUse",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "lethal efficiency": [
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperRestoreAmmoForMultikillWithOneShot",
+   "where": "col2",
+   "mode": "pve"
+  }
+ ],
+ "lethal perimeter": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerShoulderGunZoneSentry",
+   "where": "col6",
+   "mode": "pve"
+  }
+ ],
+ "lingering concealment": [
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperDeactivateCamouflageLaterAfterInterruptedByAttack",
+   "where": "col5",
+   "mode": "pve"
+  }
+ ],
+ "long range barrage": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerFarRangedDamage",
+   "where": "col2",
+   "mode": "pve"
+  }
+ ],
+ "lord executioner's axe": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_thunder_hammer",
+   "variant": "05_a"
+  }
+ ],
+ "magazine restoration": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_bolt_rifle",
+   "perk": "arifle_bolt_rifle_mastercrafted_2_1",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_auto_bolt_rifle",
+   "perk": "arifle_auto_bolt_rifle_mastercrafted_2_1",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "perk": "arifle_heavy_bolt_rifle_mastercrafted_2_1",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_bolt_carbine",
+   "perk": "smg_bolt_carbine_relic_2_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_occulus_bolt_carbine",
+   "perk": "smg_occulus_bolt_carbine_relic_2_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "shotgun_meltagun",
+   "perk": "shotgun_meltagun_mastercrafted_1_1",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "majoris slayer": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_chainsword",
+   "perk": "melee_chainsword_relic_1_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_fist",
+   "perk": "melee_power_fist_relic_1_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_sword",
+   "perk": "melee_power_sword_relic_1_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_thunder_hammer",
+   "perk": "melee_thunder_hammer_relic_1_2",
+   "tier": "RELIC"
+  }
+ ],
+ "manoeuvrability": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderIncreaseAbilityRegenSpeed",
+   "where": "col4",
+   "mode": "pve"
+  }
+ ],
+ "marked for death": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierHeadshotImmediatelyKillScannedTarget",
+   "where": "col6",
+   "mode": "pve"
+  }
+ ],
+ "marksmanship": [
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperIncreaseHeadshotDamageForTeam",
+   "where": "team",
+   "mode": "pve"
+  }
+ ],
+ "master crafted": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_bolt_rifle",
+   "variant": "02"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "smg_bolt_carbine",
+   "variant": "02"
+  }
+ ],
+ "master crafted alpha": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_heavy_bolter",
+   "variant": "02"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "brifle_stalker_bolt_rifle",
+   "variant": "02"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_auto_bolt_rifle",
+   "variant": "02"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "variant": "02"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "variant": "02"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "brifle_bolt_sniper_rifle",
+   "variant": "02"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "smg_occulus_bolt_carbine",
+   "variant": "02"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "pwpn_plasma_exterminator",
+   "variant": "02"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_las_fusil",
+   "variant": "02"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "variant": "02"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "variant": "02"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "variant": "02"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_bolt_pistol",
+   "variant": "02"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "shotgun_meltagun",
+   "variant": "02"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_plasma_pistol",
+   "variant": "02"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_chainsword",
+   "variant": "02"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_fist",
+   "variant": "02"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_combat_knife",
+   "variant": "02"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_sword",
+   "variant": "02"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_thunder_hammer",
+   "variant": "02"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_volkite_pistol",
+   "variant": "02"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_inferno_pistol",
+   "variant": "02"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_pyroblaster",
+   "variant": "02"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_pyrecannon",
+   "variant": "02"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_axe",
+   "variant": "02"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_halberd",
+   "variant": "02"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_bolt_carbine",
+   "variant": "02"
+  }
+ ],
+ "master crafted beta": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_heavy_bolter",
+   "variant": "02_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "brifle_stalker_bolt_rifle",
+   "variant": "02_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_auto_bolt_rifle",
+   "variant": "02_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "variant": "02_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "variant": "02_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "brifle_bolt_sniper_rifle",
+   "variant": "02_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "smg_occulus_bolt_carbine",
+   "variant": "02_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "pwpn_plasma_exterminator",
+   "variant": "02_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_las_fusil",
+   "variant": "02_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "variant": "02_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "variant": "02_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "variant": "02_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_bolt_pistol",
+   "variant": "02_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "shotgun_meltagun",
+   "variant": "02_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_plasma_pistol",
+   "variant": "02_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_chainsword",
+   "variant": "02_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_fist",
+   "variant": "02_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_combat_knife",
+   "variant": "02_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_sword",
+   "variant": "02_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_thunder_hammer",
+   "variant": "02_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_volkite_pistol",
+   "variant": "02_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_inferno_pistol",
+   "variant": "02_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_pyroblaster",
+   "variant": "02_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_pyrecannon",
+   "variant": "02_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_axe",
+   "variant": "02_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_halberd",
+   "variant": "02_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_bolt_carbine",
+   "variant": "02_a"
+  }
+ ],
+ "master crafted gamma": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_heavy_bolter",
+   "variant": "02_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "variant": "02_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "variant": "02_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "variant": "02_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_sword",
+   "variant": "02_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_thunder_hammer",
+   "variant": "02_b"
+  }
+ ],
+ "master crafted marksman": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "smg_bolt_carbine",
+   "variant": "02_a"
+  }
+ ],
+ "master crafted with grenade launcher": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_bolt_rifle",
+   "variant": "02_a"
+  }
+ ],
+ "master of defence": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_sword",
+   "perk": "melee_power_sword_mastercrafted_2_1",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "master of offence": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_sword",
+   "perk": "melee_power_sword_mastercrafted_1_1",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "masterful defence": [
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankRestoreAbilityForBlockDamage",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "materiel upgrade": [
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperRangeIncrease",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "medicae adept": [
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperIncreasedRevivingSpeed",
+   "where": "col0",
+   "mode": "pve"
+  }
+ ],
+ "melee champion": [
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkIncreaseMeleeDamageToTeam",
+   "where": "team",
+   "mode": "pve"
+  }
+ ],
+ "melee mastery": [
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkIncreaseMeleeDamage",
+   "where": "col0",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperIncreaseMeleeDamageAgainstEliteAndHigher",
+   "where": "col0",
+   "mode": "pve"
+  }
+ ],
+ "melee onslaught": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_sword",
+   "perk": "melee_power_sword_artificer_2_1",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "melta rifle": [
+  {
+   "kind": "weapon",
+   "weapon": "shotgun_meltagun"
+  }
+ ],
+ "merciless resolve": [
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankEnduranceAfterShieldBash",
+   "where": "col5",
+   "mode": "pve"
+  }
+ ],
+ "methodical destruction": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerEquipmentExposeOnHit",
+   "where": "col1",
+   "mode": "pve"
+  }
+ ],
+ "mighty blast": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_halberd",
+   "perk": "melee_power_halberd_relic_2_2",
+   "tier": "RELIC"
+  }
+ ],
+ "minoris slayer": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_chainsword",
+   "perk": "melee_chainsword_artificer_2_4",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_fist",
+   "perk": "melee_power_fist_relic_2_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_sword",
+   "perk": "melee_power_sword_relic_2_3_sub",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_thunder_hammer",
+   "perk": "melee_thunder_hammer_relic_2_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_axe",
+   "perk": "melee_power_axe_artificer_1_3",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "momentum gain": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_chainsword",
+   "perk": "melee_chainsword_relic_1_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_sword",
+   "perk": "melee_power_sword_mastercrafted_1_3",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "motivated melee": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_inferno_pistol",
+   "perk": "hgun_inferno_pistol_mastercrafted_1_1",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "moving target": [
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkRestoreAblilityByKillOnDistance",
+   "where": "col0",
+   "mode": "pve"
+  }
+ ],
+ "multi kill": [
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportRestoreAmmoForMultikillWithOneShot",
+   "where": "col0",
+   "mode": "pve"
+  }
+ ],
+ "multi melta": [
+  {
+   "kind": "weapon",
+   "weapon": "hwpn_support_heavy_meltagun"
+  }
+ ],
+ "neo volkite pistol": [
+  {
+   "kind": "weapon",
+   "weapon": "hgun_volkite_pistol"
+  }
+ ],
+ "no help is coming": [
+  {
+   "kind": "heroicPerk",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "perk": "PerkHeroicHeavyBoltPistol",
+   "variant": "05"
+  }
+ ],
+ "nocturne's retort": [
+  {
+   "kind": "heroicPerk",
+   "weapon": "melee_power_sword",
+   "perk": "Melee_Power_Sword_Heroic_A",
+   "variant": "05_a"
+  }
+ ],
+ "obdurate bastion": [
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportIncreaseIronHaloDurability",
+   "where": "col4",
+   "mode": "pve"
+  }
+ ],
+ "occulus bolt carbine": [
+  {
+   "kind": "weapon",
+   "weapon": "smg_occulus_bolt_carbine"
+  }
+ ],
+ "offensive capability": [
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportDOTWhenIronHaloActive",
+   "where": "col6",
+   "mode": "pve"
+  }
+ ],
+ "omnissiah's fury": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerShoulderGunIgniteOnHit",
+   "where": "col6",
+   "mode": "pve"
+  }
+ ],
+ "omnissian axe": [
+  {
+   "kind": "weapon",
+   "weapon": "melee_power_halberd"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_halberd",
+   "variant": "01"
+  }
+ ],
+ "omnissian axe deflection": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerRangedDamageAfterPerfectDefense",
+   "where": "col1",
+   "mode": "pve"
+  }
+ ],
+ "one shot": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_inferno_pistol",
+   "perk": "hgun_inferno_pistol_relic_1_1",
+   "tier": "RELIC"
+  }
+ ],
+ "ophelian liberation": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_auto_bolt_rifle",
+   "variant": "04_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "variant": "04_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "smg_bolt_carbine",
+   "variant": "04_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "variant": "04_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_inferno_pistol",
+   "variant": "04_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_pyroblaster",
+   "variant": "04_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_pyrecannon",
+   "variant": "04_a"
+  }
+ ],
+ "ophelian liberation alpha": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_bolt_rifle",
+   "variant": "04_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_heavy_bolter",
+   "variant": "04_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "brifle_stalker_bolt_rifle",
+   "variant": "04_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "variant": "04_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "brifle_bolt_sniper_rifle",
+   "variant": "04_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "smg_occulus_bolt_carbine",
+   "variant": "04_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "pwpn_plasma_exterminator",
+   "variant": "04_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_las_fusil",
+   "variant": "04_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "variant": "04_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "variant": "04_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_bolt_pistol",
+   "variant": "04_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "shotgun_meltagun",
+   "variant": "04_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_plasma_pistol",
+   "variant": "04_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_combat_knife",
+   "variant": "04_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_thunder_hammer",
+   "variant": "04"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_volkite_pistol",
+   "variant": "04_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_halberd",
+   "variant": "04"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_bolt_carbine",
+   "variant": "04"
+  }
+ ],
+ "ophelian liberation beta": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_bolt_rifle",
+   "variant": "04_c"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_heavy_bolter",
+   "variant": "04_c"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "brifle_stalker_bolt_rifle",
+   "variant": "04_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "variant": "04_c"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "brifle_bolt_sniper_rifle",
+   "variant": "04_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "smg_occulus_bolt_carbine",
+   "variant": "04_c"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "pwpn_plasma_exterminator",
+   "variant": "04_c"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_las_fusil",
+   "variant": "04_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "variant": "04_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "variant": "04_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_bolt_pistol",
+   "variant": "04_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "shotgun_meltagun",
+   "variant": "04_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_plasma_pistol",
+   "variant": "04_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_combat_knife",
+   "variant": "04_b"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_thunder_hammer",
+   "variant": "04_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_halberd",
+   "variant": "04_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_bolt_carbine",
+   "variant": "04_a"
+  }
+ ],
+ "ophelian liberation gamma": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_thunder_hammer",
+   "variant": "04_b"
+  }
+ ],
+ "ophelian liberation marksman": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "smg_bolt_carbine",
+   "variant": "04_c"
+  }
+ ],
+ "overcharge": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderIncreaseHoldAttackDamage",
+   "where": "col0",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankIncreaseHoldAttackDamage",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "overcharged plasma coils": [
+  {
+   "kind": "heroicPerk",
+   "weapon": "hgun_plasma_pistol",
+   "perk": "HeroicPlasmaPistolRange",
+   "variant": "05"
+  }
+ ],
+ "overwhelming power": [
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportIncreaseRangeDamageWhenIronHaloActiveForTeam",
+   "where": "col2",
+   "mode": "pve"
+  }
+ ],
+ "patience rewarded": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_thunder_hammer",
+   "perk": "melee_thunder_hammer_relic_1_1",
+   "tier": "RELIC"
+  }
+ ],
+ "patient stance": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_axe",
+   "perk": "melee_power_axe_mastercrafted_1_3",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "pattern of excellence": [
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperRestoreEquipmentForConsecutiveHeadshots",
+   "where": "col6",
+   "mode": "pve"
+  }
+ ],
+ "perfect cooling": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_bolter",
+   "perk": "support_heavy_bolter_mastercrafted_1_1",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_plasma_pistol",
+   "perk": "hgun_plasma_pistol_relic_1_1",
+   "tier": "RELIC"
+  }
+ ],
+ "perfect radius": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "pwpn_plasma_exterminator",
+   "perk": "pwpn_plasma_exterminator_relic_2_1",
+   "tier": "RELIC"
+  }
+ ],
+ "perpetual cooling": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_bolter",
+   "perk": "support_heavy_bolter_common_2",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_bolter",
+   "perk": "support_heavy_bolter_relic_2_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_pyroblaster",
+   "perk": "pyreblaster_common_2",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_pyrecannon",
+   "perk": "pyrecannon_common_2",
+   "tier": "COMMON"
+  }
+ ],
+ "perpetual fire": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "shotgun_meltagun",
+   "perk": "shotgun_meltagun_relic_1_2",
+   "tier": "RELIC"
+  }
+ ],
+ "perpetual penetration": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_bolt_rifle",
+   "perk": "arifle_bolt_rifle_relic_1_4",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_bolter",
+   "perk": "support_heavy_bolter_mastercrafted_2_3_sub",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_auto_bolt_rifle",
+   "perk": "arifle_auto_bolt_rifle_mastercrafted_2_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "perk": "arifle_heavy_bolt_rifle_relic_1_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "perk": "brifle_instigator_bolt_carbine_relic_1_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_occulus_bolt_carbine",
+   "perk": "smg_occulus_bolt_carbine_mastercrafted_2_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "perk": "hgun_heavy_bolt_pistol_mastercrafted_2_1",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "perpetual precision": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_bolt_rifle",
+   "perk": "arifle_bolt_rifle_mastercrafted_2_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_bolt_carbine",
+   "perk": "smg_bolt_carbine_relic_1_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "perk": "hgun_heavy_bolt_pistol_artificer_1_1",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_pistol",
+   "perk": "hgun_bolt_pistol_common_1",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_carbine",
+   "perk": "hgun_bolt_carbine_artificer_1_2",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "perpetual range": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "perk": "support_heavy_meltagun_mastercrafted_2_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "perk": "support_heavy_meltagun_mastercrafted_2_3",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "shotgun_meltagun",
+   "perk": "shotgun_meltagun_relic_2_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_inferno_pistol",
+   "perk": "hgun_inferno_pistol_common_2",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_inferno_pistol",
+   "perk": "hgun_inferno_pistol_mastercrafted_2_2",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "perpetual speed": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_axe",
+   "perk": "melee_power_axe_common_1",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_halberd",
+   "perk": "melee_power_halberd_common_2",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_halberd",
+   "perk": "melee_power_halberd_mastercrafted_2_2",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "perpetual strength": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_chainsword",
+   "perk": "melee_chainsword_common_2",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_chainsword",
+   "perk": "melee_chainsword_mastercrafted_1_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_chainsword",
+   "perk": "melee_chainsword_mastercrafted_2_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_fist",
+   "perk": "melee_power_fist_common_2",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_fist",
+   "perk": "melee_power_fist_mastercrafted_1_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_fist",
+   "perk": "melee_power_fist_mastercrafted_2_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_combat_knife",
+   "perk": "melee_combat_knife_common_2",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_combat_knife",
+   "perk": "melee_combat_knife_mastercrafted_1_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_combat_knife",
+   "perk": "melee_combat_knife_mastercrafted_2_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_sword",
+   "perk": "melee_power_sword_common_2",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_sword",
+   "perk": "melee_power_sword_mastercrafted_1_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_sword",
+   "perk": "melee_power_sword_mastercrafted_2_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_thunder_hammer",
+   "perk": "melee_thunder_hammer_common_2",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_thunder_hammer",
+   "perk": "melee_thunder_hammer_mastercrafted_1_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_thunder_hammer",
+   "perk": "melee_thunder_hammer_mastercrafted_2_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_thunder_hammer",
+   "perk": "melee_thunder_hammer_artificer_2_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_axe",
+   "perk": "melee_power_axe_common_2",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_axe",
+   "perk": "melee_power_axe_mastercrafted_1_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_axe",
+   "perk": "melee_power_axe_mastercrafted_2_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_halberd",
+   "perk": "melee_power_halberd_common_1",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_halberd",
+   "perk": "melee_power_halberd_mastercrafted_1_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_halberd",
+   "perk": "melee_power_halberd_artificer_2_2",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "perpetual velocity": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "pwpn_plasma_exterminator",
+   "perk": "pwpn_plasma_exterminator_relic_2_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_las_fusil",
+   "perk": "hwpn_las_fusil_common_1",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_las_fusil",
+   "perk": "hwpn_las_fusil_artificer_1_1",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_plasma_pistol",
+   "perk": "hgun_plasma_pistol_artificer_1_2",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "perseverance": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderEnduranceWhileDoingHoldMeleeAttack",
+   "where": "col2",
+   "mode": "pve"
+  }
+ ],
+ "persistence": [
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperReduceIncomingDamageAfterCamouflageDeactivate",
+   "where": "col5",
+   "mode": "pve"
+  }
+ ],
+ "plasma boost": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierBuffPlasmaDamageDependingOnHeatThreshold",
+   "where": "col0",
+   "mode": "pve"
+  }
+ ],
+ "plasma collection": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "pwpn_plasma_exterminator",
+   "perk": "pwpn_plasma_exterminator_artificer_1_1",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "perk": "support_plasma_incinerator_mastercrafted_2_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "perk": "support_plasma_incinerator_relic_2_3",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_plasma_pistol",
+   "perk": "hgun_plasma_pistol_common_1",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_plasma_pistol",
+   "perk": "hgun_plasma_pistol_mastercrafted_1_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_plasma_pistol",
+   "perk": "hgun_plasma_pistol_artificer_2_2",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "plasma enhancement": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerSpawnWithShoulderGunPlasma",
+   "where": "col0",
+   "mode": "pve"
+  }
+ ],
+ "plasma hail": [
+  {
+   "kind": "heroicPerk",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "perk": "arifle_heavy_plasma_heroic_1",
+   "variant": "05"
+  }
+ ],
+ "plasma incinerator": [
+  {
+   "kind": "weapon",
+   "weapon": "pwpn_plasma_exterminator"
+  }
+ ],
+ "plasma pistol": [
+  {
+   "kind": "weapon",
+   "weapon": "hgun_plasma_pistol"
+  }
+ ],
+ "porphyr shield": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_fist",
+   "variant": "01_twitch"
+  }
+ ],
+ "potent flame": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_pyroblaster",
+   "perk": "pyreblaster_mastercrafted_1_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_pyroblaster",
+   "perk": "pyreblaster_artificer_1_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_pyrecannon",
+   "perk": "pyrecannon_artificer_1_2",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "power axe": [
+  {
+   "kind": "weapon",
+   "weapon": "melee_power_axe"
+  }
+ ],
+ "power fist": [
+  {
+   "kind": "weapon",
+   "weapon": "melee_power_fist"
+  }
+ ],
+ "power gladius": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_combat_knife",
+   "variant": "05"
+  }
+ ],
+ "power regulator": [
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportDecreaseIronHaloEnergyDrainSpeed",
+   "where": "col4",
+   "mode": "pve"
+  }
+ ],
+ "power restoration": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_sword",
+   "perk": "melee_power_sword_relic_2_4",
+   "tier": "RELIC"
+  }
+ ],
+ "power strike": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_axe",
+   "perk": "melee_power_axe_artificer_1_1",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "power sword": [
+  {
+   "kind": "weapon",
+   "weapon": "melee_power_sword"
+  }
+ ],
+ "power wave": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_axe",
+   "perk": "melee_power_axe_artificer_1_2",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "powerful shot": [
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankIncreaseRangedAttackDamage",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "practiced aim": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderIncreaseRangedAttackDamage",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "precise calibration": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierAuspexBuffBonusDebuffRadius",
+   "where": "col4",
+   "mode": "pve"
+  }
+ ],
+ "precision enhancement": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerSpawnWithShoulderGunSniper",
+   "where": "col0",
+   "mode": "pve"
+  }
+ ],
+ "precision strike": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderIncreaseGroundpoundDamageReduceGroundpoundRange",
+   "where": "col3",
+   "mode": "pve"
+  }
+ ],
+ "precision targeting": [
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperReducedSpreadForTeam",
+   "where": "team",
+   "mode": "pve"
+  }
+ ],
+ "pride in duty": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderIncreaseGroundpoundDamageAfterFinisher",
+   "where": "col5",
+   "mode": "pve"
+  }
+ ],
+ "priority targeting": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierAuspexBuffMarkDurationIgnoreCommonAndFodder",
+   "where": "col3",
+   "mode": "pve"
+  }
+ ],
+ "proven efficiency": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderIncreaseGunStrikeDamageForTeam",
+   "where": "team",
+   "mode": "pve"
+  }
+ ],
+ "pure flame": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_pyroblaster",
+   "perk": "pyreblaster_relic_1_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_pyrecannon",
+   "perk": "pyrecannon_relic_1_2",
+   "tier": "RELIC"
+  }
+ ],
+ "purification": [
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperRemoveNegativeStatusEffectsAndReloadFirearm",
+   "where": "col3",
+   "mode": "pve"
+  }
+ ],
+ "purity of purpose": [
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankDotAreaFromBanner",
+   "where": "col3",
+   "mode": "pve"
+  }
+ ],
+ "push the advantage": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerMeleeAfterFinisher",
+   "where": "col2",
+   "mode": "pve"
+  }
+ ],
+ "pyreblaster": [
+  {
+   "kind": "weapon",
+   "weapon": "hwpn_pyroblaster"
+  }
+ ],
+ "pyrecannon": [
+  {
+   "kind": "weapon",
+   "weapon": "hwpn_pyrecannon"
+  }
+ ],
+ "radiating impact": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierAoeDamageAfterFinisher",
+   "where": "col6",
+   "mode": "pve"
+  }
+ ],
+ "rally": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_fist",
+   "perk": "melee_power_fist_artificer_2_1",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "rampage": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_bolt_rifle",
+   "perk": "arifle_bolt_rifle_relic_2_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_auto_bolt_rifle",
+   "perk": "arifle_auto_bolt_rifle_relic_2_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "perk": "arifle_heavy_bolt_rifle_relic_2_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "perk": "brifle_instigator_bolt_carbine_relic_2_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "pwpn_plasma_exterminator",
+   "perk": "pwpn_plasma_exterminator_mastercrafted_2_1",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_plasma_pistol",
+   "perk": "hgun_plasma_pistol_mastercrafted_2_1",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_halberd",
+   "perk": "melee_power_halberd_artificer_1_3",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "rapid charge": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_halberd",
+   "perk": "melee_power_halberd_relic_2_1",
+   "tier": "RELIC"
+  }
+ ],
+ "rapid cooling": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "pwpn_plasma_exterminator",
+   "perk": "pwpn_plasma_exterminator_mastercrafted_1_1",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "perk": "support_plasma_incinerator_mastercrafted_1_1",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_plasma_pistol",
+   "perk": "hgun_plasma_pistol_mastercrafted_1_1",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "rapid health": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_bolt_rifle",
+   "perk": "arifle_bolt_rifle_relic_1_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_auto_bolt_rifle",
+   "perk": "arifle_auto_bolt_rifle_relic_1_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "perk": "arifle_heavy_bolt_rifle_relic_1_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "perk": "brifle_instigator_bolt_carbine_relic_1_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_bolt_carbine",
+   "perk": "smg_bolt_carbine_mastercrafted_1_1",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_occulus_bolt_carbine",
+   "perk": "smg_occulus_bolt_carbine_relic_1_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "perk": "hgun_heavy_bolt_pistol_mastercrafted_1_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_pistol",
+   "perk": "hgun_bolt_pistol_relic_2_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "shotgun_meltagun",
+   "perk": "shotgun_meltagun_mastercrafted_2_1",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_inferno_pistol",
+   "perk": "hgun_inferno_pistol_relic_1_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_pyroblaster",
+   "perk": "pyreblaster_artificer_2_1",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_pyrecannon",
+   "perk": "pyrecannon_artificer_2_1",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "rapid regeneration": [
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankIncreaseArmorRestoringFromBannerDecreaseBannerTimer",
+   "where": "col3",
+   "mode": "pve"
+  }
+ ],
+ "rebound": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_axe",
+   "perk": "melee_power_axe_relic_2_1",
+   "tier": "RELIC"
+  }
+ ],
+ "reclamation": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_thunder_hammer",
+   "perk": "melee_thunder_hammer_artificer_1_1",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "reconnaissance by fire": [
+  {
+   "kind": "heroicPerk",
+   "weapon": "brifle_stalker_bolt_rifle",
+   "perk": "PerkHeroicStalkerBoltRifle",
+   "variant": "05"
+  }
+ ],
+ "recoupment": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_bolt_rifle",
+   "perk": "arifle_bolt_rifle_artificer_1_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_stalker_bolt_rifle",
+   "perk": "brifle_stalker_bolt_rifle_relic_1_3",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_auto_bolt_rifle",
+   "perk": "arifle_auto_bolt_rifle_relic_1_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "perk": "arifle_heavy_bolt_rifle_artificer_1_4",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "perk": "brifle_instigator_bolt_carbine_artificer_1_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_bolt_sniper_rifle",
+   "perk": "brifle_bolt_sniper_rifle_relic_1_3",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_bolt_carbine",
+   "perk": "smg_bolt_carbine_relic_1_4",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_occulus_bolt_carbine",
+   "perk": "smg_occulus_bolt_carbine_artificer_1_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_las_fusil",
+   "perk": "hwpn_las_fusil_relic_1_3",
+   "tier": "RELIC"
+  }
+ ],
+ "reeling blow": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_fist",
+   "perk": "melee_power_fist_relic_1_2 ",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_combat_knife",
+   "perk": "melee_combat_knife_artificer_2_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_sword",
+   "perk": "melee_power_sword_relic_1_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_thunder_hammer",
+   "perk": "melee_thunder_hammer_relic_1_3",
+   "tier": "RELIC"
+  }
+ ],
+ "reinforced guncasing": [
+  {
+   "kind": "heroicPerk",
+   "weapon": "hwpn_support_heavy_bolter",
+   "perk": "heavy_bolter_heroic_1",
+   "variant": "05"
+  }
+ ],
+ "reinforced position": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerSentryTurretTeamBuff",
+   "where": "team",
+   "mode": "pve"
+  }
+ ],
+ "rejuvenating effect": [
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankBannerRisesFromIncapacitation",
+   "where": "col5",
+   "mode": "pve"
+  }
+ ],
+ "relentless pursuit": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierBuffRangeDamageAfterGunstrike",
+   "where": "col1",
+   "mode": "pve"
+  }
+ ],
+ "relic alpha": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_axe",
+   "variant": "04"
+  }
+ ],
+ "relic battle worn": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "variant": "05"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_plasma_pistol",
+   "variant": "05"
+  }
+ ],
+ "relic beta": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_axe",
+   "variant": "04_a"
+  }
+ ],
+ "relic gamma": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_axe",
+   "variant": "04_b"
+  }
+ ],
+ "reloaded restoration": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_stalker_bolt_rifle",
+   "perk": "brifle_stalker_bolt_rifle_relic_2_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "perk": "brifle_instigator_bolt_carbine_mastercrafted_2_1",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_bolt_sniper_rifle",
+   "perk": "brifle_bolt_sniper_rifle_relic_2_2",
+   "tier": "RELIC"
+  }
+ ],
+ "reloading immunity": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_bolt_rifle",
+   "perk": "arifle_bolt_rifle_relic_1_3_sub",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "perk": "arifle_heavy_bolt_rifle_relic_1_3_sub",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "perk": "brifle_instigator_bolt_carbine_relic_2_2",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_bolt_sniper_rifle",
+   "perk": "brifle_bolt_sniper_rifle_artificer_2_3_sub",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_bolt_carbine",
+   "perk": "smg_bolt_carbine_relic_2_3_sub",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_occulus_bolt_carbine",
+   "perk": "smg_occulus_bolt_carbine_artificer_2_1",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "shotgun_meltagun",
+   "perk": "shotgun_meltagun_artificer_2_3",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "remote threat": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_stalker_bolt_rifle",
+   "perk": "brifle_stalker_bolt_rifle_relic_2_3",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "perk": "arifle_heavy_bolt_rifle_artificer_2_1",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "perk": "arifle_heavy_bolt_rifle_relic_2_4",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_bolt_sniper_rifle",
+   "perk": "brifle_bolt_sniper_rifle_common_2",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_occulus_bolt_carbine",
+   "perk": "smg_occulus_bolt_carbine_common_1",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "perk": "hgun_heavy_bolt_pistol_mastercrafted_1_3",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_carbine",
+   "perk": "hgun_bolt_carbine_artificer_1_1",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "renewal": [
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperRecoverAbilityChargeForHeadshot",
+   "where": "col3",
+   "mode": "pve"
+  }
+ ],
+ "replenishing hit": [
+  {
+   "kind": "heroicPerk",
+   "weapon": "brifle_bolt_sniper_rifle",
+   "perk": "sniper_bolt_rifle_heroic_1",
+   "variant": "05"
+  }
+ ],
+ "replenishing salvo": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerShoulderGunKillRestoresEquipment",
+   "where": "col4",
+   "mode": "pve"
+  }
+ ],
+ "resilience": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierIncreaseHealByInjector",
+   "where": "prestige",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankIncreaseHealByInjector",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "resilient flame": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_pyroblaster",
+   "perk": "pyreblaster_relic_1_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_pyrecannon",
+   "perk": "pyrecannon_relic_1_1",
+   "tier": "RELIC"
+  }
+ ],
+ "restless fortitude": [
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkReduceDamageAfterHookAttack",
+   "where": "col3",
+   "mode": "pve"
+  }
+ ],
+ "restoration": [
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkRestoreArmorSegmentForRapidSuccession",
+   "where": "prestige",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportRestoreArmorSegmentForRapidSuccession",
+   "where": "col0",
+   "mode": "pve"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_axe",
+   "perk": "melee_power_axe_relic_1_1",
+   "tier": "RELIC"
+  }
+ ],
+ "restorative takedown": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_halberd",
+   "perk": "melee_power_halberd_relic_1_1",
+   "tier": "RELIC"
+  }
+ ],
+ "retaliation": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_bolt_carbine",
+   "perk": "smg_bolt_carbine_mastercrafted_2_1",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_occulus_bolt_carbine",
+   "perk": "smg_occulus_bolt_carbine_mastercrafted_2_1",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "pwpn_plasma_exterminator",
+   "perk": "pwpn_plasma_exterminator_relic_1_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "perk": "support_plasma_incinerator_relic_1_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_pistol",
+   "perk": "hgun_bolt_pistol_mastercrafted_2_1",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "shotgun_meltagun",
+   "perk": "shotgun_meltagun_relic_1_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_plasma_pistol",
+   "perk": "hgun_plasma_pistol_relic_2_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_carbine",
+   "perk": "hgun_bolt_carbine_artificer_2_1",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "retribution": [
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkIncreaseMeleeDamageWhenClipOut",
+   "where": "col2",
+   "mode": "pve"
+  }
+ ],
+ "retribution's bequest": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "variant": "05"
+  }
+ ],
+ "reverberating impact": [
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportIncreaseChargedMeleeDamage",
+   "where": "prestige",
+   "mode": "pve"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_chainsword",
+   "perk": "melee_chainsword_artificer_1_1",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "riposte": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_axe",
+   "perk": "melee_power_axe_mastercrafted_2_3_sub",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "salamanders": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "shotgun_meltagun",
+   "variant": "05"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_sword",
+   "variant": "05_a"
+  }
+ ],
+ "salvation of bakka": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_bolt_rifle",
+   "variant": "03"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "brifle_stalker_bolt_rifle",
+   "variant": "03"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_auto_bolt_rifle",
+   "variant": "03"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "brifle_bolt_sniper_rifle",
+   "variant": "03"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "smg_bolt_carbine",
+   "variant": "03"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "variant": "03"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "variant": "03"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_bolt_pistol",
+   "variant": "03"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "shotgun_meltagun",
+   "variant": "03"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_plasma_pistol",
+   "variant": "03"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_chainsword",
+   "variant": "03"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_combat_knife",
+   "variant": "03_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_sword",
+   "variant": "03"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_volkite_pistol",
+   "variant": "03"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_inferno_pistol",
+   "variant": "03"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_pyroblaster",
+   "variant": "03"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_pyrecannon",
+   "variant": "03"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_bolt_carbine",
+   "variant": "03"
+  }
+ ],
+ "salvation of bakka alpha": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_heavy_bolter",
+   "variant": "03"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "variant": "03"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "variant": "03"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "smg_occulus_bolt_carbine",
+   "variant": "03"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "pwpn_plasma_exterminator",
+   "variant": "03"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_las_fusil",
+   "variant": "03"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "variant": "03"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_thunder_hammer",
+   "variant": "03"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_halberd",
+   "variant": "03_a"
+  }
+ ],
+ "salvation of bakka beta": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_heavy_bolter",
+   "variant": "03_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "variant": "03_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "variant": "03_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "smg_occulus_bolt_carbine",
+   "variant": "03_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "pwpn_plasma_exterminator",
+   "variant": "03_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_las_fusil",
+   "variant": "03_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "variant": "03_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_thunder_hammer",
+   "variant": "03_a"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_halberd",
+   "variant": "03_b"
+  }
+ ],
+ "salvation of bakka delta": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_thunder_hammer",
+   "variant": "03_c"
+  }
+ ],
+ "salvation of bakka gamma": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_thunder_hammer",
+   "variant": "03_b"
+  }
+ ],
+ "salvation of bakka marksman": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "smg_bolt_carbine",
+   "variant": "03_a"
+  }
+ ],
+ "salvation of bakka with grenade launcher": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_bolt_rifle",
+   "variant": "03_a"
+  }
+ ],
+ "sanguine edge": [
+  {
+   "kind": "heroicPerk",
+   "weapon": "melee_power_axe",
+   "perk": "PvEMeleePowerAxeBlockingWalkingStanceUI",
+   "variant": "05"
+  }
+ ],
+ "saving grace": [
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportRestoreIronHaloChargeForRevivingTeammate",
+   "where": "col5",
+   "mode": "pve"
+  }
+ ],
+ "saw blade": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_chainsword",
+   "perk": "melee_chainsword_artificer_2_1",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "scathing retort": [
+  {
+   "kind": "heroicPerk",
+   "weapon": "melee_combat_knife",
+   "perk": "Melee_Combat_Knife_Heroic_2",
+   "variant": "05_a"
+  }
+ ],
+ "scrambled targeting": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderReducedIncomingDamageWhenSurrounded",
+   "where": "prestige",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankReducedIncomingDamageWhenSurrounded",
+   "where": "col1",
+   "mode": "pve"
+  }
+ ],
+ "second look": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierRestoreAbilityForZeroAuspexTarget",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "secure stockpile": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierRestoreEquipmentTeamPerk",
+   "where": "team",
+   "mode": "pve"
+  }
+ ],
+ "seismic chain": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_thunder_hammer",
+   "perk": "melee_thunder_hammer_artificer_2_1",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "servo gun": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "SpawnWithShoulderGunBolter",
+   "where": "base",
+   "mode": "pve"
+  }
+ ],
+ "shadow stab": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_combat_knife",
+   "perk": "melee_combat_knife_artificer_2_3_sub",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "sharp impact": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_combat_knife",
+   "perk": "melee_combat_knife_mastercrafted_1_1",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "shattering impact": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_thunder_hammer",
+   "perk": "melee_thunder_hammer_mastercrafted_2_3",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "shock and awe": [
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankIncreaseDamageAgainstEnemiesInShockArea",
+   "where": "col1",
+   "mode": "pve"
+  }
+ ],
+ "shock wave": [
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkIncreaseSplashDamageByHookHit",
+   "where": "col3",
+   "mode": "pve"
+  }
+ ],
+ "shoulder bash": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_combat_knife",
+   "perk": "melee_combat_knife_artificer_1_3_sub",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "signal jammer": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierMuteEnemiesInsideAsupexZone",
+   "where": "col6",
+   "mode": "pve"
+  }
+ ],
+ "skilled restoration": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_sword",
+   "perk": "melee_power_sword_artificer_1_1",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "skilled supplier": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierIncreaseMaxAmmo",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "slash momentum": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_axe",
+   "perk": "melee_power_axe_relic_2_2",
+   "tier": "RELIC"
+  }
+ ],
+ "slashing blade": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_sword",
+   "perk": "melee_power_sword_artificer_1_3_sub",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "smiting angel": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderIncreaseGroundpoundAttack",
+   "where": "col3",
+   "mode": "pve"
+  }
+ ],
+ "sniper": [
+  {
+   "kind": "class",
+   "class": "SNIPER"
+  }
+ ],
+ "spare power": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierRestoreAbilityForUseLootable",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "speed restoration": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_sword",
+   "perk": "melee_power_sword_relic_1_4",
+   "tier": "RELIC"
+  }
+ ],
+ "squad cohesion": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderIncreaseAbilityRechargeToTeam",
+   "where": "team",
+   "mode": "pve"
+  }
+ ],
+ "squad renewal": [
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperRecoverAbilityChargeForHeadshotForTeam",
+   "where": "team",
+   "mode": "pve"
+  }
+ ],
+ "stalker bolt rifle": [
+  {
+   "kind": "weapon",
+   "weapon": "brifle_stalker_bolt_rifle"
+  }
+ ],
+ "standard bearer": [
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankInvulnerabilityWhenActivatingBanner",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "standard issue": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_bolt_rifle",
+   "variant": "01"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_heavy_bolter",
+   "variant": "01"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "brifle_stalker_bolt_rifle",
+   "variant": "01"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_auto_bolt_rifle",
+   "variant": "01"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "variant": "01"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "variant": "01"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "brifle_bolt_sniper_rifle",
+   "variant": "01"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "smg_bolt_carbine",
+   "variant": "01"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "smg_occulus_bolt_carbine",
+   "variant": "01"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "pwpn_plasma_exterminator",
+   "variant": "01"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_las_fusil",
+   "variant": "01"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "variant": "01"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "variant": "01"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "variant": "01"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_bolt_pistol",
+   "variant": "01"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "shotgun_meltagun",
+   "variant": "01"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_plasma_pistol",
+   "variant": "01"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_chainsword",
+   "variant": "01"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_fist",
+   "variant": "01"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_combat_knife",
+   "variant": "01"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_sword",
+   "variant": "01"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_thunder_hammer",
+   "variant": "01"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_volkite_pistol",
+   "variant": "01"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_inferno_pistol",
+   "variant": "01"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_pyroblaster",
+   "variant": "01"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hwpn_pyrecannon",
+   "variant": "01"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_axe",
+   "variant": "01"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "hgun_bolt_carbine",
+   "variant": "01"
+  }
+ ],
+ "static charge": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_halberd",
+   "perk": "melee_power_halberd_mastercrafted_1_3",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "steady aim": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierReduceRecoil",
+   "where": "col2",
+   "mode": "pve"
+  }
+ ],
+ "steel within": [
+  {
+   "kind": "classPerk",
+   "class": "TANK",
+   "perk": "PveTankReducedDamageWhenLowHP",
+   "where": "col2",
+   "mode": "pve"
+  }
+ ],
+ "stimm boost": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerMedicaeStimmsHealBoost",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "storm's dominion": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_thunder_hammer",
+   "variant": "05"
+  }
+ ],
+ "strategic gun strike": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerShoulderGunMajorisOnlyFarBonus",
+   "where": "col5",
+   "mode": "pve"
+  }
+ ],
+ "strategic stand": [
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportRestoreFadeHPCantMoveInHeavyStance",
+   "where": "col1",
+   "mode": "pve"
+  }
+ ],
+ "strategic strikes": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderIncreaseMeleeDamageAgianstBossesToTeam",
+   "where": "team",
+   "mode": "pve"
+  }
+ ],
+ "strong finish": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_bolt_sniper_rifle",
+   "perk": "brifle_bolt_sniper_rifle_relic_2_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "perk": "hgun_heavy_bolt_pistol_artificer_1_3",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "strong start": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_bolt_sniper_rifle",
+   "perk": "brifle_bolt_sniper_rifle_relic_1_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "perk": "hgun_heavy_bolt_pistol_artificer_2_3",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "supercharged follow up": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_halberd",
+   "perk": "melee_power_halberd_artificer_2_1",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "supercharged shot": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "perk": "support_plasma_incinerator_mastercrafted_1_3",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "perk": "support_plasma_incinerator_artificer_1_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "perk": "support_plasma_incinerator_relic_1_3",
+   "tier": "RELIC"
+  }
+ ],
+ "survival instinct": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_stalker_bolt_rifle",
+   "perk": "brifle_stalker_bolt_rifle_mastercrafted_2_1",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_bolt_sniper_rifle",
+   "perk": "brifle_bolt_sniper_rifle_mastercrafted_2_1",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "swift recovery": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_chainsword",
+   "perk": "melee_chainsword_mastercrafted_2_1",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_fist",
+   "perk": "melee_power_fist_mastercrafted_1_1",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "synergistic arsenal": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerShoulderGunRegenNearSentry",
+   "where": "col3",
+   "mode": "pve"
+  }
+ ],
+ "tactical": [
+  {
+   "kind": "class",
+   "class": "SOLDIER"
+  }
+ ],
+ "tactical ambush": [
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperIncreaseFirstMeleeAttackDamageFromCamouflage",
+   "where": "col4",
+   "mode": "pve"
+  }
+ ],
+ "tactical precision": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_bolt_rifle",
+   "perk": "arifle_bolt_rifle_artificer_1_3_sub",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "arifle_heavy_bolt_rifle",
+   "perk": "arifle_heavy_bolt_rifle_artificer_1_3_sub",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "perk": "brifle_instigator_bolt_carbine_artificer_1_3_sub",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_heavy_bolt_pistol",
+   "perk": "hgun_heavy_bolt_pistol_relic_1_3",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_carbine",
+   "perk": "hgun_bolt_carbine_artificer_2_2",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "tactical prowess": [
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkResetHookCooldownForFinisher",
+   "where": "col6",
+   "mode": "pve"
+  }
+ ],
+ "tactical retreat": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_axe",
+   "perk": "melee_power_axe_artificer_2_2",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "target lock": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierAuspexBuffDamageSensitivityFromEquipment",
+   "where": "col3",
+   "mode": "pve"
+  }
+ ],
+ "targeted shot": [
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperIncreaseFirstFirearmAttackDamageFromCamouflage",
+   "where": "col4",
+   "mode": "pve"
+  }
+ ],
+ "techmarine": [
+  {
+   "kind": "class",
+   "class": "ENGINEER"
+  }
+ ],
+ "tenacity": [
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkIncreaseAbilityDamageAfterKillMajoris",
+   "where": "col4",
+   "mode": "pve"
+  }
+ ],
+ "terminus slayer": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_combat_knife",
+   "perk": "melee_combat_knife_relic_1_1",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_sword",
+   "perk": "melee_power_sword_relic_1_3_sub",
+   "tier": "RELIC"
+  }
+ ],
+ "thermal boost": [
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportBuffDamageDependingOnHeatThreshold",
+   "where": "col1",
+   "mode": "pve"
+  }
+ ],
+ "thrill of the fight": [
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkDecreaseDamageSensitivityAfterRiposteAndPerfectDodge",
+   "where": "col5",
+   "mode": "pve"
+  }
+ ],
+ "thunder hammer": [
+  {
+   "kind": "weapon",
+   "weapon": "melee_thunder_hammer"
+  }
+ ],
+ "tide of battle": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_fist",
+   "perk": "melee_power_fist_artificer_1_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_combat_knife",
+   "perk": "melee_combat_knife_artificer_1_2",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "tip of the spear": [
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkIncreaseFirearmSensivityForHookTarget",
+   "where": "col4",
+   "mode": "pve"
+  }
+ ],
+ "trampling stride": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_chainsword",
+   "perk": "melee_chainsword_artificer_1_3_sub",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "tranquility": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_sword",
+   "perk": "melee_power_sword_mastercrafted_2_3",
+   "tier": "MASTERCRAFTED"
+  }
+ ],
+ "transhuman physiology": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierAuraHealthTrailRestoreByFirearmDamage",
+   "where": "team",
+   "mode": "pve"
+  }
+ ],
+ "uiweaponskillfirearmrestoresegmentpershotpack name": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "perk": "support_heavy_meltagun_artificer_2_2",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "shotgun_meltagun",
+   "perk": "shotgun_meltagun_mastercrafted_2_2",
+   "tier": "MASTERCRAFTED"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_inferno_pistol",
+   "perk": "hgun_inferno_pistol_relic_2_2",
+   "tier": "RELIC"
+  }
+ ],
+ "uiweaponskillheroicthunder hummer05aname": [
+  {
+   "kind": "heroicPerk",
+   "weapon": "melee_thunder_hammer",
+   "perk": "Melee_ThunderHummer_Heroic_A",
+   "variant": "05_a"
+  }
+ ],
+ "uiweaponskillmeleefistchargedamagereduce name": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_fist",
+   "perk": "melee_power_fist_artificer_2_2",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "uiweaponskillmeleefistchargeinstbackfist name": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_power_fist",
+   "perk": "melee_power_fist_relic_artificer_1_3_sub",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "uiweaponskillmeleepower increasearmorlostname": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "melee_thunder_hammer",
+   "perk": "melee_thunder_hammer_artificer_1_2",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "ultima ratio": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_halberd",
+   "variant": "05"
+  }
+ ],
+ "ultramarines": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "arifle_bolt_rifle",
+   "variant": "01_preorder"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_chainsword",
+   "variant": "01_preorder"
+  }
+ ],
+ "unflinching focus": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerReviveAbilityRegenTeam",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "unmatched zeal": [
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkRestoreHPbyFinisherTeam",
+   "where": "team",
+   "mode": "pve"
+  }
+ ],
+ "unwavering resolve": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_stalker_bolt_rifle",
+   "perk": "brifle_stalker_bolt_rifle_common_1",
+   "tier": "COMMON"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "brifle_bolt_sniper_rifle",
+   "perk": "brifle_bolt_sniper_rifle_artificer_1_1",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "smg_bolt_carbine",
+   "perk": "smg_bolt_carbine_artificer_2_1",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "unyielding oath": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderInvulnerableOnAbility",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "upper hand": [
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkUnstoppableAfterRiposteAndPerfectDodge",
+   "where": "col0",
+   "mode": "pve"
+  }
+ ],
+ "vanguard": [
+  {
+   "kind": "class",
+   "class": "BERSERK"
+  }
+ ],
+ "vantage point": [
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperIncreasePrimaryWeaponDamageAfterNotMoving",
+   "where": "col1",
+   "mode": "pve"
+  }
+ ],
+ "versatile precision": [
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperRestorePrimaryAmmoForSecondaryWeaponKill",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "versatility": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierBuffSecondaryDamageAfterSwitching",
+   "where": "col1",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "SNIPER",
+   "perk": "PveSniperBuffSecondaryDamageAfterSwitching",
+   "where": "prestige",
+   "mode": "pve"
+  },
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportBuffSecondaryDamageAfterSwitching",
+   "where": "col2",
+   "mode": "pve"
+  }
+ ],
+ "victorious restoration": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_bolt_carbine",
+   "perk": "hgun_bolt_carbine_relic_1_1",
+   "tier": "RELIC"
+  }
+ ],
+ "violent deflagration": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_volkite_pistol",
+   "perk": "hgun_volkite_pistol_relic_2_1",
+   "tier": "RELIC"
+  }
+ ],
+ "vital data": [
+  {
+   "kind": "classPerk",
+   "class": "SOLDIER",
+   "perk": "PveSoldierReduceAuspexCooldownForTargetArchetype",
+   "where": "col3",
+   "mode": "pve"
+  }
+ ],
+ "volatile sentry": [
+  {
+   "kind": "classPerk",
+   "class": "ENGINEER",
+   "perk": "PveEngineerSentryTurretApplyBiggerExplosion",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "volkite blitz": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_volkite_pistol",
+   "perk": "hgun_volkite_pistol_relic_1_2",
+   "tier": "RELIC"
+  }
+ ],
+ "volkite discharge": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_volkite_pistol",
+   "perk": "hgun_volkite_pistol_relic_1_1",
+   "tier": "RELIC"
+  }
+ ],
+ "volkite discharge area": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_volkite_pistol",
+   "perk": "hgun_volkite_pistol_artificer_1_1",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hgun_volkite_pistol",
+   "perk": "hgun_volkite_pistol_artificer_2_1",
+   "tier": "ARTIFICER"
+  }
+ ],
+ "warden blade alpha": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_sword",
+   "variant": "04_b"
+  }
+ ],
+ "warden blade beta": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_sword",
+   "variant": "04_c"
+  }
+ ],
+ "weapon strike": [
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_bolter",
+   "perk": "support_heavy_bolter_relic_2_3_sub",
+   "tier": "RELIC"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_plasma_incinerator",
+   "perk": "support_plasma_incinerator_artificer_2_3",
+   "tier": "ARTIFICER"
+  },
+  {
+   "kind": "weaponPerk",
+   "weapon": "hwpn_support_heavy_meltagun",
+   "perk": "support_heavy_meltagun_common_2",
+   "tier": "COMMON"
+  }
+ ],
+ "well equipped": [
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkIncreaseEquipmentDamage",
+   "where": "prestige",
+   "mode": "pve"
+  }
+ ],
+ "white scars": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_chainsword",
+   "variant": "05_a"
+  }
+ ],
+ "winged fury": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderIncreaseDashAttackDamage",
+   "where": "col0",
+   "mode": "pve"
+  }
+ ],
+ "wings of flame": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderJumpPackDashDamagesEnemies",
+   "where": "col4",
+   "mode": "pve"
+  }
+ ],
+ "word of the omnissiah": [
+  {
+   "kind": "heroicPerk",
+   "weapon": "melee_power_halberd",
+   "perk": "Melee_Halberd_Heroic",
+   "variant": "05"
+  }
+ ],
+ "wrapped": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "brifle_instigator_bolt_carbine",
+   "variant": "05"
+  },
+  {
+   "kind": "weaponVariant",
+   "weapon": "brifle_bolt_sniper_rifle",
+   "variant": "05"
+  }
+ ],
+ "wrath of the imperium": [
+  {
+   "kind": "classPerk",
+   "class": "SUPPORT",
+   "perk": "PveSupportDealDamageWhenIronHaloSpendsAllEnergy",
+   "where": "col5",
+   "mode": "pve"
+  }
+ ],
+ "xenophase blade": [
+  {
+   "kind": "weaponVariant",
+   "weapon": "melee_power_sword",
+   "variant": "05"
+  }
+ ],
+ "zealous blow": [
+  {
+   "kind": "classPerk",
+   "class": "RAIDER",
+   "perk": "PveRaiderGroundpoundKillRestoresAbilityCharge",
+   "where": "col4",
+   "mode": "pve"
+  }
+ ],
+ "zone of impact": [
+  {
+   "kind": "classPerk",
+   "class": "BERSERK",
+   "perk": "PveBerserkAoeDamageOnAutoFinisher",
+   "where": "col4",
+   "mode": "pve"
+  }
+ ]
+}

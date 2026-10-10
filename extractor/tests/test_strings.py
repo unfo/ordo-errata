@@ -37,3 +37,11 @@ def test_recover_broken_desc_key():
     assert t.recover("X_02_DESC")["text"] == "Reaching..."
     assert t.recover("X_03_DESC") is None
     assert t.recover("X_02_NAME") is None
+
+
+def test_deobfuscate_xor_hex_strings():
+    from sm2data.strings import deobfuscate
+
+    assert deobfuscate("6d3s989ddb8ddaedda9dd") == "Test"
+    assert deobfuscate("6d3s9ffd1ffd1ffd1") == "..."
+    assert deobfuscate("Plain text") == "Plain text"

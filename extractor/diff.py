@@ -62,9 +62,14 @@ def perk_index(snap: dict) -> dict[str, dict]:
     return idx
 
 
+def _norm_text(t: str | None) -> str | None:
+    """Ignore line-break/spacing-only edits (literal "\\n" or whitespace)."""
+    return " ".join(t.replace("\\n", " ").split()) if t else t
+
+
 PERK_FIELDS = {
     "name": lambda p: p.get("name"),
-    "description": lambda p: (p.get("desc") or {}).get("text"),
+    "description": lambda p: _norm_text((p.get("desc") or {}).get("text")),
     "values": lambda p: [x.get("text") for x in p.get("params", [])],
     "icon": lambda p: p.get("icon"),
     "type": lambda p: p.get("type"),
