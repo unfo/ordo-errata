@@ -1455,3 +1455,140 @@ button.link {
   font-size: 0.75rem;
   color: var(--muted);
 }
+
+/* ---- mini tree popover (patch notes) ---- */
+
+.mini-popover {
+  position: fixed;
+  z-index: 50;
+  pointer-events: none;
+  max-width: calc(100vw - 16px);
+}
+
+.mini-popover.above {
+  transform: translateY(-100%);
+}
+
+.mini-card {
+  background: #0e1114;
+  border: 1px solid var(--gold-dim);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.6);
+  padding: 8px 10px;
+  --mini: 22px;
+}
+
+.mini-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+}
+
+.mini-owner {
+  height: 22px;
+  max-width: 60px;
+  object-fit: contain;
+}
+
+.mini-groups,
+.mini-weapon {
+  display: flex;
+  gap: 8px;
+}
+
+.mini-head {
+  font-size: 0.55rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 3px;
+}
+
+.mini-cols {
+  display: flex;
+  gap: 3px;
+}
+
+.mini-col {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.mini-weapon .mini-col {
+  gap: 8px;
+  padding: 8px 0;
+}
+
+.mini-weapon .mini-group {
+  background: linear-gradient(var(--tier-bg), transparent);
+  padding: 2px 4px;
+}
+
+.mini-cell {
+  position: relative;
+  display: block;
+}
+
+.mini-sub {
+  position: absolute;
+  left: calc(var(--mini) * 0.75);
+}
+
+.mini-sub.sub-1 {
+  top: calc(var(--mini) * -0.7);
+}
+
+.mini-sub.sub-2 {
+  bottom: calc(var(--mini) * -0.7);
+}
+
+.mini-weapon .mini-col:has(.mini-sub) {
+  padding-right: calc(var(--mini) * 0.75);
+}
+
+.mini-tile {
+  display: grid;
+  place-items: center;
+  width: var(--mini);
+  height: var(--mini);
+  background: #173049;
+  opacity: 0.55;
+}
+
+.mini-tile.hex {
+  clip-path: polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0% 50%);
+}
+
+.mini-tile.empty {
+  background: transparent;
+}
+
+.mini-tile img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.mini-group.group-team .mini-tile,
+.mini-group.group-signature .mini-tile {
+  background: #4a3a1c;
+}
+
+.mini-tile.target {
+  opacity: 1;
+  background: var(--gold);
+  box-shadow: 0 0 0 2px var(--gold), 0 0 12px var(--gold);
+  transform: scale(1.25);
+  z-index: 1;
+  position: relative;
+}
+
+.mini-tile.target img {
+  filter: brightness(0);
+}
+
+.mini-prestige {
+  margin-top: 6px;
+}

@@ -286,8 +286,14 @@ export function resolveChangelog(
 ): ParsedChangelog {
   const { meta, body } = frontMatter(md);
   const { title, items } = parseMarkdown(body);
-  // Current names win; names used in other snapshots fill the gaps (renamed/replaced perks).
-  const names = { ...(snap.formerNames ?? {}), ...snap.names };
+  // Current names plus names used in other snapshots (renamed/replaced perks). Both are kept as
+  // candidates so the section's scope decides: "Exigency Charge" under "Tactical" is the old Tactical
+  // prestige perk, not the current Vanguard perk of the same name.
+  const names: Record<string, NameRef[]> = { ...snap.names };
+  for (const [k, refs] of Object.entries(snap.formerNames ?? {})) {
+    const cur = names[k] ?? [];
+    names[k] = [...cur, ...refs.filter((r) => !cur.some((c) => JSON.stringify(c) === JSON.stringify(r)))];
+  }
   for (const [k, v] of Object.entries(aliases)) {
     if (!k.startsWith("_")) names[normalizeName(k)] = [...(names[normalizeName(k)] ?? []), ...v];
   }

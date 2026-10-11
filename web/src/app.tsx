@@ -11,8 +11,9 @@ type Route = { page: "class" | "weapon" | "changelog" | "diff"; id?: string };
 
 function parseRoute(hash: string): Route {
   const [, page, id] = hash.replace(/^#/, "").split("/");
-  if (page === "weapon" || page === "changelog" || page === "diff") return { page, id: id && decodeURIComponent(id) };
-  return { page: "class", id: id && decodeURIComponent(id) };
+  if (page === "weapon" || page === "changelog" || page === "diff" || page === "class") return { page, id: id && decodeURIComponent(id) };
+  // Landing page (no or unknown hash): the patch notes.
+  return { page: "changelog" };
 }
 
 function useRoute(): Route {

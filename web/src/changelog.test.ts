@@ -97,6 +97,10 @@ describe("patch 15", () => {
     const steady = parsed.items.find((r) => r.item.ownText.startsWith("Steady Aim has been removed"));
     expect(steady?.keys).toContain(`perk:${perkByName("Focused Strike").id}`);
     expect(parsed.unmatched.map((u) => u.name)).not.toContain("Steady Aim");
+    // "Exigency Charge" is a current Vanguard perk name, but under "Tactical" it is the old Tactical slot.
+    const exigency = parsed.items.find((r) => r.item.ownText.includes("Exigency Charge"));
+    expect(exigency?.keys).toContain(`perk:${perkByName("Passive Chambering").id}`);
+    expect(exigency?.labels.some((l) => l.label.includes("Vanguard"))).toBe(false);
   });
 
   it("separates PvP changes", () => {

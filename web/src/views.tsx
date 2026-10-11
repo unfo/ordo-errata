@@ -22,7 +22,7 @@ interface Group {
  * GEAR (hex), SIGNATURE (square). Columns unlock at levels 2,3,4 | 5 | 6,7,8 | 9
  * (then +8 and +16 for the rows below), which maps onto those groups in order.
  */
-function groupColumns(c: ClassData): Group[] {
+export function groupColumns(c: ClassData): Group[] {
   const firstLevel = (col: { slots: Slot[] }) => Math.min(...col.slots.map((s) => s.level));
   const cols = c.pve.columns.map((col) => ({ key: `col${col.tierIndex}`, slots: col.slots, first: firstLevel(col) }));
   return [

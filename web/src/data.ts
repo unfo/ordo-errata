@@ -142,8 +142,8 @@ export function formerNames(
   const out: Record<string, NameRef[]> = {};
   for (const idx of others)
     for (const [name, refs] of Object.entries(idx)) {
-      if (current[name]) continue;
-      const alive = refs.filter(exists);
+      // Skip refs the current index already has under this name; keep the ones it doesn't.
+      const alive = refs.filter(exists).filter((r) => !(current[name] ?? []).some((c) => JSON.stringify(c) === JSON.stringify(r)));
       if (alive.length) out[name] = [...(out[name] ?? []), ...alive.filter((r) => !(out[name] ?? []).some((o) => JSON.stringify(o) === JSON.stringify(r)))];
     }
   return out;
