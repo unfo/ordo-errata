@@ -1413,3 +1413,39 @@ button.link {
   -webkit-mask-repeat: no-repeat;
   -webkit-mask-position: center;
 }
+
+/* ---- data diff grouped by class / weapon ---- */
+
+.owner-group {
+  margin: 10px 0;
+  border: 1px solid var(--line);
+  background: #111316;
+}
+
+.owner-group > summary {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 10px;
+  background: var(--panel);
+}
+
+.owner-group[open] > summary {
+  border-bottom: 1px solid var(--line);
+}
+
+.owner-icon {
+  height: 28px;
+  max-width: 72px;
+  object-fit: contain;
+}
+
+.owner-name {
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.owner-group .diff-entity {
+  margin: 6px 8px;
+}

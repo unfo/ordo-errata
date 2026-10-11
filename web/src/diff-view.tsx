@@ -372,7 +372,21 @@ export function DiffView({
       tooltip: changes.find((c) => c.kind === "tooltip") as { old?: { parts: DescPart[] }; new?: { parts: DescPart[] } } | undefined,
       doc: documented(key),
     }))
-    .filter((r) => (r.lines.length || r.tooltip) && (!onlyUndocumented || !r.doc));
+    .filter((r) => r.lines.length || r.tooltip)
+    // A perk's tooltip changes (perk:<id>) and game-logic changes (perkType:<type>) arrive as two
+    // entities; merge them into one card when the type belongs to exactly one perk.
+    .reduce<{ key: string; lines: Line[]; tooltip?: { old?: { parts: DescPart[] }; new?: { parts: DescPart[] } }; doc: boolean }[]>((acc, r) => {
+      const perks = r.key.startsWith("perkType:") ? byType.get(r.key.slice(9)) ?? [] : [];
+      const key = perks.length === 1 ? `perk:${perks[0].id}` : r.key;
+      const prev = acc.find((x) => x.key === key);
+      if (prev) {
+        prev.lines.push(...r.lines);
+        prev.tooltip ??= r.tooltip;
+        prev.doc ||= r.doc;
+      } else acc.push({ ...r, key, lines: [...r.lines] });
+      return acc;
+    }, [])
+    .filter((r) => !onlyUndocumented || !r.doc);
 
   // The perk's own in-game description is often the best explanation of its raw values.
   const perkFor = (key: string): Perk | undefined => {
@@ -390,6 +404,7 @@ export function DiffView({
     return label(key);
   };
   const hrefKey = (key: string) => entityKeys(snap, key, byType)[0] ?? key;
+  const ownerOf = (key: string): Owner => owners(snap, byType, key);
 
   return (
     <article class="notes">
@@ -406,32 +421,97 @@ export function DiffView({
         {rows.length} changed items ({mode.toUpperCase()} view). Items marked <span class="badge doc">in notes</span> are mentioned in the selected patch
         notes; the rest are <span class="badge undoc">not in notes</span>.
       </p>
-      {rows.map(({ key, lines, tooltip, doc }) => {
-        const l = labelFor(key);
-        const href = hrefFor(snap, hrefKey(key));
-        return (
-          <div class="diff-entity" key={key}>
-            <button type="button" class="chip" disabled={!href} onClick={() => href && go(href)}>
-              <Icon class="chip-icon" name={l.icon} alt="" />
-              {l.label}
-            </button>
-            <span class={`badge ${doc ? "doc" : "undoc"}`}>{doc ? "in notes" : "not in notes"}</span>
-            {tooltip ? (
-              <TooltipDiff old={tooltip.old} new={tooltip.new} />
-            ) : (
-              (() => {
-                const p = perkFor(key);
-                return p?.desc ? (
-                  <p class="diff-desc">
-                    <Desc parts={p.desc.parts} />
-                  </p>
-                ) : null;
-              })()
-            )}
-            {lines.length > 0 && <GroupedChanges rows={lines} />}
-          </div>
-        );
-      })}
+      {groupByOwner(rows, ownerOf).map((g) => (
+        <details class="owner-group" key={g.owner.id} open={g.rows.length <= 6 || rows.length <= 12}>
+          <summary>
+            <Icon class="owner-icon" name={g.owner.icon} alt="" />
+            <span class="owner-name">{g.owner.name}</span>
+            <span class="muted">
+              {g.rows.length} changed {g.rows.length === 1 ? "item" : "items"}
+              {g.undocumented > 0 && ` · ${g.undocumented} not in notes`}
+            </span>
+          </summary>
+          {g.rows.map(({ key, lines, tooltip, doc }) => {
+            const l = labelFor(key);
+            const href = hrefFor(snap, hrefKey(key));
+            return (
+              <div class="diff-entity" key={key}>
+                <button type="button" class="chip" disabled={!href} onClick={() => href && go(href)}>
+                  <Icon class="chip-icon" name={l.icon} alt="" />
+                  {l.label}
+                </button>
+                <span class={`badge ${doc ? "doc" : "undoc"}`}>{doc ? "in notes" : "not in notes"}</span>
+                {tooltip ? (
+                  <TooltipDiff old={tooltip.old} new={tooltip.new} />
+                ) : (
+                  (() => {
+                    const p = perkFor(key);
+                    return p?.desc ? (
+                      <p class="diff-desc">
+                        <Desc parts={p.desc.parts} />
+                      </p>
+                    ) : null;
+                  })()
+                )}
+                {lines.length > 0 && <GroupedChanges rows={lines} />}
+              </div>
+            );
+          })}
+        </details>
+      ))}
     </article>
   );
+}
+
+export interface Owner {
+  id: string;
+  name: string;
+  icon?: string | null;
+  /** Sort position: classes in armory order, then weapons A-Z, then shared. */
+  order: number;
+}
+
+/** The class or weapon an entity belongs to (shared perk types get their own group). */
+export function owners(snap: Snapshot, byType: Map<string, Perk[]>, key: string): Owner {
+  const classOf = new Map<string, number>();
+  snap.classes.classes.forEach((c, i) => {
+    for (const p of [...c.pve.base, ...c.pvp.base, ...c.pve.columns.flatMap((x) => x.slots.flatMap((s) => s.perks)), ...c.pve.team.flatMap((s) => s.perks), ...c.pve.prestige.flatMap((s) => s.perks)])
+      classOf.set(p.id, i);
+  });
+  const weapons = [...snap.weapons.weapons].sort((a, b) => a.name.localeCompare(b.name));
+  const weaponOf = new Map<string, number>();
+  weapons.forEach((w, i) => {
+    for (const p of [...w.tiers.flatMap((t) => t.layers.flat()), ...w.heroic]) weaponOf.set(p.id, i);
+  });
+  const cls = (i: number): Owner => {
+    const c = snap.classes.classes[i];
+    return { id: `class:${c.id}`, name: c.name, icon: c.icon, order: i };
+  };
+  const wpn = (i: number): Owner => ({ id: `weapon:${weapons[i].id}`, name: weapons[i].name, icon: weapons[i].icon, order: 100 + i });
+  const shared: Owner = { id: "shared", name: "Shared perks (used by several classes or weapons)", order: 1000 };
+
+  const [kind, rest] = [key.slice(0, key.indexOf(":")), key.slice(key.indexOf(":") + 1)];
+  if (kind === "weapon" || kind === "variant") {
+    const i = weapons.findIndex((w) => w.id === rest.split("/")[0]);
+    return i >= 0 ? wpn(i) : shared;
+  }
+  const perkIds = kind === "perkType" ? (byType.get(rest) ?? []).map((p) => p.id) : [rest];
+  const found = new Set(perkIds.map((id) => (classOf.has(id) ? `c${classOf.get(id)}` : weaponOf.has(id) ? `w${weaponOf.get(id)}` : "?")));
+  if (found.size !== 1) return shared;
+  const only = [...found][0];
+  if (only.startsWith("c")) return cls(Number(only.slice(1)));
+  if (only.startsWith("w")) return wpn(Number(only.slice(1)));
+  return shared;
+}
+
+export function groupByOwner<R extends { key: string; doc: boolean }>(rows: R[], ownerOf: (key: string) => Owner) {
+  const groups = new Map<string, { owner: Owner; rows: R[]; undocumented: number }>();
+  for (const r of rows) {
+    const o = ownerOf(r.key);
+    const g = groups.get(o.id) ?? { owner: o, rows: [], undocumented: 0 };
+    g.rows.push(r);
+    if (!r.doc) g.undocumented++;
+    groups.set(o.id, g);
+  }
+  return [...groups.values()].sort((a, b) => a.owner.order - b.owner.order);
 }
