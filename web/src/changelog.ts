@@ -276,6 +276,21 @@ function scopeNames(idx: Index, scope: Scope): { name: string; refs: NameRef[] }
   return out.sort((a, b) => b.name.length - a.name.length);
 }
 
+const weaponNameCache = new WeakMap<Index, { name: string; refs: NameRef[] }[]>();
+
+/** Weapon display names (longest first) for plain-text scanning. */
+function weaponNames(idx: Index): { name: string; refs: NameRef[] }[] {
+  let out = weaponNameCache.get(idx);
+  if (!out) {
+    out = Object.entries(idx.names)
+      .map(([name, refs]) => ({ name, refs: refs.filter((r) => r.kind === "weapon") }))
+      .filter((x) => x.refs.length && x.name.length >= 8)
+      .sort((a, b) => b.name.length - a.name.length);
+    weaponNameCache.set(idx, out);
+  }
+  return out;
+}
+
 const NOT_NAMES = /^(standard-issue version and all non range-specialized versions|\d.*|.*%.*)$/i;
 
 export function resolveChangelog(
@@ -353,6 +368,18 @@ export function resolveChangelog(
           refs.push(...r);
           // The span was only part of this longer name (e.g. "Resupply" in "Combat Squad Resupply").
           for (let i = miss.length - 1; i >= 0; i--) if (name.includes(normalizeName(miss[i]))) miss.splice(i, 1);
+          break;
+        }
+      }
+    }
+
+    // Still nothing: look for weapon names anywhere in the line ("Plasma pistol variants ...").
+    // Only weapon names of 8+ characters, so words like "heavy" or "melta" alone never match.
+    if (!refs.length) {
+      const text = ` ${normalizeName(item.ownText)} `;
+      for (const { name, refs: r } of weaponNames(idx)) {
+        if (text.includes(` ${name} `)) {
+          refs.push(...r);
           break;
         }
       }

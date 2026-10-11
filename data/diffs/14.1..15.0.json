@@ -1,6 +1,6 @@
 {
- "from": "14.x",
- "to": "15.1",
+ "from": "14.1",
+ "to": "15.0",
  "entities": {
   "perk:Melee_OneHandedHammer_Heroic": [
    {
@@ -2242,46 +2242,6 @@
     "new": "SE_BURNING_MELEE_DAMAGE_SENSITIVITY_TO_TARGET"
    }
   ],
-  "perkType:FirearmFireRateIncreaseFireRate": [
-   {
-    "kind": "value",
-    "field": "application.permanentModifiers[FIREARM_CHARGE_DURATION].applyType",
-    "old": null,
-    "new": "PERCENT_SUM"
-   },
-   {
-    "kind": "value",
-    "field": "application.permanentModifiers[FIREARM_CHARGE_DURATION].bonus",
-    "old": null,
-    "new": -10
-   },
-   {
-    "kind": "value",
-    "field": "application.permanentModifiers[FIREARM_CHARGE_DURATION].type",
-    "old": null,
-    "new": "FIREARM_CHARGE_DURATION"
-   }
-  ],
-  "perkType:FirearmFireRateIncreaseFireRateByPerfectDodge": [
-   {
-    "kind": "value",
-    "field": "application.permanentModifiers[FIREARM_CHARGE_DURATION].applyType",
-    "old": null,
-    "new": "PERCENT_SUM"
-   },
-   {
-    "kind": "value",
-    "field": "application.permanentModifiers[FIREARM_CHARGE_DURATION].bonus",
-    "old": null,
-    "new": -25
-   },
-   {
-    "kind": "value",
-    "field": "application.permanentModifiers[FIREARM_CHARGE_DURATION].type",
-    "old": null,
-    "new": "FIREARM_CHARGE_DURATION"
-   }
-  ],
   "perkType:FirearmReloadInstantlyReloadByUsingClassAbilitySecondary": [
    {
     "kind": "value",
@@ -2422,21 +2382,45 @@
    },
    {
     "kind": "value",
-    "field": "application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE].applyType",
+    "field": "application.isResetMultiplierAfterDelay",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
+    "field": "application.maxMultiplier",
+    "old": null,
+    "new": 1
+   },
+   {
+    "kind": "value",
+    "field": "application.modifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE].applyType",
     "old": null,
     "new": "PERCENT_SUM"
    },
    {
     "kind": "value",
-    "field": "application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE].bonus",
+    "field": "application.modifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE].bonus",
     "old": null,
     "new": 25
    },
    {
     "kind": "value",
-    "field": "application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE].type",
+    "field": "application.modifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE].type",
     "old": null,
     "new": "SCALE_DAMAGE_AMOUNT_FROM_MELEE"
+   },
+   {
+    "kind": "value",
+    "field": "application.resetMultiplierDelay",
+    "old": null,
+    "new": 7
+   },
+   {
+    "kind": "value",
+    "field": "application.shouldCheckCurrentStrike",
+    "old": null,
+    "new": true
    },
    {
     "kind": "value",
@@ -2480,7 +2464,7 @@
     "kind": "value",
     "field": "activationController.cooldown.cooldownTime",
     "old": null,
-    "new": 20
+    "new": 60
    },
    {
     "kind": "value",
@@ -2518,7 +2502,7 @@
     "kind": "value",
     "field": "activationController.cooldown.cooldownTime",
     "old": null,
-    "new": 15
+    "new": 30
    },
    {
     "kind": "value",
@@ -2582,13 +2566,13 @@
     "kind": "value",
     "field": "application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE_PER_SPENT_STACK].applyType",
     "old": null,
-    "new": "PERCENT_MULT"
+    "new": "PERCENT_SUM"
    },
    {
     "kind": "value",
     "field": "application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE_PER_SPENT_STACK].bonus",
     "old": null,
-    "new": 30
+    "new": 20
    },
    {
     "kind": "value",
@@ -2722,7 +2706,7 @@
     "kind": "value",
     "field": "activationController.delayedResetSec",
     "old": null,
-    "new": 20
+    "new": 10
    },
    {
     "kind": "value",
@@ -3125,14 +3109,6 @@
     "new": "DEFAULT"
    }
   ],
-  "perkType:PveEngineerReviveAbilityRegenTeam": [
-   {
-    "kind": "value",
-    "field": "deactivationTrigger.needEntryPointOwnerTagCheck",
-    "old": null,
-    "new": false
-   }
-  ],
   "perkType:PveEngineerServoArmItem": [
    {
     "kind": "value",
@@ -3145,26 +3121,6 @@
     "field": "application.inventoryItemUnit.inventoryItemAmount",
     "old": null,
     "new": 1
-   }
-  ],
-  "perkType:PveEngineerShoulderGunIgniteOnHit": [
-   {
-    "kind": "value",
-    "field": "application.applications.BurnBolter.isDirectHit",
-    "old": null,
-    "new": true
-   },
-   {
-    "kind": "value",
-    "field": "application.applications.BurnPlasma.isDirectHit",
-    "old": null,
-    "new": true
-   },
-   {
-    "kind": "value",
-    "field": "application.applications.BurnSniper.isDirectHit",
-    "old": null,
-    "new": true
    }
   ],
   "perkType:PveEngineerTeamExtraEquipment": [
@@ -4934,6 +4890,86 @@
     "new": 90
    }
   ],
+  "variant:hgun_heavy_bolt_pistol/01": [
+   {
+    "kind": "stat",
+    "field": "headshotMult",
+    "old": 2.1,
+    "new": 3.5
+   }
+  ],
+  "variant:hgun_heavy_bolt_pistol/02": [
+   {
+    "kind": "stat",
+    "field": "headshotMult",
+    "old": 2.1,
+    "new": 3.5
+   }
+  ],
+  "variant:hgun_heavy_bolt_pistol/02_a": [
+   {
+    "kind": "stat",
+    "field": "headshotMult",
+    "old": 2.1,
+    "new": 3.5
+   }
+  ],
+  "variant:hgun_heavy_bolt_pistol/02_b": [
+   {
+    "kind": "stat",
+    "field": "headshotMult",
+    "old": 2.1,
+    "new": 3.5
+   }
+  ],
+  "variant:hgun_heavy_bolt_pistol/03": [
+   {
+    "kind": "stat",
+    "field": "headshotMult",
+    "old": 2.1,
+    "new": 3.5
+   }
+  ],
+  "variant:hgun_heavy_bolt_pistol/03_a": [
+   {
+    "kind": "stat",
+    "field": "headshotMult",
+    "old": 2.1,
+    "new": 3.5
+   }
+  ],
+  "variant:hgun_heavy_bolt_pistol/03_b": [
+   {
+    "kind": "stat",
+    "field": "headshotMult",
+    "old": 2.1,
+    "new": 3.5
+   }
+  ],
+  "variant:hgun_heavy_bolt_pistol/04": [
+   {
+    "kind": "stat",
+    "field": "headshotMult",
+    "old": 2.1,
+    "new": 3.5
+   }
+  ],
+  "variant:hgun_heavy_bolt_pistol/04_a": [
+   {
+    "kind": "stat",
+    "field": "headshotMult",
+    "old": 2.1,
+    "new": 3.5
+   }
+  ],
+  "variant:hgun_heavy_bolt_pistol/04_b": [
+   {
+    "kind": "stat",
+    "field": "headshotMult",
+    "old": 2.1,
+    "new": 3.5
+   }
+  ],
   "variant:hwpn_support_heavy_bolter/05": [
    {
     "kind": "value",
@@ -4958,16 +4994,10 @@
     "new": 16
    },
    {
-    "kind": "stat",
-    "field": "range",
-    "old": 2.5,
-    "new": 4.5
-   },
-   {
     "kind": "value",
     "field": "ModificatorDamageCoefficientSpline.coeffDamage.spline[0]",
     "old": 0,
-    "new": 6
+    "new": 3
    },
    {
     "kind": "value",
@@ -5032,16 +5062,10 @@
     "new": 16
    },
    {
-    "kind": "stat",
-    "field": "range",
-    "old": 3.5,
-    "new": 4.5
-   },
-   {
     "kind": "value",
     "field": "ModificatorDamageCoefficientSpline.coeffDamage.spline[0]",
     "old": 0,
-    "new": 6
+    "new": 4
    },
    {
     "kind": "value",
@@ -5109,7 +5133,7 @@
     "kind": "value",
     "field": "ModificatorDamageCoefficientSpline.coeffDamage.spline[0]",
     "old": 0,
-    "new": 6
+    "new": 5
    },
    {
     "kind": "value",
@@ -5185,13 +5209,7 @@
     "kind": "stat",
     "field": "ammoReserve",
     "old": 15,
-    "new": 12
-   },
-   {
-    "kind": "stat",
-    "field": "magazine",
-    "old": 5,
-    "new": 6
+    "new": 10
    }
   ],
   "variant:shotgun_meltagun/02": [
@@ -5199,25 +5217,13 @@
     "kind": "stat",
     "field": "ammoReserve",
     "old": 15,
-    "new": 12
-   },
-   {
-    "kind": "stat",
-    "field": "magazine",
-    "old": 5,
-    "new": 6
-   },
-   {
-    "kind": "stat",
-    "field": "range",
-    "old": 2.5,
-    "new": 4.5
+    "new": 10
    },
    {
     "kind": "value",
     "field": "ModificatorDamageCoefficientSpline.coeffDamage.spline[0]",
     "old": 0,
-    "new": 5
+    "new": 2.5
    },
    {
     "kind": "value",
@@ -5263,27 +5269,7 @@
     "kind": "stat",
     "field": "ammoReserve",
     "old": 18,
-    "new": 16
-   },
-   {
-    "kind": "stat",
-    "field": "magazine",
-    "old": 6,
-    "new": 8
-   },
-   {
-    "kind": "value",
-    "field": "ModificatorAmmoPool.modificator",
-    "old": 3,
-    "new": 4,
-    "pct": 33.33
-   },
-   {
-    "kind": "value",
-    "field": "ModificatorClipAmmo.modificator",
-    "old": 1,
-    "new": 2,
-    "pct": 100.0
+    "new": 13
    }
   ],
   "variant:shotgun_meltagun/03": [
@@ -5291,25 +5277,13 @@
     "kind": "stat",
     "field": "ammoReserve",
     "old": 15,
-    "new": 12
-   },
-   {
-    "kind": "stat",
-    "field": "magazine",
-    "old": 5,
-    "new": 6
-   },
-   {
-    "kind": "stat",
-    "field": "range",
-    "old": 3.5,
-    "new": 4.5
+    "new": 10
    },
    {
     "kind": "value",
     "field": "ModificatorDamageCoefficientSpline.coeffDamage.spline[0]",
     "old": 0,
-    "new": 5
+    "new": 3
    },
    {
     "kind": "value",
@@ -5355,27 +5329,7 @@
     "kind": "stat",
     "field": "ammoReserve",
     "old": 21,
-    "new": 19
-   },
-   {
-    "kind": "stat",
-    "field": "magazine",
-    "old": 7,
-    "new": 9
-   },
-   {
-    "kind": "value",
-    "field": "ModificatorAmmoPool.modificator",
-    "old": 6,
-    "new": 7,
-    "pct": 16.67
-   },
-   {
-    "kind": "value",
-    "field": "ModificatorClipAmmo.modificator",
-    "old": 2,
-    "new": 3,
-    "pct": 50.0
+    "new": 16
    }
   ],
   "variant:shotgun_meltagun/04": [
@@ -5383,19 +5337,13 @@
     "kind": "stat",
     "field": "ammoReserve",
     "old": 15,
-    "new": 12
-   },
-   {
-    "kind": "stat",
-    "field": "magazine",
-    "old": 5,
-    "new": 6
+    "new": 10
    },
    {
     "kind": "value",
     "field": "ModificatorDamageCoefficientSpline.coeffDamage.spline[0]",
     "old": 0,
-    "new": 5
+    "new": 3.5
    },
    {
     "kind": "value",
@@ -5441,27 +5389,7 @@
     "kind": "stat",
     "field": "ammoReserve",
     "old": 24,
-    "new": 22
-   },
-   {
-    "kind": "stat",
-    "field": "magazine",
-    "old": 8,
-    "new": 10
-   },
-   {
-    "kind": "value",
-    "field": "ModificatorAmmoPool.modificator",
-    "old": 9,
-    "new": 10,
-    "pct": 11.11
-   },
-   {
-    "kind": "value",
-    "field": "ModificatorClipAmmo.modificator",
-    "old": 3,
-    "new": 4,
-    "pct": 33.33
+    "new": 19
    }
   ],
   "variant:shotgun_meltagun/04_b": [
@@ -5469,13 +5397,7 @@
     "kind": "stat",
     "field": "ammoReserve",
     "old": 15,
-    "new": 12
-   },
-   {
-    "kind": "stat",
-    "field": "magazine",
-    "old": 5,
-    "new": 6
+    "new": 10
    }
   ],
   "variant:shotgun_meltagun/05": [
@@ -6501,6 +6423,22 @@
     "pct": 10.0
    }
   ],
+  "weapon:hgun_heavy_bolt_pistol": [
+   {
+    "kind": "value",
+    "field": "pve.cartridgeDescriptions.bolts.shotCreatorSettings.damage",
+    "old": 3.9,
+    "new": 6,
+    "pct": 53.85
+   },
+   {
+    "kind": "value",
+    "field": "pve.cartridgeDescriptions.bolts.shotCreatorSettings.headshotMult",
+    "old": 2.1,
+    "new": 3.5,
+    "pct": 66.67
+   }
+  ],
   "weapon:hwpn_pyrecannon": [
    {
     "kind": "value",
@@ -6540,7 +6478,7 @@
     "kind": "value",
     "field": "pve.cartridgeDescriptions.blind_cone.shotCreatorSettings.coeffDamage.spline[0]",
     "old": 0,
-    "new": 3
+    "new": 2
    },
    {
     "kind": "value",
@@ -8283,6 +8221,12 @@
    },
    {
     "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.ChargeStackDamager.extraDamages.melee_damaging_window.shouldForceHeavyHit",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
     "field": "pve.comboDesc.strikeSettings.ChargeStackDamager.mainDamage.canKnockback",
     "old": null,
     "new": true
@@ -8897,7 +8841,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Heavy1.mainDamage.healthDmgPercent",
     "old": null,
-    "new": 250
+    "new": 150
    },
    {
     "kind": "value",
@@ -8969,7 +8913,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Heavy2.extraDamagesOverridePerFlagType.MELEE_HAMMER_ONE_HANDED_SHOCKWAVES.melee_extra_damage_2.healthDmgPercent",
     "old": null,
-    "new": 100
+    "new": 50
    },
    {
     "kind": "value",
@@ -9005,7 +8949,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Heavy2.mainDamage.healthDmgPercent",
     "old": null,
-    "new": 250
+    "new": 150
    },
    {
     "kind": "value",
@@ -9077,7 +9021,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Heavy3.extraDamagesOverridePerFlagType.MELEE_HAMMER_ONE_HANDED_SHOCKWAVES.melee_extra_damage_2.healthDmgPercent",
     "old": null,
-    "new": 100
+    "new": 50
    },
    {
     "kind": "value",
@@ -9113,7 +9057,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Heavy3.mainDamage.healthDmgPercent",
     "old": null,
-    "new": 250
+    "new": 150
    },
    {
     "kind": "value",
@@ -9501,6 +9445,12 @@
    },
    {
     "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.HeavyFastChargeLeft.extraDamages.melee_extra_damage_2.shouldForceHeavyHit",
+    "old": null,
+    "new": true
+   },
+   {
+    "kind": "value",
     "field": "pve.comboDesc.strikeSettings.HeavyFastChargeLeft.maxDamagedActors",
     "old": null,
     "new": 5
@@ -9594,6 +9544,12 @@
     "field": "pve.comboDesc.strikeSettings.HeavyFastChargeRight.extraDamages.melee_extra_damage_2.radiusScale",
     "old": null,
     "new": 5
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.strikeSettings.HeavyFastChargeRight.extraDamages.melee_extra_damage_2.shouldForceHeavyHit",
+    "old": null,
+    "new": true
    },
    {
     "kind": "value",
@@ -10139,7 +10095,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.JetpackLand1Charged.extraDamages.melee_extra_damage_1.healthDmgPercent",
     "old": null,
-    "new": 150
+    "new": 50
    },
    {
     "kind": "value",
@@ -10289,7 +10245,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Light1.mainDamage.healthDmgPercent",
     "old": null,
-    "new": 125
+    "new": 100
    },
    {
     "kind": "value",
@@ -10335,12 +10291,6 @@
    },
    {
     "kind": "value",
-    "field": "pve.comboDesc.strikeSettings.Light1Charged.extraDamages.melee_extra_damage.canRepeatDamageToDamagedActorsAfterThis",
-    "old": null,
-    "new": true
-   },
-   {
-    "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Light1Charged.extraDamages.melee_extra_damage.damageOffset.x",
     "old": null,
     "new": 0
@@ -10361,7 +10311,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Light1Charged.extraDamages.melee_extra_damage.healthDmgPercent",
     "old": null,
-    "new": 150
+    "new": 50
    },
    {
     "kind": "value",
@@ -10409,7 +10359,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Light1Charged.mainDamage.healthDmgPercent",
     "old": null,
-    "new": 175
+    "new": 150
    },
    {
     "kind": "value",
@@ -10439,7 +10389,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Light1Charged.maxDamagedActors",
     "old": null,
-    "new": 10
+    "new": 4
    },
    {
     "kind": "value",
@@ -10481,7 +10431,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Light1ChargedDouble.extraDamages.melee_extra_damage.healthDmgPercent",
     "old": null,
-    "new": 150
+    "new": 50
    },
    {
     "kind": "value",
@@ -10529,7 +10479,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Light1ChargedDouble.mainDamage.healthDmgPercent",
     "old": null,
-    "new": 175
+    "new": 150
    },
    {
     "kind": "value",
@@ -10559,7 +10509,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Light1ChargedDouble.maxDamagedActors",
     "old": null,
-    "new": 10
+    "new": 4
    },
    {
     "kind": "value",
@@ -10617,12 +10567,6 @@
    },
    {
     "kind": "value",
-    "field": "pve.comboDesc.strikeSettings.Light2Charged.extraDamages.melee_extra_damage.canRepeatDamageToDamagedActorsAfterThis",
-    "old": null,
-    "new": true
-   },
-   {
-    "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Light2Charged.extraDamages.melee_extra_damage.damageOffset.x",
     "old": null,
     "new": 0
@@ -10643,7 +10587,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Light2Charged.extraDamages.melee_extra_damage.healthDmgPercent",
     "old": null,
-    "new": 150
+    "new": 50
    },
    {
     "kind": "value",
@@ -10691,7 +10635,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Light2Charged.mainDamage.healthDmgPercent",
     "old": null,
-    "new": 175
+    "new": 150
    },
    {
     "kind": "value",
@@ -10721,7 +10665,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Light2Charged.maxDamagedActors",
     "old": null,
-    "new": 10
+    "new": 5
    },
    {
     "kind": "value",
@@ -10763,7 +10707,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Light2ChargedDouble.extraDamages.melee_extra_damage.healthDmgPercent",
     "old": null,
-    "new": 150
+    "new": 50
    },
    {
     "kind": "value",
@@ -10811,7 +10755,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Light2ChargedDouble.mainDamage.healthDmgPercent",
     "old": null,
-    "new": 175
+    "new": 150
    },
    {
     "kind": "value",
@@ -10841,7 +10785,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Light2ChargedDouble.maxDamagedActors",
     "old": null,
-    "new": 10
+    "new": 5
    },
    {
     "kind": "value",
@@ -10931,7 +10875,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Light3Charged.extraDamages.melee_extra_damage.healthDmgPercent",
     "old": null,
-    "new": 150
+    "new": 50
    },
    {
     "kind": "value",
@@ -10979,7 +10923,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Light3Charged.mainDamage.healthDmgPercent",
     "old": null,
-    "new": 175
+    "new": 150
    },
    {
     "kind": "value",
@@ -11009,7 +10953,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Light3Charged.maxDamagedActors",
     "old": null,
-    "new": 10
+    "new": 5
    },
    {
     "kind": "value",
@@ -11057,7 +11001,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Light3ChargedDouble.extraDamages.melee_extra_damage.healthDmgPercent",
     "old": null,
-    "new": 150
+    "new": 50
    },
    {
     "kind": "value",
@@ -11105,7 +11049,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Light3ChargedDouble.mainDamage.healthDmgPercent",
     "old": null,
-    "new": 175
+    "new": 150
    },
    {
     "kind": "value",
@@ -11135,7 +11079,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.Light3ChargedDouble.maxDamagedActors",
     "old": null,
-    "new": 10
+    "new": 5
    },
    {
     "kind": "value",
@@ -11177,7 +11121,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.LightDashLeft.extraDamages.melee_extra_damage_1.healthDmgPercent",
     "old": null,
-    "new": 50
+    "new": 25
    },
    {
     "kind": "value",
@@ -11213,7 +11157,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.LightDashLeft.extraDamages.melee_extra_damage_1.radiusScale",
     "old": null,
-    "new": 3
+    "new": 2
    },
    {
     "kind": "value",
@@ -11225,7 +11169,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.LightDashLeft.mainDamage.healthDmgPercent",
     "old": null,
-    "new": 100
+    "new": 50
    },
    {
     "kind": "value",
@@ -11303,7 +11247,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.LightDashLeftCharged.extraDamages.melee_extra_damage_1.healthDmgPercent",
     "old": null,
-    "new": 150
+    "new": 50
    },
    {
     "kind": "value",
@@ -11351,7 +11295,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.LightDashLeftCharged.mainDamage.healthDmgPercent",
     "old": null,
-    "new": 100
+    "new": 50
    },
    {
     "kind": "value",
@@ -11555,7 +11499,7 @@
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.LongDashAttackCharged.extraDamages.melee_extra_damage_1.healthDmgPercent",
     "old": null,
-    "new": 150
+    "new": 50
    },
    {
     "kind": "value",
@@ -11651,7 +11595,7 @@
     "kind": "value",
     "field": "pve.healthDamage",
     "old": null,
-    "new": 12.1
+    "new": 11
    },
    {
     "kind": "value",
@@ -14476,14 +14420,14 @@
     "kind": "value",
     "field": "pve.ammoSettings.typeData.ammo_shotgun.maxAmount",
     "old": 15,
-    "new": 12,
-    "pct": -20.0
+    "new": 10,
+    "pct": -33.33
    },
    {
     "kind": "value",
     "field": "pve.cartridgeDescriptions.bolts.shotCreatorSettings.coeffDamage.spline[0]",
     "old": 0,
-    "new": 3
+    "new": 2
    },
    {
     "kind": "value",
@@ -14529,13 +14473,6 @@
     "old": 30,
     "new": 49.5,
     "pct": 65.0
-   },
-   {
-    "kind": "value",
-    "field": "pve.clipsSettings.default_clip.maxAmmo",
-    "old": 5,
-    "new": 6,
-    "pct": 20.0
    },
    {
     "kind": "value",

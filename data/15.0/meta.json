@@ -1,4 +1,6 @@
 {
  "buildId": "15.0",
- "lang": "english"
+ "lang": "english",
+ "steamBuildId": "unknown",
+ "note": "released 2026-10-01; snapshot exists (data/15.0)"
 }

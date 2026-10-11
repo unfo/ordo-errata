@@ -16,7 +16,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
-from build import all_class_perks, all_weapon_perks, write_json  # noqa: E402
+from build import version_key, write_json  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -177,22 +177,32 @@ def diff(old_build: str, new_build: str) -> dict:
 
 
 def builds() -> list[str]:
-    return sorted(p.name for p in DATA.iterdir() if (p / "meta.json").exists())
+    return sorted((p.name for p in DATA.iterdir() if (p / "meta.json").exists()), key=version_key)
 
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("old", nargs="?")
     ap.add_argument("new", nargs="?")
+    ap.add_argument("--all", action="store_true", help="diff every pair of consecutive snapshots")
     args = ap.parse_args()
     known = builds()
+    if args.all:
+        for old, new in zip(known, known[1:]):
+            run_one(old, new)
+        return 0
     if not (args.old and args.new):
         if len(known) < 2:
             print(f"need two builds under data/, have {known}")
             return 1
         args.old, args.new = known[-2], known[-1]
-    result = diff(args.old, args.new)
-    name = f"{args.old}..{args.new}"
+    run_one(args.old, args.new)
+    return 0
+
+
+def run_one(old: str, new: str) -> None:
+    result = diff(old, new)
+    name = f"{old}..{new}"
     write_json(DATA / "diffs" / f"{name}.json", result)
     index = sorted({p.stem for p in (DATA / "diffs").glob("*..*.json")})
     write_json(DATA / "diffs" / "index.json", {"diffs": index})
@@ -200,7 +210,6 @@ def main() -> int:
     for k in result["entities"]:
         counts[k.split(":")[0]] = counts.get(k.split(":")[0], 0) + 1
     print(f"{name}: {sum(counts.values())} changed entities {counts}")
-    return 0
 
 
 if __name__ == "__main__":

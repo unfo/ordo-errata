@@ -195,12 +195,27 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("query", nargs="?", help="Steam post URL, news id, or title substring")
     ap.add_argument("--list", action="store_true")
+    ap.add_argument("--since", metavar="YYYY-MM-DD", help="fetch every patch/hotfix post since this date (skips existing files)")
     ap.add_argument("--out", type=Path, default=ROOT / "changelogs")
     ap.add_argument("--force", action="store_true", help="overwrite an existing changelog file")
     ap.add_argument("--stdout", action="store_true")
     args = ap.parse_args()
 
     items = news()
+    if args.since:
+        since = datetime.fromisoformat(args.since).replace(tzinfo=timezone.utc).timestamp()
+        for post in sorted(items, key=lambda n: n["date"]):
+            cid = changelog_id(post["title"])
+            if post["date"] < since or not PATCH_TITLE.search(post["title"]) or not cid:
+                continue
+            target = args.out / f"{cid}.md"
+            if target.exists() and not args.force:
+                print(f"skip {target.name} (exists)")
+                continue
+            args.out.mkdir(parents=True, exist_ok=True)
+            target.write_text(render(post), encoding="utf-8")
+            print(f"wrote {target.name} from '{post['title']}'")
+        return 0
     if args.list or not args.query:
         for n in items:
             if PATCH_TITLE.search(n["title"]):

@@ -421,6 +421,11 @@ def normalize_name(name: str) -> str:
     return re.sub(r"[^a-z0-9' ]", "", n).strip()
 
 
+def version_key(name: str) -> list:
+    """Sort snapshot names like versions: 9.2 < 10.0 < 14.x < 15.0 (non-numeric parts sort last)."""
+    return [(0, int(p), "") if p.isdigit() else (1, 0, p) for p in re.split(r"[.\-]", name)]
+
+
 def write_json(path: Path, data) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
@@ -434,6 +439,8 @@ def main() -> int:
     ap.add_argument("--icons", type=Path, default=ROOT / "web" / "public" / "icons")
     ap.add_argument("--build-id", help="snapshot name when the install has no Steam manifest (e.g. an old build from DepotDownloader)")
     ap.add_argument("--no-icons", action="store_true", help="skip icon export (old builds downloaded without texture paks)")
+    ap.add_argument("--manifest", help="Steam depot manifest id the files came from (recorded in meta.json)")
+    ap.add_argument("--note", help="free-text provenance note (recorded in meta.json)")
     args = ap.parse_args()
 
     pak = PakIndex(args.game_dir)
@@ -443,7 +450,12 @@ def main() -> int:
     weapons = b.weapons()
 
     out = args.out / build_id
-    write_json(out / "meta.json", {"buildId": build_id, "lang": args.lang})
+    meta = {"buildId": build_id, "lang": args.lang, "steamBuildId": pak.build_id()}
+    if args.manifest:
+        meta["manifest"] = args.manifest
+    if args.note:
+        meta["note"] = args.note
+    write_json(out / "meta.json", meta)
     write_json(out / "classes.json", classes)
     write_json(out / "weapons.json", weapons)
     write_json(out / "names_index.json", b.names_index(classes, weapons))
@@ -460,8 +472,8 @@ def main() -> int:
         except UnsupportedTexture as e:
             failed.append(str(e))
 
-    builds = sorted(p.name for p in args.out.iterdir() if p.is_dir() and (p / "meta.json").exists())
-    write_json(args.out / "builds.json", {"builds": builds, "latest": build_id})
+    builds = sorted((p.name for p in args.out.iterdir() if p.is_dir() and (p / "meta.json").exists()), key=version_key)
+    write_json(args.out / "builds.json", {"builds": builds, "latest": builds[-1]})
 
     print(f"build {build_id}: {len(classes['classes'])} classes, {len(weapons['weapons'])} weapons, {len(b.icons)} icons")
     if b.missing_text:
