@@ -17,7 +17,10 @@ Each game update gets its own `data/<build id>/` snapshot, so later versions can
 ## Usage
 
 ```bash
-uv run extractor/build.py            # extract from ~/work/sm2 (or set SM2_GAME_DIR / --game-dir)
+uv run extractor/build.py --build-id 15.1   # snapshot the installed game (or --game-dir PATH)
+uv run extractor/diff.py 15.0 15.1          # compare two snapshots
+uv run tools/fetch_changelog.py --list      # official patch posts on Steam
+uv run tools/fetch_changelog.py "Hotfix 15.1"   # save one as changelogs/15.1-hotfix.md
 uv run pytest                        # extractor tests
 cd web && npm ci && npm run dev      # local site
 cd web && npm test                   # changelog parser tests (uses the extracted data)
