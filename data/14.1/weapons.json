@@ -16298,7 +16298,9 @@
      "name": "Ultramarines",
      "nameKey": "UI_ABILITY_CHAINSWORD_PREORDER_NAME",
      "tier": null,
-     "stats": {}
+     "stats": {
+      "defense": "BLOCK"
+     }
     },
     {
      "id": "02",
@@ -16416,7 +16418,8 @@
      "stats": {
       "strikePower": 12,
       "strikeSpeed": 8,
-      "control": 4
+      "control": 4,
+      "defense": "BLOCK"
      }
     }
    ],
@@ -17238,7 +17241,9 @@
      "name": "Porphyr Shield",
      "nameKey": "UI_ABILITY_POWER_FIST_TWITCH_NAME",
      "tier": null,
-     "stats": {}
+     "stats": {
+      "defense": "BLOCK"
+     }
     },
     {
      "id": "02",
@@ -17260,7 +17265,8 @@
      "stats": {
       "strikePower": 9.5,
       "strikeSpeed": 1.5,
-      "control": 4.5
+      "control": 4.5,
+      "defense": "BLOCK"
      }
     },
     {
@@ -17295,7 +17301,8 @@
      "stats": {
       "strikePower": 13,
       "strikeSpeed": 1.5,
-      "control": 4.5
+      "control": 4.5,
+      "defense": "BLOCK"
      }
     },
     {
@@ -17330,7 +17337,8 @@
      "stats": {
       "strikePower": 17.5,
       "strikeSpeed": 1.5,
-      "control": 4.5
+      "control": 4.5,
+      "defense": "BLOCK"
      }
     },
     {
@@ -18159,7 +18167,8 @@
      "stats": {
       "strikePower": 9.5,
       "strikeSpeed": 4.5,
-      "control": 2
+      "control": 2,
+      "defense": "BLOCK"
      }
     },
     {
@@ -18206,7 +18215,8 @@
      "stats": {
       "strikePower": 16.5,
       "strikeSpeed": 5.5,
-      "control": 2
+      "control": 2,
+      "defense": "BLOCK"
      }
     },
     {
@@ -18992,7 +19002,8 @@
      "stats": {
       "strikePower": 10,
       "strikeSpeed": 2.5,
-      "control": 4
+      "control": 4,
+      "defense": "BLOCK"
      }
     },
     {
@@ -19027,7 +19038,8 @@
      "stats": {
       "strikePower": 14.5,
       "strikeSpeed": 2.5,
-      "control": 4
+      "control": 4,
+      "defense": "BLOCK"
      }
     },
     {
@@ -19074,7 +19086,8 @@
      "stats": {
       "strikePower": 17,
       "strikeSpeed": 2.5,
-      "control": 4
+      "control": 4,
+      "defense": "BLOCK"
      }
     },
     {
@@ -20180,7 +20193,8 @@
      "stats": {
       "strikePower": 10.5,
       "strikeSpeed": 3,
-      "control": 6
+      "control": 6,
+      "defense": "BLOCK"
      }
     },
     {
@@ -20215,7 +20229,8 @@
      "stats": {
       "strikePower": 13,
       "strikeSpeed": 3,
-      "control": 6
+      "control": 6,
+      "defense": "BLOCK"
      }
     },
     {
@@ -20262,7 +20277,8 @@
      "stats": {
       "strikePower": 16.5,
       "strikeSpeed": 3,
-      "control": 6
+      "control": 6,
+      "defense": "BLOCK"
      }
     },
     {
@@ -23912,7 +23928,8 @@
      "stats": {
       "strikePower": 15,
       "strikeSpeed": 2,
-      "control": 5
+      "control": 5,
+      "defense": "BLOCK"
      }
     },
     {
@@ -23947,7 +23964,8 @@
      "stats": {
       "strikePower": 17,
       "strikeSpeed": 2,
-      "control": 5
+      "control": 5,
+      "defense": "BLOCK"
      }
     },
     {
@@ -23958,7 +23976,8 @@
      "stats": {
       "strikePower": 12,
       "strikeSpeed": 4,
-      "control": 17
+      "control": 17,
+      "defense": "BLOCK"
      }
     }
    ],

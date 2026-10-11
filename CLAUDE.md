@@ -51,6 +51,10 @@ cd web && npm test && npm run build                        # vitest (uses real d
 - Perk **ids survive renames**: replaced perks keep their slot id (Steady Aim → Focused Strike). `formerNames` in the web app uses older snapshots' names to link old patch-note names.
 - Each perk has two independent sources: UI text/params (`ui_skills_library.sso`, the tooltip) and game logic (`perk_server_factory.sso` in the *server* pak). They can disagree.
 - Weapon stat numbers are only comparable within one weapon's tier (hidden per-tier modifiers). Half points display as `9+`.
+  Players name variants by specialty ("ammo version", "fencing version"); `web/src/variant-info.ts` derives it from
+  the stats where a variant beats all its tier siblings (plus melee defence style).
+- SSL omits fields equal to their default. Defaults are declared in the loose file
+  `client_pc/root/tools/meta_descs/meta_desc_ssl.ps` (`__defaultValue`), e.g. melee `defense` defaults to `BLOCK`.
 - Some builds ship **obfuscated string tables** (`6d3s9` + XOR hex); `strings.deobfuscate` handles it.
 - Hotfix 15.1 introduced a broken text key (`Rapid Recharge` instead of `UI_WEAPON_SKILL_MELEE_ONE_HANDED_HAMMER_02_DESC`); `loc_health.json` reports such issues per build.
 

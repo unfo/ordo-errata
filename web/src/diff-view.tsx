@@ -3,6 +3,7 @@ import type { DescPart, Perk, Snapshot } from "./data";
 import type { Change, ChangeMode, Effect, Highlights, Mode } from "./changes";
 import { hrefFor, labeler } from "./changelog";
 import { Desc, GroupedChanges, Icon, TooltipDiff } from "./components";
+import { useChipPreview } from "./mini-tree";
 import { APPLY_TYPES, humanize } from "./glossary";
 
 export interface DiffChange {
@@ -405,6 +406,7 @@ export function DiffView({
   };
   const hrefKey = (key: string) => entityKeys(snap, key, byType)[0] ?? key;
   const ownerOf = (key: string): Owner => owners(snap, byType, key);
+  const preview = useChipPreview(snap);
 
   return (
     <article class="notes">
@@ -436,7 +438,7 @@ export function DiffView({
             const href = hrefFor(snap, hrefKey(key));
             return (
               <div class="diff-entity" key={key}>
-                <button type="button" class="chip" disabled={!href} onClick={() => href && go(href)}>
+                <button type="button" class="chip" disabled={!href} onClick={() => href && go(href)} {...preview.bind(hrefKey(key))}>
                   <Icon class="chip-icon" name={l.icon} alt="" />
                   {l.label}
                 </button>
@@ -459,6 +461,7 @@ export function DiffView({
           })}
         </details>
       ))}
+      {preview.popover}
     </article>
   );
 }

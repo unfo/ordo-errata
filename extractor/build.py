@@ -274,6 +274,10 @@ class Builder:
             for vid, v in sorted(ui.get("versions", {}).items()):
                 vkey = v.get("nameUid") or v.get("versionName")
                 stats = {k: v[k] for k in STAT_LABEL_KEYS if k in v}
+                if kind == "melee":
+                    # SSL omits fields equal to their default; MeleeUiVersionData.defense defaults to BLOCK
+                    # (tools/meta_descs/meta_desc_ssl.ps).
+                    stats.setdefault("defense", "BLOCK")
                 # A variant without its own modifier group has the standard version's numbers.
                 stats.update(extra.get(wid, {}).get(vid) or extra.get(wid, {}).get("01", {}))
                 if v.get("hasCoolingParameter"):

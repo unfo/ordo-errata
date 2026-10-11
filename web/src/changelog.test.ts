@@ -174,3 +174,19 @@ describe("value labels", async () => {
     expect(lowerIsBetter("damage %")).toBe(false);
   });
 });
+
+describe("variant specialties", async () => {
+  const { specialtyLabel } = await import("./variant-info");
+  const label = (wid: string, vid: string) => {
+    const w = snap.weapons.weapons.find((x) => x.id === wid)!;
+    return specialtyLabel(snap.weapons, w, w.variants.find((v) => v.id === vid)!);
+  };
+  it("names variants by what they do best within their tier", () => {
+    expect(label("shotgun_meltagun", "03_a")).toBe("Ammo version"); // Drogos Reclamation - Alpha
+    expect(label("shotgun_meltagun", "03")).toBe("Range version"); // Salvation of Bakka
+    expect(label("arifle_bolt_rifle", "03_c")).toBe("Damage version"); // Drogos Reclamation - Beta
+    expect(label("melee_chainsword", "03_a")).toMatch(/^Fencing/); // Drogos Reclamation
+    expect(label("melee_power_sword", "02_a")).toMatch(/^Block/); // defence defaults to Block
+    expect(label("shotgun_meltagun", "01")).toBeUndefined(); // only variant in its tier
+  });
+});

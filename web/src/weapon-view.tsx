@@ -4,6 +4,7 @@ import { forMode, type Highlights, type Mode } from "./changes";
 import { ChangeList, EntityChanges, effectOf, Icon, PerkTile } from "./components";
 import { LeaderLines, PerkPanel, usePerkPanel } from "./perk-panel";
 import { displayName } from "./views";
+import { specialtyLabel } from "./variant-info";
 
 const TIER_ORDER = ["COMMON", "MASTERCRAFTED", "ARTIFICER", "RELIC", "HEROIC"] as const;
 
@@ -12,6 +13,13 @@ const RANGED_STATS = ["firePower", "accuracy", "fireRate", "reloadingSpeed", "co
 /** Plain numbers listed under the stat bars in game (not half-point "+" values). */
 const PLAIN_STATS = new Set(["magazine", "ammoReserve", "headshotMult"]);
 const MELEE_STATS = ["strikePower", "strikeSpeed", "control", "defense"];
+
+/** A stat value as the game shows it: "9+" for half points, "x2.8" headshot, plain ammo counts, defence labels. */
+export function formatStat(file: WeaponsFile, k: string, v: unknown): string {
+  if (typeof v !== "number") return file.defenseLabels[String(v)] ?? String(v);
+  if (k === "headshotMult") return `x${v}`;
+  return PLAIN_STATS.has(k) ? String(Math.round(v * 100) / 100) : statText(v);
+}
 
 /** The game shows half points as "+" (9.5 -> "9+"). */
 export function statText(v: number): string {
@@ -144,6 +152,7 @@ export function WeaponView({
                               >
                                 <Icon class="version-icon" name={weapon.icon} alt="" />
                                 <span class="version-name">{v.name}</span>
+                                {specialtyLabel(file, weapon, v) && <span class="version-spec">{specialtyLabel(file, weapon, v)}</span>}
                               </button>
                             );
                           })}
@@ -182,7 +191,7 @@ export function WeaponView({
 
 type Variant = Weapon["variants"][number];
 
-function statKeys(weapon: Weapon, stats: Variant["stats"]): string[] {
+export function statKeys(weapon: Weapon, stats: Variant["stats"]): string[] {
   return (weapon.kind === "melee" ? MELEE_STATS : RANGED_STATS).filter((k) => {
     if (!(k in stats)) return false;
     // Venting weapons show Venting Speed in place of Reloading Speed.
@@ -203,8 +212,7 @@ function statKeys(weapon: Weapon, stats: Variant["stats"]): string[] {
 function TierStats({ file, weapon, variant, deltas }: { file: WeaponsFile; weapon: Weapon; variant: Variant; deltas: boolean }) {
   const siblings = weapon.variants.filter((v) => v.tier === variant.tier);
   const keys = statKeys(weapon, variant.stats);
-  const fmt = (v: unknown, k: string) =>
-    typeof v === "number" ? (k === "headshotMult" ? `x${v}` : PLAIN_STATS.has(k) ? String(Math.round(v * 100) / 100) : statText(v)) : file.defenseLabels[String(v)] ?? String(v);
+  const fmt = (v: unknown, k: string) => formatStat(file, k, v);
   return (
     <>
       <table class="tier-stats">

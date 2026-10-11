@@ -1,5 +1,6 @@
 {
  "buildId": "14.1",
  "lang": "english",
- "note": "Steam manifest 6015590042991520040 (2026-09-01): final 14.1 state; Hotfix 14.2 was a server-side fix only"
+ "steamBuildId": "unknown",
+ "manifest": "6015590042991520040"
 }

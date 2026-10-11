@@ -1592,3 +1592,67 @@ button.link {
 .mini-prestige {
   margin-top: 6px;
 }
+
+/* ---- variant / weapon preview cards ---- */
+
+.spec-badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #111;
+  background: var(--gold);
+  padding: 1px 6px;
+  margin-bottom: 6px;
+}
+
+.mini-stats {
+  border-collapse: collapse;
+  font-size: 0.75rem;
+}
+
+.mini-stats th,
+.mini-stats td {
+  padding: 2px 8px 2px 0;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.mini-stats thead th {
+  font-weight: 600;
+  vertical-align: bottom;
+  color: var(--muted);
+}
+
+.mini-stats tbody th {
+  font-weight: normal;
+  color: var(--muted);
+}
+
+.mini-stats .sel {
+  color: var(--text);
+  background: #173049;
+  padding-left: 6px;
+}
+
+.mini-stats thead .sel {
+  color: var(--gold);
+}
+
+.weapon-card-tiers {
+  display: grid;
+  gap: 6px;
+  font-size: 0.78rem;
+}
+
+.weapon-card-tier .mini-head {
+  margin-bottom: 1px;
+}
+
+.version-spec {
+  font-size: 0.65rem;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}

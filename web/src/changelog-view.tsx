@@ -3,7 +3,7 @@ import type { Snapshot } from "./data";
 import type { Mode } from "./changes";
 import { hrefFor, resolveChangelog, type Aliases, type ParsedChangelog } from "./changelog";
 import { Icon } from "./components";
-import { MiniTreeCard } from "./mini-tree";
+import { useChipPreview } from "./mini-tree";
 import aliases from "../../changelogs/aliases.json";
 
 const sources = import.meta.glob<string>("../../changelogs/*.md", { query: "?raw", import: "default" });
@@ -47,13 +47,7 @@ export function ChangelogView({
   mode: Mode;
   go: (hash: string) => void;
 }) {
-  const [mini, setMini] = useState<{ perkId: string; x: number; y: number; above: boolean }>();
-  const showMini = (perkId: string, el: HTMLElement) => {
-    const r = el.getBoundingClientRect();
-    const above = r.bottom + 260 > innerHeight; // flip above the chip near the bottom of the window
-    setMini({ perkId, x: Math.min(r.left, innerWidth - 560), y: above ? r.top - 8 : r.bottom + 8, above });
-  };
-  const hideMini = () => setMini(undefined);
+  const preview = useChipPreview(snap);
 
   if (!parsed) return <p class="muted note">Pick patch notes in the header to see what changed.</p>;
 
@@ -97,10 +91,7 @@ export function ChangelogView({
                         class="chip"
                         disabled={!href}
                         onClick={() => href && go(href)}
-                        onMouseEnter={(e) => l.key.startsWith("perk:") && showMini(l.key.slice(5), e.currentTarget as HTMLElement)}
-                        onMouseLeave={hideMini}
-                        onFocus={(e) => l.key.startsWith("perk:") && showMini(l.key.slice(5), e.currentTarget as HTMLElement)}
-                        onBlur={hideMini}
+                        {...preview.bind(l.key)}
                       >
                         <Icon class="chip-icon" name={l.icon} alt="" />
                         {l.label}
@@ -113,11 +104,7 @@ export function ChangelogView({
           </div>
         );
       })}
-      {mini && (
-        <div class={`mini-popover ${mini.above ? "above" : ""}`} style={{ left: `${Math.max(8, mini.x)}px`, top: `${mini.y}px` }}>
-          <MiniTreeCard snap={snap} perkId={mini.perkId} />
-        </div>
-      )}
+      {preview.popover}
       {parsed.unmatched.length > 0 && (
         <details class="unmatched">
           <summary>{parsed.unmatched.length} highlighted names not found in the current game data</summary>
