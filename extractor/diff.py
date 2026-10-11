@@ -64,7 +64,7 @@ def perk_index(snap: dict) -> dict[str, dict]:
 
 def _norm_text(t: str | None) -> str | None:
     """Ignore line-break/spacing-only edits (literal "\\n" or whitespace)."""
-    return " ".join(t.replace("\\n", " ").split()) if t else t
+    return " ".join(t.replace("\\n", " ").split()) if t else t  # also collapses real newlines
 
 
 PERK_FIELDS = {

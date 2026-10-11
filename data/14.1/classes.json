@@ -28,7 +28,7 @@
       ],
       "icon": "auspex_scan",
       "desc": {
-       "text": "Ability: Scanning reveals and marks enemies in the selected area for 8 seconds, making them more vulnerable. Starting Perk: Any unequipped Ranged Weapon reloads automatically after 10 seconds.",
+       "text": "Ability: Scanning reveals and marks enemies in the selected area for 8 seconds, making them more vulnerable.\n Starting Perk: Any unequipped Ranged Weapon reloads automatically after 10 seconds.",
        "parts": [
         {
          "t": "Ability: Scanning reveals and marks enemies in the selected area for "
@@ -71,7 +71,7 @@
       ],
       "icon": "auspex_scan",
       "desc": {
-       "text": "Ability: Scanning reveals and marks enemies in the selected area for 8 seconds, making them more vulnerable. Starting Perk: Any unequipped Ranged Weapon reloads automatically after 10 seconds.",
+       "text": "Ability: Scanning reveals and marks enemies in the selected area for 8 seconds, making them more vulnerable.\n Starting Perk: Any unequipped Ranged Weapon reloads automatically after 10 seconds.",
        "parts": [
         {
          "t": "Ability: Scanning reveals and marks enemies in the selected area for "
@@ -546,7 +546,7 @@
            "TERMINUS"
           ],
           "desc": {
-           "text": "Scanning an Extremis- or 50%Terminus-level enemy restores Auspex Scan's Charge by {STRING3}",
+           "text": "Scanning an Extremis- or Terminus-level enemy restores Auspex Scan's Charge by 50%",
            "parts": [
             {
              "t": "Scanning an "
@@ -562,8 +562,7 @@
              "t": "- or "
             },
             {
-             "v": "50%",
-             "kind": null
+             "enemy": "TERMINUS"
             },
             {
              "tag": "terminus",
@@ -573,8 +572,8 @@
              "t": "-level enemy restores Auspex Scan's Charge by "
             },
             {
-             "v": "{STRING3}",
-             "missing": true
+             "v": "50%",
+             "kind": null
             }
            ]
           }
@@ -1034,7 +1033,7 @@
            "EXTREMIS"
           ],
           "desc": {
-           "text": "A Headshot will instantly kill a Majoris- or 120Extremis-level enemy marked by Auspex Scan. Cooldown is {STRING3} seconds.",
+           "text": "A Headshot will instantly kill a Majoris- or Extremis-level enemy marked by Auspex Scan. Cooldown is 120 seconds.",
            "parts": [
             {
              "t": "A Headshot will instantly kill a "
@@ -1050,8 +1049,7 @@
              "t": "- or "
             },
             {
-             "v": "120",
-             "kind": null
+             "enemy": "EXTREMIS"
             },
             {
              "tag": "extremis",
@@ -1061,8 +1059,8 @@
              "t": "-level enemy marked by Auspex Scan. Cooldown is "
             },
             {
-             "v": "{STRING3}",
-             "missing": true
+             "v": "120",
+             "kind": null
             },
             {
              "t": " seconds."
@@ -1455,7 +1453,7 @@
       ],
       "icon": "auspex_scan",
       "desc": {
-       "text": "Ability: Scanning reveals and marks enemies in the selected area for 8 seconds, making them more vulnerable. Starting Perk: Any unequipped Ranged Weapon reloads automatically after 10 seconds.",
+       "text": "Ability: Scanning reveals and marks enemies in the selected area for 8 seconds, making them more vulnerable.\n Starting Perk: Any unequipped Ranged Weapon reloads automatically after 10 seconds.",
        "parts": [
         {
          "t": "Ability: Scanning reveals and marks enemies in the selected area for "
@@ -1509,7 +1507,7 @@
       ],
       "icon": "jet_pack",
       "desc": {
-       "text": "Ability: Jump Pack enables enhanced dashes and powerful jumps, resulting in new combat moves. Starting Perk: Perfect Dodge timing increases by 50%.",
+       "text": "Ability: Jump Pack enables enhanced dashes and powerful jumps, resulting in new combat moves.\n Starting Perk: Perfect Dodge timing increases by 50%.",
        "parts": [
         {
          "t": "Ability: Jump Pack enables enhanced dashes and powerful jumps, resulting in new combat moves.\n Starting Perk: Perfect Dodge timing increases by "
@@ -1537,7 +1535,7 @@
       ],
       "icon": "jet_pack",
       "desc": {
-       "text": "Ability: Jump Pack enables enhanced dashes and powerful jumps, resulting in new combat moves. Starting Perk: Perfect Dodge timing increases by 50%.",
+       "text": "Ability: Jump Pack enables enhanced dashes and powerful jumps, resulting in new combat moves.\n Starting Perk: Perfect Dodge timing increases by 50%.",
        "parts": [
         {
          "t": "Ability: Jump Pack enables enhanced dashes and powerful jumps, resulting in new combat moves.\n Starting Perk: Perfect Dodge timing increases by "
@@ -1857,14 +1855,14 @@
            "EXTREMIS"
           ],
           "desc": {
-           "text": "Melee Damage increases by {STRING3} against Majoris- or 15%Extremis-level enemies",
+           "text": "Melee Damage increases by 15% against Majoris- or Extremis-level enemies",
            "parts": [
             {
              "t": "Melee Damage increases by "
             },
             {
-             "v": "{STRING3}",
-             "missing": true
+             "v": "15%",
+             "kind": null
             },
             {
              "t": " against "
@@ -1880,8 +1878,7 @@
              "t": "- or "
             },
             {
-             "v": "15%",
-             "kind": null
+             "enemy": "EXTREMIS"
             },
             {
              "tag": "extremis",
@@ -2428,14 +2425,14 @@
          "TERMINUS"
         ],
         "desc": {
-         "text": "All Squad Members deal {STRING3} more Melee Damage against Extremis- and 20%Terminus-level enemies",
+         "text": "All Squad Members deal 20% more Melee Damage against Extremis- and Terminus-level enemies",
          "parts": [
           {
            "t": "All Squad Members deal "
           },
           {
-           "v": "{STRING3}",
-           "missing": true
+           "v": "20%",
+           "kind": null
           },
           {
            "t": " more Melee Damage against "
@@ -2451,8 +2448,7 @@
            "t": "- and "
           },
           {
-           "v": "20%",
-           "kind": null
+           "enemy": "TERMINUS"
           },
           {
            "tag": "terminus",
@@ -2781,7 +2777,7 @@
       ],
       "icon": "grapnel_launcher",
       "desc": {
-       "text": "Ability: The Grapnel Launcher propels you to an enemy, allowing you to perform a Diving Kick. Starting Perk: Contested Health regenerates 50% faster.",
+       "text": "Ability: The Grapnel Launcher propels you to an enemy, allowing you to perform a Diving Kick.\n Starting Perk: Contested Health regenerates 50% faster.",
        "parts": [
         {
          "t": "Ability: The Grapnel Launcher propels you to an enemy, allowing you to perform a Diving Kick.\n Starting Perk: Contested Health regenerates "
@@ -2814,7 +2810,7 @@
       ],
       "icon": "grapnel_launcher",
       "desc": {
-       "text": "Ability: The Grapnel Launcher propels you to an enemy, allowing you to perform a Diving Kick. Starting Perk: Contested Health regenerates 50% faster.",
+       "text": "Ability: The Grapnel Launcher propels you to an enemy, allowing you to perform a Diving Kick.\n Starting Perk: Contested Health regenerates 50% faster.",
        "parts": [
         {
          "t": "Ability: The Grapnel Launcher propels you to an enemy, allowing you to perform a Diving Kick.\n Starting Perk: Contested Health regenerates "
@@ -3723,7 +3719,7 @@
          "TERMINUS"
         ],
         "desc": {
-         "text": "Melee Finishers of Extremis- or 30%Terminus-level enemies additionally restore Health by {STRING3} for any Squad Member",
+         "text": "Melee Finishers of Extremis- or Terminus-level enemies additionally restore Health by 30% for any Squad Member",
          "parts": [
           {
            "t": "Melee Finishers of "
@@ -3739,8 +3735,7 @@
            "t": "- or "
           },
           {
-           "v": "30%",
-           "kind": null
+           "enemy": "TERMINUS"
           },
           {
            "tag": "terminus",
@@ -3750,8 +3745,8 @@
            "t": "-level enemies additionally restore Health by "
           },
           {
-           "v": "{STRING3}",
-           "missing": true
+           "v": "30%",
+           "kind": null
           },
           {
            "t": " for any Squad Member"
@@ -4087,7 +4082,7 @@
       ],
       "icon": "grapnel_launcher",
       "desc": {
-       "text": "Ability: The Grapnel Launcher propels you to an enemy, allowing you to perform a Diving Kick. Starting Perk: Contested Health regenerates 50% faster.",
+       "text": "Ability: The Grapnel Launcher propels you to an enemy, allowing you to perform a Diving Kick.\n Starting Perk: Contested Health regenerates 50% faster.",
        "parts": [
         {
          "t": "Ability: The Grapnel Launcher propels you to an enemy, allowing you to perform a Diving Kick.\n Starting Perk: Contested Health regenerates "
@@ -4124,7 +4119,7 @@
       ],
       "icon": "banner",
       "desc": {
-       "text": "Ability: A placed banner restores Armour to all Squad Members in the area of effect. Starting Perk: Health increases by 30%.",
+       "text": "Ability: A placed banner restores Armour to all Squad Members in the area of effect.\n Starting Perk: Health increases by 30%.",
        "parts": [
         {
          "t": "Ability: A placed banner restores Armour to all Squad Members in the area of effect.\n Starting Perk: Health increases by "
@@ -4157,7 +4152,7 @@
       ],
       "icon": "banner",
       "desc": {
-       "text": "Ability: A placed banner restores Armour to all Squad Members in the area of effect. Starting Perk: Health increases by 30%.",
+       "text": "Ability: A placed banner restores Armour to all Squad Members in the area of effect.\n Starting Perk: Health increases by 30%.",
        "parts": [
         {
          "t": "Ability: A placed banner restores Armour to all Squad Members in the area of effect.\n Starting Perk: Health increases by "
@@ -4964,7 +4959,7 @@
            "EXTREMIS"
           ],
           "desc": {
-           "text": "A perfectly timed Parry or Block instantly Incapacitates a Majoris- or 90Extremis-level enemy. Cooldown is {STRING3} seconds.",
+           "text": "A perfectly timed Parry or Block instantly Incapacitates a Majoris- or Extremis-level enemy. Cooldown is 90 seconds.",
            "parts": [
             {
              "t": "A perfectly timed Parry or Block instantly Incapacitates a "
@@ -4980,8 +4975,7 @@
              "t": "- or "
             },
             {
-             "v": "90",
-             "kind": null
+             "enemy": "EXTREMIS"
             },
             {
              "tag": "extremis",
@@ -4991,8 +4985,8 @@
              "t": "-level enemy. Cooldown is "
             },
             {
-             "v": "{STRING3}",
-             "missing": true
+             "v": "90",
+             "kind": null
             },
             {
              "t": " seconds."
@@ -5124,14 +5118,14 @@
          "TERMINUS"
         ],
         "desc": {
-         "text": "All Squad Members take {STRING3} less Health Damage from Extremis- and 20%Terminus-level enemies",
+         "text": "All Squad Members take 20% less Health Damage from Extremis- and Terminus-level enemies",
          "parts": [
           {
            "t": "All Squad Members take "
           },
           {
-           "v": "{STRING3}",
-           "missing": true
+           "v": "20%",
+           "kind": null
           },
           {
            "t": " less Health Damage from "
@@ -5147,8 +5141,7 @@
            "t": "- and "
           },
           {
-           "v": "20%",
-           "kind": null
+           "enemy": "TERMINUS"
           },
           {
            "tag": "terminus",
@@ -5415,7 +5408,7 @@
       ],
       "icon": "banner",
       "desc": {
-       "text": "Ability: A placed banner restores Armour to all Squad Members in the area of effect. Starting Perk: Health increases by 30%.",
+       "text": "Ability: A placed banner restores Armour to all Squad Members in the area of effect.\n Starting Perk: Health increases by 30%.",
        "parts": [
         {
          "t": "Ability: A placed banner restores Armour to all Squad Members in the area of effect.\n Starting Perk: Health increases by "
@@ -5460,7 +5453,7 @@
       ],
       "icon": "camo_cloak",
       "desc": {
-       "text": "Ability: Camouflage hides you from enemies until your next attack breaks it. That attack will deal 25% more Damage. Starting Perk: Headshot Damage increases by 10%.",
+       "text": "Ability: Camouflage hides you from enemies until your next attack breaks it. That attack will deal 25% more Damage.\n Starting Perk: Headshot Damage increases by 10%.",
        "parts": [
         {
          "t": "Ability: Camouflage hides you from enemies until your next attack breaks it. That attack will deal "
@@ -5508,7 +5501,7 @@
       ],
       "icon": "camo_cloak",
       "desc": {
-       "text": "Ability: Camouflage hides you from enemies until your next attack breaks it. That attack will deal 25% more Damage. Starting Perk: Headshot Damage increases by 10%.",
+       "text": "Ability: Camouflage hides you from enemies until your next attack breaks it. That attack will deal 25% more Damage.\n Starting Perk: Headshot Damage increases by 10%.",
        "parts": [
         {
          "t": "Ability: Camouflage hides you from enemies until your next attack breaks it. That attack will deal "
@@ -6438,13 +6431,13 @@
          "TERMINUS"
         ],
         "desc": {
-         "text": "Weapon Spread is reduced by 15%, and Ranged Damage against Extremis- and 25%Terminus-level enemies is increased by {STRING4} for all Squad Members",
+         "text": "Weapon Spread is reduced by 25%, and Ranged Damage against Extremis- and Terminus-level enemies is increased by 15% for all Squad Members",
          "parts": [
           {
            "t": "Weapon Spread is reduced by "
           },
           {
-           "v": "15%",
+           "v": "25%",
            "kind": null
           },
           {
@@ -6461,8 +6454,7 @@
            "t": "- and "
           },
           {
-           "v": "25%",
-           "kind": null
+           "enemy": "TERMINUS"
           },
           {
            "tag": "terminus",
@@ -6472,8 +6464,8 @@
            "t": "-level enemies is increased by "
           },
           {
-           "v": "{STRING4}",
-           "missing": true
+           "v": "15%",
+           "kind": null
           },
           {
            "t": " for all Squad Members"
@@ -6792,7 +6784,7 @@
       ],
       "icon": "camo_cloak",
       "desc": {
-       "text": "Ability: Camouflage hides you from enemies until your next attack breaks it. That attack will deal 25% more Damage. Starting Perk: Headshot Damage increases by 10%.",
+       "text": "Ability: Camouflage hides you from enemies until your next attack breaks it. That attack will deal 25% more Damage.\n Starting Perk: Headshot Damage increases by 10%.",
        "parts": [
         {
          "t": "Ability: Camouflage hides you from enemies until your next attack breaks it. That attack will deal "
@@ -6844,7 +6836,7 @@
       ],
       "icon": "barrier_1",
       "desc": {
-       "text": "Ability: A powerful barrier blocks all Ranged Damage. Starting Perk: When Iron Halo is active, all Squad Members within 50 metres take 10% less Damage from Ranged Attacks.",
+       "text": "Ability: A powerful barrier blocks all Ranged Damage.\n Starting Perk: When Iron Halo is active, all Squad Members within 50 metres take 10% less Damage from Ranged Attacks.",
        "parts": [
         {
          "t": "Ability: A powerful barrier blocks all Ranged Damage.\n Starting Perk: When Iron Halo is active, all Squad Members within "
@@ -6892,7 +6884,7 @@
       ],
       "icon": "barrier_1",
       "desc": {
-       "text": "Ability: A powerful barrier blocks all Ranged Damage. Starting Perk: When Iron Halo is active, all Squad Members within 50 metres take 10% less Damage from Ranged Attacks.",
+       "text": "Ability: A powerful barrier blocks all Ranged Damage.\n Starting Perk: When Iron Halo is active, all Squad Members within 50 metres take 10% less Damage from Ranged Attacks.",
        "parts": [
         {
          "t": "Ability: A powerful barrier blocks all Ranged Damage.\n Starting Perk: When Iron Halo is active, all Squad Members within "
@@ -8102,7 +8094,7 @@
       ],
       "icon": "barrier_1",
       "desc": {
-       "text": "Ability: A powerful barrier blocks all Ranged Damage. Starting Perk: When Iron Halo is active, all Squad Members within 50 metres take 10% less Damage from Ranged Attacks.",
+       "text": "Ability: A powerful barrier blocks all Ranged Damage.\n Starting Perk: When Iron Halo is active, all Squad Members within 50 metres take 10% less Damage from Ranged Attacks.",
        "parts": [
         {
          "t": "Ability: A powerful barrier blocks all Ranged Damage.\n Starting Perk: When Iron Halo is active, all Squad Members within "
@@ -8152,7 +8144,7 @@
       "params": [],
       "icon": null,
       "desc": {
-       "text": "Ability: Unleash a powerful Servo-Gun volley Starting Perk: You can detect and activate Tarantula Sentry Guns. They will attack nearby enemies until they run out of ammo or are destroyed.",
+       "text": "Ability: Unleash a powerful Servo-Gun volley\n\nStarting Perk: You can detect and activate Tarantula Sentry Guns. They will attack nearby enemies until they run out of ammo or are destroyed.",
        "parts": [
         {
          "t": "Ability: Unleash a powerful Servo-Gun volley\n\nStarting Perk: You can detect and activate Tarantula Sentry Guns. They will attack nearby enemies until they run out of ammo or are destroyed."
@@ -9080,14 +9072,14 @@
          "EXTREMIS"
         ],
         "desc": {
-         "text": "Squad Members restore {STRING3} additional Armour Segment for Finishers on Majoris or 1Extremis enemies",
+         "text": "Squad Members restore 1 additional Armour Segment for Finishers on Majoris or Extremis enemies",
          "parts": [
           {
            "t": "Squad Members restore "
           },
           {
-           "v": "{STRING3}",
-           "missing": true
+           "v": "1",
+           "kind": null
           },
           {
            "t": " additional Armour Segment for Finishers on "
@@ -9103,8 +9095,7 @@
            "t": " or "
           },
           {
-           "v": "1",
-           "kind": null
+           "enemy": "EXTREMIS"
           },
           {
            "tag": "extremis",

@@ -1656,3 +1656,10 @@ button.link {
   text-transform: uppercase;
   letter-spacing: 0.06em;
 }
+
+/* Game texts contain line breaks ("Ability: ...\n Starting Perk: ..."). */
+.card-desc,
+.tip,
+.diff-desc {
+  white-space: pre-line;
+}

@@ -550,7 +550,7 @@
    {
     "kind": "tooltip",
     "old": {
-     "text": "A Headshot will instantly kill a Majoris- or 120Extremis-level enemy marked by Auspex Scan. Cooldown is {STRING3} seconds.",
+     "text": "A Headshot will instantly kill a Majoris- or Extremis-level enemy marked by Auspex Scan. Cooldown is 120 seconds.",
      "parts": [
       {
        "t": "A Headshot will instantly kill a "
@@ -566,8 +566,7 @@
        "t": "- or "
       },
       {
-       "v": "120",
-       "kind": null
+       "enemy": "EXTREMIS"
       },
       {
        "tag": "extremis",
@@ -577,8 +576,8 @@
        "t": "-level enemy marked by Auspex Scan. Cooldown is "
       },
       {
-       "v": "{STRING3}",
-       "missing": true
+       "v": "120",
+       "kind": null
       },
       {
        "t": " seconds."
@@ -586,7 +585,7 @@
      ]
     },
     "new": {
-     "text": "Activating Auspex Scan weakens one Majoris- or 100%Extremis-level enemy within its range. All damage bonuses applied by Auspex Scan against that target are increased by {STRING3}",
+     "text": "Activating Auspex Scan weakens one Majoris- or Extremis-level enemy within its range. All damage bonuses applied by Auspex Scan against that target are increased by 100%",
      "parts": [
       {
        "t": "Activating Auspex Scan weakens one "
@@ -602,8 +601,7 @@
        "t": "- or "
       },
       {
-       "v": "100%",
-       "kind": null
+       "enemy": "EXTREMIS"
       },
       {
        "tag": "extremis",
@@ -613,8 +611,8 @@
        "t": "-level enemy within its range. All damage bonuses applied by Auspex Scan against that target are increased by "
       },
       {
-       "v": "{STRING3}",
-       "missing": true
+       "v": "100%",
+       "kind": null
       }
      ]
     }
@@ -702,7 +700,7 @@
      ]
     },
     "new": {
-     "text": "Scanning an Extremis- or 50%Terminus-level enemy restores {STRING3} Auspex Scan Charge",
+     "text": "Scanning an Extremis- or Terminus-level enemy restores 50% Auspex Scan Charge",
      "parts": [
       {
        "t": "Scanning an "
@@ -718,8 +716,7 @@
        "t": "- or "
       },
       {
-       "v": "50%",
-       "kind": null
+       "enemy": "TERMINUS"
       },
       {
        "tag": "terminus",
@@ -729,8 +726,8 @@
        "t": "-level enemy restores "
       },
       {
-       "v": "{STRING3}",
-       "missing": true
+       "v": "50%",
+       "kind": null
       },
       {
        "t": " Auspex Scan Charge"
@@ -795,7 +792,7 @@
    {
     "kind": "tooltip",
     "old": {
-     "text": "Scanning an Extremis- or 50%Terminus-level enemy restores Auspex Scan's Charge by {STRING3}",
+     "text": "Scanning an Extremis- or Terminus-level enemy restores Auspex Scan's Charge by 50%",
      "parts": [
       {
        "t": "Scanning an "
@@ -811,8 +808,7 @@
        "t": "- or "
       },
       {
-       "v": "50%",
-       "kind": null
+       "enemy": "TERMINUS"
       },
       {
        "tag": "terminus",
@@ -822,8 +818,8 @@
        "t": "-level enemy restores Auspex Scan's Charge by "
       },
       {
-       "v": "{STRING3}",
-       "missing": true
+       "v": "50%",
+       "kind": null
       }
      ]
     },
@@ -909,7 +905,7 @@
    {
     "kind": "tooltip",
     "old": {
-     "text": "Ability: Scanning reveals and marks enemies in the selected area for 8 seconds, making them more vulnerable. Starting Perk: Any unequipped Ranged Weapon reloads automatically after 10 seconds.",
+     "text": "Ability: Scanning reveals and marks enemies in the selected area for 8 seconds, making them more vulnerable.\n Starting Perk: Any unequipped Ranged Weapon reloads automatically after 10 seconds.",
      "parts": [
       {
        "t": "Ability: Scanning reveals and marks enemies in the selected area for "
@@ -931,7 +927,7 @@
      ]
     },
     "new": {
-     "text": "Ability: Scanning reveals and marks enemies in the selected area for 10 seconds, making them more vulnerable.\\n Starting Perk: Bolt Weapons penetrate 8 more enemies. Non-Headshot Damage increases by {STRING3}.",
+     "text": "Ability: Scanning reveals and marks enemies in the selected area for 10 seconds, making them more vulnerable.\n Starting Perk: Bolt Weapons penetrate 8 more enemies. Non-Headshot Damage increases by {STRING3}.",
      "parts": [
       {
        "t": "Ability: Scanning reveals and marks enemies in the selected area for "
@@ -941,7 +937,7 @@
        "kind": null
       },
       {
-       "t": " seconds, making them more vulnerable.\\n  Starting Perk: Bolt Weapons penetrate "
+       "t": " seconds, making them more vulnerable.\n  Starting Perk: Bolt Weapons penetrate "
       },
       {
        "v": "8",
@@ -1089,7 +1085,7 @@
    {
     "kind": "tooltip",
     "old": {
-     "text": "Ability: Scanning reveals and marks enemies in the selected area for 8 seconds, making them more vulnerable. Starting Perk: Any unequipped Ranged Weapon reloads automatically after 10 seconds.",
+     "text": "Ability: Scanning reveals and marks enemies in the selected area for 8 seconds, making them more vulnerable.\n Starting Perk: Any unequipped Ranged Weapon reloads automatically after 10 seconds.",
      "parts": [
       {
        "t": "Ability: Scanning reveals and marks enemies in the selected area for "
@@ -1111,7 +1107,7 @@
      ]
     },
     "new": {
-     "text": "Ability: Scanning reveals and marks enemies in the selected area for 8 seconds, making them more vulnerable.\\n Starting Perk: Bolt Weapons penetrate 1 more enemies. Non-Headshot Damage increases by 20%.",
+     "text": "Ability: Scanning reveals and marks enemies in the selected area for 8 seconds, making them more vulnerable.\n Starting Perk: Bolt Weapons penetrate 1 more enemies. Non-Headshot Damage increases by 20%.",
      "parts": [
       {
        "t": "Ability: Scanning reveals and marks enemies in the selected area for "
@@ -1121,7 +1117,7 @@
        "kind": null
       },
       {
-       "t": " seconds, making them more vulnerable.\\n  Starting Perk: Bolt Weapons penetrate "
+       "t": " seconds, making them more vulnerable.\n  Starting Perk: Bolt Weapons penetrate "
       },
       {
        "v": "1",

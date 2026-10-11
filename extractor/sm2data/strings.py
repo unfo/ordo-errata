@@ -63,7 +63,8 @@ def load_strings(pak: PakIndex, lang: str = "english") -> StringTable:
         m = _LINE.match(line)
         if not m:
             continue
-        key, val = m.group("key"), deobfuscate(m.group("val"))
+        # "\n" in the table is an escaped line break the game renders as a new line.
+        key, val = m.group("key"), deobfuscate(m.group("val")).replace("\\n", "\n")
         if not _KEY_OK.match(key):
             table.malformed.append({"line": lineno, "key": key, "text": val, "prev_key": prev_key})
         table.values[key] = val
@@ -79,15 +80,16 @@ def render_description(template: str, params: list[dict], presence: list[str] | 
     ``{"enemy": "MAJORIS"}`` (enemy tier icon) and ``{"tag": "majoris", "t": "Majoris"}``
     (styled run) so the UI can render values and icons like the game does.
 
-    For enemy-presence perks, ``{STRING1}`` is the enemy tier icon and the
-    regular parameters fill ``{STRING2}`` onward.
+    For enemy-presence perks, ``{STRING1}``..``{STRINGn}`` are the n enemy tier icons and
+    the regular parameters fill the placeholders after them.
     """
     presence = presence or []
     values: dict[int, dict] = {}
-    offset = 1
-    if presence:
-        values[1] = {"enemy": presence[0]}
-        offset = 2
+    # Enemy-tier icons take the first placeholders ({STRING1}..{STRINGn} for n tiers), values follow:
+    # "... by {STRING3} against {STRING1}Majoris- or {STRING2}Extremis-level enemies".
+    for i, tier in enumerate(presence):
+        values[i + 1] = {"enemy": tier}
+    offset = len(presence) + 1
     for i, p in enumerate(params):
         values[i + offset] = p
 
@@ -125,4 +127,4 @@ def render_description(template: str, params: list[dict], presence: list[str] | 
     emit_text(template[pos:])
 
     text = "".join(p.get("t") or p.get("v") or "" for p in parts)
-    return {"text": re.sub(r"\s+", " ", text).strip(), "parts": parts}
+    return {"text": re.sub(r"[ \t]+", " ", text).strip(), "parts": parts}

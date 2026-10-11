@@ -94,6 +94,7 @@ class Builder:
         self.missing_icons: set[str] = set()
         self.missing_text: dict[str, set[str]] = {}
         self.recovered_text: dict[str, dict] = {}
+        self.unfilled: dict[str, list[str]] = {}
         self.ui_skills = self._load_ui_skills()
         self.skill_links = ssl.loads(pak.read(MASTERY_SKILLS))["skills"]
         # Perk icon ids are switcher keys, e.g. perk_berserk_12 -> perk_berserk_12_upd texture.
@@ -176,6 +177,15 @@ class Builder:
                 self.icon(f"icn_{p.lower()}")
         if template is not None:
             out["desc"] = render_description(template, params, presence)
+            unfilled = [p["v"] for p in out["desc"]["parts"] if p.get("missing")]
+            if unfilled and "textIssue" not in out:
+                # The game's own tooltip data supplies fewer values than its text expects.
+                out["textIssue"] = {
+                    "kind": "missingValue",
+                    "note": f"The tooltip text expects {', '.join(unfilled)} but the game data supplies only "
+                    f"{len(params)} value(s), so the game shows the placeholder or a wrong number.",
+                }
+                self.unfilled.setdefault(perk_type, unfilled)
         if name is None and name_key:
             out.setdefault("textIssue", {"kind": "missing", "note": f"No text for {name_key} in the game files."})
         return out
@@ -379,6 +389,7 @@ class Builder:
             "recovered": dict(sorted(self.recovered_text.items())),
             "missingKeys": {k: sorted(v) for k, v in sorted(self.missing_text.items())},
             "missingIcons": sorted(self.missing_icons),
+            "unfilledPlaceholders": dict(sorted(self.unfilled.items())),
         }
 
 

@@ -17,7 +17,7 @@ export interface Perk {
   icon?: string | null;
   presence?: string[];
   desc?: { text: string; parts: DescPart[] };
-  textIssue?: { kind: "brokenKey" | "missing"; note: string };
+  textIssue?: { kind: "brokenKey" | "missing" | "missingValue"; note: string };
   blockedBy?: string[];
   unlocks?: string[];
   /** Weapon perks: 1 = top row, 2 = bottom row. */

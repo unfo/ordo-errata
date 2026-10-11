@@ -58,5 +58,10 @@
    "PvEMeleeThunderHammerOneHandedPowerIncreaseOnMaxCharges"
   ]
  },
- "missingIcons": []
+ "missingIcons": [],
+ "unfilledPlaceholders": {
+  "PveSoldierReloadHolsterWeapon": [
+   "{STRING3}"
+  ]
+ }
 }

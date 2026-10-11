@@ -40,5 +40,10 @@
    "hgun_absolver_bolt_pistol"
   ]
  },
- "missingIcons": []
+ "missingIcons": [],
+ "unfilledPlaceholders": {
+  "PveSoldierReloadHolsterWeapon": [
+   "{STRING3}"
+  ]
+ }
 }

@@ -45,3 +45,13 @@ def test_deobfuscate_xor_hex_strings():
     assert deobfuscate("6d3s989ddb8ddaedda9dd") == "Test"
     assert deobfuscate("6d3s9ffd1ffd1ffd1") == "..."
     assert deobfuscate("Plain text") == "Plain text"
+
+
+def test_two_enemy_tiers_take_string1_and_string2():
+    r = render_description(
+        "Melee Damage increases by {STRING3} against {STRING1}[majoris]Majoris[/majoris]- or {STRING2}[extremis]Extremis[/extremis]-level enemies",
+        [{"text": "15%"}],
+        ["MAJORIS", "EXTREMIS"],
+    )
+    assert r["text"] == "Melee Damage increases by 15% against Majoris- or Extremis-level enemies"
+    assert [p for p in r["parts"] if "enemy" in p] == [{"enemy": "MAJORIS"}, {"enemy": "EXTREMIS"}]

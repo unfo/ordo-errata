@@ -319,7 +319,12 @@ export function PerkCard({
       )}
       {perk.textIssue && (
         <p class="warn">
-          ⚠ {perk.textIssue.kind === "brokenKey" ? "The game shows broken text for this perk." : "Text missing in game."}{" "}
+          ⚠{" "}
+          {perk.textIssue.kind === "brokenKey"
+            ? "The game shows broken text for this perk."
+            : perk.textIssue.kind === "missingValue"
+              ? "The game's tooltip is missing a value."
+              : "Text missing in game."}{" "}
           <span class="muted">{perk.textIssue.note}</span>
         </p>
       )}
