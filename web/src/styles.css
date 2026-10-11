@@ -1449,3 +1449,9 @@ button.link {
 .owner-group .diff-entity {
   margin: 6px 8px;
 }
+
+.brand .tagline {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--muted);
+}

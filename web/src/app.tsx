@@ -84,7 +84,8 @@ export function App() {
     <div class="app">
       <header class="top">
         <div class="brand">
-          <h1>SM2 Patch Helper</h1>
+          <h1>Ordo Errata</h1>
+          <span class="tagline">Space Marine 2 patch notes, mapped onto the perk trees · unofficial fan tool</span>
           <span class="muted">game build {snap.buildId}</span>
         </div>
         <div class="controls">
