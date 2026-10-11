@@ -65,7 +65,16 @@ export function ClassView({
   const root = useRef<HTMLDivElement>(null);
   const visible = (perks: Perk[]) => perks.filter((p) => !p.noUi);
   // Base kits list some UI perks twice (e.g. the ability and its upgrade share a name).
-  const uniqueByName = (perks: Perk[]) => perks.filter((p, i) => perks.findIndex((q) => q.name === p.name) === i);
+  // When names repeat, keep the entry without text issues: the game shows that one (verified for Auspex Scan,
+  // whose second entry has an unfilled {STRING3} that the game never displays).
+  const uniqueByName = (perks: Perk[]) => {
+    const best = new Map<string | undefined, Perk>();
+    for (const p of perks) {
+      const cur = best.get(p.name);
+      if (!cur || (cur.textIssue && !p.textIssue)) best.set(p.name, p);
+    }
+    return [...best.values()];
+  };
   const classChanges = forMode(highlights.get(`class:${cls.id}`), mode);
 
   const tile = (p: Perk, shape: Shape, ctx: string, level?: number) => (
