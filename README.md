@@ -1,6 +1,6 @@
 # Ordo Errata
 
-**Space Marine 2 patch notes, mapped onto the perk trees.** Live site: https://unfo.github.io/ordo-errata/
+**Space Marine 2 patch notes, mapped onto the perk trees.** Live site: https://jw.fi/ordo-errata/
 
 An unofficial fan tool for **Warhammer 40,000: Space Marine 2** that shows patch-note changes on the game's own perk trees and weapon trees, using the game's icons.
 
