@@ -8,7 +8,9 @@ import { displayName } from "./views";
 const TIER_ORDER = ["COMMON", "MASTERCRAFTED", "ARTIFICER", "RELIC", "HEROIC"] as const;
 
 /** Stats in the order the game lists them. Venting weapons show Venting Speed instead of reloading. */
-const RANGED_STATS = ["firePower", "accuracy", "fireRate", "reloadingSpeed", "cooling", "chargingSpeed", "piercing", "range"];
+const RANGED_STATS = ["firePower", "accuracy", "fireRate", "reloadingSpeed", "cooling", "chargingSpeed", "piercing", "range", "magazine", "ammoReserve", "headshotMult"];
+/** Plain numbers listed under the stat bars in game (not half-point "+" values). */
+const PLAIN_STATS = new Set(["magazine", "ammoReserve", "headshotMult"]);
 const MELEE_STATS = ["strikePower", "strikeSpeed", "control", "defense"];
 
 /** The game shows half points as "+" (9.5 -> "9+"). */
@@ -186,8 +188,9 @@ function statKeys(weapon: Weapon, stats: Variant["stats"]): string[] {
     // Venting weapons show Venting Speed in place of Reloading Speed.
     if (k === "reloadingSpeed" && stats._venting) return false;
     if (k === "cooling" && !stats._venting) return false;
-    // Not listed in game for venting (plasma) weapons either.
-    if (k === "piercing" && stats._venting) return false;
+    // The game omits Piercing at its minimum value of 1 (e.g. Plasma Pistol) but lists it otherwise,
+    // also for venting weapons (Heavy Bolter: Piercing 4).
+    if (k === "piercing" && stats[k] === 1) return false;
     return true;
   });
 }
@@ -200,7 +203,8 @@ function statKeys(weapon: Weapon, stats: Variant["stats"]): string[] {
 function TierStats({ file, weapon, variant, deltas }: { file: WeaponsFile; weapon: Weapon; variant: Variant; deltas: boolean }) {
   const siblings = weapon.variants.filter((v) => v.tier === variant.tier);
   const keys = statKeys(weapon, variant.stats);
-  const fmt = (v: unknown) => (typeof v === "number" ? statText(v) : file.defenseLabels[String(v)] ?? String(v));
+  const fmt = (v: unknown, k: string) =>
+    typeof v === "number" ? (k === "headshotMult" ? `x${v}` : PLAIN_STATS.has(k) ? String(Math.round(v * 100) / 100) : statText(v)) : file.defenseLabels[String(v)] ?? String(v);
   return (
     <>
       <table class="tier-stats">
@@ -224,8 +228,13 @@ function TierStats({ file, weapon, variant, deltas }: { file: WeaponsFile; weapo
                 const d = typeof val === "number" && typeof base === "number" ? val - base : 0;
                 return (
                   <td key={v.id} class={v.id === variant.id ? "sel" : ""}>
-                    {fmt(val)}
-                    {deltas && v.id !== variant.id && d !== 0 && <span class={d > 0 ? "up" : "down"}>{d > 0 ? " ▲" : " ▼"}{statText(Math.abs(d))}</span>}
+                    {fmt(val, k)}
+                    {deltas && v.id !== variant.id && d !== 0 && (
+                      <span class={d > 0 ? "up" : "down"}>
+                        {d > 0 ? " ▲" : " ▼"}
+                        {PLAIN_STATS.has(k) ? Math.round(Math.abs(d) * 100) / 100 : statText(Math.abs(d))}
+                      </span>
+                    )}
                   </td>
                 );
               })}

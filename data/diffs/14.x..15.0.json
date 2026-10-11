@@ -4890,6 +4890,86 @@
     "new": 90
    }
   ],
+  "variant:hgun_heavy_bolt_pistol/01": [
+   {
+    "kind": "stat",
+    "field": "headshotMult",
+    "old": 2.1,
+    "new": 3.5
+   }
+  ],
+  "variant:hgun_heavy_bolt_pistol/02": [
+   {
+    "kind": "stat",
+    "field": "headshotMult",
+    "old": 2.1,
+    "new": 3.5
+   }
+  ],
+  "variant:hgun_heavy_bolt_pistol/02_a": [
+   {
+    "kind": "stat",
+    "field": "headshotMult",
+    "old": 2.1,
+    "new": 3.5
+   }
+  ],
+  "variant:hgun_heavy_bolt_pistol/02_b": [
+   {
+    "kind": "stat",
+    "field": "headshotMult",
+    "old": 2.1,
+    "new": 3.5
+   }
+  ],
+  "variant:hgun_heavy_bolt_pistol/03": [
+   {
+    "kind": "stat",
+    "field": "headshotMult",
+    "old": 2.1,
+    "new": 3.5
+   }
+  ],
+  "variant:hgun_heavy_bolt_pistol/03_a": [
+   {
+    "kind": "stat",
+    "field": "headshotMult",
+    "old": 2.1,
+    "new": 3.5
+   }
+  ],
+  "variant:hgun_heavy_bolt_pistol/03_b": [
+   {
+    "kind": "stat",
+    "field": "headshotMult",
+    "old": 2.1,
+    "new": 3.5
+   }
+  ],
+  "variant:hgun_heavy_bolt_pistol/04": [
+   {
+    "kind": "stat",
+    "field": "headshotMult",
+    "old": 2.1,
+    "new": 3.5
+   }
+  ],
+  "variant:hgun_heavy_bolt_pistol/04_a": [
+   {
+    "kind": "stat",
+    "field": "headshotMult",
+    "old": 2.1,
+    "new": 3.5
+   }
+  ],
+  "variant:hgun_heavy_bolt_pistol/04_b": [
+   {
+    "kind": "stat",
+    "field": "headshotMult",
+    "old": 2.1,
+    "new": 3.5
+   }
+  ],
   "variant:hwpn_support_heavy_bolter/05": [
    {
     "kind": "value",
@@ -4898,7 +4978,21 @@
     "new": 90
    }
   ],
+  "variant:hwpn_support_heavy_meltagun/01": [
+   {
+    "kind": "stat",
+    "field": "magazine",
+    "old": 20,
+    "new": 16
+   }
+  ],
   "variant:hwpn_support_heavy_meltagun/02": [
+   {
+    "kind": "stat",
+    "field": "magazine",
+    "old": 20,
+    "new": 16
+   },
    {
     "kind": "value",
     "field": "ModificatorDamageCoefficientSpline.coeffDamage.spline[0]",
@@ -4944,7 +5038,29 @@
     "new": null
    }
   ],
+  "variant:hwpn_support_heavy_meltagun/02_a": [
+   {
+    "kind": "stat",
+    "field": "magazine",
+    "old": 23,
+    "new": 19
+   }
+  ],
+  "variant:hwpn_support_heavy_meltagun/02_b": [
+   {
+    "kind": "stat",
+    "field": "magazine",
+    "old": 20,
+    "new": 16
+   }
+  ],
   "variant:hwpn_support_heavy_meltagun/03": [
+   {
+    "kind": "stat",
+    "field": "magazine",
+    "old": 20,
+    "new": 16
+   },
    {
     "kind": "value",
     "field": "ModificatorDamageCoefficientSpline.coeffDamage.spline[0]",
@@ -4990,7 +5106,29 @@
     "new": null
    }
   ],
+  "variant:hwpn_support_heavy_meltagun/03_a": [
+   {
+    "kind": "stat",
+    "field": "magazine",
+    "old": 26,
+    "new": 22
+   }
+  ],
+  "variant:hwpn_support_heavy_meltagun/03_b": [
+   {
+    "kind": "stat",
+    "field": "magazine",
+    "old": 20,
+    "new": 16
+   }
+  ],
   "variant:hwpn_support_heavy_meltagun/04": [
+   {
+    "kind": "stat",
+    "field": "magazine",
+    "old": 20,
+    "new": 16
+   },
    {
     "kind": "value",
     "field": "ModificatorDamageCoefficientSpline.coeffDamage.spline[0]",
@@ -5036,6 +5174,22 @@
     "new": null
    }
   ],
+  "variant:hwpn_support_heavy_meltagun/04_a": [
+   {
+    "kind": "stat",
+    "field": "magazine",
+    "old": 30,
+    "new": 26
+   }
+  ],
+  "variant:hwpn_support_heavy_meltagun/04_b": [
+   {
+    "kind": "stat",
+    "field": "magazine",
+    "old": 20,
+    "new": 16
+   }
+  ],
   "variant:melee_power_axe/05_a": [
    {
     "kind": "added",
@@ -5050,7 +5204,21 @@
     "new": "Standard-Issue"
    }
   ],
+  "variant:shotgun_meltagun/01": [
+   {
+    "kind": "stat",
+    "field": "ammoReserve",
+    "old": 15,
+    "new": 10
+   }
+  ],
   "variant:shotgun_meltagun/02": [
+   {
+    "kind": "stat",
+    "field": "ammoReserve",
+    "old": 15,
+    "new": 10
+   },
    {
     "kind": "value",
     "field": "ModificatorDamageCoefficientSpline.coeffDamage.spline[0]",
@@ -5096,7 +5264,21 @@
     "new": null
    }
   ],
+  "variant:shotgun_meltagun/02_a": [
+   {
+    "kind": "stat",
+    "field": "ammoReserve",
+    "old": 18,
+    "new": 13
+   }
+  ],
   "variant:shotgun_meltagun/03": [
+   {
+    "kind": "stat",
+    "field": "ammoReserve",
+    "old": 15,
+    "new": 10
+   },
    {
     "kind": "value",
     "field": "ModificatorDamageCoefficientSpline.coeffDamage.spline[0]",
@@ -5142,7 +5324,21 @@
     "new": null
    }
   ],
+  "variant:shotgun_meltagun/03_a": [
+   {
+    "kind": "stat",
+    "field": "ammoReserve",
+    "old": 21,
+    "new": 16
+   }
+  ],
   "variant:shotgun_meltagun/04": [
+   {
+    "kind": "stat",
+    "field": "ammoReserve",
+    "old": 15,
+    "new": 10
+   },
    {
     "kind": "value",
     "field": "ModificatorDamageCoefficientSpline.coeffDamage.spline[0]",
@@ -5188,7 +5384,29 @@
     "new": null
    }
   ],
+  "variant:shotgun_meltagun/04_a": [
+   {
+    "kind": "stat",
+    "field": "ammoReserve",
+    "old": 24,
+    "new": 19
+   }
+  ],
+  "variant:shotgun_meltagun/04_b": [
+   {
+    "kind": "stat",
+    "field": "ammoReserve",
+    "old": 15,
+    "new": 10
+   }
+  ],
   "variant:shotgun_meltagun/05": [
+   {
+    "kind": "stat",
+    "field": "ammoReserve",
+    "old": 15,
+    "new": 10
+   },
    {
     "kind": "value",
     "field": "ModificatorDamageAmount.modificator",
@@ -5197,6 +5415,12 @@
    }
   ],
   "variant:smg_bolt_carbine/02_a": [
+   {
+    "kind": "stat",
+    "field": "headshotMult",
+    "old": 2.9,
+    "new": 3.3
+   },
    {
     "kind": "value",
     "field": "ModificatorHeadshotMultiplier.modificator",
@@ -5207,6 +5431,12 @@
   ],
   "variant:smg_bolt_carbine/03_a": [
    {
+    "kind": "stat",
+    "field": "headshotMult",
+    "old": 2.9,
+    "new": 3.3
+   },
+   {
     "kind": "value",
     "field": "ModificatorHeadshotMultiplier.modificator",
     "old": 0.5,
@@ -5215,6 +5445,12 @@
    }
   ],
   "variant:smg_bolt_carbine/04_a": [
+   {
+    "kind": "stat",
+    "field": "headshotMult",
+    "old": 2.9,
+    "new": 3.3
+   },
    {
     "kind": "value",
     "field": "ModificatorHeadshotMultiplier.modificator",

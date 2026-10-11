@@ -12,3 +12,11 @@ All weapon shots: **Armoury** → select the class → open the weapon slot → 
 | 3 | Heavy → **Heavy Bolter** → *Perk Tree* | Whole tree, no hover | Branch perks in Master-Crafted, Artificer and Relic column 2 (6 branch perks in total) | `weapon_tree` |
 | 4 | Same as 3 | Hover **Heavy Immunity** (Master-Crafted, branch above column 2) | Tooltip text and values vs our card | `weapon_tree` |
 | 5 | Vanguard → **Perks** | Hover **Adrenaline Rush** (Signature column, bottom) | Enemy-tier icon + "Majoris" styling in the description | `ui` |
+
+## Results (2026-10-11)
+
+1. Heavy Bolter lists Piercing although it vents heat. The game hides Piercing only at its minimum value 1 (Plasma Pistol). Fixed.
+2. Ranged weapons also list Magazine Capacity, Ammo Reserve (absent when 0, e.g. venting weapons) and Headshot Multiplier (absent when the shot has none). These are computed from the hidden values: base description, or a heroic preset override, plus the variant's modifiers. Matches Bolt Rifle relic 25/125/x2.8, Heavy Bolter relic 450/x2 and heroic Plasma Pistol 100.
+3. Heavy Bolter tree: branch perks above/below column 2 in Master-Crafted, Artificer and Relic, plus Relic column 3. Our layout matches.
+4. Heavy Immunity tooltip text matches the game word for word.
+5. Adrenaline Rush: the enemy-tier icon and name are tinted red-orange. Fixed (the icon is now tinted via a CSS mask).

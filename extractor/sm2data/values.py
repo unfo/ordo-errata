@@ -103,3 +103,55 @@ def extract_values(pak: PakIndex, weapon_ids: list[str], perk_types: set[str]) -
             out.setdefault(f"weapon:{wid}", {}).update(_flat(pvp, "pvp"))
 
     return {k: dict(sorted(v.items())) for k, v in sorted(out.items())}
+
+
+def _apply(base: float, mod: dict) -> float:
+    m = mod.get("modificator", 0)
+    if mod.get("applyType") == "PERCENT":
+        return base * (1 + m / 100)
+    return base + m  # ABSOLUTE is the default for these modifiers
+
+
+def firearm_extra_stats(pak: PakIndex, weapon_ids: list[str]) -> dict[str, dict[str, dict]]:
+    """Stats the game lists below the stat bars but which are not in the UI stat data:
+    magazine capacity, ammo reserve and headshot multiplier, per weapon variant.
+
+    Computed like the game does: the PvE firearm description (or a heroic variant's
+    "godlike" preset override) plus the variant's clip/ammo/headshot modifiers.
+    Verified against in-game screenshots (Bolt Rifle relic 25/125/x2.8, Heavy Bolter 450/x2,
+    heroic Plasma Pistol 100).
+    """
+    descs = ssl.loads(pak.read(FIREARMS["pve"])).get("firearms", {})
+    mods = ssl.loads(pak.read(FIREARM_MODS))
+    presets = mods.get("godlikeModificatorPresets", {})
+    groups = {g.get("firearmUid"): g.get("modificatorsGroups", {}) for g in mods.get("modificatorsGroups", [])}
+
+    out: dict[str, dict[str, dict]] = {}
+    for wid in weapon_ids:
+        if wid not in descs:
+            continue
+        variants: dict[str, dict] = {}
+        for gid, group in {f"{wid}_01": {}, **groups.get(wid, {})}.items():
+            vid = gid.removeprefix(f"{wid}_")
+            m = group.get("modificators", {}) if group else {}
+            desc = descs[wid]
+            preset = m.get("ModificatorUsingGodlikeModificatorPreset", {}).get("godlikeModificatorPresetName")
+            if preset and presets.get(preset, {}).get("descriptionOverride"):
+                desc = presets[preset]["descriptionOverride"]
+            barrels = desc.get("barrelDescriptions", {})
+            barrel = barrels.get("auto") or next(iter(barrels.values()), {})
+            clip_name = barrel.get("clipName", "default_clip")
+            clip = desc.get("clipsSettings", {}).get(clip_name, {})
+            cart = desc.get("cartridgeDescriptions", {}).get(barrel.get("cartridgeName", ""), {})
+            stats: dict = {}
+            if "maxAmmo" in clip:
+                stats["magazine"] = _apply(clip["maxAmmo"], m.get("ModificatorClipAmmo", {}))
+            reserve = desc.get("ammoSettings", {}).get("typeData", {}).get(clip.get("ammoType", ""), {}).get("maxAmount")
+            if reserve:
+                stats["ammoReserve"] = _apply(reserve, m.get("ModificatorAmmoPool", {}))
+            hs = cart.get("shotCreatorSettings", {}).get("headshotMult")
+            if hs is not None:
+                stats["headshotMult"] = round(_apply(hs, m.get("ModificatorHeadshotMultiplier", {})), 3)
+            variants[vid] = stats
+        out[wid] = variants
+    return out

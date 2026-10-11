@@ -23,7 +23,7 @@ from sm2data import ssl  # noqa: E402
 from sm2data.pak import DEFAULT_GAME_DIR, PakIndex  # noqa: E402
 from sm2data.strings import StringTable, load_strings, render_description  # noqa: E402
 from sm2data.textures import TextureIndex, UnsupportedTexture  # noqa: E402
-from sm2data.values import extract_values  # noqa: E402
+from sm2data.values import extract_values, firearm_extra_stats  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 
@@ -62,6 +62,9 @@ STAT_LABEL_KEYS = {
     "strikeSpeed": "STRIKE_SPEED",
     "control": "CONTROL",
     "defense": "DEFENSE",
+    "magazine": "MAGAZINE",
+    "ammoReserve": "RESERVE",
+    "headshotMult": "HEADSHOT_MULTIPLIER",
 }
 _PERK_POS = re.compile(r"_(\d+)(?:_(\d+))?(_sub)?$")
 
@@ -252,6 +255,7 @@ class Builder:
         switcher = switcher_textures(self.load(WEAPON_ICON_SWITCHER))
         mastery_doc = self.load(WEAPON_MASTERY)
         mastery = {**mastery_doc.get("firearmProgression", {}), **mastery_doc.get("meleeProgression", {})}
+        extra = firearm_extra_stats(self.pak, list(progression))
 
         out = []
         for wid, wdata in progression.items():
@@ -270,6 +274,8 @@ class Builder:
             for vid, v in sorted(ui.get("versions", {}).items()):
                 vkey = v.get("nameUid") or v.get("versionName")
                 stats = {k: v[k] for k in STAT_LABEL_KEYS if k in v}
+                # A variant without its own modifier group has the standard version's numbers.
+                stats.update(extra.get(wid, {}).get(vid) or extra.get(wid, {}).get("01", {}))
                 if v.get("hasCoolingParameter"):
                     stats["_venting"] = True
                 variants.append(

@@ -11,7 +11,10 @@
   "strikePower": "Strength",
   "strikeSpeed": "Speed",
   "control": "Cleaving Potential",
-  "defense": "Defence"
+  "defense": "Defence",
+  "magazine": "Magazine Capacity",
+  "ammoReserve": "Ammo Reserve",
+  "headshotMult": "Headshot Multiplier"
  },
  "defenseLabels": {
   "BLOCK": "Block",
@@ -44,7 +47,10 @@
       "fireRate": 4,
       "reloadingSpeed": 5,
       "piercing": 3,
-      "range": 7
+      "range": 7,
+      "magazine": 25,
+      "ammoReserve": 125,
+      "headshotMult": 2.3
      }
     },
     {
@@ -52,7 +58,11 @@
      "name": "Ultramarines",
      "nameKey": "UI_FIREARM_ARIFLE_BOLT_RIFLE_PREORDER_NAME",
      "tier": null,
-     "stats": {}
+     "stats": {
+      "magazine": 25,
+      "ammoReserve": 125,
+      "headshotMult": 2.3
+     }
     },
     {
      "id": "02",
@@ -65,7 +75,10 @@
       "fireRate": 4,
       "reloadingSpeed": 5,
       "piercing": 3,
-      "range": 7
+      "range": 7,
+      "magazine": 25,
+      "ammoReserve": 125,
+      "headshotMult": 2.8
      }
     },
     {
@@ -79,7 +92,10 @@
       "fireRate": 4,
       "reloadingSpeed": 5,
       "piercing": 3,
-      "range": 7
+      "range": 7,
+      "magazine": 25,
+      "ammoReserve": 125,
+      "headshotMult": 2.3
      }
     },
     {
@@ -93,7 +109,10 @@
       "fireRate": 4,
       "reloadingSpeed": 5,
       "piercing": 3,
-      "range": 7
+      "range": 7,
+      "magazine": 25,
+      "ammoReserve": 125,
+      "headshotMult": 2.8
      }
     },
     {
@@ -107,7 +126,10 @@
       "fireRate": 4,
       "reloadingSpeed": 5,
       "piercing": 3,
-      "range": 7
+      "range": 7,
+      "magazine": 25,
+      "ammoReserve": 125,
+      "headshotMult": 2.3
      }
     },
     {
@@ -121,7 +143,10 @@
       "fireRate": 4,
       "reloadingSpeed": 5.5,
       "piercing": 3,
-      "range": 7
+      "range": 7,
+      "magazine": 40,
+      "ammoReserve": 280,
+      "headshotMult": 2.3
      }
     },
     {
@@ -135,7 +160,10 @@
       "fireRate": 4,
       "reloadingSpeed": 5,
       "piercing": 3,
-      "range": 7
+      "range": 7,
+      "magazine": 25,
+      "ammoReserve": 125,
+      "headshotMult": 2.3
      }
     },
     {
@@ -149,7 +177,10 @@
       "fireRate": 4,
       "reloadingSpeed": 5,
       "piercing": 3,
-      "range": 7
+      "range": 7,
+      "magazine": 25,
+      "ammoReserve": 125,
+      "headshotMult": 2.8
      }
     },
     {
@@ -163,7 +194,10 @@
       "fireRate": 4,
       "reloadingSpeed": 5,
       "piercing": 3,
-      "range": 7
+      "range": 7,
+      "magazine": 25,
+      "ammoReserve": 125,
+      "headshotMult": 2.3
      }
     },
     {
@@ -177,7 +211,10 @@
       "fireRate": 4,
       "reloadingSpeed": 6,
       "piercing": 3,
-      "range": 7
+      "range": 7,
+      "magazine": 45,
+      "ammoReserve": 315,
+      "headshotMult": 2.3
      }
     },
     {
@@ -191,7 +228,10 @@
       "fireRate": 4,
       "reloadingSpeed": 5,
       "piercing": 3,
-      "range": 7
+      "range": 7,
+      "magazine": 25,
+      "ammoReserve": 125,
+      "headshotMult": 2.3
      }
     },
     {
@@ -205,7 +245,10 @@
       "fireRate": 4,
       "reloadingSpeed": 5,
       "piercing": 3,
-      "range": 7
+      "range": 7,
+      "magazine": 25,
+      "ammoReserve": 125,
+      "headshotMult": 2.3
      }
     }
    ],
@@ -1112,6 +1155,8 @@
       "cooling": 4,
       "piercing": 4,
       "range": 5,
+      "magazine": 450,
+      "headshotMult": 2,
       "_venting": true
      }
     },
@@ -1128,6 +1173,8 @@
       "cooling": 4,
       "piercing": 4,
       "range": 5,
+      "magazine": 450,
+      "headshotMult": 2,
       "_venting": true
      }
     },
@@ -1144,6 +1191,8 @@
       "cooling": 4,
       "piercing": 4,
       "range": 5,
+      "magazine": 525,
+      "headshotMult": 2,
       "_venting": true
      }
     },
@@ -1160,6 +1209,8 @@
       "cooling": 7,
       "piercing": 4,
       "range": 5,
+      "magazine": 450,
+      "headshotMult": 2,
       "_venting": true
      }
     },
@@ -1176,6 +1227,8 @@
       "cooling": 4,
       "piercing": 4,
       "range": 5,
+      "magazine": 450,
+      "headshotMult": 2,
       "_venting": true
      }
     },
@@ -1192,6 +1245,8 @@
       "cooling": 4,
       "piercing": 4,
       "range": 5,
+      "magazine": 550,
+      "headshotMult": 2,
       "_venting": true
      }
     },
@@ -1208,6 +1263,8 @@
       "cooling": 8,
       "piercing": 4,
       "range": 5,
+      "magazine": 450,
+      "headshotMult": 2,
       "_venting": true
      }
     },
@@ -1224,6 +1281,8 @@
       "cooling": 4,
       "piercing": 4,
       "range": 5,
+      "magazine": 450,
+      "headshotMult": 2,
       "_venting": true
      }
     },
@@ -1240,6 +1299,8 @@
       "cooling": 4,
       "piercing": 4,
       "range": 5,
+      "magazine": 575,
+      "headshotMult": 2,
       "_venting": true
      }
     },
@@ -1256,6 +1317,8 @@
       "cooling": 9,
       "piercing": 4,
       "range": 5,
+      "magazine": 450,
+      "headshotMult": 2,
       "_venting": true
      }
     },
@@ -1272,6 +1335,8 @@
       "cooling": 4,
       "piercing": 4,
       "range": 5,
+      "magazine": 450,
+      "headshotMult": 2,
       "_venting": true
      }
     },
@@ -1288,6 +1353,8 @@
       "cooling": 2.5,
       "piercing": 4,
       "range": 5,
+      "magazine": 450,
+      "headshotMult": 2,
       "_venting": true
      }
     }
@@ -2114,7 +2181,10 @@
       "fireRate": 2,
       "reloadingSpeed": 5,
       "piercing": 4,
-      "range": 10
+      "range": 10,
+      "magazine": 12,
+      "ammoReserve": 36,
+      "headshotMult": 3.1
      }
     },
     {
@@ -2128,7 +2198,10 @@
       "fireRate": 2,
       "reloadingSpeed": 5,
       "piercing": 4,
-      "range": 10
+      "range": 10,
+      "magazine": 14,
+      "ammoReserve": 42,
+      "headshotMult": 3.1
      }
     },
     {
@@ -2142,7 +2215,10 @@
       "fireRate": 2,
       "reloadingSpeed": 5,
       "piercing": 4,
-      "range": 10
+      "range": 10,
+      "magazine": 12,
+      "ammoReserve": 36,
+      "headshotMult": 3.4
      }
     },
     {
@@ -2156,7 +2232,10 @@
       "fireRate": 2,
       "reloadingSpeed": 5,
       "piercing": 4,
-      "range": 10
+      "range": 10,
+      "magazine": 16,
+      "ammoReserve": 48,
+      "headshotMult": 3.1
      }
     },
     {
@@ -2170,7 +2249,10 @@
       "fireRate": 2,
       "reloadingSpeed": 5,
       "piercing": 4,
-      "range": 10
+      "range": 10,
+      "magazine": 12,
+      "ammoReserve": 36,
+      "headshotMult": 3.4
      }
     },
     {
@@ -2184,7 +2266,10 @@
       "fireRate": 2,
       "reloadingSpeed": 5,
       "piercing": 4,
-      "range": 10
+      "range": 10,
+      "magazine": 18,
+      "ammoReserve": 54,
+      "headshotMult": 3.1
      }
     },
     {
@@ -2198,7 +2283,10 @@
       "fireRate": 2,
       "reloadingSpeed": 5,
       "piercing": 4,
-      "range": 10
+      "range": 10,
+      "magazine": 12,
+      "ammoReserve": 36,
+      "headshotMult": 3.4
      }
     },
     {
@@ -2212,7 +2300,10 @@
       "fireRate": 3.5,
       "reloadingSpeed": 5,
       "piercing": 4,
-      "range": 10
+      "range": 10,
+      "magazine": 12,
+      "ammoReserve": 36,
+      "headshotMult": 3.1
      }
     },
     {
@@ -2226,7 +2317,10 @@
       "fireRate": 3,
       "reloadingSpeed": 5,
       "piercing": 1,
-      "range": 10
+      "range": 10,
+      "magazine": 18,
+      "ammoReserve": 48,
+      "headshotMult": 3.1
      }
     }
    ],
@@ -2955,7 +3049,10 @@
       "fireRate": 6.5,
       "reloadingSpeed": 5,
       "piercing": 2,
-      "range": 5
+      "range": 5,
+      "magazine": 35,
+      "ammoReserve": 210,
+      "headshotMult": 2
      }
     },
     {
@@ -2969,7 +3066,10 @@
       "fireRate": 6.5,
       "reloadingSpeed": 5,
       "piercing": 2,
-      "range": 5
+      "range": 5,
+      "magazine": 35,
+      "ammoReserve": 210,
+      "headshotMult": 2
      }
     },
     {
@@ -2983,7 +3083,10 @@
       "fireRate": 6.5,
       "reloadingSpeed": 5,
       "piercing": 2,
-      "range": 5
+      "range": 5,
+      "magazine": 38,
+      "ammoReserve": 228,
+      "headshotMult": 2
      }
     },
     {
@@ -2997,7 +3100,10 @@
       "fireRate": 6.5,
       "reloadingSpeed": 5,
       "piercing": 2,
-      "range": 5
+      "range": 5,
+      "magazine": 35,
+      "ammoReserve": 210,
+      "headshotMult": 2
      }
     },
     {
@@ -3011,7 +3117,10 @@
       "fireRate": 6.5,
       "reloadingSpeed": 5,
       "piercing": 2,
-      "range": 5
+      "range": 5,
+      "magazine": 42,
+      "ammoReserve": 252,
+      "headshotMult": 2
      }
     },
     {
@@ -3025,7 +3134,10 @@
       "fireRate": 6.5,
       "reloadingSpeed": 5,
       "piercing": 2,
-      "range": 5
+      "range": 5,
+      "magazine": 35,
+      "ammoReserve": 210,
+      "headshotMult": 2
      }
     },
     {
@@ -3039,7 +3151,10 @@
       "fireRate": 6.5,
       "reloadingSpeed": 5,
       "piercing": 2,
-      "range": 5
+      "range": 5,
+      "magazine": 45,
+      "ammoReserve": 270,
+      "headshotMult": 2
      }
     },
     {
@@ -3053,7 +3168,10 @@
       "fireRate": 9,
       "reloadingSpeed": 5,
       "piercing": 2,
-      "range": 5
+      "range": 5,
+      "magazine": 50,
+      "ammoReserve": 300,
+      "headshotMult": 2
      }
     }
    ],
@@ -3724,7 +3842,10 @@
       "fireRate": 5,
       "reloadingSpeed": 4.5,
       "piercing": 4,
-      "range": 6
+      "range": 6,
+      "magazine": 45,
+      "ammoReserve": 225,
+      "headshotMult": 2
      }
     },
     {
@@ -3738,7 +3859,10 @@
       "fireRate": 5,
       "reloadingSpeed": 4.5,
       "piercing": 4,
-      "range": 6
+      "range": 6,
+      "magazine": 45,
+      "ammoReserve": 225,
+      "headshotMult": 2
      }
     },
     {
@@ -3752,7 +3876,10 @@
       "fireRate": 5,
       "reloadingSpeed": 4.5,
       "piercing": 4,
-      "range": 6
+      "range": 6,
+      "magazine": 45,
+      "ammoReserve": 225,
+      "headshotMult": 2
      }
     },
     {
@@ -3766,7 +3893,10 @@
       "fireRate": 5,
       "reloadingSpeed": 4.5,
       "piercing": 4,
-      "range": 6
+      "range": 6,
+      "magazine": 50,
+      "ammoReserve": 250,
+      "headshotMult": 2
      }
     },
     {
@@ -3780,7 +3910,10 @@
       "fireRate": 5,
       "reloadingSpeed": 4.5,
       "piercing": 4,
-      "range": 6
+      "range": 6,
+      "magazine": 45,
+      "ammoReserve": 225,
+      "headshotMult": 2
      }
     },
     {
@@ -3794,7 +3927,10 @@
       "fireRate": 5,
       "reloadingSpeed": 5,
       "piercing": 4,
-      "range": 6
+      "range": 6,
+      "magazine": 55,
+      "ammoReserve": 275,
+      "headshotMult": 2
      }
     },
     {
@@ -3808,7 +3944,10 @@
       "fireRate": 5,
       "reloadingSpeed": 4.5,
       "piercing": 4,
-      "range": 8
+      "range": 8,
+      "magazine": 45,
+      "ammoReserve": 225,
+      "headshotMult": 2.1
      }
     },
     {
@@ -3822,7 +3961,10 @@
       "fireRate": 5,
       "reloadingSpeed": 4.5,
       "piercing": 4,
-      "range": 6
+      "range": 6,
+      "magazine": 55,
+      "ammoReserve": 275,
+      "headshotMult": 2
      }
     },
     {
@@ -3836,7 +3978,10 @@
       "fireRate": 5,
       "reloadingSpeed": 4.5,
       "piercing": 4,
-      "range": 6
+      "range": 6,
+      "magazine": 45,
+      "ammoReserve": 225,
+      "headshotMult": 2
      }
     },
     {
@@ -3850,7 +3995,10 @@
       "fireRate": 5,
       "reloadingSpeed": 5.5,
       "piercing": 4,
-      "range": 6
+      "range": 6,
+      "magazine": 60,
+      "ammoReserve": 300,
+      "headshotMult": 2
      }
     },
     {
@@ -3864,7 +4012,10 @@
       "fireRate": 5,
       "reloadingSpeed": 4.5,
       "piercing": 4,
-      "range": 8
+      "range": 8,
+      "magazine": 45,
+      "ammoReserve": 225,
+      "headshotMult": 2.1
      }
     },
     {
@@ -3878,7 +4029,10 @@
       "fireRate": 5,
       "reloadingSpeed": 4.5,
       "piercing": 4,
-      "range": 6
+      "range": 6,
+      "magazine": 45,
+      "ammoReserve": 225,
+      "headshotMult": 1.9
      }
     }
    ],
@@ -4799,7 +4953,10 @@
       "fireRate": 9,
       "reloadingSpeed": 4,
       "piercing": 2,
-      "range": 8
+      "range": 8,
+      "magazine": 24,
+      "ammoReserve": 144,
+      "headshotMult": 2.3
      }
     },
     {
@@ -4813,7 +4970,10 @@
       "fireRate": 9,
       "reloadingSpeed": 4,
       "piercing": 2,
-      "range": 8
+      "range": 8,
+      "magazine": 24,
+      "ammoReserve": 144,
+      "headshotMult": 2.6
      }
     },
     {
@@ -4827,7 +4987,10 @@
       "fireRate": 9,
       "reloadingSpeed": 4,
       "piercing": 2,
-      "range": 8
+      "range": 8,
+      "magazine": 30,
+      "ammoReserve": 210,
+      "headshotMult": 2.3
      }
     },
     {
@@ -4841,7 +5004,10 @@
       "fireRate": 9,
       "reloadingSpeed": 4,
       "piercing": 2,
-      "range": 8
+      "range": 8,
+      "magazine": 24,
+      "ammoReserve": 144,
+      "headshotMult": 2.6
      }
     },
     {
@@ -4855,7 +5021,10 @@
       "fireRate": 9,
       "reloadingSpeed": 4,
       "piercing": 2,
-      "range": 8
+      "range": 8,
+      "magazine": 36,
+      "ammoReserve": 252,
+      "headshotMult": 2.3
      }
     },
     {
@@ -4869,7 +5038,10 @@
       "fireRate": 9,
       "reloadingSpeed": 4,
       "piercing": 2,
-      "range": 8
+      "range": 8,
+      "magazine": 24,
+      "ammoReserve": 144,
+      "headshotMult": 2.3
      }
     },
     {
@@ -4883,7 +5055,10 @@
       "fireRate": 9,
       "reloadingSpeed": 4,
       "piercing": 2,
-      "range": 8
+      "range": 8,
+      "magazine": 24,
+      "ammoReserve": 144,
+      "headshotMult": 2.6
      }
     },
     {
@@ -4897,7 +5072,10 @@
       "fireRate": 9,
       "reloadingSpeed": 4,
       "piercing": 2,
-      "range": 8
+      "range": 8,
+      "magazine": 42,
+      "ammoReserve": 294,
+      "headshotMult": 2.3
      }
     },
     {
@@ -4911,7 +5089,10 @@
       "fireRate": 9,
       "reloadingSpeed": 4,
       "piercing": 2,
-      "range": 8
+      "range": 8,
+      "magazine": 24,
+      "ammoReserve": 144,
+      "headshotMult": 2.3
      }
     },
     {
@@ -4925,7 +5106,10 @@
       "fireRate": 10,
       "reloadingSpeed": 4,
       "piercing": 2,
-      "range": 8
+      "range": 8,
+      "magazine": 30,
+      "ammoReserve": 180,
+      "headshotMult": 2.3
      }
     }
    ],
@@ -5812,7 +5996,10 @@
       "fireRate": 1,
       "reloadingSpeed": 4,
       "piercing": 6,
-      "range": 10
+      "range": 10,
+      "magazine": 6,
+      "ammoReserve": 12,
+      "headshotMult": 5
      }
     },
     {
@@ -5826,7 +6013,10 @@
       "fireRate": 1,
       "reloadingSpeed": 4,
       "piercing": 6,
-      "range": 10
+      "range": 10,
+      "magazine": 7,
+      "ammoReserve": 14,
+      "headshotMult": 5
      }
     },
     {
@@ -5840,7 +6030,10 @@
       "fireRate": 1,
       "reloadingSpeed": 4,
       "piercing": 6,
-      "range": 10
+      "range": 10,
+      "magazine": 6,
+      "ammoReserve": 12,
+      "headshotMult": 5.2
      }
     },
     {
@@ -5854,7 +6047,10 @@
       "fireRate": 1,
       "reloadingSpeed": 4,
       "piercing": 6,
-      "range": 10
+      "range": 10,
+      "magazine": 8,
+      "ammoReserve": 16,
+      "headshotMult": 5
      }
     },
     {
@@ -5868,7 +6064,10 @@
       "fireRate": 1,
       "reloadingSpeed": 4,
       "piercing": 6,
-      "range": 10
+      "range": 10,
+      "magazine": 6,
+      "ammoReserve": 12,
+      "headshotMult": 5.2
      }
     },
     {
@@ -5882,7 +6081,10 @@
       "fireRate": 3,
       "reloadingSpeed": 4,
       "piercing": 6,
-      "range": 10
+      "range": 10,
+      "magazine": 6,
+      "ammoReserve": 12,
+      "headshotMult": 5
      }
     },
     {
@@ -5896,7 +6098,10 @@
       "fireRate": 1,
       "reloadingSpeed": 4,
       "piercing": 6,
-      "range": 10
+      "range": 10,
+      "magazine": 9,
+      "ammoReserve": 18,
+      "headshotMult": 5
      }
     },
     {
@@ -5910,7 +6115,10 @@
       "fireRate": 1,
       "reloadingSpeed": 4,
       "piercing": 6,
-      "range": 10
+      "range": 10,
+      "magazine": 6,
+      "ammoReserve": 12,
+      "headshotMult": 5.2
      }
     },
     {
@@ -5924,7 +6132,10 @@
       "fireRate": 4,
       "reloadingSpeed": 4,
       "piercing": 6,
-      "range": 10
+      "range": 10,
+      "magazine": 6,
+      "ammoReserve": 12,
+      "headshotMult": 5
      }
     },
     {
@@ -5938,7 +6149,10 @@
       "fireRate": 1,
       "reloadingSpeed": 4,
       "piercing": 6,
-      "range": 10
+      "range": 10,
+      "magazine": 3,
+      "ammoReserve": 3,
+      "headshotMult": 20
      }
     }
    ],
@@ -6666,7 +6880,10 @@
       "fireRate": 8.5,
       "reloadingSpeed": 5.5,
       "piercing": 1,
-      "range": 3
+      "range": 3,
+      "magazine": 30,
+      "ammoReserve": 240,
+      "headshotMult": 1.5
      }
     },
     {
@@ -6680,7 +6897,10 @@
       "fireRate": 8.5,
       "reloadingSpeed": 5.5,
       "piercing": 1,
-      "range": 3
+      "range": 3,
+      "magazine": 30,
+      "ammoReserve": 240,
+      "headshotMult": 1.5
      }
     },
     {
@@ -6694,7 +6914,10 @@
       "fireRate": 4.5,
       "reloadingSpeed": 4,
       "piercing": 3,
-      "range": 8
+      "range": 8,
+      "magazine": 20,
+      "ammoReserve": 140,
+      "headshotMult": 3.3
      }
     },
     {
@@ -6708,7 +6931,10 @@
       "fireRate": 8.5,
       "reloadingSpeed": 5.5,
       "piercing": 1,
-      "range": 3
+      "range": 3,
+      "magazine": 30,
+      "ammoReserve": 240,
+      "headshotMult": 1.5
      }
     },
     {
@@ -6722,7 +6948,10 @@
       "fireRate": 4.5,
       "reloadingSpeed": 4,
       "piercing": 3,
-      "range": 8
+      "range": 8,
+      "magazine": 20,
+      "ammoReserve": 140,
+      "headshotMult": 3.3
      }
     },
     {
@@ -6736,7 +6965,10 @@
       "fireRate": 8.5,
       "reloadingSpeed": 5.5,
       "piercing": 1,
-      "range": 3
+      "range": 3,
+      "magazine": 36,
+      "ammoReserve": 288,
+      "headshotMult": 1.5
      }
     },
     {
@@ -6750,7 +6982,10 @@
       "fireRate": 4.5,
       "reloadingSpeed": 4,
       "piercing": 3,
-      "range": 8
+      "range": 8,
+      "magazine": 30,
+      "ammoReserve": 270,
+      "headshotMult": 2.4
      }
     },
     {
@@ -6764,7 +6999,10 @@
       "fireRate": 8.5,
       "reloadingSpeed": 5.5,
       "piercing": 1,
-      "range": 3
+      "range": 3,
+      "magazine": 30,
+      "ammoReserve": 240,
+      "headshotMult": 1.5
      }
     },
     {
@@ -6778,7 +7016,10 @@
       "fireRate": 4.5,
       "reloadingSpeed": 4,
       "piercing": 3,
-      "range": 8
+      "range": 8,
+      "magazine": 20,
+      "ammoReserve": 140,
+      "headshotMult": 3.3
      }
     },
     {
@@ -6792,7 +7033,10 @@
       "fireRate": 8.5,
       "reloadingSpeed": 5.5,
       "piercing": 1,
-      "range": 3
+      "range": 3,
+      "magazine": 40,
+      "ammoReserve": 320,
+      "headshotMult": 1.5
      }
     },
     {
@@ -6806,7 +7050,10 @@
       "fireRate": 4.5,
       "reloadingSpeed": 4,
       "piercing": 3,
-      "range": 8
+      "range": 8,
+      "magazine": 35,
+      "ammoReserve": 315,
+      "headshotMult": 2.4
      }
     },
     {
@@ -6820,7 +7067,10 @@
       "fireRate": 8.5,
       "reloadingSpeed": 4,
       "piercing": 1,
-      "range": 3
+      "range": 3,
+      "magazine": 45,
+      "ammoReserve": 225,
+      "headshotMult": 1.5
      }
     }
    ],
@@ -7697,7 +7947,10 @@
       "fireRate": 7,
       "reloadingSpeed": 4.5,
       "piercing": 1,
-      "range": 4
+      "range": 4,
+      "magazine": 30,
+      "ammoReserve": 210,
+      "headshotMult": 2.3
      }
     },
     {
@@ -7711,7 +7964,10 @@
       "fireRate": 7,
       "reloadingSpeed": 4.5,
       "piercing": 1,
-      "range": 4
+      "range": 4,
+      "magazine": 30,
+      "ammoReserve": 210,
+      "headshotMult": 2.8
      }
     },
     {
@@ -7725,7 +7981,10 @@
       "fireRate": 7,
       "reloadingSpeed": 4.5,
       "piercing": 1,
-      "range": 4
+      "range": 4,
+      "magazine": 33,
+      "ammoReserve": 231,
+      "headshotMult": 2.3
      }
     },
     {
@@ -7739,7 +7998,10 @@
       "fireRate": 7,
       "reloadingSpeed": 4.5,
       "piercing": 1,
-      "range": 4
+      "range": 4,
+      "magazine": 30,
+      "ammoReserve": 210,
+      "headshotMult": 2.8
      }
     },
     {
@@ -7753,7 +8015,10 @@
       "fireRate": 7,
       "reloadingSpeed": 4.5,
       "piercing": 1,
-      "range": 4
+      "range": 4,
+      "magazine": 36,
+      "ammoReserve": 252,
+      "headshotMult": 2.3
      }
     },
     {
@@ -7767,7 +8032,10 @@
       "fireRate": 7,
       "reloadingSpeed": 4.5,
       "piercing": 1,
-      "range": 4
+      "range": 4,
+      "magazine": 30,
+      "ammoReserve": 210,
+      "headshotMult": 2.3
      }
     },
     {
@@ -7781,7 +8049,10 @@
       "fireRate": 7,
       "reloadingSpeed": 4.5,
       "piercing": 1,
-      "range": 4
+      "range": 4,
+      "magazine": 30,
+      "ammoReserve": 210,
+      "headshotMult": 2.8
      }
     },
     {
@@ -7795,7 +8066,10 @@
       "fireRate": 7,
       "reloadingSpeed": 4.5,
       "piercing": 1,
-      "range": 4
+      "range": 4,
+      "magazine": 40,
+      "ammoReserve": 280,
+      "headshotMult": 2.3
      }
     },
     {
@@ -7809,7 +8083,10 @@
       "fireRate": 7,
       "reloadingSpeed": 4.5,
       "piercing": 1,
-      "range": 4
+      "range": 4,
+      "magazine": 30,
+      "ammoReserve": 210,
+      "headshotMult": 2.3
      }
     },
     {
@@ -7823,7 +8100,10 @@
       "fireRate": 7,
       "reloadingSpeed": 4.5,
       "piercing": 1,
-      "range": 4
+      "range": 4,
+      "magazine": 36,
+      "ammoReserve": 252,
+      "headshotMult": 2.3
      }
     }
    ],
@@ -8656,6 +8936,7 @@
       "cooling": 3,
       "piercing": 1,
       "range": 7,
+      "magazine": 130,
       "_venting": true
      }
     },
@@ -8672,6 +8953,7 @@
       "cooling": 4,
       "piercing": 1,
       "range": 7,
+      "magazine": 130,
       "_venting": true
      }
     },
@@ -8688,6 +8970,7 @@
       "cooling": 3,
       "piercing": 1,
       "range": 7,
+      "magazine": 140,
       "_venting": true
      }
     },
@@ -8704,6 +8987,7 @@
       "cooling": 5,
       "piercing": 1,
       "range": 7,
+      "magazine": 130,
       "_venting": true
      }
     },
@@ -8720,6 +9004,7 @@
       "cooling": 3,
       "piercing": 1,
       "range": 7,
+      "magazine": 150,
       "_venting": true
      }
     },
@@ -8736,6 +9021,7 @@
       "cooling": 3,
       "piercing": 1,
       "range": 7,
+      "magazine": 130,
       "_venting": true
      }
     },
@@ -8752,6 +9038,7 @@
       "cooling": 3,
       "piercing": 1,
       "range": 7,
+      "magazine": 130,
       "_venting": true
      }
     },
@@ -8768,6 +9055,7 @@
       "cooling": 6,
       "piercing": 1,
       "range": 7,
+      "magazine": 130,
       "_venting": true
      }
     },
@@ -8784,6 +9072,7 @@
       "cooling": 3,
       "piercing": 1,
       "range": 7,
+      "magazine": 160,
       "_venting": true
      }
     },
@@ -8800,6 +9089,7 @@
       "cooling": 3,
       "piercing": 1,
       "range": 7,
+      "magazine": 130,
       "_venting": true
      }
     },
@@ -8816,6 +9106,7 @@
       "cooling": 3,
       "piercing": 1,
       "range": 7,
+      "magazine": 130,
       "_venting": true
      }
     }
@@ -9744,7 +10035,9 @@
       "fireRate": 1,
       "reloadingSpeed": 1,
       "piercing": 10,
-      "range": 10
+      "range": 10,
+      "magazine": 12,
+      "headshotMult": 5
      }
     },
     {
@@ -9758,7 +10051,9 @@
       "fireRate": 1,
       "reloadingSpeed": 1,
       "piercing": 10,
-      "range": 10
+      "range": 10,
+      "magazine": 14,
+      "headshotMult": 5
      }
     },
     {
@@ -9772,7 +10067,9 @@
       "fireRate": 1,
       "reloadingSpeed": 1,
       "piercing": 10,
-      "range": 10
+      "range": 10,
+      "magazine": 12,
+      "headshotMult": 5
      }
     },
     {
@@ -9786,7 +10083,9 @@
       "fireRate": 1,
       "reloadingSpeed": 1,
       "piercing": 10,
-      "range": 10
+      "range": 10,
+      "magazine": 16,
+      "headshotMult": 5
      }
     },
     {
@@ -9800,7 +10099,9 @@
       "fireRate": 1,
       "reloadingSpeed": 1,
       "piercing": 10,
-      "range": 10
+      "range": 10,
+      "magazine": 12,
+      "headshotMult": 5
      }
     },
     {
@@ -9814,7 +10115,9 @@
       "fireRate": 3,
       "reloadingSpeed": 1,
       "piercing": 10,
-      "range": 10
+      "range": 10,
+      "magazine": 12,
+      "headshotMult": 5
      }
     },
     {
@@ -9828,7 +10131,9 @@
       "fireRate": 1,
       "reloadingSpeed": 1,
       "piercing": 10,
-      "range": 10
+      "range": 10,
+      "magazine": 20,
+      "headshotMult": 5
      }
     },
     {
@@ -9842,7 +10147,9 @@
       "fireRate": 1,
       "reloadingSpeed": 1,
       "piercing": 10,
-      "range": 10
+      "range": 10,
+      "magazine": 12,
+      "headshotMult": 5
      }
     },
     {
@@ -9856,7 +10163,9 @@
       "fireRate": 4,
       "reloadingSpeed": 1,
       "piercing": 10,
-      "range": 10
+      "range": 10,
+      "magazine": 12,
+      "headshotMult": 5
      }
     }
    ],
@@ -10606,6 +10915,7 @@
       "cooling": 2,
       "piercing": 1,
       "range": 5,
+      "magazine": 40,
       "_venting": true
      }
     },
@@ -10622,6 +10932,7 @@
       "cooling": 5,
       "piercing": 1,
       "range": 5,
+      "magazine": 40,
       "_venting": true
      }
     },
@@ -10638,6 +10949,7 @@
       "cooling": 2,
       "piercing": 1,
       "range": 5,
+      "magazine": 45,
       "_venting": true
      }
     },
@@ -10654,6 +10966,7 @@
       "cooling": 2,
       "piercing": 1,
       "range": 5,
+      "magazine": 40,
       "_venting": true
      }
     },
@@ -10670,6 +10983,7 @@
       "cooling": 6,
       "piercing": 1,
       "range": 5,
+      "magazine": 40,
       "_venting": true
      }
     },
@@ -10686,6 +11000,7 @@
       "cooling": 2,
       "piercing": 1,
       "range": 5,
+      "magazine": 50,
       "_venting": true
      }
     },
@@ -10702,6 +11017,7 @@
       "cooling": 2,
       "piercing": 1,
       "range": 5,
+      "magazine": 40,
       "_venting": true
      }
     },
@@ -10718,6 +11034,7 @@
       "cooling": 7,
       "piercing": 1,
       "range": 5,
+      "magazine": 40,
       "_venting": true
      }
     },
@@ -10734,6 +11051,7 @@
       "cooling": 2,
       "piercing": 1,
       "range": 5,
+      "magazine": 55,
       "_venting": true
      }
     },
@@ -10750,6 +11068,7 @@
       "cooling": 2,
       "piercing": 1,
       "range": 5,
+      "magazine": 40,
       "_venting": true
      }
     },
@@ -10764,6 +11083,7 @@
       "fireRate": 3,
       "cooling": 2.5,
       "range": 5,
+      "magazine": 55,
       "_venting": true
      }
     }
@@ -11594,7 +11914,8 @@
       "fireRate": 1,
       "reloadingSpeed": 1,
       "piercing": 10,
-      "range": 1
+      "range": 1,
+      "magazine": 16
      }
     },
     {
@@ -11608,7 +11929,8 @@
       "fireRate": 1,
       "reloadingSpeed": 1,
       "piercing": 10,
-      "range": 4.5
+      "range": 4.5,
+      "magazine": 16
      }
     },
     {
@@ -11622,7 +11944,8 @@
       "fireRate": 1,
       "reloadingSpeed": 1,
       "piercing": 10,
-      "range": 1
+      "range": 1,
+      "magazine": 19
      }
     },
     {
@@ -11636,7 +11959,8 @@
       "fireRate": 2.5,
       "reloadingSpeed": 1,
       "piercing": 10,
-      "range": 1
+      "range": 1,
+      "magazine": 16
      }
     },
     {
@@ -11650,7 +11974,8 @@
       "fireRate": 1,
       "reloadingSpeed": 1,
       "piercing": 10,
-      "range": 4.5
+      "range": 4.5,
+      "magazine": 16
      }
     },
     {
@@ -11664,7 +11989,8 @@
       "fireRate": 1,
       "reloadingSpeed": 1,
       "piercing": 10,
-      "range": 1
+      "range": 1,
+      "magazine": 22
      }
     },
     {
@@ -11678,7 +12004,8 @@
       "fireRate": 3.5,
       "reloadingSpeed": 1,
       "piercing": 10,
-      "range": 1
+      "range": 1,
+      "magazine": 16
      }
     },
     {
@@ -11692,7 +12019,8 @@
       "fireRate": 1,
       "reloadingSpeed": 1,
       "piercing": 10,
-      "range": 4.5
+      "range": 4.5,
+      "magazine": 16
      }
     },
     {
@@ -11706,7 +12034,8 @@
       "fireRate": 1,
       "reloadingSpeed": 1,
       "piercing": 10,
-      "range": 1
+      "range": 1,
+      "magazine": 26
      }
     },
     {
@@ -11720,7 +12049,8 @@
       "fireRate": 4.5,
       "reloadingSpeed": 1,
       "piercing": 10,
-      "range": 1
+      "range": 1,
+      "magazine": 16
      }
     }
    ],
@@ -12566,7 +12896,10 @@
       "fireRate": 3,
       "reloadingSpeed": 8.5,
       "piercing": 2,
-      "range": 6
+      "range": 6,
+      "magazine": 8,
+      "ammoReserve": 80,
+      "headshotMult": 2.1
      }
     },
     {
@@ -12580,7 +12913,10 @@
       "fireRate": 3,
       "reloadingSpeed": 8.5,
       "piercing": 2,
-      "range": 6
+      "range": 6,
+      "magazine": 8,
+      "ammoReserve": 80,
+      "headshotMult": 2.1
      }
     },
     {
@@ -12594,7 +12930,10 @@
       "fireRate": 3,
       "reloadingSpeed": 8.5,
       "piercing": 2,
-      "range": 6
+      "range": 6,
+      "magazine": 10,
+      "ammoReserve": 100,
+      "headshotMult": 2.1
      }
     },
     {
@@ -12608,7 +12947,10 @@
       "fireRate": 3,
       "reloadingSpeed": 8.5,
       "piercing": 2,
-      "range": 6
+      "range": 6,
+      "magazine": 8,
+      "ammoReserve": 80,
+      "headshotMult": 2.1
      }
     },
     {
@@ -12622,7 +12964,10 @@
       "fireRate": 3,
       "reloadingSpeed": 8.5,
       "piercing": 2,
-      "range": 6
+      "range": 6,
+      "magazine": 8,
+      "ammoReserve": 80,
+      "headshotMult": 2.1
      }
     },
     {
@@ -12636,7 +12981,10 @@
       "fireRate": 3,
       "reloadingSpeed": 8.5,
       "piercing": 2,
-      "range": 6
+      "range": 6,
+      "magazine": 12,
+      "ammoReserve": 120,
+      "headshotMult": 2.1
      }
     },
     {
@@ -12650,7 +12998,10 @@
       "fireRate": 3,
       "reloadingSpeed": 8.5,
       "piercing": 2,
-      "range": 6
+      "range": 6,
+      "magazine": 8,
+      "ammoReserve": 80,
+      "headshotMult": 2.1
      }
     },
     {
@@ -12664,7 +13015,10 @@
       "fireRate": 3,
       "reloadingSpeed": 8.5,
       "piercing": 2,
-      "range": 6
+      "range": 6,
+      "magazine": 8,
+      "ammoReserve": 80,
+      "headshotMult": 2.1
      }
     },
     {
@@ -12678,7 +13032,10 @@
       "fireRate": 3,
       "reloadingSpeed": 8.5,
       "piercing": 2,
-      "range": 6
+      "range": 6,
+      "magazine": 14,
+      "ammoReserve": 140,
+      "headshotMult": 2.1
      }
     },
     {
@@ -12692,7 +13049,10 @@
       "fireRate": 3,
       "reloadingSpeed": 8.5,
       "piercing": 2,
-      "range": 6
+      "range": 6,
+      "magazine": 8,
+      "ammoReserve": 80,
+      "headshotMult": 2.1
      }
     },
     {
@@ -12706,7 +13066,10 @@
       "fireRate": 3,
       "reloadingSpeed": 8.5,
       "piercing": 2,
-      "range": 6
+      "range": 6,
+      "magazine": 6,
+      "ammoReserve": 48,
+      "headshotMult": 2.2
      }
     }
    ],
@@ -13539,7 +13902,10 @@
       "fireRate": 4.5,
       "reloadingSpeed": 8.5,
       "piercing": 1,
-      "range": 5
+      "range": 5,
+      "magazine": 12,
+      "ammoReserve": 144,
+      "headshotMult": 2.1
      }
     },
     {
@@ -13553,7 +13919,10 @@
       "fireRate": 4.5,
       "reloadingSpeed": 8.5,
       "piercing": 1,
-      "range": 5
+      "range": 5,
+      "magazine": 12,
+      "ammoReserve": 144,
+      "headshotMult": 2.1
      }
     },
     {
@@ -13567,7 +13936,10 @@
       "fireRate": 4.5,
       "reloadingSpeed": 8.5,
       "piercing": 1,
-      "range": 5
+      "range": 5,
+      "magazine": 14,
+      "ammoReserve": 168,
+      "headshotMult": 2.1
      }
     },
     {
@@ -13581,7 +13953,10 @@
       "fireRate": 4.5,
       "reloadingSpeed": 8.5,
       "piercing": 1,
-      "range": 5
+      "range": 5,
+      "magazine": 12,
+      "ammoReserve": 144,
+      "headshotMult": 2.1
      }
     },
     {
@@ -13595,7 +13970,10 @@
       "fireRate": 4.5,
       "reloadingSpeed": 8.5,
       "piercing": 1,
-      "range": 5
+      "range": 5,
+      "magazine": 16,
+      "ammoReserve": 192,
+      "headshotMult": 2.1
      }
     },
     {
@@ -13609,7 +13987,10 @@
       "fireRate": 4.5,
       "reloadingSpeed": 8.5,
       "piercing": 1,
-      "range": 5
+      "range": 5,
+      "magazine": 12,
+      "ammoReserve": 144,
+      "headshotMult": 2.1
      }
     },
     {
@@ -13623,7 +14004,10 @@
       "fireRate": 4.5,
       "reloadingSpeed": 8.5,
       "piercing": 1,
-      "range": 5
+      "range": 5,
+      "magazine": 18,
+      "ammoReserve": 216,
+      "headshotMult": 2.1
      }
     },
     {
@@ -13637,7 +14021,10 @@
       "fireRate": 4.5,
       "reloadingSpeed": 8.5,
       "piercing": 1,
-      "range": 5
+      "range": 5,
+      "magazine": 12,
+      "ammoReserve": 144,
+      "headshotMult": 2.1
      }
     },
     {
@@ -13651,7 +14038,10 @@
       "fireRate": 9,
       "reloadingSpeed": 8.5,
       "piercing": 1,
-      "range": 6
+      "range": 6,
+      "magazine": 18,
+      "ammoReserve": 144,
+      "headshotMult": 2.05
      }
     }
    ],
@@ -14332,7 +14722,9 @@
       "fireRate": 1,
       "reloadingSpeed": 1,
       "piercing": 10,
-      "range": 1
+      "range": 1,
+      "magazine": 6,
+      "ammoReserve": 12
      }
     },
     {
@@ -14346,7 +14738,9 @@
       "fireRate": 1,
       "reloadingSpeed": 1,
       "piercing": 10,
-      "range": 4.5
+      "range": 4.5,
+      "magazine": 6,
+      "ammoReserve": 12
      }
     },
     {
@@ -14360,7 +14754,9 @@
       "fireRate": 1,
       "reloadingSpeed": 1,
       "piercing": 10,
-      "range": 1
+      "range": 1,
+      "magazine": 8,
+      "ammoReserve": 16
      }
     },
     {
@@ -14374,7 +14770,9 @@
       "fireRate": 1,
       "reloadingSpeed": 1,
       "piercing": 10,
-      "range": 4.5
+      "range": 4.5,
+      "magazine": 6,
+      "ammoReserve": 12
      }
     },
     {
@@ -14388,7 +14786,9 @@
       "fireRate": 1,
       "reloadingSpeed": 1,
       "piercing": 10,
-      "range": 1
+      "range": 1,
+      "magazine": 9,
+      "ammoReserve": 19
      }
     },
     {
@@ -14402,7 +14802,9 @@
       "fireRate": 1,
       "reloadingSpeed": 1,
       "piercing": 10,
-      "range": 4.5
+      "range": 4.5,
+      "magazine": 6,
+      "ammoReserve": 12
      }
     },
     {
@@ -14416,7 +14818,9 @@
       "fireRate": 1,
       "reloadingSpeed": 1,
       "piercing": 10,
-      "range": 1
+      "range": 1,
+      "magazine": 10,
+      "ammoReserve": 22
      }
     },
     {
@@ -14430,7 +14834,9 @@
       "fireRate": 2,
       "reloadingSpeed": 1,
       "piercing": 10,
-      "range": 1
+      "range": 1,
+      "magazine": 6,
+      "ammoReserve": 12
      }
     },
     {
@@ -14444,7 +14850,9 @@
       "fireRate": 1,
       "reloadingSpeed": 1,
       "piercing": 10,
-      "range": 8.5
+      "range": 8.5,
+      "magazine": 5,
+      "ammoReserve": 10
      }
     }
    ],
@@ -15151,6 +15559,7 @@
       "cooling": 4,
       "piercing": 1,
       "range": 7,
+      "magazine": 90,
       "_venting": true
      }
     },
@@ -15167,6 +15576,7 @@
       "cooling": 4,
       "piercing": 1,
       "range": 7,
+      "magazine": 90,
       "_venting": true
      }
     },
@@ -15183,6 +15593,7 @@
       "cooling": 6,
       "piercing": 1,
       "range": 7,
+      "magazine": 100,
       "_venting": true
      }
     },
@@ -15199,6 +15610,7 @@
       "cooling": 4,
       "piercing": 1,
       "range": 7,
+      "magazine": 90,
       "_venting": true
      }
     },
@@ -15215,6 +15627,7 @@
       "cooling": 7,
       "piercing": 1,
       "range": 7,
+      "magazine": 110,
       "_venting": true
      }
     },
@@ -15231,6 +15644,7 @@
       "cooling": 4,
       "piercing": 1,
       "range": 7,
+      "magazine": 90,
       "_venting": true
      }
     },
@@ -15247,6 +15661,7 @@
       "cooling": 8,
       "piercing": 1,
       "range": 7,
+      "magazine": 120,
       "_venting": true
      }
     },
@@ -15263,6 +15678,7 @@
       "cooling": 4,
       "piercing": 1,
       "range": 7,
+      "magazine": 90,
       "_venting": true
      }
     },
@@ -15279,6 +15695,7 @@
       "cooling": 8,
       "piercing": 1,
       "range": 7,
+      "magazine": 100,
       "_venting": true
      }
     }
@@ -20882,7 +21299,10 @@
       "fireRate": 10,
       "reloadingSpeed": 8.5,
       "piercing": 1,
-      "range": 5
+      "range": 5,
+      "magazine": 100,
+      "ammoReserve": 500,
+      "headshotMult": 1.6
      }
     },
     {
@@ -20896,7 +21316,10 @@
       "fireRate": 10,
       "reloadingSpeed": 8.5,
       "piercing": 1,
-      "range": 5
+      "range": 5,
+      "magazine": 110,
+      "ammoReserve": 550,
+      "headshotMult": 1.6
      }
     },
     {
@@ -20910,7 +21333,10 @@
       "fireRate": 10,
       "reloadingSpeed": 8.5,
       "piercing": 1,
-      "range": 5
+      "range": 5,
+      "magazine": 100,
+      "ammoReserve": 500,
+      "headshotMult": 1.6
      }
     },
     {
@@ -20924,7 +21350,10 @@
       "fireRate": 10,
       "reloadingSpeed": 8.5,
       "piercing": 1,
-      "range": 5
+      "range": 5,
+      "magazine": 120,
+      "ammoReserve": 600,
+      "headshotMult": 1.6
      }
     },
     {
@@ -20938,7 +21367,10 @@
       "fireRate": 10,
       "reloadingSpeed": 8.5,
       "piercing": 1,
-      "range": 5
+      "range": 5,
+      "magazine": 100,
+      "ammoReserve": 500,
+      "headshotMult": 1.6
      }
     },
     {
@@ -20952,7 +21384,10 @@
       "fireRate": 10,
       "reloadingSpeed": 8.5,
       "piercing": 1,
-      "range": 5
+      "range": 5,
+      "magazine": 130,
+      "ammoReserve": 650,
+      "headshotMult": 1.6
      }
     },
     {
@@ -20966,7 +21401,10 @@
       "fireRate": 10,
       "reloadingSpeed": 8.5,
       "piercing": 1,
-      "range": 5
+      "range": 5,
+      "magazine": 100,
+      "ammoReserve": 500,
+      "headshotMult": 1.6
      }
     }
    ],
@@ -21548,7 +21986,9 @@
       "fireRate": 1.5,
       "reloadingSpeed": 6,
       "piercing": 10,
-      "range": 1
+      "range": 1,
+      "magazine": 3,
+      "ammoReserve": 15
      }
     },
     {
@@ -21562,7 +22002,9 @@
       "fireRate": 1.5,
       "reloadingSpeed": 6,
       "piercing": 10,
-      "range": 1
+      "range": 1,
+      "magazine": 3,
+      "ammoReserve": 27
      }
     },
     {
@@ -21576,7 +22018,9 @@
       "fireRate": 2.5,
       "reloadingSpeed": 6,
       "piercing": 10,
-      "range": 2
+      "range": 2,
+      "magazine": 2,
+      "ammoReserve": 16
      }
     },
     {
@@ -21590,7 +22034,9 @@
       "fireRate": 1.5,
       "reloadingSpeed": 6,
       "piercing": 10,
-      "range": 1
+      "range": 1,
+      "magazine": 3,
+      "ammoReserve": 30
      }
     },
     {
@@ -21604,7 +22050,9 @@
       "fireRate": 2.5,
       "reloadingSpeed": 6,
       "piercing": 10,
-      "range": 3
+      "range": 3,
+      "magazine": 2,
+      "ammoReserve": 16
      }
     },
     {
@@ -21618,7 +22066,9 @@
       "fireRate": 1.5,
       "reloadingSpeed": 6,
       "piercing": 10,
-      "range": 1
+      "range": 1,
+      "magazine": 3,
+      "ammoReserve": 33
      }
     },
     {
@@ -21632,7 +22082,9 @@
       "fireRate": 2.5,
       "reloadingSpeed": 6,
       "piercing": 10,
-      "range": 4
+      "range": 4,
+      "magazine": 2,
+      "ammoReserve": 16
      }
     }
    ],
@@ -22218,6 +22670,8 @@
       "cooling": 5,
       "piercing": 10,
       "range": 1,
+      "magazine": 260,
+      "headshotMult": 0,
       "_venting": true
      }
     },
@@ -22232,6 +22686,8 @@
       "cooling": 5,
       "piercing": 10,
       "range": 1,
+      "magazine": 285,
+      "headshotMult": 0,
       "_venting": true
      }
     },
@@ -22246,6 +22702,8 @@
       "cooling": 7,
       "piercing": 10,
       "range": 1,
+      "magazine": 260,
+      "headshotMult": 0,
       "_venting": true
      }
     },
@@ -22260,6 +22718,8 @@
       "cooling": 5,
       "piercing": 10,
       "range": 1,
+      "magazine": 310,
+      "headshotMult": 0,
       "_venting": true
      }
     },
@@ -22274,6 +22734,8 @@
       "cooling": 8,
       "piercing": 10,
       "range": 1,
+      "magazine": 260,
+      "headshotMult": 0,
       "_venting": true
      }
     },
@@ -22288,6 +22750,8 @@
       "cooling": 5,
       "piercing": 10,
       "range": 1,
+      "magazine": 335,
+      "headshotMult": 0,
       "_venting": true
      }
     },
@@ -22302,6 +22766,8 @@
       "cooling": 9,
       "piercing": 10,
       "range": 1,
+      "magazine": 260,
+      "headshotMult": 0,
       "_venting": true
      }
     }
@@ -22878,6 +23344,8 @@
       "cooling": 5,
       "piercing": 10,
       "range": 1,
+      "magazine": 350,
+      "headshotMult": 0,
       "_venting": true
      }
     },
@@ -22892,6 +23360,8 @@
       "cooling": 5,
       "piercing": 10,
       "range": 1,
+      "magazine": 350,
+      "headshotMult": 0,
       "_venting": true
      }
     },
@@ -22906,6 +23376,8 @@
       "cooling": 7,
       "piercing": 10,
       "range": 1,
+      "magazine": 350,
+      "headshotMult": 0,
       "_venting": true
      }
     },
@@ -22920,6 +23392,8 @@
       "cooling": 5,
       "piercing": 10,
       "range": 1,
+      "magazine": 350,
+      "headshotMult": 0,
       "_venting": true
      }
     },
@@ -22934,6 +23408,8 @@
       "cooling": 8,
       "piercing": 10,
       "range": 1,
+      "magazine": 350,
+      "headshotMult": 0,
       "_venting": true
      }
     },
@@ -22948,6 +23424,8 @@
       "cooling": 5,
       "piercing": 10,
       "range": 1,
+      "magazine": 350,
+      "headshotMult": 0,
       "_venting": true
      }
     },
@@ -22962,6 +23440,8 @@
       "cooling": 9,
       "piercing": 10,
       "range": 1,
+      "magazine": 350,
+      "headshotMult": 0,
       "_venting": true
      }
     }
@@ -25380,7 +25860,10 @@
       "fireRate": 8.5,
       "reloadingSpeed": 8.5,
       "piercing": 1,
-      "range": 3
+      "range": 3,
+      "magazine": 20,
+      "ammoReserve": 160,
+      "headshotMult": 1.5
      }
     },
     {
@@ -25394,7 +25877,10 @@
       "fireRate": 8.5,
       "reloadingSpeed": 8.5,
       "piercing": 1,
-      "range": 3
+      "range": 3,
+      "magazine": 20,
+      "ammoReserve": 160,
+      "headshotMult": 1.5
      }
     },
     {
@@ -25408,7 +25894,10 @@
       "fireRate": 8.5,
       "reloadingSpeed": 8.5,
       "piercing": 1,
-      "range": 3
+      "range": 3,
+      "magazine": 23,
+      "ammoReserve": 178,
+      "headshotMult": 1.5
      }
     },
     {
@@ -25422,7 +25911,10 @@
       "fireRate": 8.5,
       "reloadingSpeed": 8.5,
       "piercing": 1,
-      "range": 3
+      "range": 3,
+      "magazine": 20,
+      "ammoReserve": 160,
+      "headshotMult": 1.5
      }
     },
     {
@@ -25436,7 +25928,10 @@
       "fireRate": 8.5,
       "reloadingSpeed": 8.5,
       "piercing": 1,
-      "range": 3
+      "range": 3,
+      "magazine": 26,
+      "ammoReserve": 196,
+      "headshotMult": 1.5
      }
     },
     {
@@ -25450,7 +25945,10 @@
       "fireRate": 8.5,
       "reloadingSpeed": 8.5,
       "piercing": 1,
-      "range": 3
+      "range": 3,
+      "magazine": 20,
+      "ammoReserve": 160,
+      "headshotMult": 1.5
      }
     },
     {
@@ -25464,7 +25962,10 @@
       "fireRate": 8.5,
       "reloadingSpeed": 8.5,
       "piercing": 1,
-      "range": 3
+      "range": 3,
+      "magazine": 30,
+      "ammoReserve": 220,
+      "headshotMult": 1.5
      }
     }
    ],
@@ -27000,7 +27501,10 @@
       "fireRate": 3,
       "reloadingSpeed": 8.5,
       "piercing": 2,
-      "range": 6
+      "range": 6,
+      "magazine": 6,
+      "ammoReserve": 48,
+      "headshotMult": 4.5
      }
     },
     {
@@ -27014,7 +27518,10 @@
       "fireRate": 3,
       "reloadingSpeed": 8.5,
       "piercing": 2,
-      "range": 6
+      "range": 6,
+      "magazine": 6,
+      "ammoReserve": 48,
+      "headshotMult": 4.5
      }
     },
     {
@@ -27028,7 +27535,10 @@
       "fireRate": 3,
       "reloadingSpeed": 8.5,
       "piercing": 2,
-      "range": 6
+      "range": 6,
+      "magazine": 8,
+      "ammoReserve": 68,
+      "headshotMult": 4.5
      }
     },
     {
@@ -27042,7 +27552,10 @@
       "fireRate": 3,
       "reloadingSpeed": 8.5,
       "piercing": 2,
-      "range": 6
+      "range": 6,
+      "magazine": 6,
+      "ammoReserve": 48,
+      "headshotMult": 4.5
      }
     },
     {
@@ -27056,7 +27569,10 @@
       "fireRate": 3,
       "reloadingSpeed": 8.5,
       "piercing": 2,
-      "range": 6
+      "range": 6,
+      "magazine": 6,
+      "ammoReserve": 48,
+      "headshotMult": 4.5
      }
     },
     {
@@ -27070,7 +27586,10 @@
       "fireRate": 3,
       "reloadingSpeed": 8.5,
       "piercing": 2,
-      "range": 6
+      "range": 6,
+      "magazine": 10,
+      "ammoReserve": 88,
+      "headshotMult": 4.5
      }
     },
     {
@@ -27084,7 +27603,10 @@
       "fireRate": 3,
       "reloadingSpeed": 8.5,
       "piercing": 2,
-      "range": 6
+      "range": 6,
+      "magazine": 6,
+      "ammoReserve": 48,
+      "headshotMult": 4.5
      }
     },
     {
@@ -27098,7 +27620,10 @@
       "fireRate": 3,
       "reloadingSpeed": 8.5,
       "piercing": 2,
-      "range": 6
+      "range": 6,
+      "magazine": 6,
+      "ammoReserve": 48,
+      "headshotMult": 4.5
      }
     },
     {
@@ -27112,7 +27637,10 @@
       "fireRate": 3,
       "reloadingSpeed": 8.5,
       "piercing": 2,
-      "range": 6
+      "range": 6,
+      "magazine": 12,
+      "ammoReserve": 108,
+      "headshotMult": 4.5
      }
     },
     {
@@ -27126,7 +27654,10 @@
       "fireRate": 3,
       "reloadingSpeed": 8.5,
       "piercing": 2,
-      "range": 6
+      "range": 6,
+      "magazine": 6,
+      "ammoReserve": 48,
+      "headshotMult": 4.5
      }
     }
    ],
@@ -27940,7 +28471,10 @@
       "fireRate": 4,
       "reloadingSpeed": 5,
       "piercing": 3,
-      "range": 7
+      "range": 7,
+      "magazine": 25,
+      "ammoReserve": 125,
+      "headshotMult": 2.3
      }
     },
     {
@@ -27948,7 +28482,11 @@
      "name": "Ultramarines",
      "nameKey": "UI_FIREARM_ARIFLE_BOLT_RIFLE_PREORDER_NAME",
      "tier": null,
-     "stats": {}
+     "stats": {
+      "magazine": 25,
+      "ammoReserve": 125,
+      "headshotMult": 2.3
+     }
     },
     {
      "id": "02",
@@ -27961,7 +28499,10 @@
       "fireRate": 4,
       "reloadingSpeed": 5,
       "piercing": 3,
-      "range": 7
+      "range": 7,
+      "magazine": 25,
+      "ammoReserve": 125,
+      "headshotMult": 2.3
      }
     },
     {
@@ -27975,7 +28516,10 @@
       "fireRate": 4,
       "reloadingSpeed": 5,
       "piercing": 3,
-      "range": 7
+      "range": 7,
+      "magazine": 25,
+      "ammoReserve": 125,
+      "headshotMult": 2.3
      }
     },
     {
@@ -27989,7 +28533,10 @@
       "fireRate": 4,
       "reloadingSpeed": 5,
       "piercing": 3,
-      "range": 7
+      "range": 7,
+      "magazine": 25,
+      "ammoReserve": 125,
+      "headshotMult": 2.3
      }
     },
     {
@@ -28003,7 +28550,10 @@
       "fireRate": 4,
       "reloadingSpeed": 5,
       "piercing": 3,
-      "range": 7
+      "range": 7,
+      "magazine": 25,
+      "ammoReserve": 125,
+      "headshotMult": 2.3
      }
     },
     {
@@ -28017,7 +28567,10 @@
       "fireRate": 4,
       "reloadingSpeed": 5.5,
       "piercing": 3,
-      "range": 7
+      "range": 7,
+      "magazine": 25,
+      "ammoReserve": 125,
+      "headshotMult": 2.3
      }
     },
     {
@@ -28031,7 +28584,10 @@
       "fireRate": 4,
       "reloadingSpeed": 5,
       "piercing": 3,
-      "range": 7
+      "range": 7,
+      "magazine": 25,
+      "ammoReserve": 125,
+      "headshotMult": 2.3
      }
     },
     {
@@ -28045,7 +28601,10 @@
       "fireRate": 4,
       "reloadingSpeed": 5,
       "piercing": 3,
-      "range": 7
+      "range": 7,
+      "magazine": 25,
+      "ammoReserve": 125,
+      "headshotMult": 2.3
      }
     },
     {
@@ -28059,7 +28618,10 @@
       "fireRate": 4,
       "reloadingSpeed": 5,
       "piercing": 3,
-      "range": 7
+      "range": 7,
+      "magazine": 25,
+      "ammoReserve": 125,
+      "headshotMult": 2.3
      }
     },
     {
@@ -28073,7 +28635,10 @@
       "fireRate": 4,
       "reloadingSpeed": 6,
       "piercing": 3,
-      "range": 7
+      "range": 7,
+      "magazine": 25,
+      "ammoReserve": 125,
+      "headshotMult": 2.3
      }
     },
     {
@@ -28087,7 +28652,10 @@
       "fireRate": 4,
       "reloadingSpeed": 5,
       "piercing": 3,
-      "range": 7
+      "range": 7,
+      "magazine": 25,
+      "ammoReserve": 125,
+      "headshotMult": 2.3
      }
     },
     {
@@ -28101,7 +28669,10 @@
       "fireRate": 4,
       "reloadingSpeed": 5,
       "piercing": 3,
-      "range": 7
+      "range": 7,
+      "magazine": 25,
+      "ammoReserve": 125,
+      "headshotMult": 2.3
      }
     }
    ],

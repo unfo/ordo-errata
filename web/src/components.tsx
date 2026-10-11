@@ -12,7 +12,19 @@ export function Desc({ parts }: { parts: DescPart[] }) {
   return (
     <>
       {parts.map((p, i) => {
-        if ("enemy" in p) return <Icon key={i} class="inline-icon" name={`icn_${p.enemy.toLowerCase()}`} alt={p.enemy} />;
+        if ("enemy" in p) {
+          // Tinted with the tier colour like the game does: the icon texture is used as a mask.
+          const url = iconUrl(`icn_${p.enemy.toLowerCase()}`);
+          return (
+            <span
+              key={i}
+              role="img"
+              aria-label={p.enemy}
+              class={`inline-icon enemy-icon tag-${p.enemy.toLowerCase()}`}
+              style={url ? { maskImage: `url(${url})`, WebkitMaskImage: `url(${url})` } : undefined}
+            />
+          );
+        }
         if ("v" in p)
           return (
             <span key={i} class={`val ${p.kind === "POSITIVE" ? "pos" : p.kind === "NEGATIVE" ? "neg" : ""} ${p.missing ? "missing" : ""}`}>

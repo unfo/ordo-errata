@@ -14,7 +14,7 @@
   --added: #e7c35a;
   --removed: #8a8f96;
   --changed: #e0973f;
-  --majoris: #e0973f;
+  --majoris: #e8573c;
   --extremis: #e0584f;
   --terminus: #c45ae0;
   --minoris: #b8b8b8;
@@ -429,6 +429,7 @@ select {
 }
 
 .tag-majoris { color: var(--majoris); }
+/* Game draws enemy-tier names in red-orange (screenshot: Adrenaline Rush tooltip). */
 .tag-extremis { color: var(--extremis); }
 .tag-terminus { color: var(--terminus); }
 .tag-minoris { color: var(--minoris); }
@@ -1400,4 +1401,15 @@ button.link {
 
 .class-view .perk-panel {
   position: sticky;
+}
+
+.enemy-icon {
+  display: inline-block;
+  background-color: currentColor;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
 }
