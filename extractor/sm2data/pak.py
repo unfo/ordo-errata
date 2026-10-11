@@ -3,10 +3,47 @@
 from __future__ import annotations
 
 import os
+import re
 import zipfile
 from pathlib import Path
 
-DEFAULT_GAME_DIR = Path(os.environ.get("SM2_GAME_DIR", Path.home() / "work" / "sm2"))
+GAME_FOLDER = "Space Marine 2"
+# Steam installs to check (WSL view of Windows drives, and native Linux).
+_STEAM_ROOTS = [
+    Path("/mnt/c/Program Files (x86)/Steam"),
+    Path("/mnt/c/Program Files/Steam"),
+    Path.home() / ".steam/steam",
+    Path.home() / ".local/share/Steam",
+]
+
+
+def _wsl_path(win_path: str) -> Path:
+    """'E:\\SteamLibrary' -> /mnt/e/SteamLibrary (WSL); other paths unchanged."""
+    m = re.match(r"^([A-Za-z]):[\\/](.*)$", win_path)
+    if m:
+        return Path("/mnt") / m.group(1).lower() / m.group(2).replace("\\", "/")
+    return Path(win_path)
+
+
+def find_game_dir() -> Path | None:
+    """Locate the installed game: $SM2_GAME_DIR, else every Steam library listed in
+    steamapps/libraryfolders.vdf (so extra libraries on other drives are found too)."""
+    if os.environ.get("SM2_GAME_DIR"):
+        return Path(os.environ["SM2_GAME_DIR"])
+    libraries: list[Path] = []
+    for root in _STEAM_ROOTS:
+        vdf = root / "steamapps" / "libraryfolders.vdf"
+        if vdf.is_file():
+            libraries += [_wsl_path(p.replace("\\\\", "\\")) for p in re.findall(r'"path"\s+"([^"]+)"', vdf.read_text(errors="replace"))]
+        libraries.append(root)
+    for lib in libraries:
+        game = lib / "steamapps" / "common" / GAME_FOLDER
+        if (game / "client_pc").is_dir():
+            return game
+    return None
+
+
+DEFAULT_GAME_DIR = find_game_dir()
 STEAM_APP_ID = 2183900
 
 # Paks that never contain data we use; skipping them keeps indexing fast.
@@ -20,7 +57,9 @@ class PakIndex:
     files are still found, and the client copy wins for shared files).
     """
 
-    def __init__(self, game_dir: Path = DEFAULT_GAME_DIR):
+    def __init__(self, game_dir: Path | None = DEFAULT_GAME_DIR):
+        if game_dir is None:
+            raise FileNotFoundError("Space Marine 2 install not found; pass --game-dir or set SM2_GAME_DIR")
         self.game_dir = Path(game_dir)
         self._zips: dict[Path, zipfile.ZipFile] = {}
         self._where: dict[str, Path] = {}

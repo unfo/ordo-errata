@@ -19,7 +19,7 @@ update, or fetch the old version later with DepotDownloader (see backfill below)
 4. Check the patch notes page for unmatched names (bottom of the page). If a perk or weapon is named differently in
    the notes than in game, add it to `changelogs/aliases.json`.
 5. Add the release to `tools/backfill/versions.csv` (version, release date, next release, manifest id from
-   `~/steam-c/../appmanifest_2183900.acf` → `InstalledDepots.2183901.manifest`).
+   `<Steam library>/steamapps/appmanifest_2183900.acf` → `InstalledDepots.2183901.manifest`).
 6. Run the tests (`uv run pytest -q`, `cd web && npm test && npm run build`), commit on `develop`, fast-forward `main`,
    push. GitHub Actions deploys.
 
@@ -64,7 +64,7 @@ then `uv run extractor/build.py --game-dir <copy> --build-id <v> --no-icons`. If
 `web/public/icons/`, it prints which `default_pct_*.pak` files contain them. Copy only those (about 1.5 GB each) and run
 again without `--no-icons`.
 
-Setup on a fresh machine: `uv sync` (Python 3.11+), `cd web && npm ci` (Node 24). Game path: `--game-dir` or `SM2_GAME_DIR`.
+Setup on a fresh machine: `uv sync` (Python 3.11+), `cd web && npm ci` (Node 24). Game path: auto-detected from Steam (`libraryfolders.vdf`), or `--game-dir` / `SM2_GAME_DIR`.
 
 ## In-game verification
 

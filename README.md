@@ -23,7 +23,7 @@ Documentation: [how it works](docs/how-it-works.md) (game file formats, what is 
 ## Usage
 
 ```bash
-uv run extractor/build.py --build-id 15.1   # snapshot the installed game (or --game-dir PATH)
+uv run extractor/build.py --build-id 15.1   # snapshot the installed game (auto-detected; or --game-dir PATH)
 uv run extractor/diff.py 15.0 15.1          # compare two snapshots
 uv run tools/fetch_changelog.py --list      # official patch posts on Steam
 uv run tools/fetch_changelog.py "Hotfix 15.1"   # save one as changelogs/15.1-hotfix.md
@@ -48,4 +48,9 @@ If you represent a rights holder and have concerns about any content here, pleas
 
 ## License
 
-TODO: a Creative Commons license for this project's own code and content is still to be chosen. Until then, all rights are reserved by the author for the project's own work. Third-party game content is excluded, as described above.
+| What | Licence |
+|---|---|
+| Source code: `extractor/`, `tools/`, `web/` (except `web/public/icons/`), `.github/`, tests and config | [MIT](LICENSE) |
+| Documentation: `README.md`, `CLAUDE.md`, `docs/` | [CC BY 4.0](LICENSE-docs) |
+| Game-derived content: `data/` (extracted names, descriptions and values), `web/public/icons/` (game icons) | **Not licensed by this project.** © Games Workshop Limited / Saber Interactive / Focus Entertainment, used for fan purposes; see the disclaimer above. |
+| Patch notes: `changelogs/*.md` | **Not licensed by this project.** Official patch notes © Saber Interactive / Focus Entertainment, reproduced with a link to each original post. |

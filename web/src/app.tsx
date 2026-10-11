@@ -177,6 +177,10 @@ function Footer() {
         project's license.
       </p>
       <p>
+        Source: <a href="https://github.com/unfo/ordo-errata">github.com/unfo/ordo-errata</a> · code MIT, documentation CC BY 4.0
+        (game content excluded).
+      </p>
+      <p>
         Provided “as is”, without warranty of any kind. Data is extracted automatically from the game files and may be incomplete or
         out of date. Rights holders: contact{" "}
         <a href="mailto:emperor-protects@localhost.exposed">emperor-protects@localhost.exposed</a> about any content and it will be

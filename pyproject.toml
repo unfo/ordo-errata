@@ -3,6 +3,7 @@ name = "ordo-errata"
 version = "0.1.0"
 description = "Extract perk/weapon data and icons from a local Space Marine 2 install for the patch helper site"
 requires-python = ">=3.11"
+license = "MIT"
 dependencies = ["pillow>=11"]
 
 [dependency-groups]

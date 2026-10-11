@@ -24,7 +24,7 @@ Read first: [docs/how-it-works.md](docs/how-it-works.md) (formats, data flow, wh
 ## Commands
 
 ```bash
-uv run extractor/build.py --build-id 15.1                 # snapshot the installed game (SM2_GAME_DIR or ~/work/sm2)
+uv run extractor/build.py --build-id 15.1                 # snapshot the installed game (auto-detected Steam install, or SM2_GAME_DIR)
 uv run extractor/build.py --game-dir DIR --build-id X --no-icons   # snapshot a partial download
 uv run extractor/diff.py --all                             # diff all consecutive snapshots
 uv run pytest -q                                           # extractor tests
