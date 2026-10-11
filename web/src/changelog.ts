@@ -286,7 +286,8 @@ export function resolveChangelog(
 ): ParsedChangelog {
   const { meta, body } = frontMatter(md);
   const { title, items } = parseMarkdown(body);
-  const names = { ...snap.names };
+  // Current names win; names used in other snapshots fill the gaps (renamed/replaced perks).
+  const names = { ...(snap.formerNames ?? {}), ...snap.names };
   for (const [k, v] of Object.entries(aliases)) {
     if (!k.startsWith("_")) names[normalizeName(k)] = [...(names[normalizeName(k)] ?? []), ...v];
   }

@@ -1,12 +1,20 @@
 import { readFileSync, readdirSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import { inferEffect, inferMode, parseMarkdown, resolveChangelog, type Aliases } from "./changelog";
-import type { Snapshot } from "./data";
+import { formerNames, type Snapshot } from "./data";
 
 const root = new URL("../../", import.meta.url);
 const builds = JSON.parse(readFileSync(new URL("data/builds.json", root), "utf8"));
 const read = (p: string) => JSON.parse(readFileSync(new URL(`data/${builds.latest}/${p}.json`, root), "utf8"));
-const snap: Snapshot = { buildId: builds.latest, classes: read("classes"), weapons: read("weapons"), names: read("names_index") };
+const readFrom = (b: string, p: string) => JSON.parse(readFileSync(new URL(`data/${b}/${p}.json`, root), "utf8"));
+const others = builds.builds.filter((b: string) => b !== builds.latest).map((b: string) => readFrom(b, "names_index"));
+const snap: Snapshot = {
+  buildId: builds.latest,
+  classes: read("classes"),
+  weapons: read("weapons"),
+  names: read("names_index"),
+  formerNames: formerNames(read("names_index"), others, read("classes"), read("weapons")),
+};
 const aliases: Aliases = JSON.parse(readFileSync(new URL("changelogs/aliases.json", root), "utf8"));
 const log = (name: string) => readFileSync(new URL(`changelogs/${name}`, root), "utf8");
 
@@ -83,6 +91,12 @@ describe("patch 15", () => {
       const ch = parsed.highlights.get(`perk:${perkByName(name).id}`);
       expect(ch, name).toBeDefined();
     }
+  });
+
+  it("links replaced perks through their former names", () => {
+    const steady = parsed.items.find((r) => r.item.ownText.startsWith("Steady Aim has been removed"));
+    expect(steady?.keys).toContain(`perk:${perkByName("Focused Strike").id}`);
+    expect(parsed.unmatched.map((u) => u.name)).not.toContain("Steady Aim");
   });
 
   it("separates PvP changes", () => {

@@ -94,6 +94,12 @@ export interface Snapshot {
   classes: ClassesFile;
   weapons: WeaponsFile;
   names: Record<string, NameRef[]>;
+  /**
+   * Names used by other snapshots for entities that still exist under a new name, e.g.
+   * "steady aim" -> the Tactical slot now called Focused Strike (the game keeps perk ids
+   * when it replaces a perk in the same slot).
+   */
+  formerNames: Record<string, NameRef[]>;
 }
 
 // Every build snapshot is code-split; only the selected one is downloaded.
@@ -110,12 +116,37 @@ async function load<T>(build: string, name: string): Promise<T> {
 }
 
 export async function loadSnapshot(build: string = latestBuild): Promise<Snapshot> {
-  const [classes, weapons, names] = await Promise.all([
+  const [classes, weapons, names, ...others] = await Promise.all([
     load<ClassesFile>(build, "classes"),
     load<WeaponsFile>(build, "weapons"),
     load<Record<string, NameRef[]>>(build, "names_index"),
+    ...builds.filter((b) => b !== build).map((b) => load<Record<string, NameRef[]>>(b, "names_index")),
   ]);
-  return { buildId: build, classes, weapons, names };
+  return { buildId: build, classes, weapons, names, formerNames: formerNames(names, others, classes, weapons) };
+}
+
+/** Names from other builds whose entities still exist here but no longer carry that name. */
+export function formerNames(
+  current: Record<string, NameRef[]>,
+  others: Record<string, NameRef[]>[],
+  classes: ClassesFile,
+  weapons: WeaponsFile,
+): Record<string, NameRef[]> {
+  const perkIds = new Set<string>();
+  for (const c of classes.classes)
+    for (const p of [...c.pve.base, ...c.pvp.base, ...c.pve.columns.flatMap((x) => x.slots.flatMap((s) => s.perks)), ...c.pve.team.flatMap((s) => s.perks), ...c.pve.prestige.flatMap((s) => s.perks)])
+      perkIds.add(p.id);
+  for (const w of weapons.weapons) for (const p of [...w.tiers.flatMap((t) => t.layers.flat()), ...w.heroic]) perkIds.add(p.id);
+  const weaponIds = new Set(weapons.weapons.map((w) => w.id));
+  const exists = (r: NameRef) => ("perk" in r ? perkIds.has(r.perk) : "weapon" in r ? weaponIds.has(r.weapon) : true);
+  const out: Record<string, NameRef[]> = {};
+  for (const idx of others)
+    for (const [name, refs] of Object.entries(idx)) {
+      if (current[name]) continue;
+      const alive = refs.filter(exists);
+      if (alive.length) out[name] = [...(out[name] ?? []), ...alive.filter((r) => !(out[name] ?? []).some((o) => JSON.stringify(o) === JSON.stringify(r)))];
+    }
+  return out;
 }
 
 export function iconUrl(name: string | null | undefined): string | undefined {
