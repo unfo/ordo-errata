@@ -16,6 +16,10 @@ Patch notes name perks and weapons by text only. This tool shows *which* hex in 
 
 Each game update gets its own `data/<build id>/` snapshot, so later versions can diff the game data directly, including changes the notes don't mention.
 
+Documentation: [how it works](docs/how-it-works.md) (game file formats, what is extracted from which file) ·
+[maintenance](docs/maintenance.md) (new patches, backfilling old versions, offline machines, deploy) ·
+[CLAUDE.md](CLAUDE.md) (conventions for AI-assisted development).
+
 ## Usage
 
 ```bash

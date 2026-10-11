@@ -6,6 +6,7 @@ Usage:
   uv run tools/crop.py weapon_stats FILE.jpg ...   # specific files
   uv run tools/crop.py --list
 
+The screenshot folder is auto-detected from the Steam install (or --dir / SM2_SCREENSHOT_DIR).
 Presets live in tools/crops.json, defined on the centred 2550x1440 UI area of a
 3440x1440 screenshot and scaled by height for other resolutions. Output goes to
 reference/crops/ (gitignored); screenshots are only read.
@@ -23,12 +24,27 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parent.parent
 PRESETS = ROOT / "tools" / "crops.json"
 OUT = ROOT / "reference" / "crops"
-SCREENSHOT_DIR = Path(
-    os.environ.get(
-        "SM2_SCREENSHOT_DIR",
-        "/mnt/c/Program Files (x86)/Steam/userdata/<steam-account-id>/760/remote/2183900/screenshots",
-    )
-)
+APP_ID = 2183900
+# Steam installs to look in (WSL view of Windows, and native Linux). Override with --dir or SM2_SCREENSHOT_DIR.
+STEAM_ROOTS = [
+    Path("/mnt/c/Program Files (x86)/Steam"),
+    Path("/mnt/c/Program Files/Steam"),
+    Path.home() / ".steam/steam",
+    Path.home() / ".local/share/Steam",
+]
+
+
+def screenshot_dir(explicit: Path | None) -> Path:
+    """--dir, then $SM2_SCREENSHOT_DIR, then auto-detect Steam's per-user screenshot folder for this game
+    (userdata/<account id>/760/remote/2183900/screenshots; the most recently used one if several accounts)."""
+    if explicit:
+        return explicit
+    if os.environ.get("SM2_SCREENSHOT_DIR"):
+        return Path(os.environ["SM2_SCREENSHOT_DIR"])
+    found = [d for root in STEAM_ROOTS for d in root.glob(f"userdata/*/760/remote/{APP_ID}/screenshots") if d.is_dir()]
+    if not found:
+        raise SystemExit("Steam screenshot folder not found; pass --dir or set SM2_SCREENSHOT_DIR")
+    return max(found, key=lambda d: d.stat().st_mtime)
 UI_W, UI_H = 2550, 1440
 
 
@@ -48,6 +64,7 @@ def main() -> int:
     ap.add_argument("--last", type=int, default=1, help="use the N newest screenshots when no files are given")
     ap.add_argument("--max-width", type=int, default=0, help="downscale output to at most this width")
     ap.add_argument("--list", action="store_true")
+    ap.add_argument("--dir", type=Path, help="screenshot folder (default: $SM2_SCREENSHOT_DIR or auto-detected)")
     args = ap.parse_args()
 
     if args.list or not args.preset:
@@ -55,7 +72,12 @@ def main() -> int:
             print(f"{k:14} {v}")
         return 0
 
-    files = args.files or sorted(SCREENSHOT_DIR.glob("*.jpg"), key=lambda p: p.stat().st_mtime)[-args.last :]
+    if not args.files:
+        folder = screenshot_dir(args.dir)
+        args.files = sorted(folder.glob("*.jpg"), key=lambda p: p.stat().st_mtime)[-args.last :]
+        if not args.files:
+            raise SystemExit(f"no .jpg screenshots in {folder}")
+    files = args.files
     OUT.mkdir(parents=True, exist_ok=True)
     for f in files:
         with Image.open(f) as im:

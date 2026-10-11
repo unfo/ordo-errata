@@ -378,6 +378,16 @@ class Builder:
         }
 
 
+def pak_of_icon(b: "Builder", name: str) -> str | None:
+    """Name of the default_pct_*.pak holding an icon's pixels (None if not available here)."""
+    try:
+        h = b.tex.header(name)
+        member = b.tex._mip_member(h["mips"][0], name)
+        return b.pak._where[member].name
+    except (KeyError, IndexError, UnsupportedTexture):
+        return None
+
+
 def all_class_perks(c: dict) -> list[dict]:
     pve = c["pve"]
     groups = [pve["base"], c["pvp"]["base"]]
@@ -461,6 +471,13 @@ def main() -> int:
     write_json(out / "names_index.json", b.names_index(classes, weapons))
     write_json(out / "loc_health.json", b.loc_health())
     write_json(out / "values.json", extract_values(pak, [w["id"] for w in weapons["weapons"]], perk_types(classes, weapons)))
+
+    new_icons = sorted(n for n in b.icons if not (args.icons / f"{n}.png").exists())
+    if args.no_icons and new_icons:
+        # Tell the user which texture paks hold the missing icons, so only those need copying.
+        paks = sorted({pak_of_icon(b, n) for n in new_icons} - {None})
+        print(f"  {len(new_icons)} icons not yet in {args.icons.relative_to(ROOT) if args.icons.is_relative_to(ROOT) else args.icons}; "
+              f"they live in: {', '.join(paks) or 'texture paks not present here'}")
 
     failed = []
     for name in [] if args.no_icons else sorted(b.icons):
