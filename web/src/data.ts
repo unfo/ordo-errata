@@ -24,6 +24,16 @@ export interface Perk {
   row?: number;
   /** Weapon perks: a branch perk unlocked by the row's main perk. */
   sub?: boolean;
+  /** Weapon perks: internal ids of the attacks the perk applies to (from the game logic). */
+  strikes?: string[];
+}
+
+/** A move as listed on the game's combo moves screen. "{STRING}" in text is a button prompt. */
+export interface Move {
+  name: string;
+  kind: "combo" | "ability";
+  text: string[];
+  hold: boolean;
 }
 
 export interface Slot {
@@ -72,6 +82,7 @@ export interface Weapon {
   }[];
   tiers: WeaponTier[];
   heroic: (Perk & { variant: string })[];
+  moves?: Move[];
 }
 
 export interface WeaponsFile {

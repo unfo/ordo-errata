@@ -55,6 +55,13 @@ cd web && npm test && npm run build                        # vitest (uses real d
   the stats where a variant beats all its tier siblings (plus melee defence style).
 - SSL omits fields equal to their default. Defaults are declared in the loose file
   `client_pc/root/tools/meta_descs/meta_desc_ssl.ps` (`__defaultValue`), e.g. melee `defense` defaults to `BLOCK`.
+- Melee **moves** (names + how-to text) come from the combo moves screen data (`ui_combo_moves_library.sso`). Weapon
+  perks list the internal **attacks** they affect (`strikeUids`, or a flag the weapon's `strikeSettings.<attack>` react
+  to). The game keeps no attack-id → move-name table; inferring one from perk texts proved wrong, so don't.
+- Perks can delegate their effect to a **helper perk** (`PerkApplicationAttachPerk` → `perkLink`); values.py follows
+  the link (`linked.` paths). Perfect Reprisal moved its bonus there in 15.2.
+- **`EXTRACTOR_VERSION`** (build.py) is stamped into `meta.json`; bump it when snapshot content changes and rebuild all
+  snapshots (old versions from DepotDownloader copies, see `tools/backfill/versions.csv`). `diff.py` warns on mismatch.
 - Some builds ship **obfuscated string tables** (`6d3s9` + XOR hex); `strings.deobfuscate` handles it.
 - Hotfix 15.1 introduced a broken text key (`Rapid Recharge` instead of `UI_WEAPON_SKILL_MELEE_ONE_HANDED_HAMMER_02_DESC`); `loc_health.json` reports such issues per build.
 

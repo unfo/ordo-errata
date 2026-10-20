@@ -324,7 +324,13 @@ export function resolveChangelog(
   for (const item of items) {
     const mode = inferMode(item.section, item.ownText);
     const effect = inferEffect(item.ownText);
-    const scope = scopeFromSection(idx, item.section);
+    // "Tactical: Fixed a bug ..." in a general section: the prefix names the class.
+    let scope = scopeFromSection(idx, item.section);
+    const prefix = item.ownText.match(/^([A-Za-z][A-Za-z -]{2,20}):\s/);
+    if (prefix) {
+      const cls = lookup(idx, prefix[1]).find((r) => r.kind === "class");
+      if (cls && cls.kind === "class") scope = { kind: "class", class: cls.class };
+    }
     const refs: NameRef[] = [];
     const miss: string[] = [];
 
@@ -373,15 +379,16 @@ export function resolveChangelog(
       }
     }
 
-    // Still nothing: look for weapon names anywhere in the line ("Plasma pistol variants ...").
-    // Only weapon names of 8+ characters, so words like "heavy" or "melta" alone never match.
-    if (!refs.length) {
-      const text = ` ${normalizeName(item.ownText)} `;
+    // Weapon names anywhere in the line ("... the Plasma Pistol having the buff from Versatility").
+    // Only names of 8+ characters, so words like "heavy" or "melta" alone never match; a weapon the
+    // line already links (directly or via one of its variants/perks) is not added again.
+    {
+      let text = ` ${normalizeName(item.ownText)} `;
       for (const { name, refs: r } of weaponNames(idx)) {
-        if (text.includes(` ${name} `)) {
-          refs.push(...r);
-          break;
-        }
+        if (!text.includes(` ${name} `)) continue;
+        const fresh = r.filter((x) => x.kind === "weapon" && !refs.some((y) => "weapon" in y && y.weapon === x.weapon));
+        refs.push(...fresh);
+        text = text.replace(` ${name} `, " "); // longest names first: "bolt carbine one handed" before "bolt carbine"
       }
     }
 

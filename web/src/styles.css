@@ -1663,3 +1663,63 @@ button.link {
 .diff-desc {
   white-space: pre-line;
 }
+
+/* ---- weapon moves ---- */
+
+.moves {
+  margin-top: 20px;
+}
+
+.move-list {
+  margin: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.move {
+  display: grid;
+  grid-template-columns: minmax(9em, 14em) 1fr;
+  gap: 12px;
+  padding: 6px 8px;
+  background: var(--panel);
+  border-left: 3px solid var(--gold-dim);
+}
+
+.move dt {
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.move dd {
+  margin: 0;
+}
+
+.badge.move-kind {
+  background: var(--line);
+  color: var(--text);
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+kbd.btn-prompt {
+  display: inline-block;
+  font-size: 0.7em;
+  padding: 0 4px;
+  margin: 0 2px;
+  border: 1px solid var(--muted);
+  border-radius: 3px;
+  color: var(--gold);
+  vertical-align: middle;
+}
+
+.perk-strikes {
+  font-size: 0.8rem;
+  margin: 0 0 8px;
+}
+
+@media (max-width: 600px) {
+  .move {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}

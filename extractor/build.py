@@ -28,7 +28,7 @@ from sm2data.values import extract_values, firearm_extra_stats  # noqa: E402
 ROOT = Path(__file__).resolve().parent.parent
 # Bump when a change alters what ends up in the snapshot files (new values, filters, rendering), so diffs
 # between snapshots built by different versions can warn that some differences come from the extractor.
-EXTRACTOR_VERSION = 2
+EXTRACTOR_VERSION = 3
 
 MASTERY = "ssl/main/user/mastery/mastery_library.sso"
 MASTERY_SKILLS = "ssl/main/user/mastery/mastery_skills_library.sso"
@@ -40,6 +40,7 @@ WEAPON_HEROIC = "ssl/main/user/progression/weapons_mastery/perks/weapon_heroic_p
 UI_FIREARMS = "ssl/weapons/ui/ui_firearms_library.sso"
 UI_ABILITIES = "ssl/abilities/ui/ui_abilities_library.sso"
 WEAPON_ICON_KEYS = "ssl/ui/fusion/assets/switchers/weapon_icons/ui_weapon_icon_converter.sso"
+COMBO_MOVES = "ssl/ui/screens/pause/combo_moves_list/ui_combo_moves_library.sso"
 WEAPON_ICON_SWITCHER = "ssl/ui/fusion/assets/switchers/weapon_icons/ui_switcher_weapon_icons_big.sso"
 PERK_ICON_SWITCHER = "ssl/ui/fusion/assets/switchers/perk_icons/ui_switcher_perk_icons.sso"
 
@@ -269,6 +270,7 @@ class Builder:
         mastery_doc = self.load(WEAPON_MASTERY)
         mastery = {**mastery_doc.get("firearmProgression", {}), **mastery_doc.get("meleeProgression", {})}
         extra = firearm_extra_stats(self.pak, list(progression))
+        combo_lib = self.load(COMBO_MOVES).get("meleeWeapons", {}) if COMBO_MOVES in self.pak else {}
 
         out = []
         for wid, wdata in progression.items():
@@ -340,6 +342,7 @@ class Builder:
                     "variants": variants,
                     "tiers": tiers,
                     "heroic": heroic_perks,
+                    "moves": self.moves(combo_lib.get(wid)),
                 }
             )
         labels = {k: self.s.get(f"UI_WEAPON_PARAMETER_{v}_NAME") or k for k, v in STAT_LABEL_KEYS.items()}
@@ -348,6 +351,26 @@ class Builder:
         return {"statLabels": labels, "defenseLabels": defense, "tierNames": tier_names, "weapons": out}
 
     # -- indexes and reports -----------------------------------------------
+
+    def moves(self, entry: dict | None) -> list[dict]:
+        """The weapon's moves as listed on the in-game combo moves screen: name, kind and how-to text.
+        "{STRING}" in the text is the button glyph the game draws."""
+        out = []
+        for group, kind in (("baseCombos", "combo"), ("uniqueAbilities", "ability")):
+            for move in (entry or {}).get(group, {}).values():
+                if not isinstance(move, dict) or not move.get("comboName"):
+                    continue
+                steps = [m for m in move.get("moves", []) if isinstance(m, dict)]
+                texts = [t for t in (self.text(m.get("text"), "combo moves") for m in steps if m.get("text")) if t]
+                out.append(
+                    {
+                        "name": self.text(move["comboName"], "combo moves") or move["comboName"],
+                        "kind": kind,
+                        "text": texts,
+                        "hold": any(m.get("holdNeeded") for m in steps),
+                    }
+                )
+        return out
 
     @staticmethod
     def names_index(classes: dict, weapons: dict) -> dict:
@@ -394,6 +417,29 @@ class Builder:
             "missingIcons": sorted(self.missing_icons),
             "unfilledPlaceholders": dict(sorted(self.unfilled.items())),
         }
+
+
+def link_perks_to_attacks(weapons: dict, values: dict) -> None:
+    """Add each weapon perk's affected attacks ("strikes": internal attack ids).
+
+    A perk names its attacks either directly (strikeUids) or through a flag that the weapon's attack
+    definitions react to (extraDamagesOverridePerFlagType.<FLAG> under strikeSettings.<attack>), e.g.
+    Echoing Swing sets MELEE_HAMMER_ONE_HANDED_SHOCKWAVES, which only Heavy2 and Heavy3 react to.
+    (Attack ids are not mapped to move names: the game keeps no such table, and inferring it from perk
+    descriptions proved unreliable.)
+    """
+    for w in weapons["weapons"]:
+        wvals = values.get(f"weapon:{w['id']}", {})
+        attacks = {m.group(1) for k in wvals for m in [re.search(r"strikeSettings\.([^.\[]+)", k)] if m}
+        for p in all_weapon_perks(w):
+            strikes: set[str] = set()
+            for k, v in values.get(f"perk:{p['type']}", {}).items():
+                if k.endswith("strikeUids") and isinstance(v, str):
+                    strikes.update(x for x in v.split(", ") if x in attacks)
+                if "flags[" in k and isinstance(v, str):
+                    strikes.update(a for a in attacks if any(f"strikeSettings.{a}." in wk and v in wk for wk in wvals))
+            if strikes:
+                p["strikes"] = sorted(strikes)
 
 
 def pak_of_icon(b: "Builder", name: str) -> str | None:
@@ -485,10 +531,12 @@ def main() -> int:
         meta["note"] = args.note
     write_json(out / "meta.json", meta)
     write_json(out / "classes.json", classes)
+    values = extract_values(pak, [w["id"] for w in weapons["weapons"]], perk_types(classes, weapons))
+    link_perks_to_attacks(weapons, values)
     write_json(out / "weapons.json", weapons)
     write_json(out / "names_index.json", b.names_index(classes, weapons))
     write_json(out / "loc_health.json", b.loc_health())
-    write_json(out / "values.json", extract_values(pak, [w["id"] for w in weapons["weapons"]], perk_types(classes, weapons)))
+    write_json(out / "values.json", values)
 
     new_icons = sorted(n for n in b.icons if not (args.icons / f"{n}.png").exists())
     if args.no_icons and new_icons:

@@ -248,6 +248,31 @@ export function EntityChanges({ changes, mode }: { changes?: Change[]; mode: Mod
   );
 }
 
+/** Internal attack id -> readable words: "Light1ChargedDouble" -> "Light 1 charged double". */
+export function attackName(id: string): string {
+  const s = id.replace(/([a-z])([A-Z0-9])/g, "$1 $2").replace(/([0-9])([A-Z])/g, "$1 $2").replace(/_/g, " ").toLowerCase();
+  return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
+/** Move how-to text with the game's button prompts ({STRING}) drawn as a key cap. */
+export function MoveText({ text }: { text: string }) {
+  const bits = text.split("{STRING}");
+  return (
+    <>
+      {bits.map((b, i) => (
+        <span key={i}>
+          {b}
+          {i < bits.length - 1 && (
+            <kbd class="btn-prompt" title="Button prompt (the game shows your key binding here)">
+              ◆
+            </kbd>
+          )}
+        </span>
+      ))}
+    </>
+  );
+}
+
 export function PerkTile({
   perk,
   shape,
@@ -316,6 +341,11 @@ export function PerkCard({
         </p>
       ) : (
         <p class="card-desc muted">No description.</p>
+      )}
+      {perk.strikes && perk.strikes.length > 0 && (
+        <p class="perk-strikes">
+          <span class="muted">Applies to attacks:</span> {perk.strikes.map(attackName).join(", ")}
+        </p>
       )}
       {perk.textIssue && (
         <p class="warn">

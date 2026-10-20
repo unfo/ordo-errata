@@ -198,3 +198,12 @@ describe("identifier list diffs", async () => {
     expect([l.item, l.old, l.new]).toEqual(["activation trigger · attacks it applies to", "—", "+ C"]);
   });
 });
+
+describe("class prefix in general sections", () => {
+  it("links 'Tactical: ... Versatility' to the Tactical perk", () => {
+    const md = "# Hotfix\n## GENERAL FIXES\n- Tactical: Fixed a bug with the Plasma Pistol having the buff from \"*Versatility*\" even if no Primary Weapon was equipped.\n";
+    const r = resolveChangelog("t", md, snap, aliases).items[0];
+    expect(r.keys).toContain("perk:PveSoldierBuffSecondaryDamageAfterSwitching");
+    expect(r.keys).toContain("weapon:hgun_plasma_pistol");
+  });
+});

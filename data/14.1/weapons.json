@@ -1133,7 +1133,8 @@
       ]
      }
     }
-   ]
+   ],
+   "moves": []
   },
   {
    "id": "hwpn_support_heavy_bolter",
@@ -2161,7 +2162,8 @@
       ]
      }
     }
-   ]
+   ],
+   "moves": []
   },
   {
    "id": "brifle_stalker_bolt_rifle",
@@ -3029,7 +3031,8 @@
       ]
      }
     }
-   ]
+   ],
+   "moves": []
   },
   {
    "id": "arifle_auto_bolt_rifle",
@@ -3786,7 +3789,8 @@
      ]
     }
    ],
-   "heroic": []
+   "heroic": [],
+   "moves": []
   },
   {
    "id": "arifle_heavy_bolt_rifle",
@@ -4897,7 +4901,8 @@
       ]
      }
     }
-   ]
+   ],
+   "moves": []
   },
   {
    "id": "brifle_instigator_bolt_carbine",
@@ -5940,7 +5945,8 @@
       ]
      }
     }
-   ]
+   ],
+   "moves": []
   },
   {
    "id": "brifle_bolt_sniper_rifle",
@@ -6824,7 +6830,8 @@
       ]
      }
     }
-   ]
+   ],
+   "moves": []
   },
   {
    "id": "smg_bolt_carbine",
@@ -7891,7 +7898,8 @@
       ]
      }
     }
-   ]
+   ],
+   "moves": []
   },
   {
    "id": "smg_occulus_bolt_carbine",
@@ -8878,7 +8886,8 @@
      ]
     }
    ],
-   "heroic": []
+   "heroic": [],
+   "moves": []
   },
   {
    "id": "pwpn_plasma_exterminator",
@@ -9979,7 +9988,8 @@
      ]
     }
    ],
-   "heroic": []
+   "heroic": [],
+   "moves": []
   },
   {
    "id": "hwpn_las_fusil",
@@ -10857,7 +10867,8 @@
      ]
     }
    ],
-   "heroic": []
+   "heroic": [],
+   "moves": []
   },
   {
    "id": "hwpn_support_plasma_incinerator",
@@ -11858,7 +11869,8 @@
       ]
      }
     }
-   ]
+   ],
+   "moves": []
   },
   {
    "id": "hwpn_support_heavy_meltagun",
@@ -12815,7 +12827,8 @@
      ]
     }
    ],
-   "heroic": []
+   "heroic": [],
+   "moves": []
   },
   {
    "id": "hgun_heavy_bolt_pistol",
@@ -13821,7 +13834,8 @@
       ]
      }
     }
-   ]
+   ],
+   "moves": []
   },
   {
    "id": "hgun_bolt_pistol",
@@ -14641,7 +14655,8 @@
       ]
      }
     }
-   ]
+   ],
+   "moves": []
   },
   {
    "id": "shotgun_meltagun",
@@ -15451,7 +15466,8 @@
       ]
      }
     }
-   ]
+   ],
+   "moves": []
   },
   {
    "id": "hgun_plasma_pistol",
@@ -16260,7 +16276,8 @@
       ]
      }
     }
-   ]
+   ],
+   "moves": []
   },
   {
    "id": "melee_chainsword",
@@ -16556,6 +16573,9 @@
         ],
         "unlocks": [
          "melee_chainsword_mastercrafted_1_2"
+        ],
+        "strikes": [
+         "Heavy4"
         ]
        },
        {
@@ -16591,6 +16611,12 @@
         ],
         "unlocks": [
          "melee_chainsword_mastercrafted_2_2"
+        ],
+        "strikes": [
+         "Heavy1",
+         "Heavy2",
+         "Heavy3",
+         "Heavy4"
         ]
        }
       ],
@@ -16694,6 +16720,10 @@
         ],
         "unlocks": [
          "melee_chainsword_artificer_1_2"
+        ],
+        "strikes": [
+         "Heavy4",
+         "PerkHeavy5"
         ]
        },
        {
@@ -16795,6 +16825,13 @@
          "melee_chainsword_artificer_1_3_sub",
          "melee_chainsword_artificer_2_2",
          "melee_chainsword_artificer_1_4"
+        ],
+        "strikes": [
+         "Light1",
+         "Light2",
+         "Light3",
+         "Light5Mirrored",
+         "PerkLight5"
         ]
        },
        {
@@ -16829,6 +16866,14 @@
          "melee_chainsword_artificer_2_3_sub",
          "melee_chainsword_artificer_1_2",
          "melee_chainsword_artificer_2_4"
+        ],
+        "strikes": [
+         "Heavy1",
+         "Heavy2",
+         "Heavy3",
+         "Heavy4",
+         "LightPreparedDepricated",
+         "PerkHeavy5"
         ]
        },
        {
@@ -16906,6 +16951,12 @@
         ],
         "unlocks": [
          "melee_chainsword_relic_1_1"
+        ],
+        "strikes": [
+         "Light1",
+         "Light2",
+         "Light3",
+         "Light5Mirrored"
         ]
        },
        {
@@ -17098,6 +17149,12 @@
         "row": 1,
         "blockedBy": [
          "melee_chainsword_relic_1_1"
+        ],
+        "strikes": [
+         "Light1",
+         "Light2",
+         "Light3",
+         "Light5Mirrored"
         ]
        },
        {
@@ -17214,6 +17271,46 @@
        }
       ]
      }
+    }
+   ],
+   "moves": [
+    {
+     "name": "Light Combo",
+     "kind": "combo",
+     "text": [],
+     "hold": false
+    },
+    {
+     "name": "Quick Punch",
+     "kind": "combo",
+     "text": [],
+     "hold": true
+    },
+    {
+     "name": "Front Kick",
+     "kind": "combo",
+     "text": [],
+     "hold": true
+    },
+    {
+     "name": "Shoulder Bash",
+     "kind": "combo",
+     "text": [],
+     "hold": true
+    },
+    {
+     "name": "Stomp",
+     "kind": "combo",
+     "text": [],
+     "hold": true
+    },
+    {
+     "name": "Whirl Slash",
+     "kind": "combo",
+     "text": [
+      "While evading/While sprinting {STRING}"
+     ],
+     "hold": false
     }
    ]
   },
@@ -17479,6 +17576,13 @@
         ],
         "unlocks": [
          "melee_power_fist_mastercrafted_1_2"
+        ],
+        "strikes": [
+         "LightPrepared1",
+         "LightPrepared2",
+         "LightPrepared3",
+         "LightPrepared4",
+         "LightPrepared5"
         ]
        },
        {
@@ -17675,6 +17779,10 @@
         ],
         "unlocks": [
          "melee_power_fist_artificer_2_2"
+        ],
+        "strikes": [
+         "LightPrepared4",
+         "LightPrepared5"
         ]
        }
       ],
@@ -17736,6 +17844,13 @@
          "melee_power_fist_artificer_1_3",
          "melee_power_fist_artificer_2_2",
          "melee_power_fist_relic_artificer_1_3_sub"
+        ],
+        "strikes": [
+         "LightPrepared1",
+         "LightPrepared2",
+         "LightPrepared3",
+         "LightPrepared4",
+         "LightPrepared5"
         ]
        },
        {
@@ -17759,6 +17874,13 @@
          "melee_power_fist_artificer_2_3",
          "melee_power_fist_artificer_1_2",
          "melee_power_fist_artificer_2_3_sub"
+        ],
+        "strikes": [
+         "LightPrepared1",
+         "LightPrepared2",
+         "LightPrepared3",
+         "LightPrepared4",
+         "LightPrepared5"
         ]
        },
        {
@@ -17826,6 +17948,21 @@
         ],
         "unlocks": [
          "melee_power_fist_relic_1_1"
+        ],
+        "strikes": [
+         "CombatShield1",
+         "Light1",
+         "Light2",
+         "Light3",
+         "Light4",
+         "LightDashLeft",
+         "LightLongDash",
+         "LightPrepared1",
+         "LightPrepared2",
+         "LightPrepared3",
+         "LightPrepared4",
+         "LightPrepared5",
+         "PerkLightPrepared1"
         ]
        },
        {
@@ -17858,6 +17995,10 @@
         ],
         "unlocks": [
          "melee_power_fist_relic_2_1"
+        ],
+        "strikes": [
+         "LightPrepared4",
+         "LightPrepared5"
         ]
        }
       ]
@@ -18004,6 +18145,10 @@
         },
         "blockedBy": [
          "melee_power_fist_relic_1_1"
+        ],
+        "strikes": [
+         "LightDashLeft",
+         "LightLongDash"
         ]
        },
        {
@@ -18036,6 +18181,10 @@
         "row": 2,
         "blockedBy": [
          "melee_power_fist_relic_2_1"
+        ],
+        "strikes": [
+         "LightDashLeft",
+         "LightLongDash"
         ]
        }
       ]
@@ -18113,6 +18262,66 @@
        }
       ]
      }
+    }
+   ],
+   "moves": [
+    {
+     "name": "Light Combo",
+     "kind": "combo",
+     "text": [],
+     "hold": false
+    },
+    {
+     "name": "Heavy Combo",
+     "kind": "combo",
+     "text": [],
+     "hold": true
+    },
+    {
+     "name": "Thrust Jab",
+     "kind": "combo",
+     "text": [],
+     "hold": true
+    },
+    {
+     "name": "Backfist",
+     "kind": "combo",
+     "text": [],
+     "hold": true
+    },
+    {
+     "name": "Hammer Hook",
+     "kind": "combo",
+     "text": [],
+     "hold": true
+    },
+    {
+     "name": "Backfist 2",
+     "kind": "combo",
+     "text": [],
+     "hold": true
+    },
+    {
+     "name": "Thrust Jab 2",
+     "kind": "combo",
+     "text": [],
+     "hold": true
+    },
+    {
+     "name": "Cannon Punch",
+     "kind": "combo",
+     "text": [
+      "While evading/While sprinting {STRING}"
+     ],
+     "hold": false
+    },
+    {
+     "name": "Power Amplification",
+     "kind": "ability",
+     "text": [
+      "Immune to knockback while {STRING}"
+     ],
+     "hold": true
     }
    ]
   },
@@ -18354,6 +18563,10 @@
         ],
         "unlocks": [
          "melee_combat_knife_mastercrafted_1_2"
+        ],
+        "strikes": [
+         "Heavy2",
+         "Heavy3"
         ]
        },
        {
@@ -18409,6 +18622,13 @@
         ],
         "unlocks": [
          "melee_combat_knife_mastercrafted_2_2"
+        ],
+        "strikes": [
+         "Heavy1",
+         "Heavy2",
+         "Heavy3",
+         "Heavy4",
+         "LightPrepared"
         ]
        }
       ],
@@ -18515,6 +18735,14 @@
         ],
         "unlocks": [
          "melee_combat_knife_artificer_1_2"
+        ],
+        "strikes": [
+         "Light1",
+         "Light2",
+         "Light3",
+         "Light4",
+         "LightDashLeft",
+         "LightPrepared"
         ]
        },
        {
@@ -18550,6 +18778,14 @@
         ],
         "unlocks": [
          "melee_combat_knife_artificer_2_2"
+        ],
+        "strikes": [
+         "Heavy1",
+         "Heavy2",
+         "Heavy3",
+         "Heavy4",
+         "LightPrepared",
+         "PerkDash"
         ]
        }
       ],
@@ -18615,6 +18851,9 @@
          "melee_combat_knife_artificer_1_3_sub",
          "melee_combat_knife_artificer_2_2",
          "melee_combat_knife_relic_1_1"
+        ],
+        "strikes": [
+         "Heavy4"
         ]
        },
        {
@@ -18669,6 +18908,9 @@
          "melee_combat_knife_artificer_1_2",
          "melee_combat_knife_relic_2_1",
          "melee_combat_knife_artificer_2_3_sub"
+        ],
+        "strikes": [
+         "Heavy4"
         ]
        },
        {
@@ -18842,6 +19084,13 @@
         "row": 1,
         "blockedBy": [
          "melee_combat_knife_relic_1_1"
+        ],
+        "strikes": [
+         "Light1",
+         "Light2",
+         "Light3",
+         "Light4",
+         "Light4Mirrored"
         ]
        },
        {
@@ -18960,6 +19209,60 @@
        }
       ]
      }
+    }
+   ],
+   "moves": [
+    {
+     "name": "Light Combo",
+     "kind": "combo",
+     "text": [],
+     "hold": false
+    },
+    {
+     "name": "Heavy Combo",
+     "kind": "combo",
+     "text": [],
+     "hold": true
+    },
+    {
+     "name": "Heavy Swing",
+     "kind": "combo",
+     "text": [],
+     "hold": true
+    },
+    {
+     "name": "Right Skull Crusher",
+     "kind": "combo",
+     "text": [],
+     "hold": true
+    },
+    {
+     "name": "Left Skull Crusher",
+     "kind": "combo",
+     "text": [],
+     "hold": true
+    },
+    {
+     "name": "Whirlwind Slash",
+     "kind": "combo",
+     "text": [],
+     "hold": true
+    },
+    {
+     "name": "Distant Stab",
+     "kind": "combo",
+     "text": [
+      "While evading/While sprinting {STRING}"
+     ],
+     "hold": false
+    },
+    {
+     "name": "Endless Combo",
+     "kind": "ability",
+     "text": [
+      "{STRING} to switch stance between Light and Heavy combos"
+     ],
+     "hold": true
     }
    ]
   },
@@ -19434,6 +19737,14 @@
         ],
         "unlocks": [
          "melee_power_sword_artificer_1_1"
+        ],
+        "strikes": [
+         "PowerSlash1",
+         "PowerSlash2",
+         "PowerSlash3",
+         "SpeedSlash1",
+         "SpeedSlash3",
+         "SpeedSlash4"
         ]
        },
        {
@@ -19522,6 +19833,10 @@
         ],
         "unlocks": [
          "melee_power_sword_artificer_1_2"
+        ],
+        "strikes": [
+         "SlowLeft2",
+         "SlowRight2"
         ]
        },
        {
@@ -19687,6 +20002,14 @@
          "melee_power_sword_artificer_1_2",
          "melee_power_sword_relic_2_1",
          "melee_power_sword_artificer_2_3_sub"
+        ],
+        "strikes": [
+         "PowerSlash1",
+         "PowerSlash2",
+         "PowerSlash3",
+         "SpeedSlash1",
+         "SpeedSlash3",
+         "SpeedSlash4"
         ]
        },
        {
@@ -19791,6 +20114,10 @@
         ],
         "unlocks": [
          "melee_power_sword_relic_1_2"
+        ],
+        "strikes": [
+         "SlowLeft",
+         "SlowRight"
         ]
        },
        {
@@ -19826,6 +20153,10 @@
         ],
         "unlocks": [
          "melee_power_sword_relic_2_2"
+        ],
+        "strikes": [
+         "SlowLeft",
+         "SlowRight"
         ]
        }
       ],
@@ -20030,6 +20361,15 @@
         "row": 1,
         "blockedBy": [
          "melee_power_sword_relic_2_4"
+        ],
+        "strikes": [
+         "PerkSpeedSlash5",
+         "SpeedDashSlash",
+         "SpeedLongDashSlash",
+         "SpeedSlash1",
+         "SpeedSlash2",
+         "SpeedSlash3",
+         "SpeedSlash4"
         ]
        },
        {
@@ -20062,6 +20402,14 @@
         "row": 2,
         "blockedBy": [
          "melee_power_sword_relic_1_4"
+        ],
+        "strikes": [
+         "PerkPowerSlash4",
+         "PowerDashSlash",
+         "PowerLongDashSlash",
+         "PowerSlash1",
+         "PowerSlash2",
+         "PowerSlash3"
         ]
        }
       ]
@@ -20096,7 +20444,11 @@
         "t": " more Damage"
        }
       ]
-     }
+     },
+     "strikes": [
+      "SlowLeft",
+      "SlowRight"
+     ]
     },
     {
      "variant": "05_a",
@@ -20138,7 +20490,76 @@
         "t": " Empower stacks. The parry window is smaller."
        }
       ]
-     }
+     },
+     "strikes": [
+      "PerkSpeedSlash5",
+      "SpeedDashSlash",
+      "SpeedLongDashSlash",
+      "SpeedSlash1",
+      "SpeedSlash2",
+      "SpeedSlash3",
+      "SpeedSlash4"
+     ]
+    }
+   ],
+   "moves": [
+    {
+     "name": "Switch Style",
+     "kind": "combo",
+     "text": [],
+     "hold": true
+    },
+    {
+     "name": "Speed Style",
+     "kind": "combo",
+     "text": [
+      "Fast attack combo with great reach"
+     ],
+     "hold": false
+    },
+    {
+     "name": "Speed Combo",
+     "kind": "combo",
+     "text": [],
+     "hold": false
+    },
+    {
+     "name": "Power Style",
+     "kind": "combo",
+     "text": [
+      "Slow, wide swings. Best against swarms."
+     ],
+     "hold": false
+    },
+    {
+     "name": "Power Combo",
+     "kind": "combo",
+     "text": [],
+     "hold": false
+    },
+    {
+     "name": "Air Thrust/Whirl Slash",
+     "kind": "combo",
+     "text": [
+      "While evading/While sprinting {STRING}"
+     ],
+     "hold": false
+    },
+    {
+     "name": "Power Rake",
+     "kind": "combo",
+     "text": [
+      "In the middle of the combo {STRING}"
+     ],
+     "hold": true
+    },
+    {
+     "name": "Power Whirl",
+     "kind": "ability",
+     "text": [
+      "Switch stance by pausing momentarily"
+     ],
+     "hold": false
     }
    ]
   },
@@ -20419,6 +20840,14 @@
         ],
         "unlocks": [
          "melee_thunder_hammer_mastercrafted_1_2"
+        ],
+        "strikes": [
+         "PerkThunderHammerLight4",
+         "PerkThunderHammerLight4Mirror",
+         "PerkThunderHammerLightPrepared",
+         "ThunderHammerLight4",
+         "ThunderHammerLight4Mirror",
+         "ThunderHammerLightPrepared"
         ]
        },
        {
@@ -20592,6 +21021,10 @@
         ],
         "unlocks": [
          "melee_thunder_hammer_artificer_2_1"
+        ],
+        "strikes": [
+         "ThunderHammerLight4",
+         "ThunderHammerLight4Mirror"
         ]
        }
       ]
@@ -20636,6 +21069,11 @@
         ],
         "unlocks": [
          "melee_thunder_hammer_artificer_1_2"
+        ],
+        "strikes": [
+         "ThunderHammerLight4",
+         "ThunderHammerLight4Mirror",
+         "ThunderHammerLightPrepared"
         ]
        },
        {
@@ -20681,7 +21119,10 @@
          ]
         },
         "row": 1,
-        "sub": true
+        "sub": true,
+        "strikes": [
+         "ThunderHammerLightPrepared"
+        ]
        },
        {
         "id": "melee_thunder_hammer_artificer_1_2",
@@ -20775,7 +21216,11 @@
          ]
         },
         "row": 2,
-        "sub": true
+        "sub": true,
+        "strikes": [
+         "PerkThunderHammerLightPrepared",
+         "ThunderHammerLightPrepared"
+        ]
        }
       ],
       [
@@ -20812,6 +21257,11 @@
         ],
         "unlocks": [
          "melee_thunder_hammer_relic_1_1"
+        ],
+        "strikes": [
+         "ThunderHammerLight1",
+         "ThunderHammerLight2",
+         "ThunderHammerLight3"
         ]
        },
        {
@@ -20921,6 +21371,10 @@
         ],
         "unlocks": [
          "melee_thunder_hammer_relic_1_2"
+        ],
+        "strikes": [
+         "PerkThunderHammerLightPrepared",
+         "ThunderHammerLightPrepared"
         ]
        },
        {
@@ -21087,6 +21541,10 @@
         "row": 1,
         "blockedBy": [
          "melee_thunder_hammer_relic_2_3"
+        ],
+        "strikes": [
+         "ThunderHammerLightDash",
+         "ThunderHammerLongDashAttack"
         ]
        },
        {
@@ -21119,6 +21577,10 @@
         "row": 2,
         "blockedBy": [
          "melee_thunder_hammer_relic_1_3"
+        ],
+        "strikes": [
+         "ThunderHammerLightDash",
+         "ThunderHammerLongDashAttack"
         ]
        }
       ]
@@ -21142,7 +21604,11 @@
         "t": "Fully Charged Attacks leave behind a Shock Grenade effect"
        }
       ]
-     }
+     },
+     "strikes": [
+      "PerkThunderHammerLightPrepared",
+      "ThunderHammerLightPrepared"
+     ]
     },
     {
      "variant": "05_a",
@@ -21164,6 +21630,42 @@
       }
      ],
      "icon": "heroic_wpn_perk_thunder_hammer_axe_executioner"
+    }
+   ],
+   "moves": [
+    {
+     "name": "Infinite Light Combo",
+     "kind": "combo",
+     "text": [],
+     "hold": false
+    },
+    {
+     "name": "Ground Slam",
+     "kind": "combo",
+     "text": [],
+     "hold": true
+    },
+    {
+     "name": "Pommel Smash",
+     "kind": "combo",
+     "text": [
+      "While evading/While sprinting {STRING}"
+     ],
+     "hold": false
+    },
+    {
+     "name": "Aftershock",
+     "kind": "ability",
+     "text": [],
+     "hold": true
+    },
+    {
+     "name": "Aftershock Amplification",
+     "kind": "ability",
+     "text": [
+      "Damage increases every 1.45 seconds while {STRING}"
+     ],
+     "hold": true
     }
    ]
   },
@@ -21852,7 +22354,8 @@
      ]
     }
    ],
-   "heroic": []
+   "heroic": [],
+   "moves": []
   },
   {
    "id": "hgun_inferno_pistol",
@@ -22511,7 +23014,8 @@
      ]
     }
    ],
-   "heroic": []
+   "heroic": [],
+   "moves": []
   },
   {
    "id": "hwpn_pyroblaster",
@@ -23185,7 +23689,8 @@
      ]
     }
    ],
-   "heroic": []
+   "heroic": [],
+   "moves": []
   },
   {
    "id": "hwpn_pyrecannon",
@@ -23851,7 +24356,8 @@
      ]
     }
    ],
-   "heroic": []
+   "heroic": [],
+   "moves": []
   },
   {
    "id": "melee_power_axe",
@@ -24118,6 +24624,9 @@
         ],
         "unlocks": [
          "melee_power_axe_mastercrafted_2_2"
+        ],
+        "strikes": [
+         "Light4"
         ]
        }
       ],
@@ -24272,6 +24781,15 @@
         "unlocks": [
          "melee_power_axe_mastercrafted_2_3_sub",
          "melee_power_axe_artificer_2_1"
+        ],
+        "strikes": [
+         "DashSprintOverhead",
+         "Light1",
+         "Light2",
+         "Light3",
+         "Light4",
+         "LongDashAttack",
+         "PerkOverheadStrike"
         ]
        },
        {
@@ -24370,6 +24888,12 @@
         ],
         "unlocks": [
          "melee_power_axe_artificer_2_2"
+        ],
+        "strikes": [
+         "Light1",
+         "Light2",
+         "Light3",
+         "Light4"
         ]
        }
       ],
@@ -24394,6 +24918,9 @@
         "unlocks": [
          "melee_power_axe_artificer_1_3",
          "melee_power_axe_artificer_2_2"
+        ],
+        "strikes": [
+         "PowerBackstep"
         ]
        },
        {
@@ -24615,6 +25142,12 @@
         "row": 2,
         "unlocks": [
          "melee_power_axe_relic_1_2"
+        ],
+        "strikes": [
+         "Light1",
+         "Light2",
+         "Light3",
+         "Light4"
         ]
        }
       ],
@@ -24649,6 +25182,11 @@
         "row": 1,
         "blockedBy": [
          "melee_power_axe_relic_2_2"
+        ],
+        "strikes": [
+         "DashSprintOverhead",
+         "LongDashAttack",
+         "PerkOverheadStrike"
         ]
        },
        {
@@ -24701,6 +25239,12 @@
         "row": 2,
         "blockedBy": [
          "melee_power_axe_relic_1_2"
+        ],
+        "strikes": [
+         "WhirlwindIdle",
+         "WhirlwindLeft",
+         "WhirlwindRight",
+         "WhirlwindRightCombo1"
         ]
        }
       ]
@@ -24725,6 +25269,63 @@
        }
       ]
      }
+    }
+   ],
+   "moves": [
+    {
+     "name": "Light Combo",
+     "kind": "combo",
+     "text": [],
+     "hold": false
+    },
+    {
+     "name": "Whirl Slash",
+     "kind": "combo",
+     "text": [
+      "Any moment of the combo {STRING}"
+     ],
+     "hold": true
+    },
+    {
+     "name": "Chained Whirl Slash",
+     "kind": "combo",
+     "text": [
+      "Any moment of the combo {STRING}"
+     ],
+     "hold": true
+    },
+    {
+     "name": "Overhead Strike",
+     "kind": "combo",
+     "text": [
+      "While evading/While sprinting {STRING}"
+     ],
+     "hold": false
+    },
+    {
+     "name": "Power Stance",
+     "kind": "ability",
+     "text": [
+      "Stance after a Perfect Parry"
+     ],
+     "hold": false
+    },
+    {
+     "name": "Power Backstep",
+     "kind": "ability",
+     "text": [
+      "While in Power Stance {STRING}"
+     ],
+     "hold": true
+    },
+    {
+     "name": "Overhead Strike",
+     "kind": "ability",
+     "text": [
+      "While in Power Stance {STRING}",
+      "While in Power Stance {STRING}"
+     ],
+     "hold": true
     }
    ]
   },
@@ -24979,6 +25580,9 @@
         ],
         "unlocks": [
          "melee_power_halberd_mastercrafted_1_2"
+        ],
+        "strikes": [
+         "ThrustStrike"
         ]
        },
        {
@@ -25003,6 +25607,12 @@
         ],
         "unlocks": [
          "melee_power_halberd_mastercrafted_2_2"
+        ],
+        "strikes": [
+         "Light1",
+         "Light1Chained",
+         "Light2",
+         "Light3"
         ]
        }
       ],
@@ -25112,6 +25722,13 @@
         ],
         "unlocks": [
          "melee_power_halberd_artificer_1_1"
+        ],
+        "strikes": [
+         "ImpalingStrike_Stacks0",
+         "ImpalingStrike_Stacks1",
+         "ImpalingStrike_Stacks2",
+         "ImpalingStrike_Stacks3",
+         "ThrustLunge"
         ]
        },
        {
@@ -25167,6 +25784,12 @@
         ],
         "unlocks": [
          "melee_power_halberd_artificer_2_1"
+        ],
+        "strikes": [
+         "Light1",
+         "Light1Chained",
+         "Light2",
+         "Light3"
         ]
        }
       ]
@@ -25211,6 +25834,9 @@
         ],
         "unlocks": [
          "melee_power_halberd_artificer_1_2"
+        ],
+        "strikes": [
+         "ThrustLunge"
         ]
        },
        {
@@ -25277,7 +25903,15 @@
          ]
         },
         "row": 1,
-        "sub": true
+        "sub": true,
+        "strikes": [
+         "ImpalingStrike_Stacks0",
+         "ImpalingStrike_Stacks1",
+         "ImpalingStrike_Stacks2",
+         "ImpalingStrike_Stacks3",
+         "ThrustLunge",
+         "ThrustStrike"
+        ]
        },
        {
         "id": "melee_power_halberd_artificer_1_2",
@@ -25379,7 +26013,10 @@
          ]
         },
         "row": 2,
-        "sub": true
+        "sub": true,
+        "strikes": [
+         "Light3"
+        ]
        }
       ],
       [
@@ -25524,6 +26161,9 @@
         ],
         "unlocks": [
          "melee_power_halberd_relic_1_2"
+        ],
+        "strikes": [
+         "DashSprintOverhead"
         ]
        },
        {
@@ -25652,6 +26292,54 @@
        }
       ]
      }
+    }
+   ],
+   "moves": [
+    {
+     "name": "Light Combo",
+     "kind": "combo",
+     "text": [],
+     "hold": false
+    },
+    {
+     "name": "Power Discharge",
+     "kind": "combo",
+     "text": [
+      "Hold {STRING} after any light attack"
+     ],
+     "hold": true
+    },
+    {
+     "name": "Sweeping Whirl",
+     "kind": "combo",
+     "text": [
+      "While evading/While sprinting {STRING}"
+     ],
+     "hold": false
+    },
+    {
+     "name": "Omnissian Rush",
+     "kind": "ability",
+     "text": [
+      "Rush forward while holding {STRING}"
+     ],
+     "hold": true
+    },
+    {
+     "name": "Omnissian Strike",
+     "kind": "ability",
+     "text": [
+      "Hold to accumulate up to 3 charges while knocking back enemies"
+     ],
+     "hold": true
+    },
+    {
+     "name": "Impaling Strike",
+     "kind": "ability",
+     "text": [
+      "Keep holding {STRING} after smashing into an enemy to perform a heavy piercing attack"
+     ],
+     "hold": true
     }
    ]
   },
@@ -26354,7 +27042,8 @@
      ]
     }
    ],
-   "heroic": []
+   "heroic": [],
+   "moves": []
   }
  ]
 }

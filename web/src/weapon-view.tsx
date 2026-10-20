@@ -1,7 +1,7 @@
 import { useRef, useState } from "preact/hooks";
 import type { Perk, Weapon, WeaponsFile } from "./data";
 import { forMode, type Highlights, type Mode } from "./changes";
-import { ChangeList, EntityChanges, effectOf, Icon, PerkTile } from "./components";
+import { ChangeList, EntityChanges, effectOf, Icon, MoveText, PerkTile } from "./components";
 import { LeaderLines, PerkPanel, usePerkPanel } from "./perk-panel";
 import { displayName } from "./views";
 import { specialtyLabel } from "./variant-info";
@@ -164,6 +164,35 @@ export function WeaponView({
             })}
           </div>
         </div>
+
+        {weapon.moves && weapon.moves.length > 0 && (
+          <section class="moves">
+            <h2>Moves</h2>
+            <p class="muted small">As listed on the game's combo moves screen. ◆ marks a button prompt.</p>
+            <dl class="move-list">
+              {weapon.moves.map((m) => (
+                <div class="move" key={m.name}>
+                  <dt>
+                    {m.name}
+                    {m.kind === "ability" && <span class="badge move-kind">ability</span>}
+                    {m.hold && <span class="badge move-kind">hold</span>}
+                  </dt>
+                  <dd>
+                    {m.text.length ? (
+                      m.text.map((t, i) => (
+                        <div key={i}>
+                          <MoveText text={t} />
+                        </div>
+                      ))
+                    ) : (
+                      <span class="muted">(no description in game)</span>
+                    )}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </section>
+        )}
 
         <EntityChanges changes={weaponChanges} mode={mode} />
       </div>
