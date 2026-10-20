@@ -21,6 +21,7 @@ const TERMS: Record<string, string> = {
   SCALE_RECOIL: "recoil",
   FIREARM_SWITCH_SPEED: "weapon switch speed",
   healthDmgPercent: "damage %",
+  strikeUids: "attacks it applies to",
   maxDamagedActors: "max enemies hit (cleave)",
   radiusScale: "radius multiplier",
   shouldForceHeavyHit: "always staggers (heavy hit)",

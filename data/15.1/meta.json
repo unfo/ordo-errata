@@ -1,6 +1,8 @@
 {
  "buildId": "15.1",
  "lang": "english",
- "steamBuildId": "25799387",
- "manifest": "4440869252320986273"
+ "steamBuildId": "unknown",
+ "extractorVersion": 2,
+ "manifest": "4440869252320986273",
+ "note": "released 2026-10-08; re-downloaded with DepotDownloader"
 }

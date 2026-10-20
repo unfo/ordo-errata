@@ -206,6 +206,14 @@ function rowOf(c: DiffChange, group?: string): Pick<Line, "item" | "old" | "new"
       const item = prettyPath(path)
         .replace(/^(PvE|PvP) · /, "")
         .replace(/^(application|type) · /, "");
+      // Identifier lists ("Light1, Light2, ..."): show what was removed / added instead of both full lists.
+      if (typeof c.old === "string" && typeof c.new === "string" && (c.old.includes(", ") || c.new.includes(", "))) {
+        const a = new Set(c.old.split(", "));
+        const b = new Set(c.new.split(", "));
+        const removed = [...a].filter((x) => !b.has(x));
+        const added = [...b].filter((x) => !a.has(x));
+        return { item, old: removed.length ? `− ${removed.join(", ")}` : "—", new: added.length ? `+ ${added.join(", ")}` : "—" };
+      }
       return { item, old: fmtValue(c.old), new: fmtValue(c.new), pct: c.pct };
     }
   }

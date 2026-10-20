@@ -190,3 +190,11 @@ describe("variant specialties", async () => {
     expect(label("shotgun_meltagun", "01")).toBeUndefined(); // only variant in its tier
   });
 });
+
+describe("identifier list diffs", async () => {
+  const { describeAll } = await import("./diff-view");
+  it("shows only removed and added entries", () => {
+    const [l] = describeAll([{ kind: "value", field: "activationTrigger.strikeUids", old: "A, B", new: "A, B, C" }]);
+    expect([l.item, l.old, l.new]).toEqual(["activation trigger · attacks it applies to", "—", "+ C"]);
+  });
+});
