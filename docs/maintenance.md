@@ -5,7 +5,13 @@
 Steam updates the game in place, so the old version disappears from disk. Either snapshot **before** letting Steam
 update, or fetch the old version later with DepotDownloader (see backfill below).
 
-1. *(optional, before updating)* `uv run extractor/build.py --build-id <old version>` if that snapshot doesn't exist yet.
+1. **Before Steam updates** (Steam → game → Properties → Updates → "Only update this game when I launch it" gives you
+   time): keep the current version's files so it can be re-extracted whenever the extractor improves:
+   ```bash
+   tools/backfill/keep-current-build.sh 15.1      # copies the 4 needed paks (~1.4 GB) to ~/sm2-builds/15.1/
+   ```
+   and snapshot it if `data/<version>/` doesn't exist yet. If the update already happened, the old version can
+   still be fetched later with DepotDownloader (its manifest id is in `tools/backfill/versions.csv`).
 2. Let Steam update, then snapshot the new build with icons:
    ```bash
    uv run extractor/build.py --build-id 15.2
