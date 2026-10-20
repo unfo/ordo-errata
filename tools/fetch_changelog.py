@@ -168,7 +168,7 @@ def bbcode_to_markdown(src: str) -> str:
     flush()
 
     md = "\n".join(out)
-    md = re.sub(r"\*\*\s*\*\*", "", md)  # empty bold
+    md = re.sub(r"\*\*[ \t]*\*\*", "", md)  # empty bold (same line only: "**A**\n**B**" are two headings)
     md = re.sub(r"(?m)^(\s*(?:-|\d+\.) )\s+", r"\1", md)
     md = re.sub(r"\n{3,}", "\n\n", md)
     return md.strip() + "\n"

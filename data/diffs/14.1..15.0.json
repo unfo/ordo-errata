@@ -2025,74 +2025,14 @@
    },
    {
     "kind": "value",
-    "field": "activationTrigger.hitCondition.conditions.HitConditionDamageSideEffect.pdNodePosX",
-    "old": -68,
-    "new": null
-   },
-   {
-    "kind": "value",
-    "field": "activationTrigger.hitCondition.conditions.HitConditionDamageSideEffect.pdNodePosY",
-    "old": 313,
-    "new": null
-   },
-   {
-    "kind": "value",
     "field": "activationTrigger.hitCondition.conditions.HitConditionDamageSideEffect.sideEffectType",
     "old": "BURNING",
     "new": null
    },
    {
     "kind": "value",
-    "field": "activationTrigger.hitCondition.conditions.HitConditionStatusEffectWithInitiatorApplied.pdNodePosX",
-    "old": -246,
-    "new": null
-   },
-   {
-    "kind": "value",
-    "field": "activationTrigger.hitCondition.conditions.HitConditionStatusEffectWithInitiatorApplied.pdNodePosY",
-    "old": 423,
-    "new": null
-   },
-   {
-    "kind": "value",
     "field": "activationTrigger.hitCondition.conditions.hitCondition_1.isCheckOnlySpecificFirearm",
     "old": false,
-    "new": null
-   },
-   {
-    "kind": "value",
-    "field": "activationTrigger.hitCondition.conditions.hitCondition_1.pdNodePosX",
-    "old": -22.84213,
-    "new": null
-   },
-   {
-    "kind": "value",
-    "field": "activationTrigger.hitCondition.conditions.hitCondition_1.pdNodePosY",
-    "old": 176.4211,
-    "new": null
-   },
-   {
-    "kind": "value",
-    "field": "activationTrigger.hitCondition.pdNodePosX",
-    "old": 220.5268,
-    "new": null
-   },
-   {
-    "kind": "value",
-    "field": "activationTrigger.hitCondition.pdNodePosY",
-    "old": 180.7937,
-    "new": null
-   },
-   {
-    "kind": "value",
-    "field": "activationTrigger.hitConditionPropDiagramRootX",
-    "old": 539.1018,
-    "new": null
-   },
-   {
-    "kind": "value",
-    "field": "activationTrigger.hitConditionPropDiagramRootY",
-    "old": 183.4074,
     "new": null
    },
    {
@@ -2143,74 +2083,14 @@
    },
    {
     "kind": "value",
-    "field": "activationTrigger.hitCondition.conditions.HitConditionDamageSideEffect.pdNodePosX",
-    "old": -68,
-    "new": null
-   },
-   {
-    "kind": "value",
-    "field": "activationTrigger.hitCondition.conditions.HitConditionDamageSideEffect.pdNodePosY",
-    "old": 313,
-    "new": null
-   },
-   {
-    "kind": "value",
     "field": "activationTrigger.hitCondition.conditions.HitConditionDamageSideEffect.sideEffectType",
     "old": "BURNING",
     "new": null
    },
    {
     "kind": "value",
-    "field": "activationTrigger.hitCondition.conditions.HitConditionStatusEffectWithInitiatorApplied.pdNodePosX",
-    "old": -246,
-    "new": null
-   },
-   {
-    "kind": "value",
-    "field": "activationTrigger.hitCondition.conditions.HitConditionStatusEffectWithInitiatorApplied.pdNodePosY",
-    "old": 423,
-    "new": null
-   },
-   {
-    "kind": "value",
     "field": "activationTrigger.hitCondition.conditions.hitCondition_1.isCheckOnlySpecificFirearm",
     "old": false,
-    "new": null
-   },
-   {
-    "kind": "value",
-    "field": "activationTrigger.hitCondition.conditions.hitCondition_1.pdNodePosX",
-    "old": -22.84213,
-    "new": null
-   },
-   {
-    "kind": "value",
-    "field": "activationTrigger.hitCondition.conditions.hitCondition_1.pdNodePosY",
-    "old": 176.4211,
-    "new": null
-   },
-   {
-    "kind": "value",
-    "field": "activationTrigger.hitCondition.pdNodePosX",
-    "old": 220.5268,
-    "new": null
-   },
-   {
-    "kind": "value",
-    "field": "activationTrigger.hitCondition.pdNodePosY",
-    "old": 180.7937,
-    "new": null
-   },
-   {
-    "kind": "value",
-    "field": "activationTrigger.hitConditionPropDiagramRootX",
-    "old": 539.1018,
-    "new": null
-   },
-   {
-    "kind": "value",
-    "field": "activationTrigger.hitConditionPropDiagramRootY",
-    "old": 183.4074,
     "new": null
    },
    {
@@ -2420,27 +2300,9 @@
    },
    {
     "kind": "value",
-    "field": "deactivationTrigger.hitCondition.pdNodePosX",
+    "field": "deactivationTrigger.hitCondition.strikeUids",
     "old": null,
-    "new": -257
-   },
-   {
-    "kind": "value",
-    "field": "deactivationTrigger.hitCondition.pdNodePosY",
-    "old": null,
-    "new": 21
-   },
-   {
-    "kind": "value",
-    "field": "deactivationTrigger.hitConditionPropDiagramRootX",
-    "old": null,
-    "new": -48
-   },
-   {
-    "kind": "value",
-    "field": "deactivationTrigger.hitConditionPropDiagramRootY",
-    "old": null,
-    "new": 17
+    "new": "Heavy1, Heavy2, Heavy3, Light1, Light2, Light3"
    },
    {
     "kind": "value",
@@ -2520,15 +2382,9 @@
    },
    {
     "kind": "value",
-    "field": "activationTrigger.condition.condition.conditions.Killstreak.killCondition.pdNodePosX",
+    "field": "activationTrigger.condition.condition.conditions.Killstreak.killCondition.strikeUids",
     "old": null,
-    "new": -182
-   },
-   {
-    "kind": "value",
-    "field": "activationTrigger.condition.condition.conditions.Killstreak.killCondition.pdNodePosY",
-    "old": null,
-    "new": 57
+    "new": "Light1, Light2, Light3"
    },
    {
     "kind": "value",
@@ -2604,6 +2460,12 @@
    },
    {
     "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": null,
+    "new": "HeavyChargedLeft, HeavyChargedRight, JetpackLand1Charged, Light1Charged, Light1ChargedDouble, Light2Charged, Light2ChargedDouble, Light3Charged, Light3ChargedDouble, LightDashLeftCharged, LongDashAttackCharged"
+   },
+   {
+    "kind": "value",
     "field": "application.permanentModifiers[MELEE_DAMAGE_DISPATCHER_RADIUS].applyType",
     "old": null,
     "new": "PERCENT_SUM"
@@ -2637,6 +2499,12 @@
     "field": "deactivationTrigger.shouldTriggerOnStopped",
     "old": null,
     "new": true
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": null,
+    "new": "HeavyChargedLeft, HeavyChargedRight, JetpackLand1Charged, Light1Charged, Light1ChargedDouble, Light2Charged, Light2ChargedDouble, Light3Charged, Light3ChargedDouble, LightDashLeftCharged, LongDashAttackCharged"
    },
    {
     "kind": "value",
@@ -2806,18 +2674,6 @@
    },
    {
     "kind": "value",
-    "field": "activationTrigger.hitCondition.conditions.Threat_Classes.pdNodePosX",
-    "old": null,
-    "new": -265
-   },
-   {
-    "kind": "value",
-    "field": "activationTrigger.hitCondition.conditions.Threat_Classes.pdNodePosY",
-    "old": null,
-    "new": 88
-   },
-   {
-    "kind": "value",
     "field": "activationTrigger.hitCondition.conditions.Threat_Classes.threatClasses[0]",
     "old": null,
     "new": "ELITE"
@@ -2839,18 +2695,6 @@
     "field": "activationTrigger.hitCondition.conditions.Threat_Classes.threatClasses[3]",
     "old": null,
     "new": "BOSS"
-   },
-   {
-    "kind": "value",
-    "field": "activationTrigger.hitConditionPropDiagramRootX",
-    "old": null,
-    "new": 203
-   },
-   {
-    "kind": "value",
-    "field": "activationTrigger.hitConditionPropDiagramRootY",
-    "old": null,
-    "new": -6
    },
    {
     "kind": "value",
@@ -2898,33 +2742,9 @@
    },
    {
     "kind": "value",
-    "field": "activationTrigger.hitCondition.conditions.HitConditionHealthAmount.pdNodePosX",
-    "old": null,
-    "new": -386.3165
-   },
-   {
-    "kind": "value",
-    "field": "activationTrigger.hitCondition.conditions.HitConditionHealthAmount.pdNodePosY",
-    "old": null,
-    "new": 112.6312
-   },
-   {
-    "kind": "value",
     "field": "activationTrigger.hitCondition.conditions.HitConditionHealthAmount.typeActorToCheck",
     "old": null,
     "new": "DAMAGER_ACTOR"
-   },
-   {
-    "kind": "value",
-    "field": "activationTrigger.hitCondition.conditions.HitConditionThreatClasses.pdNodePosX",
-    "old": null,
-    "new": -366.3165
-   },
-   {
-    "kind": "value",
-    "field": "activationTrigger.hitCondition.conditions.HitConditionThreatClasses.pdNodePosY",
-    "old": null,
-    "new": -155.7896
    },
    {
     "kind": "value",
@@ -2949,30 +2769,6 @@
     "field": "activationTrigger.hitCondition.conditions.HitConditionThreatClasses.threatClasses[3]",
     "old": null,
     "new": "BOSS"
-   },
-   {
-    "kind": "value",
-    "field": "activationTrigger.hitCondition.pdNodePosX",
-    "old": null,
-    "new": -48.42115
-   },
-   {
-    "kind": "value",
-    "field": "activationTrigger.hitCondition.pdNodePosY",
-    "old": null,
-    "new": -30.52622
-   },
-   {
-    "kind": "value",
-    "field": "activationTrigger.hitConditionPropDiagramRootX",
-    "old": null,
-    "new": 128.4211
-   },
-   {
-    "kind": "value",
-    "field": "activationTrigger.hitConditionPropDiagramRootY",
-    "old": null,
-    "new": -6.315789
    },
    {
     "kind": "value",
@@ -3031,6 +2827,12 @@
     "field": "activationTrigger.shouldTriggerOnStarted",
     "old": null,
     "new": true
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": null,
+    "new": "ChargeStackDamager"
    },
    {
     "kind": "value",
@@ -3100,9 +2902,159 @@
    },
    {
     "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": null,
+    "new": "ChargeStackDamager"
+   },
+   {
+    "kind": "value",
     "field": "perkVisualizationType",
     "old": null,
     "new": "DEFAULT"
+   }
+  ],
+  "perkType:PveEngineerSentryTurretApplyBiggerExplosion": [
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_DAMAGE_RADIUS_FROM_ABILITY_GEAR].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_DAMAGE_RADIUS_FROM_ABILITY_GEAR].bonus",
+    "old": 20,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_DAMAGE_RADIUS_FROM_ABILITY_GEAR].type",
+    "old": "SCALE_DAMAGE_RADIUS_FROM_ABILITY_GEAR",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_PERK_TURRET_EXPLOSION].applyType",
+    "old": "PERCENT_MULT",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_PERK_TURRET_EXPLOSION].bonus",
+    "old": 1000,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_PERK_TURRET_EXPLOSION].type",
+    "old": "SCALE_PERK_TURRET_EXPLOSION",
+    "new": null
+   }
+  ],
+  "perkType:PveEngineerSentryTurretPowerUp": [
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_FIREARM].applyType",
+    "old": "PERCENT_MULT",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_FIREARM].bonus",
+    "old": 30,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_FIREARM].type",
+    "old": "SCALE_DAMAGE_AMOUNT_FROM_FIREARM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[TARANTULA_MAX_ENERGY].applyType",
+    "old": "PERCENT_MULT",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[TARANTULA_MAX_ENERGY].bonus",
+    "old": 50,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[TARANTULA_MAX_ENERGY].type",
+    "old": "TARANTULA_MAX_ENERGY",
+    "new": null
+   }
+  ],
+  "perkType:PveEngineerSentryTurretTeamBuff": [
+   {
+    "kind": "value",
+    "field": "linked.application.period",
+    "old": 0.2,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[DAMAGE_SENSITIVITY].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[DAMAGE_SENSITIVITY].bonus",
+    "old": -30,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[DAMAGE_SENSITIVITY].type",
+    "old": "DAMAGE_SENSITIVITY",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_FIREARM].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_FIREARM].bonus",
+    "old": 20,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_FIREARM].type",
+    "old": "SCALE_DAMAGE_AMOUNT_FROM_FIREARM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE].bonus",
+    "old": 20,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE].type",
+    "old": "SCALE_DAMAGE_AMOUNT_FROM_MELEE",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.radius",
+    "old": 15,
+    "new": null
    }
   ],
   "perkType:PveEngineerServoArmItem": [
@@ -3119,12 +3071,174 @@
     "new": 1
    }
   ],
+  "perkType:PveEngineerShoulderGunRegenNearSentry": [
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.condition.condition.characterType",
+    "old": "MARINE_ENGINEER",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.condition.condition.selector",
+    "old": "ALIVE_ONLY",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.period",
+    "old": 0.2,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[ABILITY_ULTIMATE_REGENERATION].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[ABILITY_ULTIMATE_REGENERATION].bonus",
+    "old": 25,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[ABILITY_ULTIMATE_REGENERATION].type",
+    "old": "ABILITY_ULTIMATE_REGENERATION",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.radius",
+    "old": 15,
+    "new": null
+   }
+  ],
   "perkType:PveEngineerTeamExtraEquipment": [
    {
     "kind": "value",
     "field": "application.applications.IfNotLoadoutChangeRestoreEquipment.ownerConditionOnTeamPerkAttach.condition.condition.durationSec",
     "old": null,
     "new": 1
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.abilityCheckMode",
+    "old": "MULTIPLE",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.abilitySlot",
+    "old": "ROUTINE",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.hasRestrictionBySlot",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.listMode",
+    "old": "BLACK",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.needTriggerOnAttachAbility",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.applications.ChangeRoutineChargesByModifier.permanentModifiers[ABILITY_ROUTINE_MAX_CHARGES].bonus",
+    "old": 1,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.applications.ChangeRoutineChargesByModifier.permanentModifiers[ABILITY_ROUTINE_MAX_CHARGES].type",
+    "old": "ABILITY_ROUTINE_MAX_CHARGES",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.applications.RestoreRoutineCharges.abilitySlot",
+    "old": "ROUTINE",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.applications.RestoreRoutineCharges.canRestoreWhenAbilityActive",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.applications.RestoreRoutineCharges.chargesToRestore",
+    "old": 1,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.applications.RestoreRoutineCharges.shouldRestoreCharges",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.deactivationTrigger.abilityCheckMode",
+    "old": "MULTIPLE",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.deactivationTrigger.abilitySlot",
+    "old": "ROUTINE",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.deactivationTrigger.hasRestrictionBySlot",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.deactivationTrigger.listMode",
+    "old": "BLACK",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.deactivationTrigger.needTriggerOnDetachAbility",
+    "old": true,
+    "new": null
+   }
+  ],
+  "perkType:PveMeleeGenericIncomingRangedDamageReduced": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "Light1, Light2, Light3, Light4, Light4Mirrored, Light5Mirrored, PowerSlash1, PowerSlash2, PowerSlash3, SpeedSlash1, SpeedSlash1, SpeedSlash3, SpeedSlash4, ThunderHammerLight1, ThunderHammerLight2, ThunderHammerLight3",
+    "new": "Heavy1, Heavy2, Heavy3, Light1, Light1, Light2, Light2, Light3, Light3, Light4, Light4Mirrored, Light5Mirrored, PowerSlash1, PowerSlash2, PowerSlash3, SpeedSlash1, SpeedSlash1, SpeedSlash3, SpeedSlash4, ThunderHammerLight1, ThunderHammerLight2, ThunderHammerLight3"
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "Light1, Light2, Light3, Light4, Light4Mirrored, Light5Mirrored, PowerSlash1, PowerSlash2, PowerSlash3, SpeedSlash1, SpeedSlash1, SpeedSlash3, SpeedSlash4, ThunderHammerLight1, ThunderHammerLight2, ThunderHammerLight3",
+    "new": "Heavy1, Heavy1, Heavy3, Light1, Light1, Light2, Light2, Light3, Light3, Light4, Light4Mirrored, Light5Mirrored, PowerSlash1, PowerSlash2, PowerSlash3, SpeedSlash1, SpeedSlash1, SpeedSlash3, SpeedSlash4, ThunderHammerLight1, ThunderHammerLight2, ThunderHammerLight3"
+   }
+  ],
+  "perkType:PveMeleePowerAxeHeavyPowerIncreaseForEachHeavyStrike": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.HitConditionMeleeStrike.strikeUids",
+    "old": "WhirlwindIdle, WhirlwindLeft, WhirlwindRight, WhirlwindRightCombo1",
+    "new": "WhirlwindIdle, WhirlwindIdleCharged, WhirlwindLeft, WhirlwindLeftCharged, WhirlwindRight, WhirlwindRightCharged, WhirlwindRightCombo1, WhirlwindRightCombo1Charged"
    }
   ],
   "perkType:PveMeleePowerAxeSlowAndDamageIncreaseByStacksAfterFinisher": [
@@ -3153,6 +3267,20 @@
     "field": "application.permanentModifiers[MELEE_DAMAGE_EXTRA_1_DISPATCHER_RADIUS].type",
     "old": null,
     "new": "MELEE_DAMAGE_EXTRA_1_DISPATCHER_RADIUS"
+   }
+  ],
+  "perkType:PveRaiderEnduranceWhileDoingHoldMeleeAttack": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.triggers.PerkTriggerMeleeStrike.strikeUids",
+    "old": "Heavy1, Heavy2, Heavy3, Heavy4, HeroicMeltaShot_L, HeroicMeltaShot_R, Light1_PreShoot, Light2_PreShoot, Light3_PreShoot, Light4_PreShoot, LightPrepared1, LightPrepared2, LightPrepared3, LightPrepared4, LightPrepared5, LightPreparedDepricated, PerkHeavy5, PerkLightPrepared1, PerkThunderHammerLight4, PerkThunderHammerLight4Mirror, PerkThunderHammerLightPrepared, ThunderHammerLight4, ThunderHammerLight4Mirror, ThunderHammerLightPrepared",
+    "new": "Heavy1, Heavy2, Heavy3, Heavy4, HeroicMeltaShot_L, HeroicMeltaShot_L_Hold, HeroicMeltaShot_R, HeroicMeltaShot_R_Hold, Light1_PreShoot, Light2_PreShoot, Light3_PreShoot, Light4_PreShoot, LightPrepared1, LightPrepared2, LightPrepared3, LightPrepared4, LightPrepared5, LightPreparedDepricated, PerkHeavy5, PerkLightPrepared1, PerkThunderHammerLight4, PerkThunderHammerLight4Mirror, PerkThunderHammerLightPrepared, ThunderHammerLight4, ThunderHammerLight4Mirror, ThunderHammerLightPrepared"
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.triggers.PerkTriggerMeleeStrike.strikeUids",
+    "old": "Heavy1, Heavy2, Heavy3, Heavy4, HeroicMeltaShot_L, HeroicMeltaShot_R, Light1_PreShoot, Light2_PreShoot, Light3_PreShoot, Light4_PreShoot, LightPrepared1, LightPrepared2, LightPrepared3, LightPrepared4, LightPrepared5, LightPreparedDepricated, PerkHeavy5, PerkLightPrepared1, PerkThunderHammerLight4, PerkThunderHammerLight4Mirror, PerkThunderHammerLightPrepared, ThunderHammerLight4, ThunderHammerLight4Mirror, ThunderHammerLightPrepared",
+    "new": "Heavy1, Heavy2, Heavy3, Heavy4, HeroicMeltaShot_L, HeroicMeltaShot_L_Hold, HeroicMeltaShot_R, HeroicMeltaShot_R_Hold, Light1_PreShoot, Light2_PreShoot, Light3_PreShoot, Light4_PreShoot, LightPrepared1, LightPrepared2, LightPrepared3, LightPrepared4, LightPrepared5, LightPreparedDepricated, PerkHeavy5, PerkLightPrepared1, PerkThunderHammerLight4, PerkThunderHammerLight4Mirror, PerkThunderHammerLightPrepared, ThunderHammerLight4, ThunderHammerLight4Mirror, ThunderHammerLightPrepared"
    }
   ],
   "perkType:PveSniperRestorePrimaryAmmoForSecondaryWeaponKill": [
@@ -4355,6 +4483,13 @@
   "perkType:PveSoldierRestoreEquipmentTeamPerk": [
    {
     "kind": "value",
+    "field": "linked.activationTrigger.tickTimeSec",
+    "old": 60,
+    "new": 90,
+    "pct": 50.0
+   },
+   {
+    "kind": "value",
     "field": "perkVisualizationType",
     "old": null,
     "new": "DEFAULT"
@@ -4366,6 +4501,90 @@
     "field": "application.applications.IfNotLoadoutChangeAttachRefillAmmoToTeam.ownerConditionOnTeamPerkAttach.condition.condition.durationSec",
     "old": null,
     "new": 1
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.applications.PerkApplicationModifiers.permanentModifiers[MAX_AMMO_HEAVY].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.applications.PerkApplicationModifiers.permanentModifiers[MAX_AMMO_HEAVY].bonus",
+    "old": 25,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.applications.PerkApplicationModifiers.permanentModifiers[MAX_AMMO_HEAVY].type",
+    "old": "MAX_AMMO_HEAVY",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.applications.PerkApplicationModifiers.permanentModifiers[MAX_AMMO_PRIMARY].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.applications.PerkApplicationModifiers.permanentModifiers[MAX_AMMO_PRIMARY].bonus",
+    "old": 25,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.applications.PerkApplicationModifiers.permanentModifiers[MAX_AMMO_PRIMARY].type",
+    "old": "MAX_AMMO_PRIMARY",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.applications.ReceiveAmmo.ownerCondition.condition.condition.clipToCheckAmmo",
+    "old": "DEFAULT_CLIP",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.applications.ReceiveAmmo.ownerCondition.condition.condition.slot",
+    "old": "PRIMARY",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.applications.ReceiveAmmo.perkApplication.firearmSlot",
+    "old": "PRIMARY",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.applications.ReceiveAmmo.perkApplication.minBullets",
+    "old": 0,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.applications.ReceiveAmmo.perkApplication.refillPercentsInventory",
+    "old": 100,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.applications.ReceiveAmmoForNoInventoryFirearm.ownerCondition.condition.clipToCheckAmmo",
+    "old": "DEFAULT_CLIP",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.applications.ReceiveAmmoForNoInventoryFirearm.perkApplication.minBullets",
+    "old": 0,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.applications.ReceiveAmmoForNoInventoryFirearm.perkApplication.typeOfRefillClip",
+    "old": "IN_CLIP",
+    "new": null
    }
   ],
   "perkType:PveSupportRestorePrimaryAmmoForFinisherOfSpecial": [
@@ -6597,30 +6816,6 @@
    },
    {
     "kind": "value",
-    "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.AddByFinisher.conditionTrigger.condition.conditions.Finisher.hitCondition.pdNodePosX",
-    "old": null,
-    "new": 400
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.AddByFinisher.conditionTrigger.condition.conditions.Finisher.hitCondition.pdNodePosY",
-    "old": null,
-    "new": 480
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.AddByFinisher.conditionTrigger.condition.conditions.Finisher.hitConditionPropDiagramRootX",
-    "old": null,
-    "new": 833.6844
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.AddByFinisher.conditionTrigger.condition.conditions.Finisher.hitConditionPropDiagramRootY",
-    "old": null,
-    "new": 489.1227
-   },
-   {
-    "kind": "value",
     "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.AddByFinisher.conditionTrigger.condition.conditions.Finisher.isKillOnly",
     "old": null,
     "new": true
@@ -6639,21 +6834,21 @@
    },
    {
     "kind": "value",
-    "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.RemoveByEndOfStrikeThatHitActor.conditionTrigger.condition.conditions.MeleeStrikeWithHitsEndedTriggeronly.conditionHit.hitCondition.pdNodePosX",
+    "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.RemoveByEndOfStrikeThatHitActor.conditionTrigger.condition.conditions.MeleeStrikeWithHitsEndedTriggeronly.conditionHit.hitCondition.strikeUids",
     "old": null,
-    "new": -187.3367
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.RemoveByEndOfStrikeThatHitActor.conditionTrigger.condition.conditions.MeleeStrikeWithHitsEndedTriggeronly.conditionHit.hitCondition.pdNodePosY",
-    "old": null,
-    "new": 108.0033
+    "new": "WhirlwindIdleCharged, WhirlwindLeftCharged, WhirlwindRightCharged, WhirlwindRightCombo1Charged"
    },
    {
     "kind": "value",
     "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.RemoveByEndOfStrikeThatHitActor.conditionTrigger.condition.conditions.MeleeStrikeWithHitsEndedTriggeronly.conditionMeleeStrike.needCheckStrikeUid",
     "old": null,
     "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.RemoveByEndOfStrikeThatHitActor.conditionTrigger.condition.conditions.MeleeStrikeWithHitsEndedTriggeronly.conditionMeleeStrike.strikeUids",
+    "old": null,
+    "new": "WhirlwindIdleCharged, WhirlwindLeftCharged, WhirlwindRightCharged, WhirlwindRightCombo1Charged"
    },
    {
     "kind": "value",
@@ -7203,336 +7398,6 @@
    },
    {
     "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Additive Preparing.height",
-    "old": null,
-    "new": 498.663
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Additive Preparing.isCollapsed",
-    "old": null,
-    "new": false
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Additive Preparing.width",
-    "old": null,
-    "new": 1899.664
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Additive Preparing.x",
-    "old": null,
-    "new": 6300
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Additive Preparing.y",
-    "old": null,
-    "new": 5100
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Charging.height",
-    "old": null,
-    "new": 850
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Charging.isCollapsed",
-    "old": null,
-    "new": false
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Charging.width",
-    "old": null,
-    "new": 2400
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Charging.x",
-    "old": null,
-    "new": 8400
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Charging.y",
-    "old": null,
-    "new": 9450
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Combat Shield Strikes_F7pcuObfd.height",
-    "old": null,
-    "new": 955
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Combat Shield Strikes_F7pcuObfd.isCollapsed",
-    "old": null,
-    "new": false
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Combat Shield Strikes_F7pcuObfd.width",
-    "old": null,
-    "new": 1881.708
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Combat Shield Strikes_F7pcuObfd.x",
-    "old": null,
-    "new": 6300
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Combat Shield Strikes_F7pcuObfd.y",
-    "old": null,
-    "new": 9450
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Combat Shield.height",
-    "old": null,
-    "new": 746.1659
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Combat Shield.isCollapsed",
-    "old": null,
-    "new": false
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Combat Shield.width",
-    "old": null,
-    "new": 1882
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Combat Shield.x",
-    "old": null,
-    "new": 6300
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Combat Shield.y",
-    "old": null,
-    "new": 8593.336
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Dash & Sprint Attack.height",
-    "old": null,
-    "new": 650
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Dash & Sprint Attack.isCollapsed",
-    "old": null,
-    "new": false
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Dash & Sprint Attack.width",
-    "old": null,
-    "new": 1795.625
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Dash & Sprint Attack.x",
-    "old": null,
-    "new": 6400
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Dash & Sprint Attack.y",
-    "old": null,
-    "new": 7850
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Falling Attack.height",
-    "old": null,
-    "new": 350
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Falling Attack.isCollapsed",
-    "old": null,
-    "new": false
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Falling Attack.width",
-    "old": null,
-    "new": 1785.156
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Falling Attack.x",
-    "old": null,
-    "new": 6400
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Falling Attack.y",
-    "old": null,
-    "new": 7450
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Heavy Combo.height",
-    "old": null,
-    "new": 1550
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Heavy Combo.isCollapsed",
-    "old": null,
-    "new": false
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Heavy Combo.width",
-    "old": null,
-    "new": 3130.266
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Heavy Combo.x",
-    "old": null,
-    "new": 8400
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Heavy Combo.y",
-    "old": null,
-    "new": 7300
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Jetpack Attack.height",
-    "old": null,
-    "new": 650
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Jetpack Attack.isCollapsed",
-    "old": null,
-    "new": false
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Jetpack Attack.width",
-    "old": null,
-    "new": 1775.684
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Jetpack Attack.x",
-    "old": null,
-    "new": 6400
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Jetpack Attack.y",
-    "old": null,
-    "new": 6750
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Light Combo.height",
-    "old": null,
-    "new": 1600
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Light Combo.isCollapsed",
-    "old": null,
-    "new": false
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Light Combo.width",
-    "old": null,
-    "new": 4277.734
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Light Combo.x",
-    "old": null,
-    "new": 8400
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Light Combo.y",
-    "old": null,
-    "new": 5400
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Regular Attacks.height",
-    "old": null,
-    "new": 598.663
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Regular Attacks.isCollapsed",
-    "old": null,
-    "new": false
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Regular Attacks.width",
-    "old": null,
-    "new": 1899.664
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Regular Attacks.x",
-    "old": null,
-    "new": 6300
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Regular Attacks.y",
-    "old": null,
-    "new": 5800
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Special Attacks.height",
-    "old": null,
-    "new": 1943.834
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Special Attacks.isCollapsed",
-    "old": null,
-    "new": false
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Special Attacks.width",
-    "old": null,
-    "new": 1900
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Special Attacks.x",
-    "old": null,
-    "new": 6300
-   },
-   {
-    "kind": "value",
-    "field": "pve.comboDesc.blueprintDesc.type.groups.Special Attacks.y",
-    "old": null,
-    "new": 6600
-   },
-   {
-    "kind": "value",
     "field": "pve.comboDesc.blueprintDesc.type.nodes.BlueprintLibraryFunction_G76cOu5Y.logic.nodes.IsMeleeSlowTap_G76cdC5H.slowTapDelayRef.def",
     "old": null,
     "new": 0.33
@@ -8022,6 +7887,12 @@
     "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.StackUpdaterFastCharges.conditionTrigger.condition.conditions.MeleeStrike.needCheckStrikeUid",
     "old": null,
     "new": true
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.StackUpdaterFastCharges.conditionTrigger.condition.conditions.MeleeStrike.strikeUids",
+    "old": null,
+    "new": "HeavyFastChargeLeft, HeavyFastChargeRight"
    },
    {
     "kind": "value",

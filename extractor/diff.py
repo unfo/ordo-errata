@@ -17,6 +17,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from build import version_key, write_json  # noqa: E402
+from sm2data.values import is_layout_path  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
@@ -147,7 +148,9 @@ def diff_weapons(old: dict, new: dict) -> dict[str, list[dict]]:
 
 
 def diff_values(old: dict, new: dict) -> dict[str, list[dict]]:
-    a, b = old["values"], new["values"]
+    # Apply the current noise filter to both sides: older snapshots may still contain editor-layout paths.
+    a = {e: {k: v for k, v in vals.items() if not is_layout_path(k)} for e, vals in old["values"].items()}
+    b = {e: {k: v for k, v in vals.items() if not is_layout_path(k)} for e, vals in new["values"].items()}
     out: dict[str, list[dict]] = {}
     for ent in sorted(a.keys() | b.keys()):
         av, bv = a.get(ent, {}), b.get(ent, {})
@@ -173,7 +176,12 @@ def diff(old_build: str, new_build: str) -> dict:
     for part in (diff_perks(old, new), diff_weapons(old, new), diff_values(old, new)):
         for k, v in part.items():
             entities.setdefault(k, []).extend(v)
-    return {"from": old_build, "to": new_build, "entities": dict(sorted(entities.items()))}
+    result = {"from": old_build, "to": new_build, "entities": dict(sorted(entities.items()))}
+    versions = {b: json.loads((DATA / b / "meta.json").read_text()).get("extractorVersion", 1) for b in (old_build, new_build)}
+    if len(set(versions.values())) > 1:
+        # Different extractor versions: some differences may come from extraction changes, not the game.
+        result["extractorMismatch"] = versions
+    return result
 
 
 def builds() -> list[str]:
@@ -209,7 +217,8 @@ def run_one(old: str, new: str) -> None:
     counts: dict[str, int] = {}
     for k in result["entities"]:
         counts[k.split(":")[0]] = counts.get(k.split(":")[0], 0) + 1
-    print(f"{name}: {sum(counts.values())} changed entities {counts}")
+    warn = f"  WARNING extractor versions differ {result['extractorMismatch']}" if "extractorMismatch" in result else ""
+    print(f"{name}: {sum(counts.values())} changed entities {counts}{warn}")
 
 
 if __name__ == "__main__":

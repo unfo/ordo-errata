@@ -37,10 +37,19 @@ _SKIP = re.compile(
 _ENUM = re.compile(r"^[A-Z][A-Z0-9_]+$")
 
 
+# Editor-only layout inside behaviour graphs (node positions, group boxes, captions).
+_GRAPH_LAYOUT = {"groups", "captionVar", "pdNodePosX", "pdNodePosY", "hitConditionPropDiagramRootX", "hitConditionPropDiagramRootY"}
+# Lists of identifiers that carry gameplay meaning, e.g. which melee strikes a perk reacts to.
+_ID_LISTS = {"strikeUids"}
+
+
 def flatten(obj: Any, prefix: str = "") -> Iterator[tuple[str, float | int | bool | str]]:
     if isinstance(obj, dict):
         for k, v in obj.items():
-            if _SKIP.fullmatch(k):
+            if _SKIP.fullmatch(k) or k in _GRAPH_LAYOUT:
+                continue
+            if k in _ID_LISTS and isinstance(v, list) and all(isinstance(x, str) for x in v):
+                yield (f"{prefix}.{k}" if prefix else k), ", ".join(sorted(v))
                 continue
             yield from flatten(v, f"{prefix}.{k}" if prefix else k)
     elif isinstance(obj, list):
@@ -52,6 +61,11 @@ def flatten(obj: Any, prefix: str = "") -> Iterator[tuple[str, float | int | boo
         yield prefix, obj
     elif isinstance(obj, str) and _ENUM.match(obj):
         yield prefix, obj
+
+
+def is_layout_path(path: str) -> bool:
+    """True for editor-layout paths, so diffs can ignore them even in snapshots built before they were filtered."""
+    return any(seg.split("[")[0] in _GRAPH_LAYOUT for seg in path.split("."))
 
 
 def _flat(obj: Any, prefix: str = "") -> dict[str, float | int | bool | str]:
@@ -68,12 +82,21 @@ def extract_values(pak: PakIndex, weapon_ids: list[str], perk_types: set[str]) -
 
     # Perks: only those the UI shows (class and weapon perks).
     server = ssl.loads(pak.read_from(SERVER_PAK, PERKS_SERVER))
-    for cat in server.get("categories", {}).values():
-        for perk_type, desc in cat.get("descs", {}).items():
-            if perk_type in perk_types:
-                vals = _flat(desc.get("type", desc))
-                if vals:
-                    out[f"perk:{perk_type}"] = vals
+    all_perks = {t: d for cat in server.get("categories", {}).values() for t, d in cat.get("descs", {}).items()}
+    for perk_type in sorted(perk_types & all_perks.keys()):
+        desc = all_perks[perk_type].get("type", all_perks[perk_type])
+        vals = _flat(desc)
+        # Some perks delegate their effect to a helper perk (PerkApplicationAttachPerk); include its values
+        # so a bonus moved into the helper still shows up (Perfect Reprisal in 15.2).
+        seen = {perk_type}
+        link = desc.get("application", {}).get("perkLink")
+        while link and link in all_perks and link not in seen:
+            seen.add(link)
+            helper = all_perks[link].get("type", all_perks[link])
+            vals.update(_flat(helper, "linked"))
+            link = helper.get("application", {}).get("perkLink")
+        if vals:
+            out[f"perk:{perk_type}"] = vals
 
     wanted = set(weapon_ids)
     for mode, path in FIREARMS.items():

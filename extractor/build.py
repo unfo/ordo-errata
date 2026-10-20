@@ -26,6 +26,9 @@ from sm2data.textures import TextureIndex, UnsupportedTexture  # noqa: E402
 from sm2data.values import extract_values, firearm_extra_stats  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
+# Bump when a change alters what ends up in the snapshot files (new values, filters, rendering), so diffs
+# between snapshots built by different versions can warn that some differences come from the extractor.
+EXTRACTOR_VERSION = 2
 
 MASTERY = "ssl/main/user/mastery/mastery_library.sso"
 MASTERY_SKILLS = "ssl/main/user/mastery/mastery_skills_library.sso"
@@ -475,7 +478,7 @@ def main() -> int:
     weapons = b.weapons()
 
     out = args.out / build_id
-    meta = {"buildId": build_id, "lang": args.lang, "steamBuildId": pak.build_id()}
+    meta = {"buildId": build_id, "lang": args.lang, "steamBuildId": pak.build_id(), "extractorVersion": EXTRACTOR_VERSION}
     if args.manifest:
         meta["manifest"] = args.manifest
     if args.note:

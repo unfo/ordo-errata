@@ -238,6 +238,40 @@
     "new": "FIREARM_CHARGE_DURATION"
    }
   ],
+  "perkType:FirearmHealthRegenRestoreHealthByInstaRapidKillsOnLowHealth": [
+   {
+    "kind": "value",
+    "field": "linked.activationController.delayedResetSec",
+    "old": 0,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.triggers.PerkTriggerCondition.condition.condition.conditionTrigger.minKilledCount",
+    "old": 3,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.healPercent",
+    "old": 5,
+    "new": null
+   }
+  ],
+  "perkType:PvEMeleePowerSwordStack": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.condition.condition.strikeUids",
+    "old": "PerkSpeedSlash5, SpeedDashSlash, SpeedLongDashSlash, SpeedSlash1, SpeedSlash2, SpeedSlash3, SpeedSlash4",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.condition.condition.condition.strikeUids",
+    "old": "PerkSpeedSlash5, SpeedDashSlash, SpeedLongDashSlash, SpeedSlash1, SpeedSlash2, SpeedSlash3, SpeedSlash4",
+    "new": null
+   }
+  ],
   "perkType:PvEMeleeThunderHammerOneHandedBuffNextAttackByPerfectDodgeOrParry": [
    {
     "kind": "value",
@@ -298,6 +332,12 @@
     "field": "application.shouldCheckCurrentStrike",
     "old": true,
     "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.hitCondition.strikeUids",
+    "old": "Heavy1, Heavy2, Heavy3, Light1, Light2, Light3",
+    "new": null
    }
   ],
   "perkType:PvEMeleeThunderHammerOneHandedChargesByPerfectDodgeOrParry": [
@@ -316,6 +356,12 @@
     "old": 30,
     "new": 15,
     "pct": -50.0
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.condition.condition.conditions.Killstreak.killCondition.strikeUids",
+    "old": "Light1, Light2, Light3",
+    "new": null
    }
   ],
   "perkType:PvEMeleeThunderHammerOneHandedIncreaseHeavyChargedStrikeDamage": [
@@ -333,6 +379,20 @@
     "pct": 50.0
    }
   ],
+  "perkType:PvEMeleeThunderHammerOneHandedIncreaseHeavyChargedStrikeRadius": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "HeavyChargedLeft, HeavyChargedRight, JetpackLand1Charged, Light1Charged, Light1ChargedDouble, Light2Charged, Light2ChargedDouble, Light3Charged, Light3ChargedDouble, LightDashLeftCharged, LongDashAttackCharged",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "HeavyChargedLeft, HeavyChargedRight, JetpackLand1Charged, Light1Charged, Light1ChargedDouble, Light2Charged, Light2ChargedDouble, Light3Charged, Light3ChargedDouble, LightDashLeftCharged, LongDashAttackCharged",
+    "new": null
+   }
+  ],
   "perkType:PvEMeleeThunderHammerOneHandedPowerIncreaseOnMaxCharges": [
    {
     "kind": "value",
@@ -340,6 +400,252 @@
     "old": 10,
     "new": 20,
     "pct": 100.0
+   }
+  ],
+  "perkType:PvEMeleeThunderHammerOneHandedUnstoppableOnCharging": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "ChargeStackDamager",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "ChargeStackDamager",
+    "new": null
+   }
+  ],
+  "perkType:PvEMeleeThunderHammerShockZoneAfterChargeStrike": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "PerkThunderHammerLightPrepared, ThunderHammerLightPrepared",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "PerkThunderHammerLightPrepared, ThunderHammerLightPrepared",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.delayTime",
+    "old": 1,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.actorDesc.type.deploymentSec",
+    "old": 5,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.actorDesc.type.properties.prop_blueprints.blueprints.Deployment.nodes.SubscribeOnEquipmentUserChanged.subscribeOnInitRef.def",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.spawnOffset.z",
+    "old": 4,
+    "new": null
+   }
+  ],
+  "perkType:PveBerserkAttachToPlayersRestoreAbilityByFinisher": [
+   {
+    "kind": "value",
+    "field": "linked.activationController.delayedResetSec",
+    "old": 0.1,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.hitCondition.conditions.hitCondition_1.isBlacklist",
+    "old": false,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.hitCondition.conditions.hitCondition_1.threatClasses[0]",
+    "old": "ELITE",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.hitCondition.conditions.hitCondition_1.threatClasses[1]",
+    "old": "SPECIAL",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.hitCondition.conditions.hitCondition_1.threatClasses[2]",
+    "old": "MINIBOSS",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.hitCondition.conditions.hitCondition_1.threatClasses[3]",
+    "old": "BOSS",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.isKillOnly",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.abilitySlot",
+    "old": "ULTIMATE",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.restorePercents",
+    "old": 15,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.shouldCalculatePercentByCharge",
+    "old": true,
+    "new": null
+   }
+  ],
+  "perkType:PveBerserkIncreaseMeleeDamageToTeam": [
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE].bonus",
+    "old": 15,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_MELEE].type",
+    "old": "SCALE_DAMAGE_AMOUNT_FROM_MELEE",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_GRAPPLING_HOOK_MAIN_DAMAGE].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_GRAPPLING_HOOK_MAIN_DAMAGE].bonus",
+    "old": 15,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_GRAPPLING_HOOK_MAIN_DAMAGE].type",
+    "old": "SCALE_GRAPPLING_HOOK_MAIN_DAMAGE",
+    "new": null
+   }
+  ],
+  "perkType:PveBerserkRestoreHPbyFinisherTeam": [
+   {
+    "kind": "value",
+    "field": "linked.activationController.delayedResetSec",
+    "old": 0.1,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.hitCondition.conditions.HitConditionThreatClasses.threatClasses[0]",
+    "old": "SPECIAL",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.hitCondition.conditions.HitConditionThreatClasses.threatClasses[1]",
+    "old": "MINIBOSS",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.hitCondition.conditions.HitConditionThreatClasses.threatClasses[2]",
+    "old": "BOSS",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.isKillOnly",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.abilitySlot",
+    "old": "ULTIMATE",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.healPercent",
+    "old": 30,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.restorePercents",
+    "old": 5,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.shouldCalculatePercentByCharge",
+    "old": true,
+    "new": null
+   }
+  ],
+  "perkType:PveEngineerArmorAndSegmentOnInjectorTeam": [
+   {
+    "kind": "value",
+    "field": "linked.activationController.delayedResetSec",
+    "old": 0,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.hitCondition.conditions.HitConditionThreatClasses.threatClasses[0]",
+    "old": "ELITE",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.hitCondition.conditions.HitConditionThreatClasses.threatClasses[1]",
+    "old": "SPECIAL",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.isKillOnly",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.segmentToRestore",
+    "old": 1,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.shouldRestoreSegment",
+    "old": true,
+    "new": null
    }
   ],
   "perkType:PveEngineerReviveAbilityRegenTeam": [
@@ -368,6 +674,1660 @@
     "field": "application.applications.BurnSniper.isDirectHit",
     "old": null,
     "new": true
+   }
+  ],
+  "perkType:PveEngineerShoulderGunMajorisKillRestoreUltimate": [
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.delayTime",
+    "old": 0.1,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.perkTrigger.triggers.PerkTriggerAbilityTagBolter.shouldTriggerOnTagRemoved",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.perkTrigger.triggers.PerkTriggerAbilityTagBolterZoneAiming.shouldTriggerOnTagRemoved",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.perkTrigger.triggers.PerkTriggerAbilityTagPlasma.shouldTriggerOnTagRemoved",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.perkTrigger.triggers.PerkTriggerAbilityTagPlasmaZoneAiming.shouldTriggerOnTagRemoved",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.perkTrigger.triggers.PerkTriggerAbilityTagSniper.shouldTriggerOnTagRemoved",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.perkTrigger.triggers.PerkTriggerAbilityTagSniperZoneAiming.shouldTriggerOnTagRemoved",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.perkTrigger.triggers.PerkTriggerCondition.condition.condition.abilityProvider.abilitySlot",
+    "old": "ULTIMATE",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.perkTrigger.triggers.PerkTriggerCondition.condition.condition.abilityProvider.shouldCheckSlot",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.perkTrigger.triggers.PerkTriggerCondition.condition.condition.compareType",
+    "old": "SMALLER",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.perkTrigger.triggers.PerkTriggerCondition.condition.condition.energyPercent",
+    "old": 1,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.perkTrigger.triggers.PerkTriggerCondition.condition.condition.needCheckOnAttach",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.abilitySlot",
+    "old": "ULTIMATE",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.canRestoreWhenAbilityActive",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.shouldCalculatePercentByCharge",
+    "old": true,
+    "new": null
+   }
+  ],
+  "perkType:PveMeleeChainswordContestedByHoldStrikes": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "Heavy1, Heavy2, Heavy3, Heavy4",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "Heavy1, Heavy2, Heavy3, Heavy4",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleeChainswordFoeDamageReducedByStomp": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "Heavy4",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "Heavy4",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationController.delayedResetSec",
+    "old": 0,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.shouldTriggerAfterDealDamage",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.needRemoveStatusEffectsOnTerminate",
+    "old": false,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.targetProvider.shouldSetAfterDealDamage",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.perkVisualizationType",
+    "old": "MELEE_BOOST",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleeChainswordStompRadiusIncreased": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "Heavy4, PerkHeavy5",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "Heavy4",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleeCombatKnifeFoeDamageReducedByHeavy4": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.HitConditionMeleeStrike_1.strikeUids",
+    "old": "Heavy4",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "Heavy4",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationController.delayedResetSec",
+    "old": 0,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.shouldTriggerAfterDealDamage",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.needRemoveStatusEffectsOnTerminate",
+    "old": false,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.targetProvider.shouldSetAfterDealDamage",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.perkVisualizationType",
+    "old": "MELEE_BOOST",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleeCombatKnifeHeavy2Heavy3RadiusIncreased": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "Heavy2, Heavy3",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "Heavy2, Heavy3",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleeCombatKnifeHeavy4DistanceIncrased": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "Heavy4",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "Heavy4",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleeCombatKnifeHeavyPowerIncreaseForEachHeavyStrike": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.HitConditionMeleeStrike.strikeUids",
+    "old": "Heavy1, Heavy2, Heavy3, Heavy4, LightPrepared",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleeCombatKnifeIncreasedByHoldAttacks": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "Heavy1, Heavy2, Heavy3, Heavy4, LightPrepared, PerkDash",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "Heavy1, Heavy2, Heavy3, Heavy4",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleeCombatKnifeIncreasedByLightAttacks": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "Light1, Light2, Light3, Light4, LightDashLeft",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "Light1, Light2, Light3, Light4, LightPrepared",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleeGenericIncomingRangedDamageReduced": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "Heavy1, Heavy2, Heavy3, Light1, Light1, Light2, Light2, Light3, Light3, Light4, Light4Mirrored, Light5Mirrored, PowerSlash1, PowerSlash2, PowerSlash3, SpeedSlash1, SpeedSlash1, SpeedSlash3, SpeedSlash4, ThunderHammerLight1, ThunderHammerLight2, ThunderHammerLight3",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "Heavy1, Heavy1, Heavy3, Light1, Light1, Light2, Light2, Light3, Light3, Light4, Light4Mirrored, Light5Mirrored, PowerSlash1, PowerSlash2, PowerSlash3, SpeedSlash1, SpeedSlash1, SpeedSlash3, SpeedSlash4, ThunderHammerLight1, ThunderHammerLight2, ThunderHammerLight3",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleeGenericPowerIncreaseForEachKill": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.HitConditionMeleeStrike_1.strikeUids",
+    "old": "Light1, Light2, Light3, Light4, Light4Mirrored, Light5Mirrored, PowerSlash1, PowerSlash2, PowerSlash3, SpeedSlash1, SpeedSlash1, SpeedSlash3, SpeedSlash4, ThunderHammerLight1, ThunderHammerLight2, ThunderHammerLight3",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleeGenericPowerIncreaseForHoldAfterLight": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "Heavy1, Heavy2, Heavy3, Heavy4, LightPrepared1, LightPrepared2, LightPrepared3, LightPrepared4, LightPrepared5, LightPreparedDepricated, PerkLightPrepared1, PerkThunderHammerLight4, PerkThunderHammerLight4Mirror, PerkThunderHammerLightPrepared, ThunderHammerLight4, ThunderHammerLight4Mirror, ThunderHammerLightPrepared",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.triggers.PerkTriggerMeleeStrike.strikeUids",
+    "old": "CombatShield1, Light1, Light1, Light2, Light2, Light3, Light3, Light4, Light5Mirrored, LightDashLeft, LightLongDash, PerkLight5, ThunderHammerLight1, ThunderHammerLight2, ThunderHammerLight3, ThunderHammerLightDash, ThunderHammerLongDashAttack",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.triggers.PerkTriggerMeleeStrike_1.strikeUids",
+    "old": "Heavy1, Heavy2, Heavy3, Heavy4, LightPrepared1, LightPrepared2, LightPrepared3, LightPrepared4, LightPrepared5, LightPreparedDepricated, PerkLightPrepared1, PerkThunderHammerLight4, PerkThunderHammerLight4Mirror, PerkThunderHammerLightPrepared, ThunderHammerLight4, ThunderHammerLight4Mirror, ThunderHammerLightPrepared",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleePowerAxeAOEAfterOverhead": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.HitConditionMeleeStrike.strikeUids",
+    "old": "DashSprintOverhead, LongDashAttack, PerkOverheadStrike",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleePowerAxeContestedByLightAttacks": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "Light1, Light2, Light3, Light4",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "Light1, Light2, Light3, Light4",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleePowerAxeHeavyPowerIncreaseForEachHeavyStrike": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.HitConditionMeleeStrike.strikeUids",
+    "old": "WhirlwindIdle, WhirlwindIdleCharged, WhirlwindLeft, WhirlwindLeftCharged, WhirlwindRight, WhirlwindRightCharged, WhirlwindRightCombo1, WhirlwindRightCombo1Charged",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleePowerAxeLastStrikeMoreDamage": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "Light4",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "Light4",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleePowerAxeLightDamageAfterRiposte": [
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.hitCondition.strikeUids",
+    "old": "DashSprintOverhead, Light1, Light2, Light3, Light4, LongDashAttack, PerkOverheadStrike",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleePowerFistCannonPunchDamageIncreased": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "LightDashLeft, LightLongDash",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "LightDashLeft, LightLongDash",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleePowerFistContestedByHoldStrikes": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "LightPrepared1, LightPrepared2, LightPrepared3, LightPrepared4, LightPrepared5",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "LightPrepared1, LightPrepared2, LightPrepared3, LightPrepared4, LightPrepared5",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleePowerFistFoeDamageReducedByCannonPunch": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.HitConditionMeleeStrike_1.strikeUids",
+    "old": "LightDashLeft, LightLongDash",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "LightDashLeft, LightLongDash",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationController.delayedResetSec",
+    "old": 0,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.shouldTriggerAfterDealDamage",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.needRemoveStatusEffectsOnTerminate",
+    "old": false,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.targetProvider.shouldSetAfterDealDamage",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.perkVisualizationType",
+    "old": "MELEE_BOOST",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleePowerFistHeavy4Heavy5RadiusIncreased": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "LightPrepared4, LightPrepared5",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "LightPrepared4, LightPrepared5",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleePowerFistHeavyHoldRestoresArmour": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.HitConditionMeleeStrike.strikeUids",
+    "old": "LightPrepared4, LightPrepared5",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "LightPrepared4, LightPrepared5",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleePowerFistHeavyStrikesDistanceIncreased": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "LightPrepared1, LightPrepared2, LightPrepared3, LightPrepared4, LightPrepared5",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "LightPrepared1, LightPrepared2, LightPrepared3, LightPrepared4, LightPrepared5",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleePowerFistIncomingRangeDamageDecreaseWhileHold": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "LightPrepared1, LightPrepared2, LightPrepared3, LightPrepared4, LightPrepared5",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "LightPrepared1, LightPrepared2, LightPrepared3, LightPrepared4, LightPrepared5",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleePowerHalberdBlastDamageAfterCombo": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.Melee_Strike.strikeUids",
+    "old": "Light3",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleePowerHalberdLightComboAOE": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.strikeUids",
+    "old": "Light1, Light1Chained, Light2, Light3",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleePowerHalberdLightComboDontLoseControl": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.killCondition.strikeUids",
+    "old": "Light1, Light1Chained, Light2, Light3",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleePowerHalberdLungeDebuff": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.strikeUids",
+    "old": "ImpalingStrike_Stacks0, ImpalingStrike_Stacks1, ImpalingStrike_Stacks2, ImpalingStrike_Stacks3, ThrustLunge, ThrustStrike",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.hitCondition.strikeUids",
+    "old": "ImpalingStrike_Stacks0, ImpalingStrike_Stacks1, ImpalingStrike_Stacks2, ImpalingStrike_Stacks3, ThrustLunge, ThrustStrike",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleePowerHalberdLungeRestoreArmor": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.strikeUids",
+    "old": "ThrustStrike",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleePowerHalberdLungeRushDamageReduction": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "ThrustLunge",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "ThrustLunge",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleePowerHalberdLungeRushDamageStack": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.hitCondition.strikeUids",
+    "old": "ImpalingStrike_Stacks0, ImpalingStrike_Stacks1, ImpalingStrike_Stacks2, ImpalingStrike_Stacks3, ThrustLunge",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleePowerHalberdRelicMajorisSprint": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.HitConditionMeleeStrike.strikeUids",
+    "old": "DashSprintOverhead",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleePowerIncreasedByHoldAttacks": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "Heavy1, Heavy2, Heavy3, Heavy4, LightPreparedDepricated, PerkHeavy5",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "Heavy1, Heavy2, Heavy3, Heavy4, PerkHeavy5",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleePowerIncreasedByLightAttacks": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "Light1, Light2, Light3, Light5Mirrored, PerkLight5",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "Light1, Light2, Light3, Light5Mirrored, PerkLight5",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleePowerSwordContestedByPowerStyle": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "PerkPowerSlash4, PowerDashSlash, PowerLongDashSlash, PowerSlash1, PowerSlash2, PowerSlash3",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "PerkPowerSlash4, PowerDashSlash, PowerLongDashSlash, PowerSlash1, PowerSlash2, PowerSlash3",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleePowerSwordContestedBySpeedStyle": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "PerkSpeedSlash5, SpeedDashSlash, SpeedLongDashSlash, SpeedSlash1, SpeedSlash2, SpeedSlash3, SpeedSlash4",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "PerkSpeedSlash5, SpeedDashSlash, SpeedLongDashSlash, SpeedSlash1, SpeedSlash2, SpeedSlash3, SpeedSlash4",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleePowerSwordFoeDamageReducedByPowerRake": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.HitConditionMeleeStrike_1.strikeUids",
+    "old": "SlowLeft, SlowRight",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "SlowLeft, SlowRight",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationController.delayedResetSec",
+    "old": 0,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.shouldTriggerAfterDealDamage",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.needRemoveStatusEffectsOnTerminate",
+    "old": false,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.targetProvider.shouldSetAfterDealDamage",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.perkVisualizationType",
+    "old": "MELEE_BOOST",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleePowerSwordPowerRakeDamageIncreased": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "SlowLeft, SlowRight",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "SlowLeft, SlowRight",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleePowerSwordPowerRakeRestoreArmor": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.hitCondition.strikeUids",
+    "old": "SlowLeft2, SlowRight2",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "ThunderHammerLightPrepared",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "ThunderHammerLightPrepared",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleeThunderHammerContestedByHoldStrikes": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "ThunderHammerLight4, ThunderHammerLight4Mirror, ThunderHammerLightPrepared",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "ThunderHammerLight4, ThunderHammerLight4Mirror, ThunderHammerLightPrepared",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleeThunderHammerDamageIncreaseWhneHitAftershock": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.strikeUids",
+    "old": "PerkThunderHammerLightPrepared, ThunderHammerLightPrepared",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "ThunderHammerLightPrepared",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "ThunderHammerLightPrepared",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleeThunderHammerFoeDamageReducedByPommelSmash": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.HitConditionMeleeStrike_1.strikeUids",
+    "old": "ThunderHammerLightDash, ThunderHammerLongDashAttack",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "ThunderHammerLightDash, ThunderHammerLongDashAttack",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationController.delayedResetSec",
+    "old": 0,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.shouldTriggerAfterDealDamage",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.needRemoveStatusEffectsOnTerminate",
+    "old": false,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.targetProvider.shouldSetAfterDealDamage",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.perkVisualizationType",
+    "old": "MELEE_BOOST",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleeThunderHammerGroundSlamRadiusIncreased": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "ThunderHammerLight4, ThunderHammerLight4Mirror",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "ThunderHammerLight4, ThunderHammerLight4Mirror",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleeThunderHammerHeavyHoldRestoresArmour": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.HitConditionMeleeStrike.strikeUids",
+    "old": "PerkThunderHammerLightPrepared, ThunderHammerLightPrepared",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "PerkThunderHammerLightPrepared, ThunderHammerLightPrepared",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleeThunderHammerIncomingRangedDamageReduced": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.triggers.PerkTriggerMeleeStrike.strikeUids",
+    "old": "PerkThunderHammerLight4, PerkThunderHammerLight4Mirror, PerkThunderHammerLightPrepared, ThunderHammerLight4, ThunderHammerLight4Mirror, ThunderHammerLightPrepared",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.triggers.PerkTriggerMeleeStrike.strikeUids",
+    "old": "PerkThunderHammerLight4, PerkThunderHammerLight4Mirror, PerkThunderHammerLightPrepared, ThunderHammerLight4, ThunderHammerLight4Mirror, ThunderHammerLightPrepared",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleeThunderHammerPommelSmashDamageIncreased": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "ThunderHammerLightDash, ThunderHammerLongDashAttack",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "ThunderHammerLightDash, ThunderHammerLongDashAttack",
+    "new": null
+   }
+  ],
+  "perkType:PveMeleeThunderHammerUnstoppablePrepareAftershock": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.triggers.PerkTriggerMeleeStrike.strikeUids",
+    "old": "ThunderHammerLightPrepared",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.triggers.PerkTriggerMeleeStrike.strikeUids",
+    "old": "ThunderHammerLightPrepared",
+    "new": null
+   }
+  ],
+  "perkType:PveRaiderDebuffEnemyOnHit": [
+   {
+    "kind": "value",
+    "field": "linked.activationController.delayedResetSec",
+    "old": 0,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationController.shouldIgnoreActivationTriggerIfActive",
+    "old": false,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.hitCondition.conditions.hitCondition_1.strikeUids",
+    "old": "DashSprintOverhead, LightDashLeft, LightDashLeft, LightLongDash, LongDashAttack, PerkOverheadStrike, PowerDashSlash, PowerLongDashSlash, SpeedDashSlash, SpeedLongDashSlash, ThunderHammerLightDash, ThunderHammerLongDashAttack",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.shouldTriggerAfterDealDamage",
+    "old": true,
+    "new": null
+   }
+  ],
+  "perkType:PveRaiderEnduranceWhileDoingHoldMeleeAttack": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.triggers.PerkTriggerMeleeStrike.strikeUids",
+    "old": "Heavy1, Heavy2, Heavy3, Heavy4, HeroicMeltaShot_L, HeroicMeltaShot_L_Hold, HeroicMeltaShot_R, HeroicMeltaShot_R_Hold, Light1_PreShoot, Light2_PreShoot, Light3_PreShoot, Light4_PreShoot, LightPrepared1, LightPrepared2, LightPrepared3, LightPrepared4, LightPrepared5, LightPreparedDepricated, PerkHeavy5, PerkLightPrepared1, PerkThunderHammerLight4, PerkThunderHammerLight4Mirror, PerkThunderHammerLightPrepared, ThunderHammerLight4, ThunderHammerLight4Mirror, ThunderHammerLightPrepared",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.triggers.PerkTriggerMeleeStrike.strikeUids",
+    "old": "Heavy1, Heavy2, Heavy3, Heavy4, HeroicMeltaShot_L, HeroicMeltaShot_L_Hold, HeroicMeltaShot_R, HeroicMeltaShot_R_Hold, Light1_PreShoot, Light2_PreShoot, Light3_PreShoot, Light4_PreShoot, LightPrepared1, LightPrepared2, LightPrepared3, LightPrepared4, LightPrepared5, LightPreparedDepricated, PerkHeavy5, PerkLightPrepared1, PerkThunderHammerLight4, PerkThunderHammerLight4Mirror, PerkThunderHammerLightPrepared, ThunderHammerLight4, ThunderHammerLight4Mirror, ThunderHammerLightPrepared",
+    "new": null
+   }
+  ],
+  "perkType:PveRaiderIncreaseAbilityRechargeToTeam": [
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[ABILITY_ULTIMATE_REGENERATION].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[ABILITY_ULTIMATE_REGENERATION].bonus",
+    "old": 15,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[ABILITY_ULTIMATE_REGENERATION].type",
+    "old": "ABILITY_ULTIMATE_REGENERATION",
+    "new": null
+   }
+  ],
+  "perkType:PveRaiderIncreaseGunStrikeDamageForTeam": [
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_GUN_STRIKE_DAMAGE].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_GUN_STRIKE_DAMAGE].bonus",
+    "old": 30,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_GUN_STRIKE_DAMAGE].type",
+    "old": "SCALE_GUN_STRIKE_DAMAGE",
+    "new": null
+   }
+  ],
+  "perkType:PveRaiderIncreaseMeleeDamageAgianstBossesToTeam": [
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_MELEE_DAMAGE_TO_BOSS].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_MELEE_DAMAGE_TO_BOSS].bonus",
+    "old": 20,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_MELEE_DAMAGE_TO_BOSS].type",
+    "old": "SCALE_MELEE_DAMAGE_TO_BOSS",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_MELEE_DAMAGE_TO_MINIBOSS].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_MELEE_DAMAGE_TO_MINIBOSS].bonus",
+    "old": 20,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_MELEE_DAMAGE_TO_MINIBOSS].type",
+    "old": "SCALE_MELEE_DAMAGE_TO_MINIBOSS",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_MELEE_DAMAGE_TO_SPECIAL].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_MELEE_DAMAGE_TO_SPECIAL].bonus",
+    "old": 20,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_MELEE_DAMAGE_TO_SPECIAL].type",
+    "old": "SCALE_MELEE_DAMAGE_TO_SPECIAL",
+    "new": null
+   }
+  ],
+  "perkType:PveRaiderRetoreChargeAfterHitDash": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.hitCondition.conditions.hitCondition_1.strikeUids",
+    "old": "LightLongDash, LongDashAttack, LongDashAttack, PowerLongDashSlash, SpeedLongDashSlash, ThunderHammerLongDashAttack",
+    "new": null
+   }
+  ],
+  "perkType:PveSniperIncreaseHeadshotDamageForTeam": [
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_HEADSHOT_DAMAGE_FROM_FIREARM].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_HEADSHOT_DAMAGE_FROM_FIREARM].bonus",
+    "old": 10,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_HEADSHOT_DAMAGE_FROM_FIREARM].type",
+    "old": "SCALE_HEADSHOT_DAMAGE_FROM_FIREARM",
+    "new": null
+   }
+  ],
+  "perkType:PveSniperRecoverAbilityChargeForHeadshotForTeam": [
+   {
+    "kind": "value",
+    "field": "linked.activationController.delayedResetSec",
+    "old": 0,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.hitCondition.conditions.Bone_Names.boneNames[0]",
+    "old": "HEAD",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.hitCondition.conditions.Damage_By_Firearm.isCheckOnlySpecificFirearm",
+    "old": false,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.isKillOnly",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.abilitySlot",
+    "old": "ULTIMATE",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.chargesToRestore",
+    "old": 1,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.restorePercents",
+    "old": 10,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.shouldCalculatePercentByCharge",
+    "old": true,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.shouldRestoreCharges",
+    "old": false,
+    "new": null
+   }
+  ],
+  "perkType:PveSniperReducedSpreadForTeam": [
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[FIREARM_SCALE_SPREAD].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[FIREARM_SCALE_SPREAD].bonus",
+    "old": -25,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[FIREARM_SCALE_SPREAD].type",
+    "old": "FIREARM_SCALE_SPREAD",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_FIREARM_DAMAGE_TO_BOSS].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_FIREARM_DAMAGE_TO_BOSS].bonus",
+    "old": 15,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_FIREARM_DAMAGE_TO_BOSS].type",
+    "old": "SCALE_FIREARM_DAMAGE_TO_BOSS",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_FIREARM_DAMAGE_TO_MINIBOSS].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_FIREARM_DAMAGE_TO_MINIBOSS].bonus",
+    "old": 15,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_FIREARM_DAMAGE_TO_MINIBOSS].type",
+    "old": "SCALE_FIREARM_DAMAGE_TO_MINIBOSS",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_FIREARM_DAMAGE_TO_SPECIAL].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_FIREARM_DAMAGE_TO_SPECIAL].bonus",
+    "old": 15,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_FIREARM_DAMAGE_TO_SPECIAL].type",
+    "old": "SCALE_FIREARM_DAMAGE_TO_SPECIAL",
+    "new": null
+   }
+  ],
+  "perkType:PveSoldierAuraHealthTrailRestoreByFirearmDamage": [
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[HEALTH_TRAIL_RESTORING_FIREARM_PERCENT].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[HEALTH_TRAIL_RESTORING_FIREARM_PERCENT].bonus",
+    "old": 30,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[HEALTH_TRAIL_RESTORING_FIREARM_PERCENT].type",
+    "old": "HEALTH_TRAIL_RESTORING_FIREARM_PERCENT",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[HEALTH_TRAIL_TOTAL_MAX_RESTORE_FIREARM].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[HEALTH_TRAIL_TOTAL_MAX_RESTORE_FIREARM].bonus",
+    "old": 30,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[HEALTH_TRAIL_TOTAL_MAX_RESTORE_FIREARM].type",
+    "old": "HEALTH_TRAIL_TOTAL_MAX_RESTORE_FIREARM",
+    "new": null
+   }
+  ],
+  "perkType:PveSoldierIncreaseFirearmDamageForTeam": [
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_FIREARM].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_FIREARM].bonus",
+    "old": 15,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[SCALE_DAMAGE_AMOUNT_FROM_FIREARM].type",
+    "old": "SCALE_DAMAGE_AMOUNT_FROM_FIREARM",
+    "new": null
+   }
+  ],
+  "perkType:PveSoldierRestoreEquipmentTeamPerk": [
+   {
+    "kind": "value",
+    "field": "linked.activationController.delayedResetSec",
+    "old": 0,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.tickTimeSec",
+    "old": 90,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.chargesToRestore",
+    "old": 1,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.shouldRestoreCharges",
+    "old": true,
+    "new": null
+   }
+  ],
+  "perkType:PveSupportIncreaseChargedMeleeDamage": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "Heavy4, LightPrepared",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "deactivationTrigger.strikeUids",
+    "old": "Heavy4, LightPrepared",
+    "new": null
+   }
+  ],
+  "perkType:PveSupportReduceIncomingDamageForTeam": [
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[FIREARM_DAMAGE_SENSITIVITY].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[FIREARM_DAMAGE_SENSITIVITY].bonus",
+    "old": -25,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[FIREARM_DAMAGE_SENSITIVITY].type",
+    "old": "FIREARM_DAMAGE_SENSITIVITY",
+    "new": null
+   }
+  ],
+  "perkType:PveSupportRestoreAmmoWhenOutOfAmmoForRapidSuccession": [
+   {
+    "kind": "value",
+    "field": "linked.activationController.cooldown.cooldownTime",
+    "old": 30,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationController.delayedResetSec",
+    "old": 0,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.factor",
+    "old": 7,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.killConditionPropDiagramRootX",
+    "old": 170,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.killConditionPropDiagramRootY",
+    "old": 265,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.killsCount",
+    "old": 7,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.resetTimeSec",
+    "old": 6,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.applications.ReceiveAmmo.ownerCondition.condition.condition.clipToCheckAmmo",
+    "old": "DEFAULT_CLIP",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.applications.ReceiveAmmo.ownerCondition.condition.condition.slot",
+    "old": "PRIMARY",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.applications.ReceiveAmmo.perkApplication.firearmSlot",
+    "old": "PRIMARY",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.applications.ReceiveAmmo.perkApplication.refillPercentsClip",
+    "old": 0,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.applications.ReceiveAmmo.perkApplication.refillPercentsInventory",
+    "old": 20,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.applications.ReceiveAmmoForNoInventoryFirearm.ownerCondition.condition.clipToCheckAmmo",
+    "old": "DEFAULT_CLIP",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.applications.ReceiveAmmoForNoInventoryFirearm.perkApplication.refillPercentsClip",
+    "old": 20,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.applications.ReceiveAmmoForNoInventoryFirearm.perkApplication.typeOfRefillClip",
+    "old": "IN_CLIP",
+    "new": null
+   }
+  ],
+  "perkType:PveSupportRestoreArmorSegmentWhenIronHaloSpendsAllEnergyForTeam": [
+   {
+    "kind": "value",
+    "field": "linked.application.segmentToRestore",
+    "old": 1,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.shouldRestoreSegment",
+    "old": true,
+    "new": null
+   }
+  ],
+  "perkType:PveSupportRestoreFadeHPCantMoveInHeavyStance": [
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.triggers.PerkTriggerBodyStateAugmentedZoom.bodyStateConditionObserver.condition.bodyStateArray[0]",
+    "old": "BULKY_FIREARM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.triggers.PerkTriggerBodyStateAugmentedZoom.bodyStateConditionObserver.condition.bodyStateArray[1]",
+    "old": "AIM_AUGMENTED_ZOOM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.triggers.PerkTriggerBodyStateZoom.bodyStateConditionObserver.condition.bodyStateArray[0]",
+    "old": "BULKY_FIREARM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.triggers.PerkTriggerBodyStateZoom.bodyStateConditionObserver.condition.bodyStateArray[1]",
+    "old": "AIM_ZOOM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[HEALTH_TRAIL_RESTORING_FIREARM_PERCENT].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[HEALTH_TRAIL_RESTORING_FIREARM_PERCENT].bonus",
+    "old": 15,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[HEALTH_TRAIL_RESTORING_FIREARM_PERCENT].type",
+    "old": "HEALTH_TRAIL_RESTORING_FIREARM_PERCENT",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[HEALTH_TRAIL_TOTAL_MAX_RESTORE_FIREARM].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[HEALTH_TRAIL_TOTAL_MAX_RESTORE_FIREARM].bonus",
+    "old": 15,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[HEALTH_TRAIL_TOTAL_MAX_RESTORE_FIREARM].type",
+    "old": "HEALTH_TRAIL_TOTAL_MAX_RESTORE_FIREARM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[HEAVY_HIT_INSTEAD_KNOCKBACK_PROBABILITY].bonus",
+    "old": 100,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[HEAVY_HIT_INSTEAD_KNOCKBACK_PROBABILITY].type",
+    "old": "HEAVY_HIT_INSTEAD_KNOCKBACK_PROBABILITY",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[HEAVY_HIT_POISE_SENSITIVITY].applyType",
+    "old": "PERCENT_MULT",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[HEAVY_HIT_POISE_SENSITIVITY].bonus",
+    "old": -100,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[HEAVY_HIT_POISE_SENSITIVITY].type",
+    "old": "HEAVY_HIT_POISE_SENSITIVITY",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[MAX_ON_GROUND_MOVEMENT_SPEED].applyType",
+    "old": "PERCENT_MULT",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[MAX_ON_GROUND_MOVEMENT_SPEED].bonus",
+    "old": -100,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[MAX_ON_GROUND_MOVEMENT_SPEED].type",
+    "old": "MAX_ON_GROUND_MOVEMENT_SPEED",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.deactivationTrigger.bodyStateConditionObserver.condition.bodyStateArray[0]",
+    "old": "AIM_ZOOM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.deactivationTrigger.bodyStateConditionObserver.condition.bodyStateArray[1]",
+    "old": "AIM_AUGMENTED_ZOOM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.deactivationTrigger.bodyStateConditionObserver.condition.type",
+    "old": "ANY",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.deactivationTrigger.needTriggerOnEnter",
+    "old": false,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.deactivationTrigger.needTriggerOnExit",
+    "old": true,
+    "new": null
+   }
+  ],
+  "perkType:PveSupportRestoreFullHealthWhenRevivedForTeam": [
+   {
+    "kind": "value",
+    "field": "linked.activationController.delayedResetSec",
+    "old": -1,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[INCAP_HEAL_ON_REVIVE].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[INCAP_HEAL_ON_REVIVE].bonus",
+    "old": 1000,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[INCAP_HEAL_ON_REVIVE].type",
+    "old": "INCAP_HEAL_ON_REVIVE",
+    "new": null
+   }
+  ],
+  "perkType:PveTankEnduranceAfterShieldBash": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "CombatShield1, CombatShieldThrustAttack, ThunderHammerLightDash",
+    "new": null
+   }
+  ],
+  "perkType:PveTankIncreaseMeleeDamageAfterShieldBash": [
+   {
+    "kind": "value",
+    "field": "activationTrigger.strikeUids",
+    "old": "CombatShield1, CombatShieldThrustAttack, ThunderHammerLightDash",
+    "new": null
+   }
+  ],
+  "perkType:PveTankReducedArmorPassiveRegenerationDelayToTeam": [
+   {
+    "kind": "value",
+    "field": "linked.activationController.delayedResetSec",
+    "old": 0,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.activationTrigger.tickTimeSec",
+    "old": 30,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.segmentToRestore",
+    "old": 1,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.shouldRestoreSegment",
+    "old": true,
+    "new": null
+   }
+  ],
+  "perkType:PveTankReducedDamageFromBossesToTeam": [
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[HEALTH_ONLY_DAMAGE_FROM_BOSS_SENSITIVITY].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[HEALTH_ONLY_DAMAGE_FROM_BOSS_SENSITIVITY].bonus",
+    "old": -20,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[HEALTH_ONLY_DAMAGE_FROM_BOSS_SENSITIVITY].type",
+    "old": "HEALTH_ONLY_DAMAGE_FROM_BOSS_SENSITIVITY",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[HEALTH_ONLY_DAMAGE_FROM_MINIBOSS_SENSITIVITY].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[HEALTH_ONLY_DAMAGE_FROM_MINIBOSS_SENSITIVITY].bonus",
+    "old": -20,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[HEALTH_ONLY_DAMAGE_FROM_MINIBOSS_SENSITIVITY].type",
+    "old": "HEALTH_ONLY_DAMAGE_FROM_MINIBOSS_SENSITIVITY",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[HEALTH_ONLY_DAMAGE_FROM_SPECIAL_SENSITIVITY].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[HEALTH_ONLY_DAMAGE_FROM_SPECIAL_SENSITIVITY].bonus",
+    "old": -20,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[HEALTH_ONLY_DAMAGE_FROM_SPECIAL_SENSITIVITY].type",
+    "old": "HEALTH_ONLY_DAMAGE_FROM_SPECIAL_SENSITIVITY",
+    "new": null
+   }
+  ],
+  "perkType:PveTankReducedHealthTrailFadingSpeedToTeam": [
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[HEALTH_TRAIL_FADING_SPEED].applyType",
+    "old": "PERCENT_SUM",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[HEALTH_TRAIL_FADING_SPEED].bonus",
+    "old": -50,
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "linked.application.permanentModifiers[HEALTH_TRAIL_FADING_SPEED].type",
+    "old": "HEALTH_TRAIL_FADING_SPEED",
+    "new": null
    }
   ],
   "variant:hgun_heavy_bolt_pistol/01": [
@@ -701,7 +2661,41 @@
     "pct": 50.0
    }
   ],
+  "weapon:melee_power_axe": [
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.RemoveByEndOfStrikeThatHitActor.conditionTrigger.condition.conditions.MeleeStrikeWithHitsEndedTriggeronly.conditionHit.hitCondition.strikeUids",
+    "old": "WhirlwindIdleCharged, WhirlwindLeftCharged, WhirlwindRightCharged, WhirlwindRightCombo1Charged",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.RemoveByEndOfStrikeThatHitActor.conditionTrigger.condition.conditions.MeleeStrikeWithHitsEndedTriggeronly.conditionMeleeStrike.strikeUids",
+    "old": "WhirlwindIdleCharged, WhirlwindLeftCharged, WhirlwindRightCharged, WhirlwindRightCombo1Charged",
+    "new": null
+   }
+  ],
+  "weapon:melee_power_sword": [
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.RemoveByEndOfStrikeThatHitActor.conditionTrigger.condition.conditions.MeleeStrikeWithHitsEndedTriggeronly.conditionHit.hitCondition.strikeUids",
+    "old": "PerkSpeedSlash5, SpeedDashSlash, SpeedLongDashSlash, SpeedSlash1, SpeedSlash2, SpeedSlash3, SpeedSlash4",
+    "new": null
+   },
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.RemoveByEndOfStrikeThatHitActor.conditionTrigger.condition.conditions.MeleeStrikeWithHitsEndedTriggeronly.conditionMeleeStrike.strikeUids",
+    "old": "PerkSpeedSlash5, SpeedDashSlash, SpeedLongDashSlash, SpeedSlash1, SpeedSlash2, SpeedSlash3, SpeedSlash4",
+    "new": null
+   }
+  ],
   "weapon:melee_thunder_hammer_one_handed": [
+   {
+    "kind": "value",
+    "field": "pve.comboDesc.stackManagerDesc.type.stackUpdaters.StackUpdaterFastCharges.conditionTrigger.condition.conditions.MeleeStrike.strikeUids",
+    "old": "HeavyFastChargeLeft, HeavyFastChargeRight",
+    "new": null
+   },
    {
     "kind": "value",
     "field": "pve.comboDesc.strikeSettings.ChargeStackDamager.extraDamages.melee_damaging_window.shouldForceHeavyHit",
@@ -980,5 +2974,9 @@
     "pct": 20.0
    }
   ]
+ },
+ "extractorMismatch": {
+  "15.0": 2,
+  "15.1": 1
  }
 }
